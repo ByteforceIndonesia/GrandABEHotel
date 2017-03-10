@@ -6,14 +6,10 @@ class Main extends MY_Controller {
 	function __construct ()
 	{
 		parent::__construct();
-
-		$data = array (
-			'page_title' => 'Grand ABE Hotel Jayapura'
-			);
 	}
 
 	public function index()
 	{
-		$this->template->load('template', 'home', $data);
+		$this->template->load('template', 'home', $this->data);
 	}
 }
