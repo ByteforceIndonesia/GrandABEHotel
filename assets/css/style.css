@@ -6,21 +6,35 @@ body {
   margin: 0;
   padding: 0; }
 
-.wrapper {
-  height: 500%; }
+.darkerFilter {
+  background: rgba(0, 0, 0, 0.4) !important;
+  height: 100%; }
+
+.fixed {
+  transition: all .2s ease-in-out;
+  position: fixed !important;
+  top: 0 !important;
+  background: #fff !important;
+  width: 100% !important; }
 
 #navigation {
   border: 0;
-  background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0;
-  margin: -5.8vh 0 0 0;
+  background: transparent;
+  box-shadow: none;
   padding: 0 2em 0 2em;
+  margin-bottom: 0;
+  bottom: 0;
   height: 5vh;
+  width: 100%;
   border-radius: 0;
-  font-size: 2em;
-  font-weight: 300; }
+  font-size: 1.5em;
+  font-weight: 300;
+  position: absolute;
+  transition: all .2s ease-in-out;
+  z-index: 1000; }
   #navigation #navbar {
-    margin: 0; }
+    margin: 0;
+    border: 0; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
@@ -63,7 +77,7 @@ body {
       opacity: 1; }
 
 #pageTwo {
-  height: 100vh;
+  min-height: 60vh;
   width: 100%; }
   #pageTwo #booking {
     height: 37vh;
@@ -136,5 +150,103 @@ body {
         transition: border .35s ease-in-out; }
       #pageTwo #booking .bookingPanel .formBook input[type=submit]:hover {
         border: 1px solid #000; }
+
+#pageThree {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden; }
+  #pageThree .bedAbout {
+    background: url("../images/bedAbout.jpg");
+    background-size: cover;
+    position: relative;
+    height: 60vh; }
+  #pageThree .logoAbout {
+    margin-top: 10vh; }
+    #pageThree .logoAbout img {
+      max-width: 20vh; }
+  #pageThree h1 {
+    margin-top: 1em;
+    font-size: 52px;
+    font-weight: 300; }
+  #pageThree p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300; }
+
+#pageFour {
+  width: 100%;
+  height: 50vh;
+  background: #272c2d;
+  padding-top: 4.5vh; }
+  #pageFour .aboutUs {
+    border-bottom: 1px solid #fff; }
+    #pageFour .aboutUs h1 {
+      font-weight: 300;
+      font-size: 52px;
+      color: #fff;
+      margin-left: 10px; }
+  #pageFour .aboutUsParagraph {
+    margin-top: 5vh; }
+    #pageFour .aboutUsParagraph p {
+      margin-top: 2em;
+      color: #fff; }
+
+#pageFive {
+  background: url("../images/home_large.jpg");
+  background-size: cover;
+  height: 50vh;
+  width: 100%; }
+  #pageFive .wrapMe .whitePanel {
+    margin-top: 15vh;
+    background: #fff;
+    padding: 1em;
+    box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
+    #pageFive .wrapMe .whitePanel h1 {
+      font-size: 70px;
+      font-weight: 300;
+      text-align: right;
+      margin: 0 .5em 0 0; }
+  #pageFive .wrapMe .virtualTourButton {
+    margin-left: 25vh; }
+    #pageFive .wrapMe .virtualTourButton button {
+      background: red;
+      box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75);
+      border: 0;
+      font-size: 30px;
+      color: #fff;
+      width: 80%;
+      padding: .5em 1em .5em 0;
+      font-weight: 300;
+      text-align: right;
+      opacity: 0.8;
+      transition: opacity .2s ease-in-out; }
+    #pageFive .wrapMe .virtualTourButton button:hover {
+      opacity: 1; }
+
+#footer {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden; }
+  #footer .leftPanel {
+    background: #272c2d;
+    color: #fff;
+    height: 40vh;
+    padding: 5vh 15vh 1em 3em; }
+    #footer .leftPanel h4 {
+      margin-bottom: 1em;
+      font-size: 32px;
+      font-weight: 300; }
+    #footer .leftPanel p {
+      font-size: 14px;
+      font-weight: 40; }
+  #footer .rightPanel {
+    padding: 5vh 2em 1em 1em; }
+    #footer .rightPanel h4 {
+      margin-bottom: 1em;
+      font-size: 32px;
+      font-weight: 300; }
+    #footer .rightPanel p {
+      font-size: 14px;
+      font-weight: 40; }
 
 /*# sourceMappingURL=style.css.map */
