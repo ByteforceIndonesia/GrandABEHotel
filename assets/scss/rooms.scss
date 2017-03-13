@@ -1,0 +1,22 @@
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+
+#headerRooms
+{
+	height:40vh;
+
+	.panelHeaderRooms
+	{
+		z-index:1000;
+		width:100%;
+		height:30vh;
+		margin-top:-10vh;
+		background:$secondary-color;
+		padding:1em;
+		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
+	}
+	
+}
+

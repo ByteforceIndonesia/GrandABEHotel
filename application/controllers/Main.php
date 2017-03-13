@@ -13,8 +13,8 @@ class Main extends MY_Controller {
 		$this->load->view('home', $this->data);
 	}
 
-	public function room ()
+	public function rooms ()
 	{
-		$this->template->load('template', 'home', $this->data);
+		$this->template->load('template', 'rooms', $this->data);
 	}
 }

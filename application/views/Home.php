@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <!-- <a class="navbar-brand" href="#">Brand</a> -->
+		      <a class="navbar-brand" href="#">Grand ABE <strong>Hotel</strong></a>
 		    </div>
 
 		<!-- The real navbar lol -->
