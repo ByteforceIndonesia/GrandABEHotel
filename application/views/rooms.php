@@ -13,13 +13,15 @@
 </section>
 
 <section id="roomDetails">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-6">
-				
+	<div class="row" id="superiorRoom">
+		<div class="col-lg-6">
+			<div class="picPanelRooms">
+				<img src="<?php echo base_url() . IMAGES_DIR . '/bedAbout.jpg' ?>" alt="">
 			</div>
-			<div class="col-lg-6">
-				
+		</div>
+		<div class="col-lg-6">
+			<div class="headerPanelRoomText">
+				<h3>Superior Room</h3>
 			</div>
 		</div>
 	</div>

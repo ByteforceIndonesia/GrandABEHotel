@@ -17,6 +17,15 @@
     padding: 1em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
 
+#roomDetails #superiorRoom {
+  height: 30vh; }
+  #roomDetails #superiorRoom .picPanelRooms {
+    height: 30vh; }
+    #roomDetails #superiorRoom .picPanelRooms img {
+      height: 100%;
+      width: 60%;
+      padding-left: 30%; }
+
 body {
   margin: 0;
   padding: 0; }
@@ -24,6 +33,9 @@ body {
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
   height: 100%; }
+
+.wrapper {
+  overflow: hidden; }
 
 #navigation {
   border: 0;
@@ -39,7 +51,8 @@ body {
   position: fixed;
   transition: all .2s ease-in-out;
   z-index: 1000;
-  color: #000; }
+  color: #000;
+  overflow: hidden; }
   #navigation h1 {
     font-weight: 300;
     width: 50%;

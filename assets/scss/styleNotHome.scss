@@ -24,6 +24,11 @@ body
 
 }
 
+.wrapper
+{
+	overflow:hidden;
+}
+
 #navigation
 {
 	border:0;
@@ -40,6 +45,7 @@ body
 	transition:all .2s ease-in-out;
 	z-index:1000;
 	color:$font-secondary;
+	overflow: hidden;
 
 	h1
 	{
