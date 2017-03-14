@@ -1,0 +1,76 @@
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website ----
+-----------------------------*/
+
+#headerBusinessandMeetings
+{
+	height:0vh;
+
+	.panelHeaderBusinessMeetings
+	{
+		z-index:1000;
+		width:90%;
+		height:15vh;
+		margin-top:-5vh;
+		background:$secondary-color;
+		padding:2em 1em 1em 0em;
+		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
+
+		h1
+		{
+			margin-left:1em;
+			font-weight: 300;
+			font-size: 42px;
+		}
+	}
+	
+}
+
+#headerBusiness
+{
+	padding:12vh 5em 0 5em;
+	height:40vh;
+	width:100%;
+	background:$primary-color;
+	color:$font-primary;
+
+	p
+	{
+		margin-top:2em;
+	}
+}
+
+#packages
+{
+	height:40vh;
+	width:100%;
+	padding:3em 0 2em 4em;
+
+	.packageImage
+	{
+		margin-left:3em;
+		height:30vh;
+		width:40vh;
+		background:url('../images/bedAbout.jpg');
+	}
+
+	h1
+	{
+		font-size:42px;
+		font-weight:400;
+		padding-left:0.2em;
+		padding-bottom: 0.1em;
+		border-bottom:2px solid #000;
+		width:40%;
+		margin-top:1em;
+	}
+
+}
+
+#carousel
+{
+	background: $primary-color;
+	width:100%;
+	height: 40vh;
+}

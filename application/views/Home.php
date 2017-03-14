@@ -45,12 +45,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<li>
 						<a href="<?php echo base_url('rooms') ?>">Rooms</a>
 					</li>
+					<li>
+						<a href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
+					</li>
+					<li>
+						<a href="<?php echo base_url('location') ?>">Location</a>
+					</li>
+					<li>
+						<a href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
 	<section id="firstPage">
+	<div id="parallax">
+	</div>
 	<div class="darkerFilter">
 		<div class="container">
 			<div class="row">

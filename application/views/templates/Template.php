@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url() . JS_DIR . 'bootstrap.min.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'jquery.waypoints.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'main.js' ?>"></script>
+	<script src="<?php echo base_url() . JS_DIR . 'parallax.min.js' ?>"></script>
 	
 </head>
 <body>
@@ -52,18 +53,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<li>
 						<a href="<?php echo base_url('rooms') ?>">Rooms</a>
 					</li>
+					<li>
+						<a href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
+					</li>
+					<li>
+						<a href="<?php echo base_url('location') ?>">Location</a>
+					</li>
+					<li>
+						<a href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
+	<!-- Parallax -->
 	<section id="firstPage">
-	<div class="darkerFilter">
-		<div class="container">
-			<div class="row">
-			</div>
+		<div id="parallax">
+			<div class="darkerFilter"></div>
 		</div>
-	</div>
 	</section>
 
 	<section id="body">
@@ -101,4 +109,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 </div>
 </body>
+<script>
+	var navFixed = $('#body').waypoint(function(event, direction) 
+	{
+	  $('#navigation').toggleClass('fixed');
+	  	if (direction == 'down')
+		  $('#navbar').css({ 'height':nav.outerHeight() });
+		else
+		  $('#navbar').css({ 'height':'auto' })
+	  ,{
+	  	offset: function() {
+		    return -(this.element.clientHeight + 300)
+		  }
+	  };	  
+	});
+</script>
 </html>

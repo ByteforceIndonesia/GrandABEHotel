@@ -17,4 +17,21 @@ class Main extends MY_Controller {
 	{
 		$this->template->load('template', 'rooms', $this->data);
 	}
+
+	public function businessandmeetings ()
+	{
+		$this->template->load('template', 'businessandmeetings', $this->data);
+	}
+
+	public function location ()
+	{
+		$this->template->load('template', 'location', $this->data);
+	}
+
+	public function weddingsandbirthdays ()
+	{
+		$this->template->load('template', 'weddingsandbirthdays', $this->data);
+	}
+
+
 }

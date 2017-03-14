@@ -18,4 +18,26 @@ $(document).ready(function() {
     	$('#yearBig').html(year);
     });
 
+
+    // parallax
+    var last_known_scroll_position = 0;
+    var ticking = false;
+
+    function doSomething(scroll_pos) {
+        // $('#firstPage').css('background-position', '0 ' + scroll_pos*0.25 + 'px');
+        $('#parallax').css('transform', 'translateY(' + scroll_pos*0.3 + 'px)');
+    }
+
+    window.addEventListener('scroll', function(e) {
+      last_known_scroll_position = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          doSomething(last_known_scroll_position);
+          ticking = false;
+        });
+      }
+      ticking = true;
+    });
+
 });
+

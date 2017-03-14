@@ -5,7 +5,7 @@
 
 #headerRooms
 {
-	height:40vh;
+	height:30vh;
 
 	.panelHeaderRooms
 	{
@@ -22,20 +22,98 @@
 
 #roomDetails
 {
-
-	#superiorRoom
+	.room:nth-child(1)
 	{
-		height:30vh;
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(2)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(3)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(4)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(5)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(odd)
+	{
+		background:$secondary-color;
+	}
+
+	.room:nth-child(even)
+	{
+		background:$primary-color;
+		color:#fff;
+
+		.headerPanelRoomText
+		{
+			h3
+			{
+				border-bottom: 2px solid #fff;
+			}
+		}
+	}
+
+	.room
+	{
+		height:40vh;
+		margin:2em 0 2em 0;
+		padding-top: 3em;
 
 		.picPanelRooms
 		{
 			height:30vh;
 
-			img
+			.imgRoom
 			{
 				height:100%;
 				width:60%;
-				padding-left:30%;
+				margin-left:30%;
+			}
+		}
+
+		.headerPanelRoomText
+		{
+			h3
+			{
+				font-size: 38px;
+				font-weight: 400;
+				border-bottom: 2px solid #000;
+				width:50%;
+				padding-left:0.2em;
+				padding-bottom:0.2em;
 			}
 		}
 	}
