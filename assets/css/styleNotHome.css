@@ -6,6 +6,10 @@
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
 #headerRooms {
   height: 30vh; }
   #headerRooms .panelHeaderRooms {
@@ -14,8 +18,10 @@
     height: 30vh;
     margin-top: -10vh;
     background: #fff;
-    padding: 1em;
+    padding: 1em 2em 1em 2em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
+    #headerRooms .panelHeaderRooms p {
+      margin-top: 2em; }
 
 #roomDetails .room:nth-child(1) .imgRoom {
   background: url("../images/bedAbout.jpg");
@@ -53,7 +59,7 @@
     font-size: 38px;
     font-weight: 400;
     border-bottom: 2px solid #000;
-    width: 50%;
+    width: 60%;
     padding-left: 0.2em;
     padding-bottom: 0.2em; }
 
