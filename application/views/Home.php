@@ -58,7 +58,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</nav>
+	<?php
+			if($this->session->flashdata('mailMessage')&& $this->session->flashdata('mailMessageHeader'))
+			{
+		?>
+				
+			<div id = "mailModalBox" class="modal fade in" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="modal-title"><?php echo $this->session->flashdata('mailMessageHeader');?></h2>
+						</div>
+						<div class="modal-body">
+							<p><?php echo $this->session->flashdata('mailMessage');?></p>
+						</div>
+					</div>
+				</div>
+			</div>
 
+		<script type="text/javascript">
+			$('#mailModalBox').modal('show');
+		</script>	
+
+		<?php
+			}
+		?>
 	<section id="firstPage">
 	<div id="parallax">
 	</div>
@@ -103,16 +128,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 
 					<!-- Jeff ini formnya kemana? -->
-					<?php echo form_open('backendstuff') ?>
+					<?php echo form_open('email/mail') ?>
 					<div class="bookingPanel">
 						<div class="col-lg-8">
 							<div class="col-lg-4 day">
 								<center>
 									<h5>DAY</h5>
-									<div id="dayBig">
-										01	
+									<div>
+										<label for="selectDay" id="dayBig">0</label>	
 									</div>
-									<select name="day" id="selectDay">
+									<select name="day" id="selectDay" <?php echo set_value('day');?> >
+										<option value="0">-</option>
 										<?php for($i = 1; $i<32; $i++): ?>
 											<option value="<?php echo $i ?>">
 												<?php echo $i; ?>
@@ -124,10 +150,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="col-lg-4 month">
 								<center>
 									<h5>MONTH</h5>
-									<div id="monthBig">
-										01	
+									<div>
+										<label for="selectMonth" id="monthBig">0</label>	
 									</div>
-									<select name="month" id="selectMonth">
+									<select name="month" id="selectMonth" <?php echo set_value('month');?> >
+										<option value="0">-</option>
 										<?php for($i = 1; $i<13; $i++): ?>
 											<option value="<?php echo $i ?>">
 												<?php echo $i; ?>
@@ -139,12 +166,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="col-lg-4 year">
 								<center>
 									<h5>YEAR</h5>
-									<div id="yearBig">
-										01	
+									<div>
+										<label for="selectYear" id="yearBig">0</label>	
 									</div>
-									<select name="year" id="selectYear">
+									<select name="year" id="selectYear" <?php echo set_value('year');?>>
+										<option value="0">-</option>
 										<?php for($i = 16; $i<20; $i++): ?>
-											<option value="<?php echo $i . "'" ?>">
+											<option value="<?php echo $i ?>">
 												<?php echo $i; ?>
 											</option>
 										<?php endfor; ?>
@@ -153,11 +181,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 						<div class="col-lg-4 formBook">
-							<input type="text" name="name" placeholder="Name">
+							<input type="text" id= "name" name="name" placeholder="Name" <?php echo set_value('name');?>>
 							<br>
-							<input type="text" name="email" placeholder="E-mail">
+							<input type="text" id="email" name="email" placeholder="E-mail" <?php echo set_value('email');?>>
 							<br>
-							<input type="submit" value="Mail Me!">
+							<input type="submit" id="submit" value="Mail Me!">
 						</div>
 					</div>
 					<?php echo form_close () ?>
