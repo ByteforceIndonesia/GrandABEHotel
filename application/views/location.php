@@ -8,12 +8,12 @@
 
 <section id="whereAreWe">
 	<div class="row">
-		<div class="col-lg-5">
+		<div class="col-xl-5">
 			<div class="mapsWrapper">
 				
 			</div>
 		</div>
-		<div class="col-lg-5">
+		<div class="col-xl-5">
 			<div class="rightSideMaps">
 				<h1>Where Are We</h1>
 				<p>
@@ -36,9 +36,8 @@
 </section>
 
 <section id="touristAttraction" class="container">
-	<div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
+	<div class="row">
+		<div class="leftSideTourist">
 			<div class="touristLeft">
 				<h1>Pantai APEL</h1>
 				<p>
@@ -46,17 +45,15 @@
 				</p>
 			</div>
 		</div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
+		<div class="rightSideTourist">
 			<div class="imageTourist" 
 				 style="background:url('<?php echo base_url() . IMAGES_DIR . '/home_large.jpg' ?>')
 				 ">&nbsp</div>
 		</div>
 	</div>
 
-	<div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
+	<div class="row">
+		<div class="leftSideTourist">
 			<div class="touristLeft">
 				<h1>Pantai Hotelkamp</h1>
 				<p>
@@ -64,8 +61,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
+		<div class="rightSideTourist">
 			<div class="imageTourist" 
 				 style="background:url('<?php echo base_url() . IMAGES_DIR . '/home_large.jpg' ?>')
 				 ">&nbsp</div>

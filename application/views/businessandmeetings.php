@@ -26,18 +26,18 @@
 <section id="packages">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5">
+			<div class="col-xl-5">
 				<div class="packageImage">
 					&nbsp
 				</div>
 			</div>
-			<div class="col-lg-5">
+			<div class="col-xl-5">
 				<h1>Packages</h1>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla.
 				</p>
 			</div>
-			<div class="col-lg-2">&nbsp</div>
+			<div class="col-xl-2">&nbsp</div>
 		</div>
 	</div>
 </section>

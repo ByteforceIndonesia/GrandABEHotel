@@ -8,54 +8,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Title -->
 	<title><?php echo $page_title ?></title>
 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'style.css' ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">
-	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap-theme.min.css' ?>">
 
 	<!-- JS -->
 	<script src="<?php echo base_url() . JS_DIR . 'jquery-3.1.1.min.js' ?>"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'bootstrap.min.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'jquery.waypoints.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'main.js' ?>"></script>
-	
+
 </head>
 <body>
 <div class="wrapper">
-
-	<nav id="navigation" class="navbar navbar-default">
-		<div class="container-fluid">
-		<!-- For Mobile -->
-			<div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">Grand ABE <strong>Hotel</strong></a>
-		    </div>
-
-		<!-- The real navbar lol -->
-		    <div class="collapse navbar-collapse" id="navbar">
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="<?php echo base_url() ?>">Home</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('rooms') ?>">Rooms</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('location') ?>">Location</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
-					</li>
-				</ul>
-			</div>
+	<!-- navbar -->
+	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded" id="navigation">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>
+		  <div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav">
+				<li class="active nav-item">
+					<a class="nav-link" href="<?php echo base_url() ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('rooms') ?>">Rooms</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('location') ?>">Location</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
+				</li>
+			</ul>
 		</div>
 	</nav>
 	<?php
@@ -129,9 +122,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<!-- Jeff ini formnya kemana? -->
 					<?php echo form_open('email/mail') ?>
-					<div class="bookingPanel">
-						<div class="col-lg-8">
-							<div class="col-lg-4 day">
+					<div class="bookingPanel row">
+						<div class="col-lg-8 row">
+							<div class="col-xl-4 day">
 								<center>
 									<h5>DAY</h5>
 									<div>
@@ -147,7 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</select>
 								</center>
 							</div>
-							<div class="col-lg-4 month">
+							<div class="col-xl-4 month">
 								<center>
 									<h5>MONTH</h5>
 									<div>
@@ -163,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</select>
 								</center>
 							</div>
-							<div class="col-lg-4 year">
+							<div class="col-xl-4 year">
 								<center>
 									<h5>YEAR</h5>
 									<div>
@@ -201,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					&nbsp
 				</div>
 			</div>
-			<div class="col-lg-7 leftAbout">
+			<div class="col-lg-7 leftAbout row">
 				<div class="col-lg-3">&nbsp</div>
 				<div class="col-lg-6">
 					<center>
@@ -241,7 +234,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</section>
 
 	<section id="pageFive">
-		<div class="darkerFilter wrapMe">
+		<div class="darkerFilter wrapMe row">
 			<div class="col-lg-5">&nbsp</div>
 			<div class="col-lg-6">
 				<div class="whitePanel">
@@ -265,7 +258,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					Donec accumsan ultricies vehicula. Vestibulum malesuada egestas leo, vel iaculis magna vestibulum ac. Donec vitae posuere risus. Nullam rutrum elementum sollicitudin. Mauris gravida arcu dui, ac sollicitudin orci bibendum eget. Donec quis tincidunt lacus. Suspendisse scelerisque tellus vel nunc imperdiet, sed bibendum lacus consectetur.
 				</p>
 			</div>
-			<div class="col-lg-7 rightPanel">
+			<div class="col-lg-7 rightPanel row">
 				<div class="col-lg-4">
 					<h4>Address</h4>
 					<p>

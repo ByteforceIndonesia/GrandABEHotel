@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$secondary-color".
-        on line 16 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/rooms.scss
+        on line 16 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss
 
 11: 	{
 12: 		z-index:1000;
-13: 		width:100%;
-14: 		height:30vh;
-15: 		margin-top:-10vh;
+13: 		width:90%;
+14: 		height:15vh;
+15: 		margin-top:-5vh;
 16: 		background:$secondary-color;
-17: 		padding:1em 2em 1em 2em;
+17: 		padding:2em 1em 1em 0em;
 18: 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
 19: 
-20: 		p
+20: 		h1
 21: 		{
 
 Backtrace:
-/Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/rooms.scss:16
+/Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss:16
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
@@ -73,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$secondary-color\".\A         on line 16 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/rooms.scss\A \A 11: 	{\A 12: 		z-index:1000;\A 13: 		width:100%;\A 14: 		height:30vh;\A 15: 		margin-top:-10vh;\A 16: 		background:$secondary-color;\A 17: 		padding:1em 2em 1em 2em;\A 18: 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);\A 19: \A 20: 		p\A 21: 		{"; }
+  content: "Error: Undefined variable: \"$secondary-color\".\A         on line 16 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss\A \A 11: 	{\A 12: 		z-index:1000;\A 13: 		width:90%;\A 14: 		height:15vh;\A 15: 		margin-top:-5vh;\A 16: 		background:$secondary-color;\A 17: 		padding:2em 1em 1em 0em;\A 18: 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);\A 19: \A 20: 		h1\A 21: 		{"; }
