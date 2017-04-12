@@ -39,7 +39,7 @@
 
 	#headerBusiness
 	{
-		height:50vh;
+		height:auto !important;
 	}
 
 	#packages
@@ -71,7 +71,7 @@
 	{
 		.panelHeaderTouristAttraction
 		{
-			height: 15vh;
+			height: auto;
 			width:auto;
 		}
 	}	
@@ -170,7 +170,7 @@
 		}
 	}
 
-	#headerBusiness
+	 #headerBusiness
 	{
 		height:55vh;
 	}
@@ -266,6 +266,29 @@
 
 @media screen and(max-width:588px)
 {
+	#footer
+	{
+		.leftPanel
+		{
+			height: auto;
+		}
+	}
+
+	#headerBusiness
+	{
+		height:auto;
+	}
+
+	#headerBusinessandMeetings
+	{
+		margin-bottom: 2em;
+		
+		.panelHeaderBusinessMeetings
+		{
+			height:auto;
+		}
+	}
+
 	#pageTwo
 	{
 		height:180vh;

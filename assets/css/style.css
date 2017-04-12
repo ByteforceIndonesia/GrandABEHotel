@@ -295,7 +295,7 @@ body {
     min-height: 4vh; }
 
   #headerBusiness {
-    height: 50vh; }
+    height: auto !important; }
 
   #packages {
     height: auto;
@@ -310,7 +310,7 @@ body {
     padding: 5em 2em 0 2em; }
 
   #headerTouristAttraction .panelHeaderTouristAttraction {
-    height: 15vh;
+    height: auto;
     width: auto; }
 
   #weddings {
@@ -397,6 +397,17 @@ body {
   #footer .rightPanel {
     padding-left: 5vh; } }
 @media screen and (max-width: 588px) {
+  #footer .leftPanel {
+    height: auto; }
+
+  #headerBusiness {
+    height: auto; }
+
+  #headerBusinessandMeetings {
+    margin-bottom: 2em; }
+    #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+      height: auto; }
+
   #pageTwo {
     height: 180vh; }
 
