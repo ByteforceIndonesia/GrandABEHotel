@@ -42,7 +42,7 @@
   #roomDetails .room:nth-child(even) .headerPanelRoomText h3 {
     border-bottom: 2px solid #fff; }
 #roomDetails .room {
-  height: 40vh;
+  height: auto;
   margin: 2em 0 2em 0;
   padding-top: 3em;
   font-weight: 300; }
@@ -369,6 +369,19 @@ body {
     padding-left: 2em;
     padding-right: 2em; }
 
+  #roomDetails .room {
+    height: auto;
+    font-weight: 300;
+    padding-bottom: 2em;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto;
+      margin-bottom: 2em; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
   #footer {
     height: auto; }
     #footer .rightPanel {
@@ -380,11 +393,13 @@ body {
 
   #roomDetails .room {
     height: 65vh;
-    font-weight: 300; }
+    font-weight: 300;
+    padding-bottom: 1em; }
     #roomDetails .room p {
       margin-top: 2em; }
     #roomDetails .room .picPanelRooms .imgRoom {
-      margin: auto; }
+      margin: auto;
+      margin-bottom: 1em; }
     #roomDetails .room .headerPanelRoomText {
       padding: 0 2vh 0 2vh; }
 
@@ -399,14 +414,15 @@ body {
     padding-top: 2.5em; }
 
   #roomDetails .room {
-    height: 65vh;
+    height: auto;
     font-weight: 300; }
     #roomDetails .room p {
       margin-top: 2em; }
     #roomDetails .room .picPanelRooms .imgRoom {
-      margin: auto; }
+      margin: auto;
+      padding-bottom: 1em; }
     #roomDetails .room .headerPanelRoomText {
-      padding: 0 2vh 0 2vh; }
+      padding: 2em 2vh 2em 2vh; }
 
   #touristAttraction {
     height: 65vh; }
@@ -433,6 +449,9 @@ body {
     height: 180vh; }
 
   #whereAreWe {
-    height: 55vh; } }
+    height: 55vh; }
+
+  .room {
+    height: auto; } }
 
 /*# sourceMappingURL=styleNotHome.css.map */

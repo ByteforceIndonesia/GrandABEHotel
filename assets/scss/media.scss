@@ -88,6 +88,36 @@
 		padding-right:2em;
 	}
 
+	#roomDetails
+	{
+		.room
+		{
+			height:auto;
+			font-weight: 300;
+			padding-bottom: 2em;
+			font-weight: 300;
+
+			p
+			{
+				margin-top:2em;
+			}
+
+			.picPanelRooms
+			{
+				.imgRoom
+				{
+					margin:auto;
+					margin-bottom: 2em;
+				}
+			}
+
+			.headerPanelRoomText
+			{
+				padding:0 2vh 0 2vh;
+			}
+		}
+	}
+	
 	// Global
 	#footer
 	{
@@ -117,6 +147,7 @@
 		{
 			height:65vh;
 			font-weight: 300;
+			padding-bottom: 1em;
 
 			p
 			{
@@ -128,6 +159,7 @@
 				.imgRoom
 				{
 					margin:auto;
+					margin-bottom: 1em;
 				}
 			}
 
@@ -168,7 +200,7 @@
 	{
 		.room
 		{
-			height:65vh;
+			height:auto;
 			font-weight: 300;
 
 			p
@@ -181,12 +213,13 @@
 				.imgRoom
 				{
 					margin:auto;
+					padding-bottom: 1em;
 				}
 			}
 
 			.headerPanelRoomText
 			{
-				padding:0 2vh 0 2vh;
+				padding:2em 2vh 2em 2vh;
 			}
 		}
 	}
@@ -241,5 +274,10 @@
 	#whereAreWe
 	{
 		height:55vh;
+	}
+
+	.room
+	{
+		height:auto;
 	}
 }
