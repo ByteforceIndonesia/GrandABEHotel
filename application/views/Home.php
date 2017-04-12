@@ -21,13 +21,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url() . JS_DIR . 'bootstrap.min.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'jquery.waypoints.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'main.js' ?>"></script>
+	<script src="<?php echo base_url() . JS_DIR . 'parallax.min.js' ?>"></script>
 
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper clearfix">
 	<!-- navbar -->
 	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded" id="navigation">
-	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>

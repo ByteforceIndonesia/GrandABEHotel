@@ -3,7 +3,7 @@
 	//For Home
 	#pageTwo
 	{
-		height:145vh;
+		height:170vh;
 
 		.bookingPanel
 		{
@@ -11,19 +11,30 @@
 		}
 	}
 
-	.bigLogoNav
+	#navbar
 	{
-		display:none !important;
+		margin:0;
+		border:0;
+		background: #fff;
+		padding:1em;
+		width:100vh;
 	}
 
-	.noLogoNav
+	#pageFour
 	{
-		display:block !important;
+		height: 65vh;
 	}
+
+	.bigLogo
+	{
+		display: none !important;
+	}
+
 
 	#navigation
 	{
 		padding:1em 2em 1em 2em;
+		min-height:4vh;
 	}
 
 	#headerBusiness
@@ -220,8 +231,13 @@
 	}
 }
 
-@media screen and(max-width:510px)
+@media screen and(max-width:588px)
 {
+	#pageTwo
+	{
+		height:180vh;
+	}
+
 	#whereAreWe
 	{
 		height:55vh;

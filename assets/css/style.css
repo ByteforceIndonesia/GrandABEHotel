@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif !important; }
+  font-family: 'helvetica' !important; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -28,10 +28,10 @@ body {
   padding: 0 2em 0 2em;
   margin-bottom: 0;
   bottom: 0;
-  height: 5vh;
+  height: 10vh;
   width: 100%;
   border-radius: 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 300;
   position: absolute;
   transition: all .2s ease-in-out;
@@ -40,7 +40,8 @@ body {
     color: #ccc; }
   #navigation #navbar {
     margin: 0;
-    border: 0; }
+    border: 0;
+    transition: all .2s ease-in-out; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
@@ -77,12 +78,15 @@ body {
       padding: 0.3em 1em 0.3em 1em;
       font-size: 24px;
       opacity: 0.7;
-      transition: opacity .35s ease-in-out;
+      transition: all .35s ease-in-out;
       background: transparent;
-      color: #fff; }
+      color: #fff;
+      outline: none; }
     #firstPage .homeLine button:hover {
       opacity: 1;
       cursor: pointer; }
+    #firstPage .homeLine button:active {
+      border: 1px solid red; }
   #firstPage #parallax {
     background: url("../images/home_large.jpg");
     background-size: cover;
@@ -93,7 +97,7 @@ body {
     top: 0; }
 
 #pageTwo {
-  height: 60vh;
+  height: 66vh;
   width: 100%; }
   #pageTwo #booking {
     height: 37vh;
@@ -269,18 +273,26 @@ body {
 
 @media screen and (max-width: 1200px) {
   #pageTwo {
-    height: 145vh; }
+    height: 170vh; }
     #pageTwo .bookingPanel {
       height: 1180px !important; }
 
-  .bigLogoNav {
+  #navbar {
+    margin: 0;
+    border: 0;
+    background: #fff;
+    padding: 1em;
+    width: 100vh; }
+
+  #pageFour {
+    height: 65vh; }
+
+  .bigLogo {
     display: none !important; }
 
-  .noLogoNav {
-    display: block !important; }
-
   #navigation {
-    padding: 1em 2em 1em 2em; }
+    padding: 1em 2em 1em 2em;
+    min-height: 4vh; }
 
   #headerBusiness {
     height: 50vh; }
@@ -368,7 +380,10 @@ body {
 
   #footer .rightPanel {
     padding-left: 5vh; } }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 588px) {
+  #pageTwo {
+    height: 180vh; }
+
   #whereAreWe {
     height: 55vh; } }
 

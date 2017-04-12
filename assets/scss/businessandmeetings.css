@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$secondary-color".
-        on line 16 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss
+        on line 17 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss
 
-11: 	{
-12: 		z-index:1000;
-13: 		width:90%;
-14: 		height:15vh;
-15: 		margin-top:-5vh;
-16: 		background:$secondary-color;
-17: 		padding:2em 1em 1em 0em;
-18: 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
-19: 
-20: 		h1
-21: 		{
+12: 	{
+13: 		z-index:1000;
+14: 		width:90%;
+15: 		height:15vh;
+16: 		margin-top:-5vh;
+17: 		background:$secondary-color;
+18: 		padding:2em 1em 1em 0em;
+19: 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
+20: 
+21: 		h1
+22: 		{
 
 Backtrace:
-/Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss:16
+/Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss:17
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
@@ -73,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$secondary-color\".\A         on line 16 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss\A \A 11: 	{\A 12: 		z-index:1000;\A 13: 		width:90%;\A 14: 		height:15vh;\A 15: 		margin-top:-5vh;\A 16: 		background:$secondary-color;\A 17: 		padding:2em 1em 1em 0em;\A 18: 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);\A 19: \A 20: 		h1\A 21: 		{"; }
+  content: "Error: Undefined variable: \"$secondary-color\".\A         on line 17 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/businessandmeetings.scss\A \A 12: 	{\A 13: 		z-index:1000;\A 14: 		width:90%;\A 15: 		height:15vh;\A 16: 		margin-top:-5vh;\A 17: 		background:$secondary-color;\A 18: 		padding:2em 1em 1em 0em;\A 19: 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);\A 20: \A 21: 		h1\A 22: 		{"; }

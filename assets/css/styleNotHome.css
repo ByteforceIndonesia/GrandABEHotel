@@ -225,7 +225,8 @@
 body {
   margin: 0;
   padding: 0;
-  text-align: justify; }
+  text-align: justify;
+  font-family: 'helvetica'; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -320,18 +321,26 @@ body {
 
 @media screen and (max-width: 1200px) {
   #pageTwo {
-    height: 145vh; }
+    height: 170vh; }
     #pageTwo .bookingPanel {
       height: 1180px !important; }
 
-  .bigLogoNav {
+  #navbar {
+    margin: 0;
+    border: 0;
+    background: #fff;
+    padding: 1em;
+    width: 100vh; }
+
+  #pageFour {
+    height: 65vh; }
+
+  .bigLogo {
     display: none !important; }
 
-  .noLogoNav {
-    display: block !important; }
-
   #navigation {
-    padding: 1em 2em 1em 2em; }
+    padding: 1em 2em 1em 2em;
+    min-height: 4vh; }
 
   #headerBusiness {
     height: 50vh; }
@@ -419,7 +428,10 @@ body {
 
   #footer .rightPanel {
     padding-left: 5vh; } }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 588px) {
+  #pageTwo {
+    height: 180vh; }
+
   #whereAreWe {
     height: 55vh; } }
 

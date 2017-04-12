@@ -1,9 +1,116 @@
-/* ----------------------------
----- ByteForce Indonesia ------
------- Grand ABE's Website -------
------------------------------*/
-@media screen and (max-device-width: 1200px) {
-  #page-two {
-    height: 80vh; } }
+@media screen and (max-width: 1200px) {
+  #pageTwo {
+    height: 170vh; }
+    #pageTwo .bookingPanel {
+      height: 1180px !important; }
+
+  #navbar {
+    margin: 0;
+    border: 0;
+    background: #fff;
+    padding: 1em;
+    width: 100vh; }
+
+  #pageFour {
+    height: 65vh; }
+
+  .bigLogo {
+    display: none !important; }
+
+  #navigation {
+    padding: 1em 2em 1em 2em; }
+
+  #headerBusiness {
+    height: 50vh; }
+
+  #packages {
+    height: auto;
+    padding: 3em 0 2em 0; }
+    #packages .packageImage {
+      margin: auto;
+      width: 100%; }
+    #packages p {
+      margin-top: 2em; }
+
+  #whereAreWe .rightSideMaps {
+    padding: 5em 2em 0 2em; }
+
+  #headerTouristAttraction .panelHeaderTouristAttraction {
+    height: 15vh;
+    width: auto; }
+
+  #weddings {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #birthdays {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #footer {
+    height: auto; }
+    #footer .rightPanel {
+      padding-left: 5vh; } }
+@media screen and (max-width: 992px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #headerBusiness {
+    height: 55vh; }
+
+  #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+    height: 12vh; } }
+@media screen and (max-width: 768px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #touristAttraction {
+    height: 65vh; }
+    #touristAttraction .leftSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left;
+      margin-bottom: 2em; }
+    #touristAttraction .rightSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left; }
+
+  #pageFour {
+    height: auto;
+    padding-bottom: 2em; }
+    #pageFour .aboutUsParagraph {
+      padding: 0 1em 0 1em; }
+
+  #footer .rightPanel {
+    padding-left: 5vh; } }
+@media screen and (max-width: 588px) {
+  #pageTwo {
+    height: 180vh; }
+
+  #whereAreWe {
+    height: 55vh; } }
 
 /*# sourceMappingURL=media.css.map */

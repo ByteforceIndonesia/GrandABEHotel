@@ -26,46 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 <div class="wrapper">
-		<nav class="navbar navbar-toggleable-lg navbar-light bg-faded bigLogoNav" id="navigation" >
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-10">
-					<h1>Grand ABE <strong>Hotel</strong></h1>
-				</div>
-				<div class="col-lg-2">
-					<img src="<?php echo base_url() . 'assets/images/logo.png'?>" alt="">
-				</div>
-			</div>
-		<div class="row">
-		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-			  <div class="collapse navbar-collapse" id="navbar">
-				<ul class="navbar-nav">
-					<li class="active nav-item">
-						<a class="nav-link" href="<?php echo base_url() ?>">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('rooms') ?>">Rooms</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('location') ?>">Location</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		</div>
-		</nav>
-
 		<!-- navbar -->
-	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded noLogoNav" id="navigation">
-	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded" id="navigation">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>
@@ -89,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</ul>
 		</div>
 	</nav>
+
 	<!-- Parallax -->
 	<section id="firstPage">
 		<div id="parallax">

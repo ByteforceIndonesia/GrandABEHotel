@@ -8,11 +8,11 @@ Error: Undefined variable: "$primary-color".
 8: 	height:40vh;
 9: 	width:100%;
 10: 	background: $primary-color;
-11: 
-12: 	.rightSideMaps
-13: 	{
-14: 		color:$font-primary;
-15: 		padding-top:4em;
+11: 	font-weight: 300;
+12: 
+13: 	.rightSideMaps
+14: 	{
+15: 		color:$font-primary;
 
 Backtrace:
 /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/location.scss:10
@@ -62,4 +62,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primary-color\".\A         on line 10 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/location.scss\A \A 5: \A 6: #whereAreWe\A 7: {\A 8: 	height:40vh;\A 9: 	width:100%;\A 10: 	background: $primary-color;\A 11: \A 12: 	.rightSideMaps\A 13: 	{\A 14: 		color:$font-primary;\A 15: 		padding-top:4em;"; }
+  content: "Error: Undefined variable: \"$primary-color\".\A         on line 10 of /Applications/XAMPP/xamppfiles/htdocs/GrandABEHotel/assets/scss/location.scss\A \A 5: \A 6: #whereAreWe\A 7: {\A 8: 	height:40vh;\A 9: 	width:100%;\A 10: 	background: $primary-color;\A 11: 	font-weight: 300;\A 12: \A 13: 	.rightSideMaps\A 14: 	{\A 15: 		color:$font-primary;"; }

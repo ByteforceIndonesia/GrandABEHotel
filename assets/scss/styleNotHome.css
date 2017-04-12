@@ -6,13 +6,6 @@
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
-@media screen and (max-device-width: 1200px) {
-  #page-two {
-    height: 80vh; } }
-/* ----------------------------
----- ByteForce Indonesia ------
------- Grand ABE's Website -------
------------------------------*/
 #headerRooms {
   height: 30vh; }
   #headerRooms .panelHeaderRooms {
@@ -51,7 +44,8 @@
 #roomDetails .room {
   height: 40vh;
   margin: 2em 0 2em 0;
-  padding-top: 3em; }
+  padding-top: 3em;
+  font-weight: 300; }
   #roomDetails .room .picPanelRooms {
     height: 30vh; }
     #roomDetails .room .picPanelRooms .imgRoom {
@@ -71,7 +65,8 @@
 ------ Grand ABE's Website ----
 -----------------------------*/
 #headerBusinessandMeetings {
-  height: 0vh; }
+  height: 0vh;
+  font-weight: 300; }
   #headerBusinessandMeetings .panelHeaderBusinessMeetings {
     z-index: 1000;
     width: 90%;
@@ -90,14 +85,16 @@
   height: 40vh;
   width: 100%;
   background: #272c2d;
-  color: #fff; }
+  color: #fff;
+  font-weight: 300; }
   #headerBusiness p {
     margin-top: 2em; }
 
 #packages {
   height: 40vh;
   width: 100%;
-  padding: 3em 0 2em 4em; }
+  padding: 3em 0 2em 4em;
+  font-weight: 300; }
   #packages .packageImage {
     margin-left: 3em;
     height: 30vh;
@@ -124,7 +121,8 @@
 #whereAreWe {
   height: 40vh;
   width: 100%;
-  background: #272c2d; }
+  background: #272c2d;
+  font-weight: 300; }
   #whereAreWe .rightSideMaps {
     color: #fff;
     padding-top: 4em; }
@@ -138,10 +136,10 @@
 #headerTouristAttraction {
   width: 100%; }
   #headerTouristAttraction .panelHeaderTouristAttraction {
-    height: 15vh;
+    height: 12vh;
     background: #fff;
     margin-top: -7vh;
-    padding: 1.5em 0 0 2.4em;
+    padding: 1.7em 0 0 2em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
     #headerTouristAttraction .panelHeaderTouristAttraction h1 {
       font-size: 42px;
@@ -149,7 +147,15 @@
 
 #touristAttraction {
   margin-top: 10vh;
-  height: 38vh; }
+  height: 45vh; }
+  #touristAttraction .leftSideTourist {
+    width: 50%;
+    padding: 0 2em 0 2em;
+    float: left; }
+  #touristAttraction .rightSideTourist {
+    width: 50%;
+    padding: 0 2em 0 2em;
+    float: left; }
   #touristAttraction .touristLeft h1 {
     font-weight: 400;
     border-bottom: 1px solid #000;
@@ -159,7 +165,9 @@
     margin-top: 3em;
     text-align: justify; }
   #touristAttraction .imageTourist {
-    height: 30vh; }
+    height: 30vh;
+    width: 100%;
+    background-size: cover; }
   #touristAttraction button .slick-prev, #touristAttraction button .slick-next, #touristAttraction button .slick-arrow {
     color: #000;
     background: #000; }
@@ -188,7 +196,8 @@
     font-weight: 300;
     color: #fff;
     border-bottom: 1px solid #fff;
-    width: 40%;
+    width: 100%;
+    padding-bottom: 10px;
     padding-left: 0.2em; }
   #weddings .panelWedding p {
     color: #fff;
@@ -207,6 +216,7 @@
     border-bottom: 1px solid #fff;
     width: 100%;
     padding-left: 0.2em;
+    padding-bottom: 10px;
     text-align: right; }
   #birthdays .panelBirthday p {
     color: #fff;
@@ -215,7 +225,8 @@
 body {
   margin: 0;
   padding: 0;
-  text-align: justify; }
+  text-align: justify;
+  font-family: 'helvetica'; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -226,6 +237,9 @@ body {
 
 .fixed {
   background-color: #fff !important; }
+
+.noLogoNav {
+  display: none !important; }
 
 #navigation {
   border: 0;
@@ -304,5 +318,120 @@ body {
     #footer .rightPanel p {
       font-size: 14px;
       font-weight: 40; }
+
+@media screen and (max-width: 1200px) {
+  #pageTwo {
+    height: 170vh; }
+    #pageTwo .bookingPanel {
+      height: 1180px !important; }
+
+  #navbar {
+    margin: 0;
+    border: 0;
+    background: #fff;
+    padding: 1em;
+    width: 100vh; }
+
+  #pageFour {
+    height: 65vh; }
+
+  .bigLogo {
+    display: none !important; }
+
+  #navigation {
+    padding: 1em 2em 1em 2em; }
+
+  #headerBusiness {
+    height: 50vh; }
+
+  #packages {
+    height: auto;
+    padding: 3em 0 2em 0; }
+    #packages .packageImage {
+      margin: auto;
+      width: 100%; }
+    #packages p {
+      margin-top: 2em; }
+
+  #whereAreWe .rightSideMaps {
+    padding: 5em 2em 0 2em; }
+
+  #headerTouristAttraction .panelHeaderTouristAttraction {
+    height: 15vh;
+    width: auto; }
+
+  #weddings {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #birthdays {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #footer {
+    height: auto; }
+    #footer .rightPanel {
+      padding-left: 5vh; } }
+@media screen and (max-width: 992px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #headerBusiness {
+    height: 55vh; }
+
+  #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+    height: 12vh; } }
+@media screen and (max-width: 768px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #touristAttraction {
+    height: 65vh; }
+    #touristAttraction .leftSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left;
+      margin-bottom: 2em; }
+    #touristAttraction .rightSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left; }
+
+  #pageFour {
+    height: auto;
+    padding-bottom: 2em; }
+    #pageFour .aboutUsParagraph {
+      padding: 0 1em 0 1em; }
+
+  #footer .rightPanel {
+    padding-left: 5vh; } }
+@media screen and (max-width: 588px) {
+  #pageTwo {
+    height: 180vh; }
+
+  #whereAreWe {
+    height: 55vh; } }
 
 /*# sourceMappingURL=styleNotHome.css.map */
