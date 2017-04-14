@@ -2,13 +2,21 @@
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+@media screen and (max-device-width: 1200px) {
+  #page-two {
+    height: 80vh; } }
 body {
   margin: 0;
   padding: 0; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
-  height: 100%; }
+  height: 100%;
+  z-index: 10000; }
 
 .fixed {
   transition: all .2s ease-in-out;
@@ -52,9 +60,8 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../images/home_large.jpg");
-  background-size: cover;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
   #firstPage .logoName {
     margin-top: 3em; }
     #firstPage .logoName h1 {
@@ -75,6 +82,14 @@ body {
       background: transparent; }
     #firstPage .homeLine button:hover {
       opacity: 1; }
+  #firstPage #parallax {
+    background: url("../images/home_large.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1000;
+    position: absolute;
+    top: 0; }
 
 #pageTwo {
   min-height: 60vh;
@@ -91,7 +106,7 @@ body {
           font-weight: 500; }
     #pageTwo #booking .bookingPanel {
       width: 80%;
-      height: 35vh;
+      height: 300px;
       background: #fff;
       margin-top: 3em;
       box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75);
@@ -225,7 +240,7 @@ body {
 
 #footer {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   overflow: hidden; }
   #footer .leftPanel {
     background: #272c2d;

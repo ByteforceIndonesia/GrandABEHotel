@@ -1,5 +1,229 @@
-/* ----------------------------
----- ByteForce Indonesia ------
------- Grand ABE's Website -------
------------------------------*/
+@media screen and (max-width: 1200px) 
+{ 
+	//For Home
+	#pageTwo
+	{
+		height:145vh;
 
+		.bookingPanel
+		{
+			height:1180px !important;
+		}
+	}
+
+	.bigLogoNav
+	{
+		display:none !important;
+	}
+
+	.noLogoNav
+	{
+		display:block !important;
+	}
+
+	#navigation
+	{
+		padding:1em 2em 1em 2em;
+	}
+
+	#headerBusiness
+	{
+		height:50vh;
+	}
+
+	#packages
+	{
+		height:auto;
+		padding: 3em 0 2em 0;
+
+		.packageImage
+		{
+			margin: auto;
+			width:100%;
+		}
+
+		p
+		{
+			margin-top:2em;
+		}
+	}
+
+	#whereAreWe
+	{
+		.rightSideMaps
+		{
+			padding:5em 2em 0 2em;
+		}
+	}
+
+	#headerTouristAttraction
+	{
+		.panelHeaderTouristAttraction
+		{
+			height: 15vh;
+			width:auto;
+		}
+	}	
+
+	#weddings
+	{
+		padding-left:2em;
+		padding-right:2em;
+	}
+
+	#birthdays
+	{
+		padding-left:2em;
+		padding-right:2em;
+	}
+
+	// Global
+	#footer
+	{
+		height: auto;
+
+		.rightPanel
+		{
+			padding-left: 5vh;
+		}
+	}
+}
+
+@media screen and (max-width: 992px)
+{
+	#headerRooms
+	{
+		.panelHeaderRooms
+		{
+			height:25vh;
+			padding-top:2.5em;
+		}
+	}
+
+	#roomDetails
+	{
+		.room
+		{
+			height:65vh;
+			font-weight: 300;
+
+			p
+			{
+				margin-top:2em;
+			}
+
+			.picPanelRooms
+			{
+				.imgRoom
+				{
+					margin:auto;
+				}
+			}
+
+			.headerPanelRoomText
+			{
+				padding:0 2vh 0 2vh;
+			}
+		}
+	}
+
+	#headerBusiness
+	{
+		height:55vh;
+	}
+
+	#headerBusinessandMeetings
+	{
+		.panelHeaderBusinessMeetings
+		{
+			height:12vh;
+		}
+	}
+}
+
+@media screen and (max-width:768px)
+{
+
+	#headerRooms
+	{
+		.panelHeaderRooms
+		{
+			height:25vh;
+			padding-top:2.5em;
+		}
+	}
+
+	#roomDetails
+	{
+		.room
+		{
+			height:65vh;
+			font-weight: 300;
+
+			p
+			{
+				margin-top:2em;
+			}
+
+			.picPanelRooms
+			{
+				.imgRoom
+				{
+					margin:auto;
+				}
+			}
+
+			.headerPanelRoomText
+			{
+				padding:0 2vh 0 2vh;
+			}
+		}
+	}
+
+	#touristAttraction
+	{
+		height:65vh;
+
+		.leftSideTourist
+		{
+			width:100%;
+			padding:0 2em 0 2em;
+			float:left;
+			margin-bottom: 2em;
+		}
+
+		.rightSideTourist
+		{
+			width:100%;
+			padding:0 2em 0 2em;
+			float:left;
+		}
+	}
+
+	#pageFour
+	{
+		height: auto;
+		padding-bottom:2em;
+
+		.aboutUsParagraph
+		{
+			padding: 0 1em 0 1em;
+		}
+	}
+
+	#footer
+	{
+		.rightPanel
+		{
+			padding-left: 5vh;
+		}
+	}
+}
+
+@media screen and(max-width:510px)
+{
+	#whereAreWe
+	{
+		height:55vh;
+	}
+}

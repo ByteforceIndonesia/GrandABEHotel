@@ -12,40 +12,86 @@
 <section id="headerBusiness">
 	<div class="row">
 		<div class="col-lg-12">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla. Fusce pellentesque diam ante, at placerat velit vehicula gravida. Suspendisse pharetra ullamcorper laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris vitae porttitor ex. Vestibulum ac tortor congue, pellentesque diam non, congue magna.
-			</p>
-
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla. Fusce pellentesque diam ante, at placerat velit vehicula gravida. Suspendisse pharetra ullamcorper laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris vitae porttitor ex. Vestibulum ac tortor congue, pellentesque diam non, congue magna.
-			</p>
+			<?php echo $bnm->ta_bnmPageDesc ?>
 		</div>
 	</div>
 </section>
 
+<!-- DESIGN ini masih blom bener jona -->
 <section id="packages">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-5">
-				<div class="packageImage">
-					&nbsp
+		<?php
+			if(!empty($packages)){
+				foreach($packages as $package){
+		?>
+			<div class="row">
+				<div class="col-xl-5">
+					<div class="packageImage" 
+					style="background-image:url('<?php echo base_url().'assets/images/uploads/packages/'.$package->image;?>');
+						background-size: contain;
+						background-repeat: no-repeat;
+					">
+					
+						&nbsp
+					</div>
 				</div>
+				<div class="col-xl-5">
+					<h1><?php echo $package->name?></h1>
+					<?php echo $package->description?>
+				</div>
+				<div class="col-xl-2">&nbsp</div>
 			</div>
-			<div class="col-lg-5">
-				<h1>Packages</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla.
-				</p>
-			</div>
-			<div class="col-lg-2">&nbsp</div>
-		</div>
+
+		<?php
+				}
+			}
+
+		?>
+		
 	</div>
 </section>
 
 <section id="carousel">
-	<div class="container">
-		<div class="row">
-			<!-- TO:DO CONTAINER -->
+		<div id="imgCarousel" class="carousel slide" data-ride="carousel" height="100%">
+			<ol class="carousel-indicators">
+		      <?php
+		      	if(!empty($images)){
+		      		echo '<li data-target="#imgCarousel" data-slide-to="0" class="active"></li>';
+		      		for ($i=1; $i <count($images) ; $i++) { 
+		      			echo'<li data-target="#imgCarousel" data-slide-to="'.$i.'"></li>';
+		      		}
+		      	}
+		      ?>
+   			</ol>
+   			<!-- //DESIGN halp, gmbrnya bingung gw jona -->
+			<div class="carousel-inner" role="listbox">
+			<?php
+				if(!empty($images))	{
+					echo'
+					<div class="item active" style="height:40vh;">
+				
+						<img src="'.base_url().'assets/images/uploads/bnmImages/'.$images[0]->image .'" style="height: 100%;" >
+						
+					</div>
+					';
+					for ($i=1; $i <count($images) ; $i++) { 
+		      			echo '
+		      				<div class="item" style="height:40vh;">
+		      				
+									<img src="'.base_url().'assets/images/uploads/bnmImages/'.$images[$i]->image .'" style="height: 100%;">
+							
+							</div>
+		      			';
+		      		}
+				}
+			?>
+				<a class="left carousel-control" href="#imgCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#imgCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				</a>
+   			</div>
 		</div>
-	</div>
 </section>

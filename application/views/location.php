@@ -6,24 +6,24 @@
 <script src="<?php echo base_url() . JS_DIR . '/photostack.js' ?>"></script>
 <script src="<?php echo base_url() . JS_DIR . '/slick.min.js' ?>"></script>
 
+<!--//DESIGN ini di tmpt gw terlalu kiri, ga kliatan jona -->
 <section id="whereAreWe">
 	<div class="row">
-		<div class="col-lg-5">
+		<div class="col-xl-5">
 			<div class="mapsWrapper">
 				
 			</div>
 		</div>
-		<div class="col-lg-5">
+		<div class="col-xl-5">
 			<div class="rightSideMaps">
 				<h1>Where Are We</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla. Fusce pellentesque diam ante, at placerat velit vehicula gravida.
-				</p>
+				<?php echo $headerLocation->ta_where; ?>
 			</div>
 		</div>
 	</div>
 </section>
 
+<!-- //DESIGN Probably trlalu ke bwh -->
 <section id="headerTouristAttraction">
 	<div class="row">
 		<div class="col-lg-6">&nbsp</div>
@@ -36,70 +36,56 @@
 </section>
 
 <section id="touristAttraction" class="container">
-	<div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
-			<div class="touristLeft">
-				<h1>Pantai APEL</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla. Fusce pellentesque diam ante, at placerat velit vehicula gravida. Suspendisse pharetra ullamcorper laoreet. 
-				</p>
-			</div>
-		</div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
-			<div class="imageTourist" 
-				 style="background:url('<?php echo base_url() . IMAGES_DIR . '/home_large.jpg' ?>')
-				 ">&nbsp</div>
-		</div>
-	</div>
+	<?php
+		if(!empty($locations)){
+			foreach ($locations as $location) {
+				echo'
+				<div>
+					<div class="col-lg-1"></div>
+					<div class="col-lg-5">
+						<div class="touristLeft">
+							<h1>'.$location->name.'</h1>'.
+								$location->description.'
+						</div>
+					</div>
+					<div class="col-lg-1"></div>
+					<div class="col-lg-5">
+						<div class="imageTourist" 
+							 style="background:url(\''. base_url() .'assets/images/uploads/locations/' . $location->image.'\');
+							 ">&nbsp</div>
+					</div>
+				</div>
 
-	<div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
-			<div class="touristLeft">
-				<h1>Pantai Hotelkamp</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla. Fusce pellentesque diam ante, at placerat velit vehicula gravida. Suspendisse pharetra ullamcorper laoreet. 
-				</p>
-			</div>
-		</div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-5">
-			<div class="imageTourist" 
-				 style="background:url('<?php echo base_url() . IMAGES_DIR . '/home_large.jpg' ?>')
-				 ">&nbsp</div>
-		</div>
-	</div>
+				';
+			}
+		}
+	?>
 </section>
 
 <section id="scattered">
 	<section id="photostack-2" class="photostack photostack-start">
 		<div>
-			<figure>
-				<a href="http://goo.gl/49lN3k" class="photostack-img"><img src="<?php echo base_url () . IMAGES_DIR ?>/scattered/1.jpg" alt="img01"/></a>
-				<figcaption>
-					<h2 class="photostack-title">Heaven of time</h2>
-					<div class="photostack-back">
-						<p>What might be right for you may not be right for some. And we know Flipper lives in a world full of wonder flying there-under under the sea.</p>
-					</div>
-				</figcaption>
-			</figure>
-			<figure>
-				<a href="http://goo.gl/NJ1Dhf" class="photostack-img"><img src="<?php echo base_url () . IMAGES_DIR ?>/scattered/2.jpg" alt="img02"/></a>
-				<figcaption>
-					<h2 class="photostack-title">Speed Racer</h2>
-				</figcaption>
-			</figure>
-			<figure data-shuffle-iteration="2">
-				<a href="http://goo.gl/Qw3ND4" class="photostack-img"><img src="<?php echo base_url () . IMAGES_DIR ?>/scattered/3.jpg" alt="img03"/></a>
-				<figcaption>
-					<h2 class="photostack-title">Serenity Beach</h2>
-					<div class="photostack-back">
-						<p>I have never been to a place so serene in my entire life before. Swimming in clear waters opened my mind to nature and reminded me of my and <span>eveybody</span> everybody else's mortality.</p>
-					</div>
-				</figcaption>
-			</figure>
+			<?php 
+				if(!empty($photos)){
+					foreach ($photos as $photo) {
+						echo'
+							<figure>
+								<a href="'.$photo->link.'" class="photostack-img"><img src="'. base_url ().'assets/images/uploads/locationPhotos/'.$photo->photo .'" alt="img01"/></a>
+								<figcaption>
+									<h2 class="photostack-title">'.$photo->title.'</h2>
+									<div class="photostack-back">
+										'.$photo->caption.'
+									</div>
+								</figcaption>
+							</figure>			
+						';
+
+
+					}
+				}
+
+			?>
+			
 		</div>
 	</section>
 </section>

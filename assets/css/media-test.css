@@ -1,0 +1,12 @@
+@media screen and (max-width: 1200px) 
+{ 
+	#page-two
+	{
+		height:80vh;
+	}
+
+	body
+	{
+		margin-top: 100px;
+	}
+}

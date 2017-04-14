@@ -1,0 +1,126 @@
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+
+#headerRooms
+{
+	height:30vh;
+
+	.panelHeaderRooms
+	{
+		z-index:1000;
+		width:100%;
+		height:30vh;
+		margin-top:-10vh;
+		background:$secondary-color;
+		padding:1em 2em 1em 2em;
+		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
+
+		p
+		{
+			margin-top: 2em;
+		}
+	}
+	
+}
+
+#roomDetails
+{
+	.room:nth-child(1)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(2)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(3)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(4)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(5)
+	{
+		.imgRoom
+		{
+			background:url('../images/bedAbout.jpg');
+			background-size:cover;
+		}
+	}
+
+	.room:nth-child(odd)
+	{
+		background:$secondary-color;
+		
+	}
+
+	.room:nth-child(even)
+	{
+		background:$primary-color;
+		color:#fff;
+
+		.headerPanelRoomText
+		{
+			h3
+			{
+				border-bottom: 2px solid #fff;
+			}
+		}
+	}
+
+	.room
+	{
+		height:40vh;
+		margin:2em 0 2em 0;
+		padding-top: 3em;
+
+		.picPanelRooms
+		{
+			height:30vh;
+
+			.imgRoom
+			{
+				height:100%;
+				width:60%;
+				margin-left:30%;
+			}
+		}
+
+		.headerPanelRoomText
+		{
+			h3
+			{
+				font-size: 38px;
+				font-weight: 400;
+				border-bottom: 2px solid #000;
+				width:60%;
+				padding-left:0.2em;
+				padding-bottom:0.2em;
+			}
+		}
+	}
+}

@@ -8,6 +8,7 @@
 	height:40vh;
 	width:100%;
 	background: $primary-color;
+	font-weight: 300;
 
 	.rightSideMaps
 	{
@@ -34,10 +35,10 @@
 
 	.panelHeaderTouristAttraction
 	{
-		height:15vh;
+		height:12vh;
 		background:$secondary-color;
 		margin-top:-7vh;
-		padding:1.5em 0 0 2.4em;
+		padding:1.7em 0 0 2em;
 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
 
 		h1
@@ -51,7 +52,21 @@
 #touristAttraction
 {
 	margin-top:10vh;
-	height:38vh;
+	height:45vh;
+
+	.leftSideTourist
+	{
+		width:50%;
+		padding:0 2em 0 2em;
+		float:left;
+	}
+
+	.rightSideTourist
+	{
+		width:50%;
+		padding:0 2em 0 2em;
+		float:left;
+	}
 
 	.touristLeft
 	{
@@ -73,6 +88,8 @@
 	.imageTourist
 	{
 		height:30vh;
+		width:100%;
+		background-size: cover;
 	}
 	
 	button

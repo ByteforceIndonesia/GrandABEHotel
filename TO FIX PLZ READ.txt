@@ -1,0 +1,39 @@
+TESTED ON ZOOM 100%, Resolution 1366x768
+css sblum update ke tmpt lu gw taro di css backup
+
+Home.php
+	Navbar, styling ga jln di sini
+	booking field, kalo xl di tmpt gw fix rusak, ke bawah smua
+	gambar yg di kiri, penempatannya kurang
+	penjelasan + logo yg si sblh kanan gambar, penempatan jg
+
+rooms.php
+	OK
+
+businessandmeetings.php
+	section package, ga nampung semua item, overflow hidden
+
+location.php
+	where are we, ga ada margin, tulisan terlalu kiri
+	tulisan <h1> tourist attractions hampir kluar kotak
+
+weddingsandbirthdays.php
+	welp, better see 4 urself lol. Itu setelah ambil data dr db jd kyk gitu
+
+footer
+	OK
+
+//Backend Note
+
+Buka CMS: http://localhost:8080/grandabehotel/admin/
+email	: admin@admin.com
+password	: password
+
+Potential Problems	
+
+controller
+	email.php
+		smtp_host ga tau supaya dynamic gmn
+	
+	//TESTING
+		Coba tes CMSnya deh

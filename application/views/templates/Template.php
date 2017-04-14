@@ -7,14 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<!-- Title -->
 	<title><?php echo $page_title ?></title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'styleNotHome.css' ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">
-	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap-theme.min.css' ?>">
 
 	<!-- JS -->
 	<script src="<?php echo base_url() . JS_DIR . 'jquery-3.1.1.min.js' ?>"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'bootstrap.min.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'jquery.waypoints.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'main.js' ?>"></script>
@@ -69,7 +69,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<!-- Parallax -->
 	<section id="firstPage">
-		<div id="parallax">
+		<div id="parallax"
+		style="
+		<?php if(!empty($main->background))
+			echo 'style="background-image:url(\''. base_url() .'assets/images/uploads/background/'.$main->background.'\' );"'
+		?>
+		"
+		>
 			<div class="darkerFilter"></div>
 		</div>
 	</section>
@@ -81,26 +87,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<section id="footer">
 		<div class="row">
 			<div class="col-lg-5 leftPanel">
-				<h4>Footer Grand Abe</h4>
-				<p>
-					Donec accumsan ultricies vehicula. Vestibulum malesuada egestas leo, vel iaculis magna vestibulum ac. Donec vitae posuere risus. Nullam rutrum elementum sollicitudin. Mauris gravida arcu dui, ac sollicitudin orci bibendum eget. Donec quis tincidunt lacus. Suspendisse scelerisque tellus vel nunc imperdiet, sed bibendum lacus consectetur.
-				</p>
+
+				<h4><?php echo $footer->ta_footerTitle?></h4>
+				<?php echo $footer->ta_footerContent?>
 			</div>
-			<div class="col-lg-7 rightPanel">
+			<div class="col-lg-7 rightPanel row">
 				<div class="col-lg-4">
 					<h4>Address</h4>
-					<p>
-						Donec accumsan ultricies vehicula. Vestibulum malesuada egestas leo, vel iaculis magna vestibulum ac. Donec vitae posuere risus. Nullam rutrum elementum sollicitudin.
-					</p>
+					<?php echo $footer->ta_addressContent?>
+					
 				</div>
 				<div class="col-lg-4">
 					<h4>Newsletter</h4>
-					<p>Sign Up for latest news</p>
+					<?php echo $footer->ta_newsletterContent?>
 				</div>
 				<div class="col-lg-4">
 					<h4>Contact Us</h4>
-					<p>FB</p>
-					<p>Instagram</p>
+					<?php foreach ($contacts as $contact) {
+						echo '<a href="'.$contact->link.'"><p>'.$contact->socialmedia.'</p></a>';
+					}?>
+					
 				</div>
 			</div>
 		</div>

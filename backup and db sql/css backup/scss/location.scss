@@ -1,0 +1,104 @@
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+
+#whereAreWe
+{
+	height:40vh;
+	width:100%;
+	background: $primary-color;
+
+	.rightSideMaps
+	{
+		color:$font-primary;
+		padding-top:4em;
+
+		h1
+		{
+			border-bottom:1px solid $font-primary;
+			width:50%;
+			font-weight: 400;
+		}
+
+		p
+		{
+			margin-top:3em;
+		}
+	}
+}
+
+#headerTouristAttraction
+{
+	width:100%;
+
+	.panelHeaderTouristAttraction
+	{
+		height:15vh;
+		background:$secondary-color;
+		margin-top:-7vh;
+		padding:1.5em 0 0 2.4em;
+		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
+
+		h1
+		{
+			font-size: 42px;
+			font-weight: 300;
+		}
+	}
+}
+
+#touristAttraction
+{
+	margin-top:10vh;
+	height:38vh;
+
+	.touristLeft
+	{
+		h1
+		{
+			font-weight: 400;
+			border-bottom:1px solid #000;
+			width:75%;
+			padding-left:0.2em;
+		}
+
+		p
+		{
+			margin-top: 3em;
+			text-align: justify;
+		}
+	}
+
+	.imageTourist
+	{
+		height:30vh;
+	}
+	
+	button
+	{
+
+		.slick-prev, .slick-next, .slick-arrow
+		{
+			color:#000;
+			background:#000;
+
+		}
+		
+	}
+}
+
+#scattered
+{
+	padding-top: -10em;
+	height:60vh;
+	overflow: hidden;
+	width:100%;
+	background: $primary-color;
+
+	#photostack-2
+	{
+		height:60vh;
+		background:$primary-color;
+	}
+}

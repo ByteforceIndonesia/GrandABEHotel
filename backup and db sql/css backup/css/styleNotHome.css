@@ -1,0 +1,426 @@
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+#headerRooms {
+  height: 30vh; }
+  #headerRooms .panelHeaderRooms {
+    z-index: 1000;
+    width: 100%;
+    height: 30vh;
+    margin-top: -10vh;
+    background: #fff;
+    padding: 1em 2em 1em 2em;
+    box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
+    #headerRooms .panelHeaderRooms p {
+      margin-top: 2em; }
+
+#roomDetails .room:nth-child(1) .imgRoom {
+  background: url("../images/bedAbout.jpg");
+  background-size: cover; }
+#roomDetails .room:nth-child(2) .imgRoom {
+  background: url("../images/bedAbout.jpg");
+  background-size: cover; }
+#roomDetails .room:nth-child(3) .imgRoom {
+  background: url("../images/bedAbout.jpg");
+  background-size: cover; }
+#roomDetails .room:nth-child(4) .imgRoom {
+  background: url("../images/bedAbout.jpg");
+  background-size: cover; }
+#roomDetails .room:nth-child(5) .imgRoom {
+  background: url("../images/bedAbout.jpg");
+  background-size: cover; }
+#roomDetails .room:nth-child(odd) {
+  background: #fff; }
+#roomDetails .room:nth-child(even) {
+  background: #272c2d;
+  color: #fff; }
+  #roomDetails .room:nth-child(even) .headerPanelRoomText h3 {
+    border-bottom: 2px solid #fff; }
+#roomDetails .room {
+  height: 40vh;
+  margin: 2em 0 2em 0;
+  padding-top: 3em;
+  font-weight: 300; }
+  #roomDetails .room .picPanelRooms {
+    height: 30vh; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      height: 100%;
+      width: 60%;
+      margin-left: 30%; }
+  #roomDetails .room .headerPanelRoomText h3 {
+    font-size: 38px;
+    font-weight: 400;
+    border-bottom: 2px solid #000;
+    width: 60%;
+    padding-left: 0.2em;
+    padding-bottom: 0.2em; }
+
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website ----
+-----------------------------*/
+#headerBusinessandMeetings {
+  height: 0vh;
+  font-weight: 300; }
+  #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+    z-index: 1000;
+    width: 90%;
+    height: 15vh;
+    margin-top: -5vh;
+    background: #fff;
+    padding: 2em 1em 1em 0em;
+    box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
+    #headerBusinessandMeetings .panelHeaderBusinessMeetings h1 {
+      margin-left: 1em;
+      font-weight: 300;
+      font-size: 42px; }
+
+#headerBusiness {
+  padding: 12vh 5em 0 5em;
+  height: 40vh;
+  width: 100%;
+  background: #272c2d;
+  color: #fff;
+  font-weight: 300; }
+  #headerBusiness p {
+    margin-top: 2em; }
+
+#packages {
+  /*height: 80vh;*/
+  width: 100%;
+  padding: 3em 0 2em 4em;
+  font-weight: 300; }
+  #packages .packageImage {
+    margin-left: 3em;
+    height: 30vh;
+    width: 40vh;
+  }
+  #packages h1 {
+    font-size: 42px;
+    font-weight: 400;
+    padding-left: 0.2em;
+    padding-bottom: 0.1em;
+    border-bottom: 2px solid #000;
+    width: 40%;
+    margin-top: 1em; }
+
+#carousel {
+  background: #272c2d;
+  width: 100%;
+  height: 80vh; }
+
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+#whereAreWe {
+  height: 40vh;
+  width: 100%;
+  background: #272c2d;
+  font-weight: 300; }
+  #whereAreWe .rightSideMaps {
+    color: #fff;
+    padding-top: 4em; }
+    #whereAreWe .rightSideMaps h1 {
+      border-bottom: 1px solid #fff;
+      width: 50%;
+      font-weight: 400; }
+    #whereAreWe .rightSideMaps p {
+      margin-top: 3em; }
+
+#headerTouristAttraction {
+  width: 100%; }
+  #headerTouristAttraction .panelHeaderTouristAttraction {
+    height: 12vh;
+    background: #fff;
+    margin-top: -7vh;
+    padding: 1.5em 0 0 2em;
+    box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
+    #headerTouristAttraction .panelHeaderTouristAttraction h1 {
+      font-size: 42px;
+      font-weight: 300; }
+
+#touristAttraction {
+  margin-top: 10vh;
+  height: 45vh; }
+
+  #touristAttraction .leftSideTourist {
+    width: 50%;
+    padding: 0 2em 0 2em;
+    float: left; }
+  #touristAttraction .rightSideTourist {
+    width: 50%;
+    padding: 0 2em 0 2em;
+    float: left; }
+
+  #touristAttraction .touristLeft h1 {
+    font-weight: 400;
+    border-bottom: 1px solid #000;
+    width: 75%;
+    padding-left: 0.2em; }
+  #touristAttraction .touristLeft p {
+    margin-top: 3em;
+    text-align: justify; }
+  #touristAttraction .imageTourist {
+    height: 30vh;
+    width: 100%;
+    background-size: cover; }
+  #touristAttraction button .slick-prev, #touristAttraction button .slick-next, #touristAttraction button .slick-arrow {
+    color: #000;
+    background: #000; }
+
+#scattered {
+  padding-top: -10em;
+  height: 60vh;
+  overflow: hidden;
+  width: 100%;
+  background: #272c2d; }
+  #scattered #photostack-2 {
+    height: 60vh;
+    background: #272c2d; }
+
+/* ----------------------------
+---- ByteForce Indonesia ------
+------ Grand ABE's Website -------
+-----------------------------*/
+#weddings {
+  height: 50vh;
+  width: 100%;
+  padding-top: 5em;
+  background: #272c2d; }
+  #weddings .panelWedding h1 {
+    font-size: 42px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 0.2em; }
+  #weddings .panelWedding p {
+    color: #fff;
+    padding-top: 2em;
+    width: 80%; }
+
+#birthdays {
+  height: 50vh;
+  width: 100%;
+  padding-top: 5em;
+  background: #272c2d; }
+  #birthdays .panelBirthday h1 {
+    font-size: 42px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding-left: 0.2em;
+    text-align: right; }
+  #birthdays .panelBirthday p {
+    color: #fff;
+    padding-top: 2em; }
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: justify; }
+
+.darkerFilter {
+  background: rgba(0, 0, 0, 0.4) !important;
+  height: 100%; }
+
+.wrapper {
+  overflow: hidden; }
+
+.fixed {
+  background-color: #fff !important; }
+
+.noLogoNav {
+  display: none !important; }
+
+#navigation {
+  border: 0;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+  padding: 0 2em 0 2em;
+  margin-bottom: 0;
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+  font-size: 1.5em;
+  font-weight: 300;
+  position: fixed;
+  transition: all .2s ease-in-out;
+  z-index: 1000;
+  color: #000;
+  overflow: hidden; }
+  #navigation h1 {
+    font-weight: 300;
+    width: 50%;
+    margin-top: 1em; }
+  #navigation img {
+    margin: 1em;
+    max-width: 70px; }
+  #navigation #navbar {
+    margin: 0;
+    border: 0; }
+    #navigation #navbar .in {
+      background: #fff;
+      border: 0; }
+    #navigation #navbar a {
+      color: #000;
+      background: transparent;
+      opacity: 0.8;
+      transition: all .2s ease-in-out; }
+    #navigation #navbar a:hover {
+      color: #333; }
+    #navigation #navbar ul li .active a {
+      color: #fff; }
+
+#firstPage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  transition: 0s linear;
+  transition-property: background-position; }
+  #firstPage #parallax {
+    background: url("../images/home_large.jpg");
+    background-size: cover;
+    height: 100vh; }
+
+#footer {
+  width: 100%;
+  height: 35vh;
+  overflow: hidden; }
+  #footer .leftPanel {
+    background: #272c2d;
+    color: #fff;
+    height: 40vh;
+    padding: 5vh 15vh 1em 3em; }
+    #footer .leftPanel h4 {
+      margin-bottom: 1em;
+      font-size: 32px;
+      font-weight: 300; }
+    #footer .leftPanel p {
+      font-size: 14px;
+      font-weight: 40; }
+  #footer .rightPanel {
+    padding: 5vh 2em 1em 1em; }
+    #footer .rightPanel h4 {
+      margin-bottom: 1em;
+      font-size: 32px;
+      font-weight: 300; }
+    #footer .rightPanel p {
+      font-size: 14px;
+      font-weight: 40; }
+
+@media screen and (max-width: 1200px) {
+  #pageTwo {
+    height: 145vh; }
+    #pageTwo .bookingPanel {
+      height: 1180px !important; }
+
+  .bigLogoNav {
+    display: none !important; }
+
+  .noLogoNav {
+    display: block !important; }
+
+  #navigation {
+    padding: 1em 2em 1em 2em; }
+
+  #headerBusiness {
+    height: 50vh; }
+
+  #packages {
+    height: auto;
+    padding: 3em 0 2em 0; }
+    #packages .packageImage {
+      margin: auto;
+      width: 100%; }
+    #packages p {
+      margin-top: 2em; }
+
+  #whereAreWe .rightSideMaps {
+    padding: 5em 2em 0 2em; }
+
+  #headerTouristAttraction .panelHeaderTouristAttraction {
+    height: 15vh;
+    width: auto; }
+
+  #weddings {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #birthdays {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #footer {
+    height: auto; }
+    #footer .rightPanel {
+      padding-left: 5vh; } }
+@media screen and (max-width: 992px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #headerBusiness {
+    height: 55vh; }
+
+  #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+    height: 12vh; } }
+@media screen and (max-width: 768px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #touristAttraction {
+    height: 65vh; }
+    #touristAttraction .leftSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left;
+      margin-bottom: 2em; }
+    #touristAttraction .rightSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left; }
+
+  #pageFour {
+    height: auto;
+    padding-bottom: 2em; }
+    #pageFour .aboutUsParagraph {
+      padding: 0 1em 0 1em; }
+
+  #footer .rightPanel {
+    padding-left: 5vh; } }
+@media screen and (max-width: 510px) {
+  #whereAreWe {
+    height: 55vh; } }
+/*# sourceMappingURL=styleNotHome.css.map */

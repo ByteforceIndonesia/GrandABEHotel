@@ -4,7 +4,8 @@
 -----------------------------*/
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Roboto', sans-serif !important; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -17,6 +18,8 @@ body {
   top: 0 !important;
   background: #fff !important;
   width: 100% !important; }
+  .fixed a {
+    color: #000 !important; }
 
 #navigation {
   border: 0;
@@ -33,6 +36,8 @@ body {
   position: absolute;
   transition: all .2s ease-in-out;
   z-index: 1000; }
+  #navigation .navbar-brand {
+    color: #ccc; }
   #navigation #navbar {
     margin: 0;
     border: 0; }
@@ -43,7 +48,8 @@ body {
       color: #ccc;
       background: transparent;
       opacity: 0.8;
-      transition: all .2s ease-in-out; }
+      transition: all .2s ease-in-out;
+      font-weight: 300; }
     #navigation #navbar a:hover {
       color: #333; }
     #navigation #navbar ul li .active a {
@@ -72,9 +78,11 @@ body {
       font-size: 24px;
       opacity: 0.7;
       transition: opacity .35s ease-in-out;
-      background: transparent; }
+      background: transparent;
+      color: #fff; }
     #firstPage .homeLine button:hover {
-      opacity: 1; }
+      opacity: 1;
+      cursor: pointer; }
   #firstPage #parallax {
     background: url("../images/home_large.jpg");
     background-size: cover;
@@ -85,13 +93,13 @@ body {
     top: 0; }
 
 #pageTwo {
-  min-height: 60vh;
+  height: 60vh;
   width: 100%; }
   #pageTwo #booking {
     height: 37vh;
-    background: #272c2d; }
+    background: #272c2d;
+    padding-top: 2em; }
     #pageTwo #booking .bookingNow {
-      margin-top: 5em;
       color: #fff; }
       #pageTwo #booking .bookingNow h1 {
         font-weight: 300; }
@@ -99,7 +107,7 @@ body {
           font-weight: 500; }
     #pageTwo #booking .bookingPanel {
       width: 80%;
-      height: 35vh;
+      height: 350px;
       background: #fff;
       margin-top: 3em;
       box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75);
@@ -114,7 +122,7 @@ body {
         font-weight: 300; }
       #pageTwo #booking .bookingPanel .day select {
         margin-top: 1.5em;
-        font-size: 0;
+        font-size: 10px;
         background-color: #272c2d; }
       #pageTwo #booking .bookingPanel .month #monthBig {
         margin-top: -5px;
@@ -125,7 +133,7 @@ body {
         font-weight: 300; }
       #pageTwo #booking .bookingPanel .month select {
         margin-top: 1.5em;
-        font-size: 0;
+        font-size: 10px;
         background-color: #272c2d; }
       #pageTwo #booking .bookingPanel .year #yearBig {
         margin-top: -5px;
@@ -136,7 +144,7 @@ body {
         font-weight: 300; }
       #pageTwo #booking .bookingPanel .year select {
         margin-top: 1.5em;
-        font-size: 0;
+        font-size: 10px;
         background-color: #272c2d; }
       #pageTwo #booking .bookingPanel .formBook input[type=text] {
         margin-top: 2.7em;
@@ -157,7 +165,8 @@ body {
         width: 100%;
         transition: border .35s ease-in-out; }
       #pageTwo #booking .bookingPanel .formBook input[type=submit]:hover {
-        border: 1px solid #000; }
+        border: 1px solid #000;
+        cursor: pointer; }
 
 #pageThree {
   width: 100%;
@@ -194,8 +203,9 @@ body {
       color: #fff;
       margin-left: 10px; }
   #pageFour .aboutUsParagraph {
-    margin-top: 5vh; }
+    margin-top: 2vh; }
     #pageFour .aboutUsParagraph p {
+      font-weight: 300;
       margin-top: 2em;
       color: #fff; }
 
@@ -256,5 +266,110 @@ body {
     #footer .rightPanel p {
       font-size: 14px;
       font-weight: 40; }
+
+@media screen and (max-width: 1200px) {
+  #pageTwo {
+    height: 145vh; }
+    #pageTwo .bookingPanel {
+      height: 1180px !important; }
+
+  .bigLogoNav {
+    display: none !important; }
+
+  .noLogoNav {
+    display: block !important; }
+
+  #navigation {
+    padding: 1em 2em 1em 2em; }
+
+  #headerBusiness {
+    height: 50vh; }
+
+  #packages {
+    height: auto;
+    padding: 3em 0 2em 0; }
+    #packages .packageImage {
+      margin: auto;
+      width: 100%; }
+    #packages p {
+      margin-top: 2em; }
+
+  #whereAreWe .rightSideMaps {
+    padding: 5em 2em 0 2em; }
+
+  #headerTouristAttraction .panelHeaderTouristAttraction {
+    height: 15vh;
+    width: auto; }
+
+  #weddings {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #birthdays {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  #footer {
+    height: auto; }
+    #footer .rightPanel {
+      padding-left: 5vh; } }
+@media screen and (max-width: 992px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #headerBusiness {
+    height: 55vh; }
+
+  #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+    height: 12vh; } }
+@media screen and (max-width: 768px) {
+  #headerRooms .panelHeaderRooms {
+    height: 25vh;
+    padding-top: 2.5em; }
+
+  #roomDetails .room {
+    height: 65vh;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+  #touristAttraction {
+    height: 65vh; }
+    #touristAttraction .leftSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left;
+      margin-bottom: 2em; }
+    #touristAttraction .rightSideTourist {
+      width: 100%;
+      padding: 0 2em 0 2em;
+      float: left; }
+
+  #pageFour {
+    height: auto;
+    padding-bottom: 2em; }
+    #pageFour .aboutUsParagraph {
+      padding: 0 1em 0 1em; }
+
+  #footer .rightPanel {
+    padding-left: 5vh; } }
+@media screen and (max-width: 510px) {
+  #whereAreWe {
+    height: 55vh; } }
 
 /*# sourceMappingURL=style.css.map */
