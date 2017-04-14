@@ -5,7 +5,11 @@
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   font-family: 'Roboto', sans-serif !important; }
+=======
+  font-family: 'helvetica' !important; }
+>>>>>>> origin/master
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -28,10 +32,10 @@ body {
   padding: 0 2em 0 2em;
   margin-bottom: 0;
   bottom: 0;
-  height: 5vh;
+  height: 10vh;
   width: 100%;
   border-radius: 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 300;
   position: absolute;
   transition: all .2s ease-in-out;
@@ -40,7 +44,8 @@ body {
     color: #ccc; }
   #navigation #navbar {
     margin: 0;
-    border: 0; }
+    border: 0;
+    transition: all .2s ease-in-out; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
@@ -77,12 +82,24 @@ body {
       padding: 0.3em 1em 0.3em 1em;
       font-size: 24px;
       opacity: 0.7;
+<<<<<<< HEAD
       transition: opacity .35s ease-in-out;
       background: transparent;
       color: #fff; }
     #firstPage .homeLine button:hover {
       opacity: 1;
       cursor: pointer; }
+=======
+      transition: all .35s ease-in-out;
+      background: transparent;
+      color: #fff;
+      outline: none; }
+    #firstPage .homeLine button:hover {
+      opacity: 1;
+      cursor: pointer; }
+    #firstPage .homeLine button:active {
+      border: 1px solid red; }
+>>>>>>> origin/master
   #firstPage #parallax {
     background: url("../images/home_large.jpg");
     background-size: cover;
@@ -93,7 +110,11 @@ body {
     top: 0; }
 
 #pageTwo {
+<<<<<<< HEAD
   height: 60vh;
+=======
+  height: 66vh;
+>>>>>>> origin/master
   width: 100%; }
   #pageTwo #booking {
     height: 37vh;
@@ -269,6 +290,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   #pageTwo {
+<<<<<<< HEAD
     height: 145vh; }
     #pageTwo .bookingPanel {
       height: 1180px !important; }
@@ -284,6 +306,31 @@ body {
 
   #headerBusiness {
     height: 50vh; }
+=======
+    height: 170vh; }
+    #pageTwo .bookingPanel {
+      height: 1180px !important; }
+
+  #navbar {
+    margin: 0;
+    border: 0;
+    background: #fff;
+    padding: 1em;
+    width: 100vh; }
+
+  #pageFour {
+    height: 65vh; }
+
+  .bigLogo {
+    display: none !important; }
+
+  #navigation {
+    padding: 1em 2em 1em 2em;
+    min-height: 4vh; }
+
+  #headerBusiness {
+    height: auto !important; }
+>>>>>>> origin/master
 
   #packages {
     height: auto;
@@ -298,7 +345,11 @@ body {
     padding: 5em 2em 0 2em; }
 
   #headerTouristAttraction .panelHeaderTouristAttraction {
+<<<<<<< HEAD
     height: 15vh;
+=======
+    height: auto;
+>>>>>>> origin/master
     width: auto; }
 
   #weddings {
@@ -309,6 +360,22 @@ body {
     padding-left: 2em;
     padding-right: 2em; }
 
+<<<<<<< HEAD
+=======
+  #roomDetails .room {
+    height: auto;
+    font-weight: 300;
+    padding-bottom: 2em;
+    font-weight: 300; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto;
+      margin-bottom: 2em; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 0 2vh 0 2vh; }
+
+>>>>>>> origin/master
   #footer {
     height: auto; }
     #footer .rightPanel {
@@ -320,11 +387,21 @@ body {
 
   #roomDetails .room {
     height: 65vh;
+<<<<<<< HEAD
     font-weight: 300; }
     #roomDetails .room p {
       margin-top: 2em; }
     #roomDetails .room .picPanelRooms .imgRoom {
       margin: auto; }
+=======
+    font-weight: 300;
+    padding-bottom: 1em; }
+    #roomDetails .room p {
+      margin-top: 2em; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      margin: auto;
+      margin-bottom: 1em; }
+>>>>>>> origin/master
     #roomDetails .room .headerPanelRoomText {
       padding: 0 2vh 0 2vh; }
 
@@ -339,14 +416,25 @@ body {
     padding-top: 2.5em; }
 
   #roomDetails .room {
+<<<<<<< HEAD
     height: 65vh;
+=======
+    height: auto;
+>>>>>>> origin/master
     font-weight: 300; }
     #roomDetails .room p {
       margin-top: 2em; }
     #roomDetails .room .picPanelRooms .imgRoom {
+<<<<<<< HEAD
       margin: auto; }
     #roomDetails .room .headerPanelRoomText {
       padding: 0 2vh 0 2vh; }
+=======
+      margin: auto;
+      padding-bottom: 1em; }
+    #roomDetails .room .headerPanelRoomText {
+      padding: 2em 2vh 2em 2vh; }
+>>>>>>> origin/master
 
   #touristAttraction {
     height: 65vh; }
@@ -368,8 +456,31 @@ body {
 
   #footer .rightPanel {
     padding-left: 5vh; } }
+<<<<<<< HEAD
 @media screen and (max-width: 510px) {
   #whereAreWe {
     height: 55vh; } }
+=======
+@media screen and (max-width: 588px) {
+  #footer .leftPanel {
+    height: auto; }
+
+  #headerBusiness {
+    height: auto; }
+
+  #headerBusinessandMeetings {
+    margin-bottom: 2em; }
+    #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+      height: auto; }
+
+  #pageTwo {
+    height: 180vh; }
+
+  #whereAreWe {
+    height: 55vh; }
+
+  .room {
+    height: auto; } }
+>>>>>>> origin/master
 
 /*# sourceMappingURL=style.css.map */

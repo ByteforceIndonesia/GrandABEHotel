@@ -10,6 +10,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'style.css' ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">
@@ -20,9 +24,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url() . JS_DIR . 'bootstrap.min.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'jquery.waypoints.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'main.js' ?>"></script>
-	
+	<script src="<?php echo base_url() . JS_DIR . 'parallax.min.js' ?>"></script>
+
 </head>
 <body>
+<<<<<<< HEAD
 <div class="wrapper">
 
 
@@ -59,6 +65,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</li>
 				</ul>
 			</div>
+=======
+<div class="wrapper clearfix">
+	<!-- navbar -->
+	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded" id="navigation">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>
+		  <div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav">
+				<li class="active nav-item">
+					<a class="nav-link" href="<?php echo base_url() ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('rooms') ?>">Rooms</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('location') ?>">Location</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
+				</li>
+			</ul>
+>>>>>>> origin/master
 		</div>
 	</nav> -->
 
@@ -89,7 +122,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</ul>
 		</div>
 	</nav>
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 	<?php
 			if($this->session->flashdata('mailMessage')&& $this->session->flashdata('mailMessageHeader'))
 			{
@@ -107,12 +143,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 				</div>
+<<<<<<< HEAD
 			</div>	
 
 		<script type="text/javascript">
 			$('#mailModalBox').modal('show');
 		</script>	
 
+=======
+			</div>
+
+		<script type="text/javascript">
+			$('#mailModalBox').modal('show');
+		</script>	
+
+>>>>>>> origin/master
 		<?php
 			}
 		?>
@@ -160,11 +205,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							GET YOUR <strong>BOOKING</strong> NOW
 						</h1>
 					</div>
+<<<<<<< HEAD
 					<!-- //DESIGN kalo col-lg-4 nya diganti jd col-xl-4 di tmpt gw rusak jona -->
 					<?php echo form_open('email/mail') ?>
 					<div class="bookingPanel">
 						<div class="col-lg-8">
 							<div class="col-lg-4 day">
+=======
+
+					<!-- Jeff ini formnya kemana? -->
+					<?php echo form_open('email/mail') ?>
+					<div class="bookingPanel row">
+						<div class="col-lg-8 row">
+							<div class="col-xl-4 day">
+>>>>>>> origin/master
 								<center>
 									<h5>DAY</h5>
 									<div>
@@ -180,7 +234,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</select>
 								</center>
 							</div>
-							<div class="col-lg-4 month">
+							<div class="col-xl-4 month">
 								<center>
 									<h5>MONTH</h5>
 									<div>
@@ -196,7 +250,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</select>
 								</center>
 							</div>
-							<div class="col-lg-4 year">
+							<div class="col-xl-4 year">
 								<center>
 									<h5>YEAR</h5>
 									<div>
@@ -240,7 +294,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					&nbsp
 				</div>
 			</div>
-			<div class="col-lg-7 leftAbout">
+			<div class="col-lg-7 leftAbout row">
 				<div class="col-lg-3">&nbsp</div>
 				<div class="col-lg-6">
 					<center>
@@ -274,12 +328,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	</section>
 
+<<<<<<< HEAD
 	<section id="pageFive" 
 		<?php if(!empty($home->upload_leftImage))
 			echo 'style="background-image:url(\''. base_url() .'assets/images/uploads/virtualBackground/'.$home->upload_virtualBg.'\' );"'
 		?>
 	>
 		<div class="darkerFilter wrapMe">
+=======
+	<section id="pageFive">
+		<div class="darkerFilter wrapMe row">
+>>>>>>> origin/master
 			<div class="col-lg-5">&nbsp</div>
 			<div class="col-lg-6">
 				<div class="whitePanel">
@@ -302,7 +361,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<h4><?php echo $footer->ta_footerTitle?></h4>
 				<?php echo $footer->ta_footerContent?>
 			</div>
-			<div class="col-lg-7 rightPanel">
+			<div class="col-lg-7 rightPanel row">
 				<div class="col-lg-4">
 					<h4>Address</h4>
 					<?php echo $footer->ta_addressContent?>

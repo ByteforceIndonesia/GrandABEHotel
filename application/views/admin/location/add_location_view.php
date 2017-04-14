@@ -10,7 +10,11 @@
 		<div class="col-lg-12 text-center">
 			<h3>Add Location</h3>
 		</div>
+<<<<<<< HEAD
 		<?php echo form_open_multipart('admin/location/addlocation',array('class'=>'form-horizontal')); ?>
+=======
+		<?php echo form_open('admin/location/addlocation',array('class'=>'form-horizontal')); ?>
+>>>>>>> origin/master
 
 			<div class="form-group">
 				<label for="ta_locationName" class="control-label col-sm-3">Location Name:</label>
@@ -21,23 +25,40 @@
 			</div>
 
 			<div class="form-group">
+<<<<<<< HEAD
 				<label for="upload_location" class="control-label col-sm-3">Location Image:</label>
+=======
+				<label for="upload_package" class="control-label col-sm-3">Location Image:</label>
+>>>>>>> origin/master
 				<div class="col-sm-4">	
 					<div class="input-group">
 						<label class="input-group-btn">
 							<span class="btn btn-default">
+<<<<<<< HEAD
 								Browse&hellip;  <input type="file" style="display: none;" id="upload_location" accept=".png,.jpg,.jpeg,.gif" name="upload_location">
 							</span>
 						</label>
 						<input type="text" class="form-control" name="txtlocation" readonly>
+=======
+								Browse&hellip; <input type="file" style="display: none;" multiple id="upload_location" name="upload_location">
+							</span>
+						</label>
+						<input type="text" class="form-control" readonly>
+>>>>>>> origin/master
 					</div>
 				</div>	
 				<div class="col-sm-5" >
 					<div class="imgDiv">
+<<<<<<< HEAD
 						<img src="<?php echo base_url() ?>assets/images/img_placeholder.png" id="img_location" >
 					</div>
 				</div>
 				<?php echo form_error('txtlocation','<div style="color:red;">','</div>');?>
+=======
+						<img src="<?php echo base_url() ?>assets/images/img_placeholder.png" id="img_room" >
+					</div>
+				</div>
+>>>>>>> origin/master
 				<?php echo form_error('upload_location','<div style="color:red;">','</div>');?>
 			</div>
 
@@ -54,6 +75,7 @@
 		<br>
 		<br>
 	</div>
+<<<<<<< HEAD
 </div>
 
 <script type="text/javascript">
@@ -66,3 +88,6 @@
 		img_location.src = url;
 	}
 </script>
+=======
+</div>
+>>>>>>> origin/master

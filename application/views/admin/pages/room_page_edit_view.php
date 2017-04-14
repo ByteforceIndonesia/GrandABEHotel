@@ -12,15 +12,23 @@
 			<h1>Room</h1>
 		</div>
 
+<<<<<<< HEAD
 		<?php echo form_open('admin/roompage/edit',array('class'=>'form-horizontal')); ?>
+=======
+		<?php echo form_open('roompage/edit',array('class'=>'form-horizontal')); ?>
+>>>>>>> origin/master
 
 			<div class="form-group">
 				<label for="ta_roomPageDesc" class="control-label col-sm-3">Page Description:</label>
 				<div class="col-sm-9">
+<<<<<<< HEAD
 					<textarea id="ta_roomPageDesc" name="ta_roomPageDesc">
 						<?php if(!empty($headerRoom)) echo set_value('ta_roomPageDesc', $headerRoom->ta_roomPageDesc); ?>
 					</textarea>
 					<?php echo form_error('ta_roomPageDesc','<div style="color:red;">','</div>');?>
+=======
+					<textarea id="ta_roomPageDesc" name="ta_roomPageDesc"></textarea>
+>>>>>>> origin/master
 				</div>
 			</div>
 		<?php echo form_submit('submit' , 'Save' , 'class="btn btn-primary col-lg-offset-3"');?>
@@ -49,6 +57,7 @@
 					Operations
 				</td>
 			</tr>
+<<<<<<< HEAD
 
 			<?php
 				if(!empty($rooms)){
@@ -67,6 +76,11 @@
 		</table>
 		<div class="col-lg-12">
 			<a href="<?php echo site_url('admin/roompage/createRoom');?>" class="btn btn-primary">
+=======
+		</table>
+		<div class="col-lg-12">
+			<a href="<?php echo site_url('admin/roompage/create');?>" class="btn btn-primary">
+>>>>>>> origin/master
 				Add Room
 			</a>
 		</div>

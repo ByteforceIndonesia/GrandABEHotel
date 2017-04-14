@@ -5,13 +5,17 @@
 		function __construct()
 		{
 			parent::__construct();
+<<<<<<< HEAD
 			$this->load->model('roomdata');
+=======
+>>>>>>> origin/master
 			if(!$this->ion_auth->in_group('admin'))
 			{
 				$this->session->set_flashdata('message','You are not allowed to visit the Pages page');
 				redirect('admin','refresh');
 			}
 		}
+<<<<<<< HEAD
 
 		public function roomExtCheck($file){
 			$path = $_FILES['upload_room']['name'];
@@ -33,11 +37,17 @@
 			if($result2 = $this->roomdata->getRooms()){
 				$this->data['rooms'] = $result2;
 			}
+=======
+		public function index()
+		{
+			$this->data['page_title'] = 'Room Edit';
+>>>>>>> origin/master
 			$this->render('admin/pages/room_page_edit_view');
 		}
 
 		public function edit()
 		{
+<<<<<<< HEAD
 			$result = $this->roomdata->getData();
 			$this->data['headerRoom'] = $result;
 
@@ -65,10 +75,17 @@
 		}
 
 		public function createRoom()
+=======
+			
+		}
+
+		public function create()
+>>>>>>> origin/master
 		{
 			$this->data['page_title'] = 'Add Room';
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('ta_roomName','Room name','trim|required');
+<<<<<<< HEAD
 			$this->form_validation->set_rules('ta_roomDesc','Room Description','trim|required');
 			$this->form_validation->set_rules('txtroom','Room Image','trim|required');
 			
@@ -86,10 +103,17 @@
 			if($result2 = $this->roomdata->getRooms()){
 				$this->data['rooms'] = $result2;
 			}
+=======
+			
+			if($this->form_validation->run()===FALSE)
+			{
+				$this->load->helper('form');
+>>>>>>> origin/master
 				$this->render('admin/rooms/create_room_view');
 			}
 			else
 			{
+<<<<<<< HEAD
 				$fileroom = $_FILES['upload_room']['name'];
 
 				if(!empty($fileroom)){
@@ -209,5 +233,10 @@
 			
 			redirect('admin/roompage','refresh');
 		}
+=======
+				redirect('admin/roompage','refresh');
+			}
+		}
+>>>>>>> origin/master
 	}
 ?>

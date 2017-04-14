@@ -10,7 +10,11 @@
 		<div class="col-lg-12 text-center">
 			<h3>Add Package</h3>
 		</div>
+<<<<<<< HEAD
 		<?php echo form_open_multipart('admin/bnm/createPackage',array('class'=>'form-horizontal')); ?>
+=======
+		<?php echo form_open('admin/bnm/create',array('class'=>'form-horizontal')); ?>
+>>>>>>> origin/master
 
 			<div class="form-group">
 				<label for="ta_packageName" class="control-label col-sm-3">Package Name:</label>
@@ -26,18 +30,31 @@
 					<div class="input-group">
 						<label class="input-group-btn">
 							<span class="btn btn-default">
+<<<<<<< HEAD
 								Browse&hellip; <input type="file" style="display: none;" id="upload_package" accept=".png,.jpg,.jpeg,.gif" name="upload_package">
 							</span>
 						</label>
 						<input type="text" class="form-control" name="txtpackage" readonly>
+=======
+								Browse&hellip; <input type="file" style="display: none;" multiple id="upload_package" name="upload_package">
+							</span>
+						</label>
+						<input type="text" class="form-control" readonly>
+>>>>>>> origin/master
 					</div>
 				</div>	
 				<div class="col-sm-5" >
 					<div class="imgDiv">
+<<<<<<< HEAD
 						<img src="<?php echo base_url() ?>assets/images/img_placeholder.png" id="img_package" >
 					</div>
 				</div>
 				<?php echo form_error('txtpackage','<div style="color:red;">','</div>');?>
+=======
+						<img src="<?php echo base_url() ?>assets/images/img_placeholder.png" id="img_room" >
+					</div>
+				</div>
+>>>>>>> origin/master
 				<?php echo form_error('upload_package','<div style="color:red;">','</div>');?>
 			</div>
 
@@ -54,6 +71,7 @@
 		<br>
 		<br>
 	</div>
+<<<<<<< HEAD
 </div>
 
 <script type="text/javascript">
@@ -66,3 +84,6 @@
 		img_package.src = url;
 	}
 </script>
+=======
+</div>
+>>>>>>> origin/master

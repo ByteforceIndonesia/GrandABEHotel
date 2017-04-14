@@ -3,7 +3,11 @@
 	//For Home
 	#pageTwo
 	{
+<<<<<<< HEAD
 		height:145vh;
+=======
+		height:170vh;
+>>>>>>> origin/master
 
 		.bookingPanel
 		{
@@ -11,6 +15,7 @@
 		}
 	}
 
+<<<<<<< HEAD
 	.bigLogoNav
 	{
 		display:none !important;
@@ -24,11 +29,41 @@
 	#navigation
 	{
 		padding:1em 2em 1em 2em;
+=======
+	#navbar
+	{
+		margin:0;
+		border:0;
+		background: #fff;
+		padding:1em;
+		width:100vh;
+	}
+
+	#pageFour
+	{
+		height: 65vh;
+	}
+
+	.bigLogo
+	{
+		display: none !important;
+	}
+
+
+	#navigation
+	{
+		padding:1em 2em 1em 2em;
+		min-height:4vh;
+>>>>>>> origin/master
 	}
 
 	#headerBusiness
 	{
+<<<<<<< HEAD
 		height:50vh;
+=======
+		height:auto !important;
+>>>>>>> origin/master
 	}
 
 	#packages
@@ -60,7 +95,11 @@
 	{
 		.panelHeaderTouristAttraction
 		{
+<<<<<<< HEAD
 			height: 15vh;
+=======
+			height: auto;
+>>>>>>> origin/master
 			width:auto;
 		}
 	}	
@@ -77,6 +116,39 @@
 		padding-right:2em;
 	}
 
+<<<<<<< HEAD
+=======
+	#roomDetails
+	{
+		.room
+		{
+			height:auto;
+			font-weight: 300;
+			padding-bottom: 2em;
+			font-weight: 300;
+
+			p
+			{
+				margin-top:2em;
+			}
+
+			.picPanelRooms
+			{
+				.imgRoom
+				{
+					margin:auto;
+					margin-bottom: 2em;
+				}
+			}
+
+			.headerPanelRoomText
+			{
+				padding:0 2vh 0 2vh;
+			}
+		}
+	}
+	
+>>>>>>> origin/master
 	// Global
 	#footer
 	{
@@ -106,6 +178,10 @@
 		{
 			height:65vh;
 			font-weight: 300;
+<<<<<<< HEAD
+=======
+			padding-bottom: 1em;
+>>>>>>> origin/master
 
 			p
 			{
@@ -117,6 +193,10 @@
 				.imgRoom
 				{
 					margin:auto;
+<<<<<<< HEAD
+=======
+					margin-bottom: 1em;
+>>>>>>> origin/master
 				}
 			}
 
@@ -127,7 +207,11 @@
 		}
 	}
 
+<<<<<<< HEAD
 	#headerBusiness
+=======
+	 #headerBusiness
+>>>>>>> origin/master
 	{
 		height:55vh;
 	}
@@ -157,7 +241,11 @@
 	{
 		.room
 		{
+<<<<<<< HEAD
 			height:65vh;
+=======
+			height:auto;
+>>>>>>> origin/master
 			font-weight: 300;
 
 			p
@@ -170,12 +258,20 @@
 				.imgRoom
 				{
 					margin:auto;
+<<<<<<< HEAD
+=======
+					padding-bottom: 1em;
+>>>>>>> origin/master
 				}
 			}
 
 			.headerPanelRoomText
 			{
+<<<<<<< HEAD
 				padding:0 2vh 0 2vh;
+=======
+				padding:2em 2vh 2em 2vh;
+>>>>>>> origin/master
 			}
 		}
 	}
@@ -220,10 +316,51 @@
 	}
 }
 
+<<<<<<< HEAD
 @media screen and(max-width:510px)
 {
+=======
+@media screen and(max-width:588px)
+{
+	#footer
+	{
+		.leftPanel
+		{
+			height: auto;
+		}
+	}
+
+	#headerBusiness
+	{
+		height:auto;
+	}
+
+	#headerBusinessandMeetings
+	{
+		margin-bottom: 2em;
+		
+		.panelHeaderBusinessMeetings
+		{
+			height:auto;
+		}
+	}
+
+	#pageTwo
+	{
+		height:180vh;
+	}
+
+>>>>>>> origin/master
 	#whereAreWe
 	{
 		height:55vh;
 	}
+<<<<<<< HEAD
+=======
+
+	.room
+	{
+		height:auto;
+	}
+>>>>>>> origin/master
 }

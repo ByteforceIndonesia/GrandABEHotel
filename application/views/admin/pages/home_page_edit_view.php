@@ -7,10 +7,13 @@
 	tinymce.init({
 		selector:'#ta_aboutUs'
 	});
+<<<<<<< HEAD
 
 	tinymce.init({
 		selector:'#ta_ShortDesc'
 	});
+=======
+>>>>>>> origin/master
 </script>
 
 	<div class="row">
@@ -21,6 +24,7 @@
 			
 			<br>
 
+<<<<<<< HEAD
 			<?php echo form_open_multipart('admin/homepage/edit',array('class'=>'form-horizontal')); ?>
 				<div class="form-group">
 					<label class="control-label col-sm-3" for="ta_landingScreen">Landing Screen:</label>
@@ -28,6 +32,13 @@
 						<textarea id="ta_landingScreen" name = "ta_landingScreen">
 							<?php if(!empty($home)) echo set_value('ta_landingScreen', $home->ta_landingScreen); ?>
 						</textarea>
+=======
+			<?php echo form_open('homepage/edit',array('class'=>'form-horizontal')); ?>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="ta_landingScreen">Landing Screen:</label>
+					<div class="col-sm-9">
+						<textarea id="ta_landingScreen" name = "ta_landingScreen"></textarea>
+>>>>>>> origin/master
 					</div>
 					<?php echo form_error('ta_landingScreen','<div style="color:red;">','</div>');?>
 				</div>
@@ -35,6 +46,7 @@
 				<br>
 
 				<div class="form-group">
+<<<<<<< HEAD
 					<label for="upload_leftImage" class="control-label col-sm-3">Left Image:</label>
 					<div class="col-sm-4">	
 						<div class="input-group">
@@ -79,11 +91,31 @@
 						</textarea>
 					</div>
 					<?php echo form_error('ta_aboutUs','<div style="color:red;">','</div>');?>
+=======
+					<label for="upload_bg" class="control-label col-sm-3">Landing Screen background:</label>
+					<div class="col-sm-4">
+						<div class="input-group">
+							<label class="input-group-btn">
+								<span class="btn btn-default">
+									Browse&hellip; <input type="file" style="display: none;" multiple id="upload_bg" name="upload_bg">
+								</span>
+							</label>
+							<input type="text" class="form-control" readonly>
+						</div>
+					</div>
+					<div class="col-sm-5 " >
+						<div class="imgDiv">
+							<img src="<?php echo base_url() ?>assets/images/img_placeholder.png" id="img_bg" >
+						</div>
+					</div>
+					<?php echo form_error('upload_bg','<div style="color:red;">','</div>');?>
+>>>>>>> origin/master
 				</div>
 
 				<br>
 
 				<div class="form-group">
+<<<<<<< HEAD
 					<label for="upload_virtualBg" class="control-label col-sm-3">Virtual Link Background:</label>
 					<div class="col-sm-4">
 						<div class="input-group">
@@ -107,13 +139,50 @@
 				</div>
 				
 				<br>
+=======
+					<label for="upload_logo" class="control-label col-sm-3">Logo:</label>
+					<div class="col-sm-4">	
+						<div class="input-group">
+							<label class="input-group-btn">
+								<span class="btn btn-default">
+									Browse&hellip; <input type="file" style="display: none;" multiple id="upload_logo" name="upload_logo">
+								</span>
+							</label>
+							<input type="text" class="form-control" readonly>
+						</div>
+					</div>	
+					<div class="col-sm-5" >
+						<div class="imgDiv">
+							<img src="<?php echo base_url() ?>assets/images/img_placeholder.png" id="img_logo" >
+						</div>
+					</div>
+					<?php echo form_error('upload_logo','<div style="color:red;">','</div>');?>
+				</div>
+
+				
+				
+				<br>
+				<div class="form-group">
+					<label for = "ta_aboutUs" class="control-label col-sm-3">About Us:</label>
+					<div class="col-sm-9">
+						<textarea id="ta_aboutUs" name="ta_aboutUs"></textarea>
+					</div>
+					<?php echo form_error('ta_aboutUs','<div style="color:red;">','</div>');?>
+				</div>
+
+				<br>
+>>>>>>> origin/master
 
 				<div class="form-group">
 					<label for="ta_virtualTourLink" class="control-label col-sm-3">Virtual Tour Link:</label>
 					<div class="col-sm-9">
+<<<<<<< HEAD
 						<input type="text" class="form-control" id="ta_virtualTourLink" name="ta_virtualTourLink"
 						value="<?php if(!empty($home)) echo set_value('ta_virtualTourLink', $home->ta_virtualTourLink); ?>"
 						>
+=======
+						<input type="text" class="form-control " id="ta_virtualTourLink" name="ta_virtualTourLink">
+>>>>>>> origin/master
 					</div>
 					<?php echo form_error('ta_virtualTourLink','<div style="color:red;">','</div>');?>
 				</div>
@@ -124,6 +193,7 @@
 		
 	</div>
 
+<<<<<<< HEAD
 	<br><br>
 
 <script type="text/javascript">
@@ -145,3 +215,6 @@
 		img_left.src = url;
 	}
 </script>
+=======
+	<br><br>
+>>>>>>> origin/master

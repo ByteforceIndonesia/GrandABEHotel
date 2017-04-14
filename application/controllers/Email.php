@@ -5,6 +5,11 @@
 		function __construct()
 		{
 			parent::__construct();
+<<<<<<< HEAD
+=======
+			//$this->load->library('email');
+			
+>>>>>>> origin/master
 		}
 
 		public function check_day($post_string)
@@ -47,6 +52,7 @@
 			}
 			else
 			{
+<<<<<<< HEAD
 				$this->load->model('Mainsettingsdata');
 				if($result = $this->Mainsettingsdata->getData()){
 					$data = $result;
@@ -55,12 +61,21 @@
 				$this->load->library('encrypt');
 
 				$password= $this->encrypt->decode($data->password);
+=======
+				$this->load->library('email');
+
+>>>>>>> origin/master
 				$config = Array(
 					'protocol' => 'smtp',
 					'smtp_host' => 'ssl://smtp.gmail.com',
 					'smtp_port' => 465,
+<<<<<<< HEAD
 					'smtp_user' => $data->email,
 					'smtp_pass' => $password,
+=======
+					'smtp_user' => '', //isi pls
+					'smtp_pass' => '', // isi pls
+>>>>>>> origin/master
 					'mailtype'  => 'html', 
 					'charset'   => 'iso-8859-1'
 					);
@@ -68,7 +83,11 @@
 				$this->email->set_newline("\r\n");
 
 				$this->email->from('automated.reservations@grandabe.com', 'Customer Reservations');
+<<<<<<< HEAD
 				$this->email->to('jeffry24797@gmail.com');
+=======
+				$this->email->to(''); isi pls
+>>>>>>> origin/master
 				// $this->email->cc('another@another-example.com');
 				// $this->email->bcc('them@their-ample.com');
 
@@ -97,7 +116,10 @@
 				}
 				
 			}
+<<<<<<< HEAD
 			
+=======
+>>>>>>> origin/master
 			redirect('','refresh');
 
 			

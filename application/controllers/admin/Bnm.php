@@ -5,13 +5,17 @@
 		function __construct()
 		{
 			parent::__construct();
+<<<<<<< HEAD
 			$this->load->model('bnmdata');
+=======
+>>>>>>> origin/master
 			if(!$this->ion_auth->in_group('admin'))
 			{
 				$this->session->set_flashdata('message','You are not allowed to visit the Pages page');
 				redirect('admin','refresh');
 			}
 		}
+<<<<<<< HEAD
 
 		public function packageExtCheck($file){
 			$path = $_FILES['upload_package']['name'];
@@ -37,11 +41,17 @@
 				$this->data['images'] = $result3;
 			}
 			//$this->data['packages']=$this->bnmdata->getPackages();
+=======
+		public function index()
+		{
+			$this->data['page_title'] = 'Business & Meetings Edit';
+>>>>>>> origin/master
 			$this->render('admin/pages/bnm_page_edit_view');
 		}
 
 		public function edit()
 		{
+<<<<<<< HEAD
 			$result = $this->bnmdata->getData();
 			$this->data['bnm'] = $result;
 
@@ -95,10 +105,25 @@
 				if($result3 = $this->bnmdata->getImages()){
 					$this->data['images'] = $result3;
 				}
+=======
+			
+		}
+
+		public function create()
+		{
+			$this->data['page_title'] = 'Add Package';
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('ta_packageName','Package name','trim|required');
+			
+			if($this->form_validation->run()===FALSE)
+			{
+				$this->load->helper('form');
+>>>>>>> origin/master
 				$this->render('admin/bnm/create_package_view');
 			}
 			else
 			{
+<<<<<<< HEAD
 				$filepackage = $_FILES['upload_package']['name'];
 
 				if(!empty($filepackage)){
@@ -307,5 +332,10 @@
 			$this->session->set_flashdata('message','Photos successfully deleted');
 			redirect('admin/bnm','refresh');
 		}
+=======
+				redirect('admin/bnm','refresh');
+			}
+		}
+>>>>>>> origin/master
 	}
 ?>

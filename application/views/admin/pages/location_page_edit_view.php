@@ -12,14 +12,22 @@
 			<h1>Location</h1>
 		</div>
 
+<<<<<<< HEAD
 		<?php echo form_open('admin/location/edit',array('class'=>'form-horizontal')); ?>
+=======
+		<?php echo form_open('location/edit',array('class'=>'form-horizontal')); ?>
+>>>>>>> origin/master
 
 			<div class="form-group">
 				<label for="ta_where" class="control-label col-sm-3">Where Are We:</label>
 				<div class="col-sm-9">
+<<<<<<< HEAD
 					<textarea id="ta_where" name="ta_where">
 						<?php if(!empty($headerLocation)) echo set_value('ta_where', $headerLocation->ta_where); ?>
 					</textarea>
+=======
+					<textarea id="ta_where" name="ta_where"></textarea>
+>>>>>>> origin/master
 				</div>
 				<?php echo form_error('ta_where','<div style="color:red;">','</div>');?>
 			</div>
@@ -49,6 +57,7 @@
 					Operations
 				</td>
 			</tr>
+<<<<<<< HEAD
 
 			<?php
 				if(!empty($locations)){
@@ -64,6 +73,8 @@
 				}
 			?>
 
+=======
+>>>>>>> origin/master
 		</table>
 		<div class="col-lg-12">
 			<a href="<?php echo site_url('admin/location/addlocation');?>" class="btn btn-primary">
@@ -93,6 +104,7 @@
 					Caption
 				</td>
 				<td>
+<<<<<<< HEAD
 					Link
 				</td>
 				<td>
@@ -118,6 +130,14 @@
 		</table>
 		<div class="col-lg-12">
 			<a href="<?php echo site_url('admin/location/addphoto');?>" class="btn btn-primary">
+=======
+					Operations
+				</td>
+			</tr>
+		</table>
+		<div class="col-lg-12">
+			<a href="<?php echo site_url('admin/location/addimage');?>" class="btn btn-primary">
+>>>>>>> origin/master
 				Add Photo
 			</a>
 		</div>
