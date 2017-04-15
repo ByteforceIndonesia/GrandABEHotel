@@ -45,6 +45,8 @@ body {
   #navigation img {
     margin: 1em;
     max-width: 70px; }
+  #navigation #toggleNav button {
+    outline: none; }
   #navigation #navbar {
     margin: 0;
     border: 0;
@@ -283,13 +285,6 @@ body {
     #pageTwo .bookingPanel {
       height: 1180px !important; }
 
-  #navbar {
-    margin: 0;
-    border: 0;
-    background: #fff;
-    padding: 1em;
-    width: 100vh; }
-
   #pageFour {
     height: 65vh; }
 
@@ -300,6 +295,13 @@ body {
     padding: 1em 2em 2em 2em;
     height: 10vh;
     transition: all .2s ease-in-out; }
+    #navigation #navbar {
+      margin: 0;
+      margin-top: 0.5em;
+      border: 0;
+      background: #fff;
+      padding: 1em;
+      width: 100vh; }
 
   .opened {
     height: 50vh !important; }
