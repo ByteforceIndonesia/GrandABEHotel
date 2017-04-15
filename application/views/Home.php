@@ -10,10 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'style.css' ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">
@@ -28,77 +25,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
-<<<<<<< HEAD
 <div class="wrapper">
 
-
-	<!--//DESIGN ini yg lama jona, yg ini ok  -->
-	<!-- <nav id="navigation" class="navbar navbar-default">
-		<div class="container-fluid">
-		
-			<div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">Grand ABE <strong>Hotel</strong></a>
-		    </div>
-
-		    <div class="collapse navbar-collapse" id="navbar">
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="<?php echo base_url() ?>">Home</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('rooms') ?>">Rooms</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('location') ?>">Location</a>
-					</li>
-					<li>
-						<a href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
-					</li>
-				</ul>
-			</div>
-=======
-<div class="wrapper clearfix">
 	<!-- navbar -->
 	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded" id="navigation">
-	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>
-		  <div class="collapse navbar-collapse" id="navbar">
-			<ul class="navbar-nav">
-				<li class="active nav-item">
-					<a class="nav-link" href="<?php echo base_url() ?>">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('rooms') ?>">Rooms</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('location') ?>">Location</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
-				</li>
-			</ul>
->>>>>>> origin/master
-		</div>
-	</nav> -->
-
-	<!--//DESIGN ini yg lu bikin jona, yg ini di tmpt gw ga jln stylenya -->
-	<!-- navbar -->
-	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded" id="navigation">
-	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="toggleNav">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>
@@ -122,10 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</ul>
 		</div>
 	</nav>
-<<<<<<< HEAD
-	
-=======
->>>>>>> origin/master
+
 	<?php
 			if($this->session->flashdata('mailMessage')&& $this->session->flashdata('mailMessageHeader'))
 			{
@@ -143,21 +71,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 				</div>
-<<<<<<< HEAD
-			</div>	
-
-		<script type="text/javascript">
-			$('#mailModalBox').modal('show');
-		</script>	
-
-=======
 			</div>
 
 		<script type="text/javascript">
 			$('#mailModalBox').modal('show');
 		</script>	
 
->>>>>>> origin/master
 		<?php
 			}
 		?>
@@ -205,20 +124,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							GET YOUR <strong>BOOKING</strong> NOW
 						</h1>
 					</div>
-<<<<<<< HEAD
-					<!-- //DESIGN kalo col-lg-4 nya diganti jd col-xl-4 di tmpt gw rusak jona -->
-					<?php echo form_open('email/mail') ?>
-					<div class="bookingPanel">
-						<div class="col-lg-8">
-							<div class="col-lg-4 day">
-=======
-
 					<!-- Jeff ini formnya kemana? -->
 					<?php echo form_open('email/mail') ?>
 					<div class="bookingPanel row">
 						<div class="col-lg-8 row">
 							<div class="col-xl-4 day">
->>>>>>> origin/master
 								<center>
 									<h5>DAY</h5>
 									<div>
@@ -327,18 +237,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 	</section>
-
-<<<<<<< HEAD
-	<section id="pageFive" 
-		<?php if(!empty($home->upload_leftImage))
-			echo 'style="background-image:url(\''. base_url() .'assets/images/uploads/virtualBackground/'.$home->upload_virtualBg.'\' );"'
-		?>
-	>
-		<div class="darkerFilter wrapMe">
-=======
 	<section id="pageFive">
 		<div class="darkerFilter wrapMe row">
->>>>>>> origin/master
 			<div class="col-lg-5">&nbsp</div>
 			<div class="col-lg-6">
 				<div class="whitePanel">
@@ -387,11 +287,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script>
 	var navFixed = $('#pageTwo').waypoint(function(event, direction) 
 	{
-	  $('#navigation').toggleClass('fixed');
-	  	if (direction == 'down')
-		  $('#navbar').css({ 'height':nav.outerHeight() });
-		else
-		  $('#navbar').css({ 'height':'auto' })
+	  $('#navigation').toggleClass('fixed')
 	  ,{
 	  	offset: function() {
 		    return -(this.element.clientHeight + 300)
@@ -403,6 +299,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$('html, body').animate({
         	scrollTop: $("#pageFour").offset().top
     	}, 1000);
+	});
+
+	$('#toggleNav').click(function(){
+		if($('#navbar').hasClass('show'))
+		{
+			$('#navigation').removeClass('opened');
+		}else
+		{
+			$('#navigation').addClass('opened');
+		}
 	});
 </script>
 </html>

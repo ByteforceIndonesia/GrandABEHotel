@@ -3,11 +3,7 @@
 	//For Home
 	#pageTwo
 	{
-<<<<<<< HEAD
-		height:145vh;
-=======
 		height:170vh;
->>>>>>> origin/master
 
 		.bookingPanel
 		{
@@ -15,21 +11,6 @@
 		}
 	}
 
-<<<<<<< HEAD
-	.bigLogoNav
-	{
-		display:none !important;
-	}
-
-	.noLogoNav
-	{
-		display:block !important;
-	}
-
-	#navigation
-	{
-		padding:1em 2em 1em 2em;
-=======
 	#navbar
 	{
 		margin:0;
@@ -49,21 +30,34 @@
 		display: none !important;
 	}
 
-
 	#navigation
 	{
-		padding:1em 2em 1em 2em;
-		min-height:4vh;
->>>>>>> origin/master
+		padding:1em 2em 2em 2em;
+		height: 10vh;
+		transition:all .2s ease-in-out;
+	}
+
+	.opened
+	{
+		height:50vh !important;
+	}
+
+	.fixed
+	{
+		transition:all .2s ease-in-out;
+		position:fixed !important;
+		background:#fff !important;
+		width:100% !important;
+		
+		a
+		{
+			color: #000 !important;
+		}
 	}
 
 	#headerBusiness
 	{
-<<<<<<< HEAD
-		height:50vh;
-=======
 		height:auto !important;
->>>>>>> origin/master
 	}
 
 	#packages
@@ -95,11 +89,7 @@
 	{
 		.panelHeaderTouristAttraction
 		{
-<<<<<<< HEAD
-			height: 15vh;
-=======
 			height: auto;
->>>>>>> origin/master
 			width:auto;
 		}
 	}	
@@ -116,8 +106,6 @@
 		padding-right:2em;
 	}
 
-<<<<<<< HEAD
-=======
 	#roomDetails
 	{
 		.room
@@ -148,7 +136,6 @@
 		}
 	}
 	
->>>>>>> origin/master
 	// Global
 	#footer
 	{
@@ -178,10 +165,6 @@
 		{
 			height:65vh;
 			font-weight: 300;
-<<<<<<< HEAD
-=======
-			padding-bottom: 1em;
->>>>>>> origin/master
 
 			p
 			{
@@ -193,10 +176,7 @@
 				.imgRoom
 				{
 					margin:auto;
-<<<<<<< HEAD
-=======
 					margin-bottom: 1em;
->>>>>>> origin/master
 				}
 			}
 
@@ -207,11 +187,7 @@
 		}
 	}
 
-<<<<<<< HEAD
 	#headerBusiness
-=======
-	 #headerBusiness
->>>>>>> origin/master
 	{
 		height:55vh;
 	}
@@ -241,11 +217,7 @@
 	{
 		.room
 		{
-<<<<<<< HEAD
-			height:65vh;
-=======
 			height:auto;
->>>>>>> origin/master
 			font-weight: 300;
 
 			p
@@ -258,20 +230,13 @@
 				.imgRoom
 				{
 					margin:auto;
-<<<<<<< HEAD
-=======
 					padding-bottom: 1em;
->>>>>>> origin/master
 				}
 			}
 
 			.headerPanelRoomText
 			{
-<<<<<<< HEAD
-				padding:0 2vh 0 2vh;
-=======
 				padding:2em 2vh 2em 2vh;
->>>>>>> origin/master
 			}
 		}
 	}
@@ -316,10 +281,6 @@
 	}
 }
 
-<<<<<<< HEAD
-@media screen and(max-width:510px)
-{
-=======
 @media screen and(max-width:588px)
 {
 	#footer
@@ -350,17 +311,13 @@
 		height:180vh;
 	}
 
->>>>>>> origin/master
 	#whereAreWe
 	{
 		height:55vh;
 	}
-<<<<<<< HEAD
-=======
 
 	.room
 	{
 		height:auto;
 	}
->>>>>>> origin/master
 }

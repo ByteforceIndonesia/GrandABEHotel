@@ -7,6 +7,7 @@ $primary-color: #272c2d;
 $secondary-color: #fff;
 
 $font-primary: #fff;
+$font-secondary: #000;
 
 
 body
@@ -14,12 +15,8 @@ body
 	margin:0;
 	padding:0;
 
-<<<<<<< HEAD
-	font-family: 'Roboto', sans-serif !important;
-=======
 	// font-family: 'Roboto', sans-serif !important;
 	font-family: 'helvetica' !important;
->>>>>>> origin/master
 }
 
 .darkerFilter
@@ -36,6 +33,7 @@ body
 	top:0 !important;
 	background:#fff !important;
 	width:100% !important;
+	height:8vh;
 	
 	a
 	{
@@ -46,32 +44,40 @@ body
 
 #navigation
 {
+	position:absolute;
+	bottom:0;
 	border:0;
-	background:rgba(0,0,0,0);
+	background:rgba(255,255,255,0.8);
 	box-shadow: none;
 	padding:0 2em 0 2em;
 	margin-bottom:0;
-	bottom: 0;
-	height:10vh;
 	width:100%;
 	border-radius: 0;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	font-weight: 300;
-	position:absolute;
 	transition:all .2s ease-in-out;
 	z-index:1000;
+	color:$font-secondary;
+	overflow: hidden;
 
-	.navbar-brand
+	h1
 	{
-		color:#ccc;
-		
+		font-weight: 300;
+		width:50%;
+		margin-top:1em;
+	}
+
+	img
+	{
+		margin:1em;
+		max-width: 70px;
 	}
 
 	#navbar
 	{
 		margin:0;
 		border:0;
-		transition:all .2s ease-in-out;
+		z-index: 1000;
 
 		.in
 		{
@@ -81,12 +87,10 @@ body
 
 		a
 		{
-			color:#ccc;
+			color:$font-secondary;
 			background:rgba(0,0,0,0);
 			opacity: 0.8;
 			transition:all .2s ease-in-out;
-			font-weight: 300;
-
 		}
 
 		a:hover
@@ -151,24 +155,18 @@ body
 			transition: all .35s ease-in-out;
 			background:rgba(0,0,0,0);
 			color:#fff;
-<<<<<<< HEAD
-=======
 			outline: none;
->>>>>>> origin/master
 		}
 
 		button:hover
 		{
 			opacity:1;
 			cursor:pointer;
-<<<<<<< HEAD
-=======
 		}
 
 		button:active
 		{
 			border:1px solid red;
->>>>>>> origin/master
 		}
 	}
 
@@ -186,11 +184,7 @@ body
 
 #pageTwo
 {
-<<<<<<< HEAD
-	height:60vh;
-=======
 	height:66vh;
->>>>>>> origin/master
 	width:100%;
 
 	#booking

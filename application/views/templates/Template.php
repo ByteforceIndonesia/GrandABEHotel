@@ -7,13 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<!-- Title -->
 	<title><?php echo $page_title ?></title>
-<<<<<<< HEAD
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-=======
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
->>>>>>> origin/master
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'styleNotHome.css' ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">

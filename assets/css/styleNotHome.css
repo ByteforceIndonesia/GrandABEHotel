@@ -321,23 +321,6 @@ body {
 
 @media screen and (max-width: 1200px) {
   #pageTwo {
-<<<<<<< HEAD
-    height: 145vh; }
-    #pageTwo .bookingPanel {
-      height: 1180px !important; }
-
-  .bigLogoNav {
-    display: none !important; }
-
-  .noLogoNav {
-    display: block !important; }
-
-  #navigation {
-    padding: 1em 2em 1em 2em; }
-
-  #headerBusiness {
-    height: 50vh; }
-=======
     height: 170vh; }
     #pageTwo .bookingPanel {
       height: 1180px !important; }
@@ -356,12 +339,23 @@ body {
     display: none !important; }
 
   #navigation {
-    padding: 1em 2em 1em 2em;
-    min-height: 4vh; }
+    padding: 1em 2em 2em 2em;
+    height: 10vh;
+    transition: all .2s ease-in-out; }
+
+  .opened {
+    height: 50vh !important; }
+
+  .fixed {
+    transition: all .2s ease-in-out;
+    position: fixed !important;
+    background: #fff !important;
+    width: 100% !important; }
+    .fixed a {
+      color: #000 !important; }
 
   #headerBusiness {
     height: auto !important; }
->>>>>>> origin/master
 
   #packages {
     height: auto;
@@ -376,11 +370,7 @@ body {
     padding: 5em 2em 0 2em; }
 
   #headerTouristAttraction .panelHeaderTouristAttraction {
-<<<<<<< HEAD
-    height: 15vh;
-=======
     height: auto;
->>>>>>> origin/master
     width: auto; }
 
   #weddings {
@@ -391,8 +381,6 @@ body {
     padding-left: 2em;
     padding-right: 2em; }
 
-<<<<<<< HEAD
-=======
   #roomDetails .room {
     height: auto;
     font-weight: 300;
@@ -406,7 +394,6 @@ body {
     #roomDetails .room .headerPanelRoomText {
       padding: 0 2vh 0 2vh; }
 
->>>>>>> origin/master
   #footer {
     height: auto; }
     #footer .rightPanel {
@@ -418,21 +405,12 @@ body {
 
   #roomDetails .room {
     height: 65vh;
-<<<<<<< HEAD
     font-weight: 300; }
-    #roomDetails .room p {
-      margin-top: 2em; }
-    #roomDetails .room .picPanelRooms .imgRoom {
-      margin: auto; }
-=======
-    font-weight: 300;
-    padding-bottom: 1em; }
     #roomDetails .room p {
       margin-top: 2em; }
     #roomDetails .room .picPanelRooms .imgRoom {
       margin: auto;
       margin-bottom: 1em; }
->>>>>>> origin/master
     #roomDetails .room .headerPanelRoomText {
       padding: 0 2vh 0 2vh; }
 
@@ -447,25 +425,15 @@ body {
     padding-top: 2.5em; }
 
   #roomDetails .room {
-<<<<<<< HEAD
-    height: 65vh;
-=======
     height: auto;
->>>>>>> origin/master
     font-weight: 300; }
     #roomDetails .room p {
       margin-top: 2em; }
     #roomDetails .room .picPanelRooms .imgRoom {
-<<<<<<< HEAD
-      margin: auto; }
-    #roomDetails .room .headerPanelRoomText {
-      padding: 0 2vh 0 2vh; }
-=======
       margin: auto;
       padding-bottom: 1em; }
     #roomDetails .room .headerPanelRoomText {
       padding: 2em 2vh 2em 2vh; }
->>>>>>> origin/master
 
   #touristAttraction {
     height: 65vh; }
@@ -487,11 +455,6 @@ body {
 
   #footer .rightPanel {
     padding-left: 5vh; } }
-<<<<<<< HEAD
-@media screen and (max-width: 510px) {
-  #whereAreWe {
-    height: 55vh; } }
-=======
 @media screen and (max-width: 588px) {
   #footer .leftPanel {
     height: auto; }
@@ -512,6 +475,5 @@ body {
 
   .room {
     height: auto; } }
->>>>>>> origin/master
 
 /*# sourceMappingURL=styleNotHome.css.map */
