@@ -12,6 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'styleNotHome.css' ?>">
+	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'styleAdminPage.css' ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">
 
 	<!-- JS -->
