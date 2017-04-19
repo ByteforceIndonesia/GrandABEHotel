@@ -20,7 +20,6 @@
 <!-- DESIGN ini masih blom bener jona -->
 <section id="packages">
 	<div class="container">
-<<<<<<< HEAD
 		<?php
 			if(!empty($packages)){
 				foreach($packages as $package){
@@ -35,12 +34,6 @@
 					
 						&nbsp
 					</div>
-=======
-		<div class="row">
-			<div class="col-xl-5">
-				<div class="packageImage">
-					&nbsp
->>>>>>> origin/master
 				</div>
 				<div class="col-xl-5">
 					<h1><?php echo $package->name?></h1>
@@ -48,24 +41,14 @@
 				</div>
 				<div class="col-xl-2">&nbsp</div>
 			</div>
-<<<<<<< HEAD
+
 
 		<?php
 				}
 			}
 
 		?>
-		
-=======
-			<div class="col-xl-5">
-				<h1>Packages</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla.
-				</p>
-			</div>
-			<div class="col-xl-2">&nbsp</div>
-		</div>
->>>>>>> origin/master
+	
 	</div>
 </section>
 

@@ -7,28 +7,16 @@
 
 			<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'style.css' ?>">
 			<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">
-<<<<<<< HEAD
 			<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'jquery.bsPhotoGallery.css' ?>">
 			<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'styleAdminPage.css' ?>">
-			
-=======
-			<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap-theme.min.css' ?>">
-			<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'styleAdminPage.css' ?>">
-
-			<script src="<?php echo base_url().'assets/tinymce/jquery.tinymce.min.js'?>"></script>
-			<script src="<?php echo base_url().'assets/tinymce/tinymce.min.js'?>"></script>
->>>>>>> origin/master
 			<script src="<?php echo base_url() . JS_DIR . 'jquery-3.1.1.min.js' ?>"></script>
 			<script src="<?php echo base_url() . JS_DIR . 'bootstrap.min.js' ?>"></script>
 			<script src="<?php echo base_url() . JS_DIR . 'jquery.waypoints.js' ?>"></script>
 			<script src="<?php echo base_url() . JS_DIR . 'fileinput.js' ?>"></script>
-<<<<<<< HEAD
 			<script src="<?php echo base_url() . JS_DIR . 'jquery.bsPhotoGallery.js' ?>"></script>
 			<script src="<?php echo base_url().'assets/tinymce/jquery.tinymce.min.js'?>"></script>
 			<script src="<?php echo base_url().'assets/tinymce/tinymce.min.js'?>"></script>
 
-=======
->>>>>>> origin/master
 			<?php echo $before_head;?>
 		</head>
 	<body>
@@ -57,7 +45,6 @@
 						
 							<ul class="dropdown-menu" role="menu">
 								<li>
-<<<<<<< HEAD
 									<a href="<?php echo site_url('admin/mainsettings')?>">Main Settings</a>
 								</li>
 
@@ -66,11 +53,7 @@
 									<a href="<?php echo site_url('admin/homepage')?>">Home</a>
 								</li>
 								<!-- <li class="divider"></li> -->
-=======
-									<a href="<?php echo site_url('admin/homepage')?>">Home</a>
-								</li>
-								<li class="divider"></li>
->>>>>>> origin/master
+
 								<li>
 									<a href="<?php echo site_url('admin/roompage')?>">Rooms</a>
 								</li>

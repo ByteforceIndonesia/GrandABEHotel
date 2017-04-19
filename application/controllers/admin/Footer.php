@@ -5,10 +5,9 @@
 		function __construct()
 		{
 			parent::__construct();
-<<<<<<< HEAD
+
 			$this->load->model('footerdata');
-=======
->>>>>>> origin/master
+
 			if(!$this->ion_auth->in_group('admin'))
 			{
 				$this->session->set_flashdata('message','You are not allowed to visit the Pages page');
@@ -18,7 +17,7 @@
 		public function index()
 		{
 			$this->data['page_title'] = 'Footer Edit';
-<<<<<<< HEAD
+
 			if($result1 = $this->footerdata->getData()){
 				$this->data['footer'] = $result1;
 			}
@@ -26,14 +25,11 @@
 				$this->data['contacts'] = $result2;
 			}
 			$this->render('admin/pages/footer_edit_view');	
-=======
-			$this->render('admin/pages/footer_edit_view');
->>>>>>> origin/master
+
 		}
 
 		public function edit()
 		{
-<<<<<<< HEAD
 			$result = $this->footerdata->getData();
 			$this->data['footer'] = $result;
 
@@ -68,16 +64,7 @@
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('ta_socialMedia','Social Media Name','trim|required');
 			$this->form_validation->set_rules('ta_link','Link','trim|required');
-=======
-			
-		}
 
-		public function add()
-		{
-			$this->data['page_title'] = 'Add Contact Info';
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('ta_locationName','Package name','trim|required');
->>>>>>> origin/master
 			
 			if($this->form_validation->run()===FALSE)
 			{
@@ -86,7 +73,6 @@
 			}
 			else
 			{
-<<<<<<< HEAD
 				$data = array(
 						'socialmedia'=>$this->input->post('ta_socialMedia'),
 						'link'=>$this->input->post('ta_link')
@@ -144,10 +130,5 @@
 			
 			redirect('admin/footer','refresh');
 		}
-=======
-				redirect('admin/footer','refresh');
-			}
-		}
->>>>>>> origin/master
 	}
 ?>

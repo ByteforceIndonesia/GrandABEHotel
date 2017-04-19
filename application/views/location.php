@@ -36,7 +36,6 @@
 </section>
 
 <section id="touristAttraction" class="container">
-<<<<<<< HEAD
 	<?php
 		if(!empty($locations)){
 			foreach ($locations as $location) {
@@ -61,39 +60,7 @@
 			}
 		}
 	?>
-=======
-	<div class="row">
-		<div class="leftSideTourist">
-			<div class="touristLeft">
-				<h1>Pantai APEL</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla. Fusce pellentesque diam ante, at placerat velit vehicula gravida. Suspendisse pharetra ullamcorper laoreet. 
-				</p>
-			</div>
-		</div>
-		<div class="rightSideTourist">
-			<div class="imageTourist" 
-				 style="background:url('<?php echo base_url() . IMAGES_DIR . '/home_large.jpg' ?>')
-				 ">&nbsp</div>
-		</div>
-	</div>
 
-	<div class="row">
-		<div class="leftSideTourist">
-			<div class="touristLeft">
-				<h1>Pantai Hotelkamp</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis, sem et accumsan convallis, sapien lectus consequat ante, ac placerat erat neque a nulla. Fusce pellentesque diam ante, at placerat velit vehicula gravida. Suspendisse pharetra ullamcorper laoreet. 
-				</p>
-			</div>
-		</div>
-		<div class="rightSideTourist">
-			<div class="imageTourist" 
-				 style="background:url('<?php echo base_url() . IMAGES_DIR . '/home_large.jpg' ?>')
-				 ">&nbsp</div>
-		</div>
-	</div>
->>>>>>> origin/master
 </section>
 
 <section id="scattered">

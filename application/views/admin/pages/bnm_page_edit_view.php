@@ -4,7 +4,6 @@
 		selector:'#ta_bnmPageDesc'
 	});
 </script>
-<<<<<<< HEAD
 <style type="text/css">
 	.gallery{
 	    padding:0 0 0 0;
@@ -23,8 +22,6 @@
 	}
 </style>
 
-=======
->>>>>>> origin/master
 
 <div class="row">
 	<div class="col-lg-10 col-lg-offset-1">
@@ -33,22 +30,16 @@
 			<h1>Business & Meetings</h1>
 		</div>
 
-<<<<<<< HEAD
 		<?php echo form_open('admin/bnm/edit',array('class'=>'form-horizontal')); ?>
-=======
-		<?php echo form_open('bnm/edit',array('class'=>'form-horizontal')); ?>
->>>>>>> origin/master
+
 
 			<div class="form-group">
 				<label for="ta_bnmPageDesc" class="control-label col-sm-3">Page Description:</label>
 				<div class="col-sm-9">
-<<<<<<< HEAD
 					<textarea id="ta_bnmPageDesc" name="ta_bnmPageDesc">
 						<?php if(!empty($bnm)) echo set_value('ta_bnmPageDesc', $bnm->ta_bnmPageDesc); ?>
 					</textarea>
-=======
-					<textarea id="ta_bnmPageDesc" name="ta_bnmPageDesc"></textarea>
->>>>>>> origin/master
+
 				</div>
 				<?php echo form_error('ta_bnmPageDesc','<div style="color:red;">','</div>');?>
 			</div>
@@ -78,7 +69,6 @@
 					Operations
 				</td>
 			</tr>
-<<<<<<< HEAD
 
 			<?php
 				if(!empty($packages)){
@@ -191,15 +181,4 @@
 	  });
 	});
 </script>
-=======
-		</table>
-		<div class="col-lg-12">
-			<a href="<?php echo site_url('admin/bnm/create');?>" class="btn btn-primary">
-				Add Room
-			</a>
-		</div>
-		<br>
-		<br>
-	</div>
-</div>
->>>>>>> origin/master
+

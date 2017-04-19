@@ -10,11 +10,7 @@
 		<div class="col-lg-12 text-center">
 			<h3>Add Room</h3>
 		</div>
-<<<<<<< HEAD
 		<?php echo form_open_multipart('admin/roompage/createRoom',array('class'=>'form-horizontal')); ?>
-=======
-		<?php echo form_open('admin/roompage/create',array('class'=>'form-horizontal')); ?>
->>>>>>> origin/master
 
 			<div class="form-group">
 				<label for="ta_roomName" class="control-label col-sm-3">Room Name:</label>
@@ -30,17 +26,10 @@
 					<div class="input-group">
 						<label class="input-group-btn">
 							<span class="btn btn-default">
-<<<<<<< HEAD
 								Browse&hellip; <input type="file" style="display: none;" id="upload_room" accept=".png,.jpg,.jpeg,.gif" name="upload_room">
 							</span>
 						</label>
 						<input type="text" class="form-control" name="txtroom"  readonly>
-=======
-								Browse&hellip; <input type="file" style="display: none;" multiple id="upload_room" name="upload_room">
-							</span>
-						</label>
-						<input type="text" class="form-control" readonly>
->>>>>>> origin/master
 					</div>
 				</div>	
 				<div class="col-sm-5" >
@@ -48,10 +37,7 @@
 						<img src="<?php echo base_url() ?>assets/images/img_placeholder.png" id="img_room" >
 					</div>
 				</div>
-<<<<<<< HEAD
 				<?php echo form_error('txtroom','<div style="color:red;">','</div>');?>
-=======
->>>>>>> origin/master
 				<?php echo form_error('upload_room','<div style="color:red;">','</div>');?>
 			</div>
 
@@ -68,7 +54,6 @@
 		<br>
 		<br>
 	</div>
-<<<<<<< HEAD
 </div>
 
 <script type="text/javascript">
@@ -81,6 +66,3 @@
 		img_room.src = url;
 	}
 </script>
-=======
-</div>
->>>>>>> origin/master

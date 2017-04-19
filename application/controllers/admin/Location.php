@@ -5,17 +5,15 @@
 		function __construct()
 		{
 			parent::__construct();
-<<<<<<< HEAD
+
 			$this->load->model('locationdata');
-=======
->>>>>>> origin/master
+
 			if(!$this->ion_auth->in_group('admin'))
 			{
 				$this->session->set_flashdata('message','You are not allowed to visit the Pages page');
 				redirect('admin','refresh');
 			}
 		}
-<<<<<<< HEAD
 
 		public function locationExtCheck($file){
 			$path = $_FILES['upload_location']['name'];
@@ -52,17 +50,11 @@
 				$this->data['photos'] = $result3;
 			}
 
-=======
-		public function index()
-		{
-			$this->data['page_title'] = 'Location Edit';
->>>>>>> origin/master
 			$this->render('admin/pages/location_page_edit_view');
 		}
 
 		public function edit()
 		{
-<<<<<<< HEAD
 			$result = $this->locationdata->getData();
 			$this->data['headerLocation'] = $result;
 
@@ -90,14 +82,10 @@
 				$this->session->set_flashdata('message','Update Success');
 				redirect('admin/location','refresh');
 			}
-=======
-			
->>>>>>> origin/master
 		}
 
 		public function addlocation()
 		{
-<<<<<<< HEAD
 			$this->data['page_title'] = 'Add Location';
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('ta_locationName','Location name','trim|required');
@@ -121,20 +109,11 @@
 			if($result3 = $this->locationdata->getPhotos()){
 				$this->data['photos'] = $result3;
 			}
-=======
-			$this->data['page_title'] = 'Add Package';
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('ta_locationName','Package name','trim|required');
-			
-			if($this->form_validation->run()===FALSE)
-			{
-				$this->load->helper('form');
->>>>>>> origin/master
+
 				$this->render('admin/location/add_location_view');
 			}
 			else
 			{
-<<<<<<< HEAD
 				$filelocation = $_FILES['upload_location']['name'];
 
 				if(!empty($filelocation)){
@@ -168,13 +147,10 @@
 
 				 	$this->session->set_flashdata('message','Location Successfully Added');
 				}
-=======
->>>>>>> origin/master
 				redirect('admin/location','refresh');
 			}
 		}
 
-<<<<<<< HEAD
 		public function editlocation($id=NULL){
 
 			$id = $this->input->post('id') ? $this->input->post('id') : $id;
@@ -261,22 +237,10 @@
 			if($result3 = $this->locationdata->getPhotos()){
 				$this->data['photos'] = $result3;
 			}
-=======
-		public function addimage()
-		{
-			$this->data['page_title'] = 'Add Image';
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('ta_imageTitle','Package name','trim|required');
-			
-			if($this->form_validation->run()===FALSE)
-			{
-				$this->load->helper('form');
->>>>>>> origin/master
 				$this->render('admin/location/add_image_view');
 			}
 			else
 			{
-<<<<<<< HEAD
 				$filelocation = $_FILES['upload_photo']['name'];
 
 				if(!empty($filelocation)){
@@ -425,10 +389,6 @@
 			}
 			
 			redirect('admin/location','refresh');
-=======
-				redirect('admin/location','refresh');
-			}
->>>>>>> origin/master
 		}
 	}
 ?>

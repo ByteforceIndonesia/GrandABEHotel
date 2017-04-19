@@ -5,11 +5,8 @@
 		<div class="col-lg-12 text-center">
 			<h3>Add Contact Info</h3>
 		</div>
-<<<<<<< HEAD
 		<?php echo form_open('admin/footer/addContact',array('class'=>'form-horizontal')); ?>
-=======
-		<?php echo form_open('admin/footer/add',array('class'=>'form-horizontal')); ?>
->>>>>>> origin/master
+
 
 			<div class="form-group">
 				<label for="ta_socialMedia" class="control-label col-sm-3">Social Media:</label>
