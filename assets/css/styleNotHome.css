@@ -11,7 +11,7 @@
   #headerRooms .panelHeaderRooms {
     z-index: 1000;
     width: 100%;
-    height: 30vh;
+    height: auto;
     margin-top: -10vh;
     background: #fff;
     padding: 1em 2em 1em 2em;
@@ -38,7 +38,8 @@
   background: #fff; }
 #roomDetails .room:nth-child(even) {
   background: #272c2d;
-  color: #fff; }
+  color: #fff;
+  padding-bottom: 3em; }
   #roomDetails .room:nth-child(even) .headerPanelRoomText h3 {
     border-bottom: 2px solid #fff; }
 #roomDetails .room {
@@ -70,7 +71,7 @@
   #headerBusinessandMeetings .panelHeaderBusinessMeetings {
     z-index: 1000;
     width: 90%;
-    height: 15vh;
+    height: auto;
     margin-top: -5vh;
     background: #fff;
     padding: 2em 1em 1em 0em;
@@ -81,8 +82,8 @@
       font-size: 42px; }
 
 #headerBusiness {
-  padding: 12vh 5em 0 5em;
-  height: 40vh;
+  padding: 8vh 5em 2em 5em;
+  height: auto;
   width: 100%;
   background: #272c2d;
   color: #fff;
@@ -91,7 +92,7 @@
     margin-top: 2em; }
 
 #packages {
-  height: 40vh;
+  height: auto;
   width: 100%;
   padding: 3em 0 2em 4em;
   font-weight: 300; }
@@ -112,23 +113,25 @@
 #carousel {
   background: #272c2d;
   width: 100%;
-  height: 40vh; }
+  height: auto; }
 
 /* ----------------------------
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
 #whereAreWe {
-  height: 40vh;
+  height: auto;
+  padding-bottom: 4em;
   width: 100%;
   background: #272c2d;
   font-weight: 300; }
   #whereAreWe .rightSideMaps {
     color: #fff;
-    padding-top: 4em; }
+    padding-top: 4em;
+    padding-bottom: 3em; }
     #whereAreWe .rightSideMaps h1 {
       border-bottom: 1px solid #fff;
-      width: 50%;
+      width: 80%;
       font-weight: 400; }
     #whereAreWe .rightSideMaps p {
       margin-top: 3em; }
@@ -136,18 +139,19 @@
 #headerTouristAttraction {
   width: 100%; }
   #headerTouristAttraction .panelHeaderTouristAttraction {
-    height: 12vh;
+    height: auto;
     background: #fff;
     margin-top: -7vh;
-    padding: 1.7em 0 0 2em;
+    padding: 1.7em 0 1.7em 2em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
     #headerTouristAttraction .panelHeaderTouristAttraction h1 {
       font-size: 42px;
       font-weight: 300; }
 
 #touristAttraction {
-  margin-top: 10vh;
-  height: 45vh; }
+  margin-top: auto;
+  height: auto;
+  padding-bottom: 4em; }
   #touristAttraction .leftSideTourist {
     width: 50%;
     padding: 0 2em 0 2em;
@@ -187,9 +191,10 @@
 ------ Grand ABE's Website -------
 -----------------------------*/
 #weddings {
-  height: 50vh;
+  height: auto;
   width: 100%;
   padding-top: 5em;
+  padding-left: 1em;
   background: #272c2d; }
   #weddings .panelWedding h1 {
     font-size: 42px;
@@ -205,9 +210,11 @@
     width: 80%; }
 
 #birthdays {
-  height: 50vh;
+  height: auto;
   width: 100%;
   padding-top: 5em;
+  padding-right: 2em;
+  padding-bottom: 4em;
   background: #272c2d; }
   #birthdays .panelBirthday h1 {
     font-size: 42px;

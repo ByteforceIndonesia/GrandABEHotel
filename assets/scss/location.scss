@@ -5,7 +5,8 @@
 
 #whereAreWe
 {
-	height:40vh;
+	height:auto;
+	padding-bottom:4em;
 	width:100%;
 	background: $primary-color;
 	font-weight: 300;
@@ -14,11 +15,12 @@
 	{
 		color:$font-primary;
 		padding-top:4em;
+		padding-bottom: 3em;
 
 		h1
 		{
 			border-bottom:1px solid $font-primary;
-			width:50%;
+			width:80%;
 			font-weight: 400;
 		}
 
@@ -35,10 +37,10 @@
 
 	.panelHeaderTouristAttraction
 	{
-		height:12vh;
+		height:auto;
 		background:$secondary-color;
 		margin-top:-7vh;
-		padding:1.7em 0 0 2em;
+		padding:1.7em 0 1.7em 2em;
 		box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
 
 		h1
@@ -51,8 +53,9 @@
 
 #touristAttraction
 {
-	margin-top:10vh;
-	height:45vh;
+	margin-top:auto;
+	height:auto;
+	padding-bottom:4em;
 
 	.leftSideTourist
 	{

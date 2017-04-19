@@ -5,9 +5,10 @@
 
 #weddings
 {
-	height:50vh;
+	height:auto;
 	width:100%;
 	padding-top: 5em;
+	padding-left: 1em;
 	background:$primary-color;
 
 	.panelWedding
@@ -34,9 +35,11 @@
 
 #birthdays
 {
-	height:50vh;
+	height:auto;
 	width:100%;
 	padding-top: 5em;
+	padding-right: 2em;
+	padding-bottom: 4em;
 	background:$primary-color;
 
 	.panelBirthday

@@ -12,7 +12,7 @@
 	{
 		z-index:1000;
 		width:90%;
-		height:15vh;
+		height:auto;
 		margin-top:-5vh;
 		background:$secondary-color;
 		padding:2em 1em 1em 0em;
@@ -30,8 +30,8 @@
 
 #headerBusiness
 {
-	padding:12vh 5em 0 5em;
-	height:40vh;
+	padding:8vh 5em 2em 5em;
+	height:auto;
 	width:100%;
 	background:$primary-color;
 	color:$font-primary;
@@ -45,7 +45,7 @@
 
 #packages
 {
-	height:40vh;
+	height:auto;
 	width:100%;
 	padding:3em 0 2em 4em;
 	font-weight: 300;
@@ -75,5 +75,5 @@
 {
 	background: $primary-color;
 	width:100%;
-	height: 40vh;
+	height: auto;
 }
