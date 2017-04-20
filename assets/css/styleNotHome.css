@@ -112,8 +112,13 @@
 
 #carousel {
   background: #272c2d;
-  width: 100%;
-  height: auto; }
+  height: auto;
+  padding: 2em 0 2em 0; }
+  #carousel .carousel-inner {
+    height: auto; }
+    #carousel .carousel-inner img {
+      height: 100%;
+      width: 100%; }
 
 /* ----------------------------
 ---- ByteForce Indonesia ------

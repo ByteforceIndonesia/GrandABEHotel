@@ -74,6 +74,17 @@
 #carousel
 {
 	background: $primary-color;
-	width:100%;
 	height: auto;
+	padding:2em 0 2em 0;
+
+	.carousel-inner
+	{
+		height:auto;
+
+		img
+		{
+			height:100%;
+			width:100%;
+		}
+	}
 }
