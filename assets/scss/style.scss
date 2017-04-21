@@ -193,14 +193,15 @@ body
 
 #pageTwo
 {
-	height:66vh;
+	height:auto;
 	width:100%;
 
 	#booking
 	{
-		height:37vh;
+		height:auto;
 		background:$primary-color;
 		padding-top:2em;
+		padding-bottom: 3em;
 
 		.bookingNow
 		{
@@ -412,7 +413,7 @@ body
 {
 	background:url('../images/home_large.jpg');
 	background-size: cover;
-	height:50vh;
+	height:auto;
 	width:100%;
 
 	.wrapMe

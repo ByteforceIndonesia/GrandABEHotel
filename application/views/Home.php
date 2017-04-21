@@ -238,19 +238,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	</section>
 	<section id="pageFive">
-		<div class="darkerFilter wrapMe row">
-			<div class="col-lg-5">&nbsp</div>
-			<div class="col-lg-6">
-				<div class="whitePanel">
-					<h1>Virtual <strong>Tour</strong></h1>
+		<div class="container">
+			<div class="darkerFilter wrapMe row">
+				<div class="col-lg-5">&nbsp</div>
+				<div class="col-lg-6">
+					<div class="whitePanel">
+						<h1>Virtual <strong>Tour</strong></h1>
+					</div>
+					<div class="virtualTourButton">
+						<button id="virtualTourBtn" onclick="window.location='<?php echo $home->ta_virtualTourLink?>';">
+							Click Here
+						</button>
+					</div>
 				</div>
-				<div class="virtualTourButton">
-					<button id="virtualTourBtn" onclick="window.location='<?php echo $home->ta_virtualTourLink?>';">
-						Click Here
-					</button>
-				</div>
+				<div class="col-lg-1">&nbsp</div>
 			</div>
-			<div class="col-lg-1">&nbsp</div>
 		</div>
 	</section>
 

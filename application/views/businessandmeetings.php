@@ -98,5 +98,3 @@
    			</div>
 		</div>
 </section>
-
-<script src="<?php echo base_url() . JS_DIR . 'businessandmeetings.js'; ?>"></script>

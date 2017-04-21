@@ -332,10 +332,8 @@ body {
       font-weight: 40; }
 
 @media screen and (max-width: 1200px) {
-  #pageTwo {
-    height: 170vh; }
-    #pageTwo .bookingPanel {
-      height: 1180px !important; }
+  #pageTwo .bookingPanel {
+    height: 1180px !important; }
 
   #pageFour {
     height: 65vh; }
@@ -478,9 +476,6 @@ body {
     margin-bottom: 2em; }
     #headerBusinessandMeetings .panelHeaderBusinessMeetings {
       height: auto; }
-
-  #pageTwo {
-    height: 180vh; }
 
   #whereAreWe {
     height: 55vh; }
