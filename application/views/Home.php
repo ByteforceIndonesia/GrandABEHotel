@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title><?php echo $page_title ?></title>
 
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'style.css' ?>">
