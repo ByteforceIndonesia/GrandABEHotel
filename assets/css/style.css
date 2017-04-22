@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  text-align: justify;
   font-family: 'helvetica' !important; }
 
 .darkerFilter {
@@ -51,7 +52,8 @@ body {
   #navigation #navbar {
     margin: 0;
     border: 0;
-    z-index: 1000; }
+    z-index: 1000;
+    overflow-y: scroll; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
@@ -68,7 +70,6 @@ body {
 #firstPage {
   position: relative;
   width: 100%;
-  height: 100vh;
   color: #fff;
   overflow: hidden; }
   #firstPage .logoName {
@@ -184,17 +185,19 @@ body {
 
 #pageThree {
   width: 100%;
-  height: 60vh;
+  height: auto;
   overflow: hidden; }
   #pageThree .bedAbout {
     background: url("../images/bedAbout.jpg");
     background-size: cover;
     position: relative;
     height: 60vh; }
-  #pageThree .logoAbout {
-    margin-top: 10vh; }
-    #pageThree .logoAbout img {
-      max-width: 20vh; }
+  #pageThree .leftAbout {
+    margin-bottom: 0; }
+    #pageThree .leftAbout .logoAbout {
+      margin-top: 3em; }
+      #pageThree .leftAbout .logoAbout img {
+        max-width: 20vh; }
   #pageThree h1 {
     margin-top: 1em;
     font-size: 52px;
@@ -227,7 +230,8 @@ body {
   background: url("../images/home_large.jpg");
   background-size: cover;
   height: auto;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 2em; }
   #pageFive .wrapMe .whitePanel {
     margin-top: 15vh;
     background: #fff;
@@ -253,7 +257,8 @@ body {
       opacity: 0.8;
       transition: opacity .2s ease-in-out; }
     #pageFive .wrapMe .virtualTourButton button:hover {
-      opacity: 1; }
+      opacity: 1;
+      cursor: pointer; }
 
 #footer {
   width: 100%;
@@ -292,7 +297,7 @@ body {
     display: none !important; }
 
   #navigation {
-    padding: 1em 2em 2em 2em;
+    padding: 1em 2em 1em 2em;
     height: 10vh;
     transition: all .2s ease-in-out; }
     #navigation #navbar {
@@ -304,7 +309,8 @@ body {
       width: 100vh; }
 
   .opened {
-    height: 50vh !important; }
+    height: 80vh !important;
+    background: #fff !important; }
 
   .fixed {
     transition: all .2s ease-in-out;
@@ -315,7 +321,8 @@ body {
       color: #000 !important; }
 
   #headerBusiness {
-    height: auto !important; }
+    height: auto !important;
+    padding-top: 15vh; }
 
   #packages {
     height: auto;
@@ -378,8 +385,19 @@ body {
     height: 55vh; }
 
   #headerBusinessandMeetings .panelHeaderBusinessMeetings {
-    height: 12vh; } }
+    height: 12vh; }
+
+  #pageThree .leftAbout {
+    padding: 0; }
+    #pageThree .leftAbout .col-lg-6 {
+      padding-left: 2.5em; }
+
+  #pageFour .aboutUs h1 {
+    width: 100%; } }
 @media screen and (max-width: 768px) {
+  #navigation {
+    height: 12vh; }
+
   #headerRooms .panelHeaderRooms {
     height: 25vh;
     padding-top: 2.5em; }
@@ -416,21 +434,32 @@ body {
   #footer .rightPanel {
     padding-left: 5vh; } }
 @media screen and (max-width: 588px) {
+  #navigation {
+    height: 12vh; }
+
   #footer .leftPanel {
     height: auto; }
 
   #headerBusiness {
-    height: auto; }
+    height: auto;
+    padding: 12vh 1.5em 2em 1.5em; }
 
-  #headerBusinessandMeetings {
-    margin-bottom: 2em; }
-    #headerBusinessandMeetings .panelHeaderBusinessMeetings {
-      height: auto; }
+  #packages h1 {
+    width: 100%; }
+
+  #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+    height: auto; }
+    #headerBusinessandMeetings .panelHeaderBusinessMeetings h1 {
+      font-size: 28px; }
 
   #whereAreWe {
     height: 55vh; }
 
   .room {
-    height: auto; } }
+    height: auto; }
+
+  #headerRooms .panelHeaderRooms {
+    height: auto;
+    padding-top: 2em; } }
 
 /*# sourceMappingURL=style.css.map */

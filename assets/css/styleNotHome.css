@@ -7,7 +7,7 @@
 ------ Grand ABE's Website -------
 -----------------------------*/
 #headerRooms {
-  height: 30vh; }
+  height: auto; }
   #headerRooms .panelHeaderRooms {
     z-index: 1000;
     width: 100%;
@@ -278,7 +278,8 @@ body {
     max-width: 70px; }
   #navigation #navbar {
     margin: 0;
-    border: 0; }
+    border: 0;
+    overflow-y: scroll; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
@@ -342,7 +343,7 @@ body {
     display: none !important; }
 
   #navigation {
-    padding: 1em 2em 2em 2em;
+    padding: 1em 2em 1em 2em;
     height: 10vh;
     transition: all .2s ease-in-out; }
     #navigation #navbar {
@@ -354,7 +355,8 @@ body {
       width: 100vh; }
 
   .opened {
-    height: 50vh !important; }
+    height: 80vh !important;
+    background: #fff !important; }
 
   .fixed {
     transition: all .2s ease-in-out;
@@ -365,7 +367,8 @@ body {
       color: #000 !important; }
 
   #headerBusiness {
-    height: auto !important; }
+    height: auto !important;
+    padding-top: 15vh; }
 
   #packages {
     height: auto;
@@ -428,8 +431,19 @@ body {
     height: 55vh; }
 
   #headerBusinessandMeetings .panelHeaderBusinessMeetings {
-    height: 12vh; } }
+    height: 12vh; }
+
+  #pageThree .leftAbout {
+    padding: 0; }
+    #pageThree .leftAbout .col-lg-6 {
+      padding-left: 2.5em; }
+
+  #pageFour .aboutUs h1 {
+    width: 100%; } }
 @media screen and (max-width: 768px) {
+  #navigation {
+    height: 12vh; }
+
   #headerRooms .panelHeaderRooms {
     height: 25vh;
     padding-top: 2.5em; }
@@ -466,21 +480,32 @@ body {
   #footer .rightPanel {
     padding-left: 5vh; } }
 @media screen and (max-width: 588px) {
+  #navigation {
+    height: 12vh; }
+
   #footer .leftPanel {
     height: auto; }
 
   #headerBusiness {
-    height: auto; }
+    height: auto;
+    padding: 12vh 1.5em 2em 1.5em; }
 
-  #headerBusinessandMeetings {
-    margin-bottom: 2em; }
-    #headerBusinessandMeetings .panelHeaderBusinessMeetings {
-      height: auto; }
+  #packages h1 {
+    width: 100%; }
+
+  #headerBusinessandMeetings .panelHeaderBusinessMeetings {
+    height: auto; }
+    #headerBusinessandMeetings .panelHeaderBusinessMeetings h1 {
+      font-size: 28px; }
 
   #whereAreWe {
     height: 55vh; }
 
   .room {
-    height: auto; } }
+    height: auto; }
+
+  #headerRooms .panelHeaderRooms {
+    height: auto;
+    padding-top: 2em; } }
 
 /*# sourceMappingURL=styleNotHome.css.map */

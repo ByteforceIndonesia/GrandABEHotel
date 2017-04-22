@@ -21,7 +21,7 @@
 
 	#navigation
 	{
-		padding:1em 2em 2em 2em;
+		padding:1em 2em 1em 2em;
 		height: 10vh;
 		transition:all .2s ease-in-out;
 
@@ -38,7 +38,8 @@
 
 	.opened
 	{
-		height:50vh !important;
+		height:80vh !important;
+		background: #fff !important;
 	}
 
 	.fixed
@@ -57,6 +58,7 @@
 	#headerBusiness
 	{
 		height:auto !important;
+		padding-top:15vh;
 	}
 
 	#packages
@@ -149,6 +151,7 @@
 
 @media screen and (max-width: 992px)
 {
+
 	#headerRooms
 	{
 		.panelHeaderRooms
@@ -198,10 +201,39 @@
 			height:12vh;
 		}
 	}
+
+	#pageThree
+	{
+		.leftAbout
+		{
+			padding:0;
+
+			.col-lg-6
+			{
+				padding-left:2.5em;
+			}
+		}
+	}
+
+	#pageFour
+	{
+		.aboutUs
+		{
+			h1
+			{
+				width:100%;
+			}
+		}
+	}
 }
 
 @media screen and (max-width:768px)
 {
+
+	#navigation
+	{
+		height:12vh;
+	}
 
 	#headerRooms
 	{
@@ -282,6 +314,11 @@
 
 @media screen and(max-width:588px)
 {
+	#navigation
+	{
+		height:12vh;
+	}
+
 	#footer
 	{
 		.leftPanel
@@ -293,15 +330,27 @@
 	#headerBusiness
 	{
 		height:auto;
+		padding:12vh 1.5em 2em 1.5em;
+	}
+
+	#packages
+	{
+		h1
+		{
+			width:100%;
+		}
 	}
 
 	#headerBusinessandMeetings
-	{
-		margin-bottom: 2em;
-		
+	{	
 		.panelHeaderBusinessMeetings
 		{
 			height:auto;
+
+			h1
+			{
+				font-size: 28px;
+			}
 		}
 	}
 
@@ -315,4 +364,14 @@
 	{
 		height:auto;
 	}
+
+	#headerRooms
+	{
+		.panelHeaderRooms
+		{
+			height:auto;
+			padding-top:2em;
+		}
+	}
+
 }

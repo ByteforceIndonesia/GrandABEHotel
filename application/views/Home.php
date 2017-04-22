@@ -239,7 +239,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</section>
 	<section id="pageFive">
 		<div class="container">
-			<div class="darkerFilter wrapMe row">
+			<div class="wrapMe row">
 				<div class="col-lg-5">&nbsp</div>
 				<div class="col-lg-6">
 					<div class="whitePanel">

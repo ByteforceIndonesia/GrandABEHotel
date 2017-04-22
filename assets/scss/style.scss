@@ -15,6 +15,7 @@ body
 	margin:0;
 	padding:0;
 	overflow-x: hidden;
+	text-align: justify;
 
 	// font-family: 'Roboto', sans-serif !important;
 	font-family: 'helvetica' !important;
@@ -87,6 +88,7 @@ body
 		margin:0;
 		border:0;
 		z-index: 1000;
+		overflow-y:scroll;
 
 		.in
 		{
@@ -127,9 +129,6 @@ body
 {
 	position:relative;
 	width:100%;
-	height:100vh;
-	// background:url('../images/home_large.jpg');
-	// background-size: cover;
 	color: $font-primary;
 	overflow:hidden;
 
@@ -339,7 +338,7 @@ body
 #pageThree
 {
 	width:100%;
-	height:60vh;
+	height:auto;
 	overflow:hidden;
 
 	.bedAbout
@@ -350,15 +349,22 @@ body
 		height:60vh;
 	}
 
-	.logoAbout
+	.leftAbout
 	{
-		margin-top:10vh;
+		margin-bottom: 0;
 
-		img
+		.logoAbout
 		{
-			max-width: 20vh;
+			margin-top:3em;
+
+			img
+			{
+				max-width: 20vh;
+			}
+			
 		}
 	}
+	
 
 	h1
 	{
@@ -415,6 +421,7 @@ body
 	background-size: cover;
 	height:auto;
 	width:100%;
+	padding-bottom: 2em;
 
 	.wrapMe
 	{
@@ -456,6 +463,7 @@ body
 			button:hover
 			{
 				opacity:1;
+				cursor:pointer;
 			}
 		}
 	}

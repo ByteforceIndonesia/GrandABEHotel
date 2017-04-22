@@ -18,6 +18,11 @@ $(document).ready(function() {
     	$('#yearBig').html(year);
     });
 
+    // Set page one height for iphone
+    $("#firstPage").css('height', window.innerHeight);
+
+    $(".opened").css('height', window.innerHeight * 0.8 + "!important");
+
 
     // parallax
     var last_known_scroll_position = 0;
