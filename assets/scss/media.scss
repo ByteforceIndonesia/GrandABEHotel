@@ -30,7 +30,7 @@
 			margin:0;
 			margin-top: 0.5em;
 			border:0;
-			background: #fff;
+			background:rgba(255,255,255,0.1);
 			padding:1em;
 			width:100vh;
 		}
@@ -38,7 +38,7 @@
 
 	.opened
 	{
-		height:80vh !important;
+		height:75vh !important;
 		background: #fff !important;
 	}
 
@@ -303,12 +303,11 @@
 
 	#navigation
 	{
-		height:12vh;
+		height:8.5vh;
 
 		#navbar
 		{
 			padding:1em 0 0 0;
-			background:rgba(255,255,255,0.1);
 		}
 	}
 
@@ -426,6 +425,14 @@
 		height:12vh;
 	}
 
+	#firstPage
+	{
+		.homeLine
+		{
+			margin-top:30%;
+		}
+	}
+
 	#footer
 	{
 		.leftPanel
@@ -481,4 +488,28 @@
 		}
 	}
 
+}
+
+@media screen and (max-width:320px)
+{
+	#navigation
+	{
+		height:14vh;
+	}
+
+	#firstPage
+	{
+		.logoName
+		{
+			h1
+			{
+				font-size:28px;
+			}
+		}
+
+		.homeLine
+		{
+			margin-top:15%;
+		}
+	}
 }

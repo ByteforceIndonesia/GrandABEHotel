@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 
     // Set page one height for iphone
-    $("#firstPage").css('height', window.innerHeight);
+    $("#firstPage").css('height', window.innerHeight * 0.8);
 
     $(".opened").css('height', window.innerHeight * 0.8 + "!important");
 
