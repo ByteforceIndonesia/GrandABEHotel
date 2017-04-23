@@ -128,39 +128,45 @@ body {
       box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75);
       padding: 2em;
       padding-bottom: 1em; }
-      #pageTwo #booking .bookingPanel .day #dayBig {
-        margin-top: -5px;
-        font-size: 7em;
-        font-weight: 400; }
-      #pageTwo #booking .bookingPanel .day h5 {
-        font-size: 3em;
-        font-weight: 300; }
-      #pageTwo #booking .bookingPanel .day select {
-        margin-top: 1.5em;
-        font-size: 10px;
-        background-color: #272c2d; }
-      #pageTwo #booking .bookingPanel .month #monthBig {
-        margin-top: -5px;
-        font-size: 7em;
-        font-weight: 400; }
-      #pageTwo #booking .bookingPanel .month h5 {
-        font-size: 3em;
-        font-weight: 300; }
-      #pageTwo #booking .bookingPanel .month select {
-        margin-top: 1.5em;
-        font-size: 10px;
-        background-color: #272c2d; }
-      #pageTwo #booking .bookingPanel .year #yearBig {
-        margin-top: -5px;
-        font-size: 7em;
-        font-weight: 400; }
-      #pageTwo #booking .bookingPanel .year h5 {
-        font-size: 3em;
-        font-weight: 300; }
-      #pageTwo #booking .bookingPanel .year select {
-        margin-top: 1.5em;
-        font-size: 10px;
-        background-color: #272c2d; }
+      #pageTwo #booking .bookingPanel .day {
+        margin-bottom: 2em; }
+        #pageTwo #booking .bookingPanel .day #dayBig {
+          margin-top: -5px;
+          font-size: 7em;
+          font-weight: 400; }
+        #pageTwo #booking .bookingPanel .day h5 {
+          font-size: 3em;
+          font-weight: 300; }
+        #pageTwo #booking .bookingPanel .day select {
+          margin-top: 1.5em;
+          font-size: 10px;
+          background-color: #272c2d; }
+      #pageTwo #booking .bookingPanel .month {
+        margin-bottom: 2em; }
+        #pageTwo #booking .bookingPanel .month #monthBig {
+          margin-top: -5px;
+          font-size: 7em;
+          font-weight: 400; }
+        #pageTwo #booking .bookingPanel .month h5 {
+          font-size: 3em;
+          font-weight: 300; }
+        #pageTwo #booking .bookingPanel .month select {
+          margin-top: 1.5em;
+          font-size: 10px;
+          background-color: #272c2d; }
+      #pageTwo #booking .bookingPanel .year {
+        margin-bottom: 2em; }
+        #pageTwo #booking .bookingPanel .year #yearBig {
+          margin-top: -5px;
+          font-size: 7em;
+          font-weight: 400; }
+        #pageTwo #booking .bookingPanel .year h5 {
+          font-size: 3em;
+          font-weight: 300; }
+        #pageTwo #booking .bookingPanel .year select {
+          margin-top: 1.5em;
+          font-size: 10px;
+          background-color: #272c2d; }
       #pageTwo #booking .bookingPanel .formBook input[type=text] {
         margin-top: 2.7em;
         border: 0;
@@ -381,6 +387,9 @@ body {
     #roomDetails .room .headerPanelRoomText {
       padding: 0 2vh 0 2vh; }
 
+  #pageTwo .panelBooking {
+    margin: 0; }
+
   #headerBusiness {
     height: 55vh; }
 
@@ -395,8 +404,14 @@ body {
   #pageFour .aboutUs h1 {
     width: 100%; } }
 @media screen and (max-width: 768px) {
+  #firstPage .logoName h1 {
+    font-size: 32px; }
+
   #navigation {
     height: 12vh; }
+    #navigation #navbar {
+      padding: 1em 0 0 0;
+      background: rgba(255, 255, 255, 0.1); }
 
   #headerRooms .panelHeaderRooms {
     height: 25vh;
@@ -429,7 +444,8 @@ body {
     height: auto;
     padding-bottom: 2em; }
     #pageFour .aboutUsParagraph {
-      padding: 0 1em 0 1em; }
+      padding: 0 1em 0 1em;
+      font-size: 14px; }
 
   #footer .rightPanel {
     padding-left: 5vh; } }

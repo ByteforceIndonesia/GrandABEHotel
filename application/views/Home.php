@@ -127,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<!-- Jeff ini formnya kemana? -->
 					<?php echo form_open('email/mail') ?>
 					<div class="bookingPanel row">
-						<div class="col-lg-8 row">
+						<div class="col-lg-8 col-md-12 panelBooking row">
 							<div class="col-xl-4 day">
 								<center>
 									<h5>DAY</h5>
@@ -177,7 +177,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</center>
 							</div>
 						</div>
-						<div class="col-lg-4 formBook">
+						<div class="col-lg-4 col-md-12 formBook">
 							<input type="text" id= "name" name="name" placeholder="Name" <?php echo set_value('name');?>>
 							<br>
 							<input type="text" id="email" name="email" placeholder="E-mail" <?php echo set_value('email');?>>
@@ -287,16 +287,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 
 <script>
-	var navFixed = $('#pageTwo').waypoint(function(event, direction) 
-	{
-	  $('#navigation').toggleClass('fixed')
-	  ,{
-	  	offset: function() {
-		    return -(this.element.clientHeight + 300)
-		  }
-	  };	  
-	});
-
 	$('#btnLearn').click(function() {
 		$('html, body').animate({
         	scrollTop: $("#pageFour").offset().top

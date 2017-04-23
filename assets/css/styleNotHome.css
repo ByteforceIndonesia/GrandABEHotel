@@ -427,6 +427,9 @@ body {
     #roomDetails .room .headerPanelRoomText {
       padding: 0 2vh 0 2vh; }
 
+  #pageTwo .panelBooking {
+    margin: 0; }
+
   #headerBusiness {
     height: 55vh; }
 
@@ -441,8 +444,14 @@ body {
   #pageFour .aboutUs h1 {
     width: 100%; } }
 @media screen and (max-width: 768px) {
+  #firstPage .logoName h1 {
+    font-size: 32px; }
+
   #navigation {
     height: 12vh; }
+    #navigation #navbar {
+      padding: 1em 0 0 0;
+      background: rgba(255, 255, 255, 0.1); }
 
   #headerRooms .panelHeaderRooms {
     height: 25vh;
@@ -475,7 +484,8 @@ body {
     height: auto;
     padding-bottom: 2em; }
     #pageFour .aboutUsParagraph {
-      padding: 0 1em 0 1em; }
+      padding: 0 1em 0 1em;
+      font-size: 14px; }
 
   #footer .rightPanel {
     padding-left: 5vh; } }
