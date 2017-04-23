@@ -208,7 +208,8 @@
     border-bottom: 1px solid #fff;
     width: 100%;
     padding-bottom: 10px;
-    padding-left: 0.2em; }
+    padding-left: 0.2em;
+    padding-top: 0.5em; }
   #weddings .panelWedding p {
     color: #fff;
     padding-top: 2em;
@@ -264,7 +265,7 @@ body {
   border-radius: 0;
   font-size: 1.5em;
   font-weight: 300;
-  position: fixed;
+  position: absolute;
   transition: all .2s ease-in-out;
   z-index: 1000;
   color: #000;
@@ -296,7 +297,7 @@ body {
 #firstPage {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
   color: #fff;
   transition: 0s linear;
@@ -429,6 +430,12 @@ body {
 
   #pageTwo .panelBooking {
     margin: 0; }
+  #pageTwo #booking .bookingPanel .day h5 {
+    font-size: 32px; }
+  #pageTwo #booking .bookingPanel .month h5 {
+    font-size: 32px; }
+  #pageTwo #booking .bookingPanel .year h5 {
+    font-size: 32px; }
 
   #headerBusiness {
     height: 55vh; }
@@ -442,7 +449,13 @@ body {
       padding-left: 2.5em; }
 
   #pageFour .aboutUs h1 {
-    width: 100%; } }
+    width: 100%; }
+
+  #pageFive .wrapMe .whitePanel h1 {
+    font-size: 38px; }
+  #pageFive .wrapMe .virtualTourButton button {
+    font-size: 26px;
+    padding-right: 0.7em; } }
 @media screen and (max-width: 768px) {
   #firstPage .logoName h1 {
     font-size: 32px; }
@@ -480,12 +493,23 @@ body {
       padding: 0 2em 0 2em;
       float: left; }
 
+  #roomDetails .room .headerPanelRoomText h3 {
+    width: 100%; }
+
+  #headerTouristAttraction {
+    margin-bottom: 5em; }
+
+  #scattered {
+    height: 90vh; }
+    #scattered #photostack-2 {
+      height: 90vh; }
+
   #pageFour {
     height: auto;
     padding-bottom: 2em; }
     #pageFour .aboutUsParagraph {
       padding: 0 1em 0 1em;
-      font-size: 14px; }
+      font-size: 16px; }
 
   #footer .rightPanel {
     padding-left: 5vh; } }

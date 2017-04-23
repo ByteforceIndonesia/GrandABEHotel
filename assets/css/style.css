@@ -389,6 +389,12 @@ body {
 
   #pageTwo .panelBooking {
     margin: 0; }
+  #pageTwo #booking .bookingPanel .day h5 {
+    font-size: 32px; }
+  #pageTwo #booking .bookingPanel .month h5 {
+    font-size: 32px; }
+  #pageTwo #booking .bookingPanel .year h5 {
+    font-size: 32px; }
 
   #headerBusiness {
     height: 55vh; }
@@ -402,7 +408,13 @@ body {
       padding-left: 2.5em; }
 
   #pageFour .aboutUs h1 {
-    width: 100%; } }
+    width: 100%; }
+
+  #pageFive .wrapMe .whitePanel h1 {
+    font-size: 38px; }
+  #pageFive .wrapMe .virtualTourButton button {
+    font-size: 26px;
+    padding-right: 0.7em; } }
 @media screen and (max-width: 768px) {
   #firstPage .logoName h1 {
     font-size: 32px; }
@@ -440,12 +452,23 @@ body {
       padding: 0 2em 0 2em;
       float: left; }
 
+  #roomDetails .room .headerPanelRoomText h3 {
+    width: 100%; }
+
+  #headerTouristAttraction {
+    margin-bottom: 5em; }
+
+  #scattered {
+    height: 90vh; }
+    #scattered #photostack-2 {
+      height: 90vh; }
+
   #pageFour {
     height: auto;
     padding-bottom: 2em; }
     #pageFour .aboutUsParagraph {
       padding: 0 1em 0 1em;
-      font-size: 14px; }
+      font-size: 16px; }
 
   #footer .rightPanel {
     padding-left: 5vh; } }

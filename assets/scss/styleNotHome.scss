@@ -56,7 +56,7 @@ body
 	border-radius: 0;
 	font-size: 1.5em;
 	font-weight: 300;
-	position:fixed;
+	position:absolute;
 	transition:all .2s ease-in-out;
 	z-index:1000;
 	color:$font-secondary;
@@ -120,7 +120,7 @@ body
 {
 	position:relative;
 	width:100%;
-	height:100vh;
+	height:50vh;
 	overflow: hidden;
 	color: $font-primary;
     transition: 0s linear;

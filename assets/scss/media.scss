@@ -195,6 +195,36 @@
 		{
 			margin:0;
 		}
+
+		#booking
+		{
+			.bookingPanel
+			{
+				.day
+				{
+					h5
+					{
+						font-size: 32px;
+					}
+				}
+
+				.month
+				{
+					h5
+					{
+						font-size: 32px;
+					}
+				}
+
+				.year
+				{
+					h5
+					{
+						font-size: 32px;
+					}
+				}
+			}	
+		}
 	}
 
 	#headerBusiness
@@ -230,6 +260,29 @@
 			h1
 			{
 				width:100%;
+			}
+		}
+	}
+
+	#pageFive
+	{
+		.wrapMe
+		{
+			.whitePanel
+			{
+				h1
+				{
+					font-size: 38px;
+				}
+			}
+
+			.virtualTourButton
+			{
+				button
+				{
+					font-size: 26px;
+					padding-right:0.7em;
+				}
 			}
 		}
 	}
@@ -316,6 +369,35 @@
 		}
 	}
 
+	#roomDetails
+	{
+		.room
+		{
+			.headerPanelRoomText
+			{
+				h3
+				{
+					width:100%;
+				}
+			}
+		}
+	}
+
+	#headerTouristAttraction
+	{
+		margin-bottom:5em;
+	}
+
+	#scattered
+	{
+		height:90vh;
+
+		#photostack-2
+		{
+			height:90vh;
+		}
+	}
+
 	#pageFour
 	{
 		height: auto;
@@ -324,7 +406,7 @@
 		.aboutUsParagraph
 		{
 			padding: 0 1em 0 1em;
-			font-size: 14px;
+			font-size: 16px;
 		}
 	}
 
