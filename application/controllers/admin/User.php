@@ -38,7 +38,7 @@
         }
       }
       $this->load->helper('form');
-      $this->render('admin/login_view','admin_master');
+      $this->render('admin/login_view','admin_login');
     }
 
     public function logout()
