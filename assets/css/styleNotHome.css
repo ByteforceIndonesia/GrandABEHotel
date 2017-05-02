@@ -153,10 +153,22 @@
       font-size: 42px;
       font-weight: 300; }
 
+.popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  padding-top: 3em;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto; }
+
 #touristAttraction {
   margin-top: auto;
   height: auto;
   padding-bottom: 4em; }
+  #touristAttraction .panel {
+    float: left;
+    padding: 0 2em 0 2em; }
   #touristAttraction .leftSideTourist {
     width: 50%;
     padding: 0 2em 0 2em;
@@ -165,15 +177,20 @@
     width: 50%;
     padding: 0 2em 0 2em;
     float: left; }
-  #touristAttraction .touristLeft h1 {
-    font-weight: 400;
-    border-bottom: 1px solid #000;
-    width: 75%;
-    padding-left: 0.2em; }
-  #touristAttraction .touristLeft p {
-    margin-top: 3em;
-    text-align: justify; }
+  #touristAttraction .touristLeft {
+    height: 30vh;
+    text-overflow: ellipsis; }
+    #touristAttraction .touristLeft h1 {
+      font-weight: 400;
+      border-bottom: 1px solid #000;
+      width: 100%;
+      padding-left: 0.2em;
+      margin-bottom: 1em; }
+    #touristAttraction .touristLeft .wordwrapper {
+      margin-top: 3em;
+      text-align: justify; }
   #touristAttraction .imageTourist {
+    margin-top: 3em;
     height: 30vh;
     width: 100%;
     background-size: cover; }
