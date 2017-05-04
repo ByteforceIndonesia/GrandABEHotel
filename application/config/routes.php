@@ -56,6 +56,7 @@ $route['rooms'] = 'main/rooms';
 $route['businessandmeetings'] = 'main/businessandmeetings'; 
 $route['location'] = 'main/location'; 
 $route['weddingsandbirthdays'] = 'main/weddingsandbirthdays'; 
+$route['restaurant'] = 'main/restaurant'; 
 
 //for CMS
 $route['admin']= 'admin/dashboard';

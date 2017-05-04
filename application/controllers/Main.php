@@ -35,6 +35,14 @@ class Main extends MY_Controller {
 
 	}
 
+	public function restaurant ()
+	{
+		$this->data['main']=$this->Mainsettingsdata->getData();
+		$this->data['footer']=$this->footerdata->getData();
+		$this->data['contacts']=$this->footerdata->getContacts();
+		$this->template->load('template', 'resto', $this->data);
+	}
+
 	public function businessandmeetings ()
 	{
 		$this->data['main']=$this->Mainsettingsdata->getData();

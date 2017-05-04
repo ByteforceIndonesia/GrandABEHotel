@@ -50,6 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('restaurant') ?>">Restaurant & Bakery</a>
+				</li>
 			</ul>
 		</div>
 	</nav>

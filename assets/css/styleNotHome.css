@@ -252,6 +252,140 @@
     color: #fff;
     padding-top: 2em; }
 
+#headResto {
+  font-family: 'helvetica';
+  margin-bottom: -1em; }
+  #headResto h1 {
+    text-align: center;
+    padding: 2em; }
+
+#headSlider {
+  margin-bottom: 2em;
+  margin-top: -2em; }
+  #headSlider .imageSlider {
+    background-size: cover !important;
+    height: 80vh;
+    width: 100%; }
+  #headSlider .imageSliderResto {
+    background: url("../images/resto/4.jpg"); }
+  #headSlider .imageSliderCake {
+    background: url("../images/cake/10.jpg"); }
+
+#headingResto {
+  margin-bottom: -5em; }
+  #headingResto .heading {
+    background: #fff;
+    -webkit-box-shadow: 11px 13px 48px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 13px 48px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 13px 48px 0px rgba(0, 0, 0, 0.75); }
+    #headingResto .heading h4 {
+      font-weight: 300;
+      padding: 1em;
+      font-size: 18px;
+      line-height: 25px; }
+
+#freatured {
+  background: #272c2d;
+  padding: 10em 2em 2em 2em; }
+  #freatured h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 1em;
+    font-size: 52px; }
+  #freatured .imageFreatured {
+    background-size: 100% 100% !important;
+    height: 30vh;
+    padding: 1em; }
+  #freatured .col-lg-4:nth-child(2) .imageFreatured {
+    background: url("../images/resto/1.jpg"); }
+  #freatured .col-lg-4:nth-child(3) .imageFreatured {
+    background: url("../images/resto/2.jpg"); }
+  #freatured .col-lg-4:nth-child(4) .imageFreatured {
+    background: url("../images/resto/3.jpg"); }
+  #freatured .textFreatured {
+    margin-top: 2em;
+    padding-bottom: 2em; }
+    #freatured .textFreatured h5 {
+      padding: 1em 2em 0 2em;
+      text-align: center;
+      color: #fff;
+      font-weight: 300; }
+
+#headingCake {
+  margin-bottom: -5em; }
+  #headingCake .heading {
+    background: #fff;
+    -webkit-box-shadow: 11px 13px 48px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 13px 48px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 13px 48px 0px rgba(0, 0, 0, 0.75); }
+    #headingCake .heading h4 {
+      font-weight: 300;
+      padding: 1em;
+      font-size: 18px;
+      line-height: 25px; }
+
+#freaturedCake {
+  background: #272c2d;
+  padding: 10em 2em 2em 2em; }
+  #freaturedCake h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 1em;
+    font-size: 52px; }
+  #freaturedCake .imageFreatured {
+    background-size: 100% 100% !important;
+    height: 30vh;
+    padding: 1em; }
+  #freaturedCake .col-lg-4:nth-child(3) .imageFreatured {
+    background: url("../images/cake/1.jpg"); }
+  #freaturedCake .col-lg-4:nth-child(4) .imageFreatured {
+    background: url("../images/cake/2.jpg"); }
+  #freaturedCake .col-lg-4:nth-child(5) .imageFreatured {
+    background: url("../images/cake/3.jpg"); }
+  #freaturedCake .col-lg-4:nth-child(6) .imageFreatured {
+    background: url("../images/cake/4.jpg"); }
+  #freaturedCake .col-lg-4:nth-child(7) .imageFreatured {
+    background: url("../images/cake/5.jpg"); }
+  #freaturedCake .col-lg-4:nth-child(8) .imageFreatured {
+    background: url("../images/cake/6.jpg"); }
+  #freaturedCake .textFreatured {
+    margin-top: 2em;
+    padding-bottom: 2em; }
+    #freaturedCake .textFreatured h5 {
+      padding: 1em 2em 0 2em;
+      text-align: center;
+      color: #fff;
+      font-weight: 300; }
+
+#freaturedSliced {
+  background: #fff;
+  padding: 3em 2em 2em 2em; }
+  #freaturedSliced h1 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1em;
+    font-size: 52px; }
+  #freaturedSliced .imageFreatured {
+    background-size: cover !important;
+    height: 30vh;
+    padding: 1em; }
+  #freaturedSliced .col-lg-3:nth-child(2) .imageFreatured {
+    background: url("../images/cake/12.jpg"); }
+  #freaturedSliced .col-lg-3:nth-child(3) .imageFreatured {
+    background: url("../images/cake/13.jpg"); }
+  #freaturedSliced .col-lg-3:nth-child(4) .imageFreatured {
+    background: url("../images/cake/14.jpg"); }
+  #freaturedSliced .col-lg-3:nth-child(5) .imageFreatured {
+    background: url("../images/cake/15.jpg"); }
+  #freaturedSliced .textFreatured {
+    margin-top: 2em; }
+    #freaturedSliced .textFreatured h5 {
+      padding: 1em 2em 0 2em;
+      text-align: center;
+      font-weight: 300; }
+
 body {
   margin: 0;
   padding: 0;
@@ -350,6 +484,9 @@ body {
       font-size: 14px;
       font-weight: 40; }
 
+@media screen and (max-width: 1263px) {
+  #navigation #navbar a {
+    font-size: 22px; } }
 @media screen and (max-width: 1200px) {
   #pageTwo .bookingPanel {
     height: 1180px !important; }
