@@ -55,8 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['rooms'] = 'main/rooms'; 
 $route['businessandmeetings'] = 'main/businessandmeetings'; 
 $route['location'] = 'main/location'; 
-$route['weddingsandbirthdays'] = 'main/weddingsandbirthdays'; 
+$route['weddingsandevents'] = 'main/weddingsandevents'; 
 $route['restaurant'] = 'main/restaurant'; 
+$route['news']		= 'main/news';
 
 //for CMS
 $route['admin']= 'admin/dashboard';

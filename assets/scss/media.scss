@@ -7,6 +7,7 @@
 			a
 			{
 				font-size: 22px;
+				color:$font-secondary;
 			}
 		}
 	}
@@ -14,15 +15,6 @@
 
 @media screen and (max-width: 1200px) 
 { 
-	//For Home
-	#pageTwo
-	{
-		.bookingPanel
-		{
-			height:1180px !important;
-		}
-	}
-
 	#pageFour
 	{
 		height: 65vh;
@@ -36,8 +28,15 @@
 	#navigation
 	{
 		padding:1em 2em 1em 2em;
-		height: 10vh;
+		height: 85px;
 		transition:all .2s ease-in-out;
+
+
+		.navbar-brand
+		{
+			margin:0;
+			font-size: 22pt;
+		}
 
 		#navbar
 		{
@@ -52,8 +51,13 @@
 
 	.opened
 	{
-		height:75vh !important;
+		height:600px !important;
 		background: #fff !important;
+
+		.navbar-brand
+		{
+			color:$font-secondary !important;
+		}
 	}
 
 	.fixed
@@ -165,13 +169,25 @@
 
 @media screen and (max-width: 992px)
 {
-
+	
 	#headerRooms
 	{
 		.panelHeaderRooms
 		{
-			height:25vh;
+			height:auto;
 			padding-top:2.5em;
+		}
+	}
+
+	#pageTwo
+	{
+		#booking
+		{
+			.bookingPanel
+			{
+				padding-top:50px;
+				padding-bottom: 50px;
+			}
 		}
 	}
 
@@ -317,11 +333,22 @@
 
 	#navigation
 	{
-		height:8.5vh;
+		height:75px;
+
+		.navbar-brand
+		{
+			font-size: 18pt;
+		}
 
 		#navbar
 		{
 			padding:1em 0 0 0;
+
+			.dropdown-item
+			{
+				font-size: 14pt;
+				font-weight: 300;
+			}
 		}
 	}
 
@@ -329,7 +356,7 @@
 	{
 		.panelHeaderRooms
 		{
-			height:25vh;
+			height:auto;
 			padding-top:2.5em;
 		}
 	}
@@ -364,7 +391,7 @@
 
 	#touristAttraction
 	{
-		height:65vh;
+		height:auto;
 
 		.leftSideTourist
 		{
@@ -436,14 +463,20 @@
 {
 	#navigation
 	{
-		height:12vh;
+		height:75px;
+
+		.navbar-brand
+		{
+			margin:0;
+			font-size: 18pt;
+		}
 	}
 
 	#firstPage
 	{
 		.homeLine
 		{
-			margin-top:30%;
+			margin-top:140px;
 		}
 	}
 
@@ -485,7 +518,7 @@
 
 	#whereAreWe
 	{
-		height:55vh;
+		height:auto;
 	}
 
 	.room
@@ -508,7 +541,14 @@
 {
 	#navigation
 	{
-		height:14vh;
+		height:75px;
+
+		.navbar-brand
+		{
+			margin:0;
+			margin-top: 5px;
+			font-size: 14pt;
+		}
 	}
 
 	#firstPage

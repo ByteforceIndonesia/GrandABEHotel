@@ -32,28 +32,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="toggleNav">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
-	  <a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>
-		  <div class="collapse navbar-collapse" id="navbar">
-			<ul class="navbar-nav">
-				<li class="active nav-item">
-					<a class="nav-link" href="<?php echo base_url() ?>">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('rooms') ?>">Rooms</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('location') ?>">Location</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('restaurant') ?>">Restaurant & Bakery</a>
-				</li>
-			</ul>
+		  	  	<a class="navbar-brand" href="#">GRAND ABE <strong>HOTEL</strong></a>
+		  	  	
+			  	<div class="collapse navbar-collapse" id="navbar">
+				<ul class="navbar-nav">
+					<li class="active nav-item">
+						<a class="nav-link" href="<?php echo base_url() ?>">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?php echo base_url('rooms') ?>">Rooms</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weddings and Events</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item" href="<?php echo base_url('weddingsandevents') ?>#wedding">Wedding</a>
+				          <a class="dropdown-item" href="<?php echo base_url('weddingsandevents') ?>#birthdays">Birthday</a>
+				        </div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="restaurantDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Restaurant</a>
+						<div class="dropdown-menu" aria-labelledby="restaurantDropDown">
+				          <a class="dropdown-item" href="<?php echo base_url('restaurant') ?>#headresto">GRACIA CAFE & RESTO</a>
+				          <a class="dropdown-item" href="<?php echo base_url('restaurant') ?>#headcake">CAKE & BAKERY SHOP</a>
+				        </div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  id="locationDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Location</a>
+						<div class="dropdown-menu" aria-labelledby="locationDropDown">
+				          <a class="dropdown-item" href="<?php echo base_url('location') ?>#wherearewe">Maps</a>
+				          <a class="dropdown-item" href="<?php echo base_url('location') ?>#headerTouristAttraction">Tourist Destinations</a>
+				        </div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?php echo base_url('news') ?>">News & Promotion</a>
+					</li>
+				</ul>
 		</div>
 	</nav>
 
@@ -62,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div id="parallax"
 		style="
 		<?php if(!empty($main->background))
-			echo 'style="background-image:url(\''. base_url() .'assets/images/uploads/background/'.$main->background.'\' );"'
+			echo 'background-image:url(\''. base_url() .'assets/images/uploads/background/'.$main->background.'\' );'
 		?>
 		"
 		>
@@ -101,8 +117,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</section>
-</div>
-</body>
 </div>
 </body>
 <script>

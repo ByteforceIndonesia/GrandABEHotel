@@ -11,6 +11,11 @@
 	background: $primary-color;
 	font-weight: 300;
 
+	.mapsWrapper
+	{
+		padding:3em 1em 0 2em;
+	}
+
 	.rightSideMaps
 	{
 		color:$font-primary;
@@ -72,6 +77,7 @@
 	{
 		float:left;
 		padding:0 2em 0 2em;
+		height:100%;
 	}
 
 	.leftSideTourist
@@ -90,7 +96,7 @@
 
 	.touristLeft
 	{
-		height:30vh;
+		height:auto;
 		text-overflow:ellipsis;
 
 		h1
@@ -114,9 +120,9 @@
 	.imageTourist
 	{
 		margin-top:3em;
-		height:30vh;
+		height:250px;
 		width:100%;
-		background-size: cover;
+		background-size: cover !important;
 	}
 	
 	button

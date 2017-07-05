@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="wrapper">
 
 	<!-- navbar -->
-	<nav class="navbar navbar-toggleable-lg navbar-light bg-faded" id="navigation">
+	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-faded" id="navigation">
 	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="toggleNav">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -44,14 +44,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url('businessandmeetings') ?>">Business & Meetings</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('location') ?>">Location</a>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weddings and Events</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="<?php echo base_url('weddingsandevents') ?>#wedding">Wedding</a>
+			          <a class="dropdown-item" href="<?php echo base_url('weddingsandevents') ?>#birthdays">Birthday</a>
+			        </div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="restaurantDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Restaurant</a>
+					<div class="dropdown-menu" aria-labelledby="restaurantDropDown">
+			          <a class="dropdown-item" href="<?php echo base_url('restaurant') ?>#headresto">GRACIA CAFE & RESTO</a>
+			          <a class="dropdown-item" href="<?php echo base_url('restaurant') ?>#headcake">CAKE & BAKERY SHOP</a>
+			        </div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#"  id="locationDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Location</a>
+					<div class="dropdown-menu" aria-labelledby="locationDropDown">
+			          <a class="dropdown-item" href="<?php echo base_url('location') ?>#wherearewe">Maps</a>
+			          <a class="dropdown-item" href="<?php echo base_url('location') ?>#headerTouristAttraction">Tourist Destinations</a>
+			        </div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('weddingsandbirthdays') ?>">Weddings and Birthdays</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('restaurant') ?>">Restaurant & Bakery</a>
+					<a class="nav-link" href="<?php echo base_url('news') ?>">News & Promotion</a>
 				</li>
 			</ul>
 		</div>
@@ -86,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<section id="firstPage">
 	<div id="parallax" style="
 		<?php if(!empty($main->background))
-			echo 'style="background-image:url(\''. base_url() .'assets/images/uploads/background/'.$main->background.'\' );"'
+			echo 'background-image:url(\''. base_url() .'assets/images/uploads/background/'.$main->background.'\' );'
 		?>
 	">
 	</div>
@@ -130,60 +145,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<!-- Jeff ini formnya kemana? -->
 					<?php echo form_open('email/mail') ?>
 					<div class="bookingPanel row">
-						<div class="col-lg-8 col-md-12 panelBooking row">
-							<div class="col-xl-4 day">
+						<div class="col-lg-7 col-md-12 panelBooking row">
+							<div class="col-md-6 day">
 								<center>
-									<h5>DAY</h5>
-									<div>
-										<label for="selectDay" id="dayBig">0</label>	
-									</div>
-									<select name="day" id="selectDay" <?php echo set_value('day');?> >
-										<option value="0">-</option>
-										<?php for($i = 1; $i<32; $i++): ?>
-											<option value="<?php echo $i ?>">
-												<?php echo $i; ?>
-											</option>
-										<?php endfor; ?>
-									</select>
+									<p>Check In</p>
+									<input type="date" name="starting" id="starting" class="form-control" value="<?php echo date("Y-m-d"); ?>" required>
 								</center>
 							</div>
-							<div class="col-xl-4 month">
+							<div class="col-md-6 month">
 								<center>
-									<h5>MONTH</h5>
-									<div>
-										<label for="selectMonth" id="monthBig">0</label>	
-									</div>
-									<select name="month" id="selectMonth" <?php echo set_value('month');?> >
-										<option value="0">-</option>
-										<?php for($i = 1; $i<13; $i++): ?>
-											<option value="<?php echo $i ?>">
-												<?php echo $i; ?>
-											</option>
-										<?php endfor; ?>
-									</select>
-								</center>
-							</div>
-							<div class="col-xl-4 year">
-								<center>
-									<h5>YEAR</h5>
-									<div>
-										<label for="selectYear" id="yearBig">0</label>	
-									</div>
-									<select name="year" id="selectYear" <?php echo set_value('year');?>>
-										<option value="0">-</option>
-										<?php for($i = 16; $i<20; $i++): ?>
-											<option value="<?php echo $i ?>">
-												<?php echo $i; ?>
-											</option>
-										<?php endfor; ?>
-									</select>
+									<p>Check Out</p>
+									<input type="date" name="end" id="end" class="form-control" value="<?php echo date("Y-m-d"); ?>" required>
 								</center>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-12 formBook">
-							<input type="text" id= "name" name="name" placeholder="Name" <?php echo set_value('name');?>>
-							<br>
-							<input type="text" id="email" name="email" placeholder="E-mail" <?php echo set_value('email');?>>
+						<div class="col-lg-5 col-md-12 formBook">
+							<!-- <input type="text" id= "name" name="name" placeholder="Name" <?php echo set_value('name');?>> -->
+
+							<input type="text" id="email" name="email" placeholder="E-mail" class="form-control" <?php echo set_value('email');?>>
 							<br>
 							<input type="submit" id="submit" value="Mail Me!">
 						</div>
@@ -227,15 +206,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<section id="pageFour">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-lg-3 offset-lg-1">
 				<div class="aboutUs">
 					<h1>About Us</h1>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="aboutUsParagraph">
-				<?php echo $home->ta_aboutUs?>
+			<div class="col-lg-10 offset-lg-1">
+				<div class="aboutUsParagraph">
+					<?php echo $home->ta_aboutUs?>
+				</div>
 			</div>
 		</div>
 	</div>

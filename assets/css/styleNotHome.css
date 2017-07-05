@@ -13,7 +13,7 @@
     width: 100%;
     height: auto;
     margin-top: -10vh;
-    background: #fff;
+    background: #F6F7EB;
     padding: 1em 2em 1em 2em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
     #headerRooms .panelHeaderRooms p {
@@ -35,9 +35,9 @@
   background: url("../images/bedAbout.jpg");
   background-size: cover; }
 #roomDetails .room:nth-child(odd) {
-  background: #fff; }
+  background: #F6F7EB; }
 #roomDetails .room:nth-child(even) {
-  background: #272c2d;
+  background: #1B2021;
   color: #fff;
   padding-bottom: 3em; }
   #roomDetails .room:nth-child(even) .headerPanelRoomText h3 {
@@ -73,7 +73,7 @@
     width: 90%;
     height: auto;
     margin-top: -5vh;
-    background: #fff;
+    background: #F6F7EB;
     padding: 2em 1em 1em 0em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
     #headerBusinessandMeetings .panelHeaderBusinessMeetings h1 {
@@ -85,7 +85,7 @@
   padding: 8vh 5em 2em 5em;
   height: auto;
   width: 100%;
-  background: #272c2d;
+  background: #1B2021;
   color: #fff;
   font-weight: 300; }
   #headerBusiness p {
@@ -107,11 +107,11 @@
     padding-left: 0.2em;
     padding-bottom: 0.1em;
     border-bottom: 2px solid #000;
-    width: 40%;
+    width: 100%;
     margin-top: 1em; }
 
 #carousel {
-  background: #272c2d;
+  background: #1B2021;
   height: auto;
   padding: 2em 0 2em 0; }
   #carousel .carousel-inner {
@@ -128,8 +128,10 @@
   height: auto;
   padding-bottom: 4em;
   width: 100%;
-  background: #272c2d;
+  background: #1B2021;
   font-weight: 300; }
+  #whereAreWe .mapsWrapper {
+    padding: 3em 1em 0 2em; }
   #whereAreWe .rightSideMaps {
     color: #fff;
     padding-top: 4em;
@@ -145,7 +147,7 @@
   width: 100%; }
   #headerTouristAttraction .panelHeaderTouristAttraction {
     height: auto;
-    background: #fff;
+    background: #F6F7EB;
     margin-top: -7vh;
     padding: 1.7em 0 1.7em 2em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
@@ -168,7 +170,8 @@
   padding-bottom: 4em; }
   #touristAttraction .panel {
     float: left;
-    padding: 0 2em 0 2em; }
+    padding: 0 2em 0 2em;
+    height: 100%; }
   #touristAttraction .leftSideTourist {
     width: 50%;
     padding: 0 2em 0 2em;
@@ -178,7 +181,7 @@
     padding: 0 2em 0 2em;
     float: left; }
   #touristAttraction .touristLeft {
-    height: 30vh;
+    height: auto;
     text-overflow: ellipsis; }
     #touristAttraction .touristLeft h1 {
       font-weight: 400;
@@ -191,9 +194,9 @@
       text-align: justify; }
   #touristAttraction .imageTourist {
     margin-top: 3em;
-    height: 30vh;
+    height: 250px;
     width: 100%;
-    background-size: cover; }
+    background-size: cover !important; }
   #touristAttraction button .slick-prev, #touristAttraction button .slick-next, #touristAttraction button .slick-arrow {
     color: #000;
     background: #000; }
@@ -203,10 +206,10 @@
   height: 60vh;
   overflow: hidden;
   width: 100%;
-  background: #272c2d; }
+  background: #1B2021; }
   #scattered #photostack-2 {
     height: 60vh;
-    background: #272c2d; }
+    background: #1B2021; }
 
 /* ----------------------------
 ---- ByteForce Indonesia ------
@@ -217,7 +220,7 @@
   width: 100%;
   padding-top: 5em;
   padding-left: 1em;
-  background: #272c2d; }
+  background: #1B2021; }
   #weddings .panelWedding h1 {
     font-size: 42px;
     font-weight: 300;
@@ -238,7 +241,7 @@
   padding-top: 5em;
   padding-right: 2em;
   padding-bottom: 4em;
-  background: #272c2d; }
+  background: #1B2021; }
   #birthdays .panelBirthday h1 {
     font-size: 42px;
     font-weight: 300;
@@ -256,6 +259,13 @@
   font-family: 'helvetica';
   margin-bottom: -1em; }
   #headResto h1 {
+    text-align: center;
+    padding: 2em; }
+
+#headCake {
+  font-family: 'helvetica';
+  margin-bottom: -1em; }
+  #headCake h1 {
     text-align: center;
     padding: 2em; }
 
@@ -285,7 +295,7 @@
       line-height: 25px; }
 
 #freatured {
-  background: #272c2d;
+  background: #1B2021;
   padding: 10em 2em 2em 2em; }
   #freatured h1 {
     text-align: center;
@@ -326,7 +336,7 @@
       line-height: 25px; }
 
 #freaturedCake {
-  background: #272c2d;
+  background: #1B2021;
   padding: 10em 2em 2em 2em; }
   #freaturedCake h1 {
     text-align: center;
@@ -390,7 +400,11 @@ body {
   margin: 0;
   padding: 0;
   text-align: justify;
+  background: #F6F7EB !important;
   font-family: 'helvetica'; }
+
+p {
+  font-size: 14px; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -407,20 +421,21 @@ body {
 
 #navigation {
   border: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.6);
   box-shadow: none;
   padding: 0 2em 0 2em;
   margin-bottom: 0;
   top: 0;
   width: 100%;
+  padding-top: 100px;
+  padding-bottom: 20px;
   border-radius: 0;
-  font-size: 1.5em;
+  font-size: 18px;
   font-weight: 300;
   position: absolute;
   transition: all .2s ease-in-out;
   z-index: 1000;
-  color: #000;
-  overflow: hidden; }
+  color: #000; }
   #navigation h1 {
     font-weight: 300;
     width: 50%;
@@ -428,13 +443,20 @@ body {
   #navigation img {
     margin: 1em;
     max-width: 70px; }
+  #navigation .navbar-brand {
+    margin-top: -150px;
+    margin-left: 0px;
+    font-size: 30pt; }
   #navigation #navbar {
     margin: 0;
     border: 0;
-    overflow-y: scroll; }
+    margin-left: -360px;
+    float: left; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
+    #navigation #navbar .dropdown-item {
+      color: #000; }
     #navigation #navbar a {
       color: #000;
       background: transparent;
@@ -448,7 +470,6 @@ body {
 #firstPage {
   position: relative;
   width: 100%;
-  height: 50vh;
   overflow: hidden;
   color: #fff;
   transition: 0s linear;
@@ -460,12 +481,12 @@ body {
 
 #footer {
   width: 100%;
-  height: 35vh;
+  height: 250px;
   overflow: hidden; }
   #footer .leftPanel {
-    background: #272c2d;
+    background: #1B2021;
     color: #fff;
-    height: 40vh;
+    height: 100%;
     padding: 5vh 15vh 1em 3em; }
     #footer .leftPanel h4 {
       margin-bottom: 1em;
@@ -475,7 +496,9 @@ body {
       font-size: 14px;
       font-weight: 40; }
   #footer .rightPanel {
-    padding: 5vh 2em 1em 1em; }
+    padding: 5vh 2em 1em 1em;
+    background: #660000 !important;
+    color: #fff !important; }
     #footer .rightPanel h4 {
       margin-bottom: 1em;
       font-size: 32px;
@@ -483,14 +506,18 @@ body {
     #footer .rightPanel p {
       font-size: 14px;
       font-weight: 40; }
+    #footer .rightPanel a {
+      text-decoration: none;
+      color: #fff !important;
+      transition: all .2s ease-in-out; }
+    #footer .rightPanel a:hover {
+      color: #ccc !important; }
 
 @media screen and (max-width: 1263px) {
   #navigation #navbar a {
-    font-size: 22px; } }
+    font-size: 22px;
+    color: #000; } }
 @media screen and (max-width: 1200px) {
-  #pageTwo .bookingPanel {
-    height: 1180px !important; }
-
   #pageFour {
     height: 65vh; }
 
@@ -499,8 +526,11 @@ body {
 
   #navigation {
     padding: 1em 2em 1em 2em;
-    height: 10vh;
+    height: 85px;
     transition: all .2s ease-in-out; }
+    #navigation .navbar-brand {
+      margin: 0;
+      font-size: 22pt; }
     #navigation #navbar {
       margin: 0;
       margin-top: 0.5em;
@@ -510,8 +540,10 @@ body {
       width: 100vh; }
 
   .opened {
-    height: 75vh !important;
+    height: 600px !important;
     background: #fff !important; }
+    .opened .navbar-brand {
+      color: #000 !important; }
 
   .fixed {
     transition: all .2s ease-in-out;
@@ -568,8 +600,12 @@ body {
       padding-left: 5vh; } }
 @media screen and (max-width: 992px) {
   #headerRooms .panelHeaderRooms {
-    height: 25vh;
+    height: auto;
     padding-top: 2.5em; }
+
+  #pageTwo #booking .bookingPanel {
+    padding-top: 50px;
+    padding-bottom: 50px; }
 
   #roomDetails .room {
     height: 65vh;
@@ -615,12 +651,17 @@ body {
     font-size: 32px; }
 
   #navigation {
-    height: 8.5vh; }
+    height: 75px; }
+    #navigation .navbar-brand {
+      font-size: 18pt; }
     #navigation #navbar {
       padding: 1em 0 0 0; }
+      #navigation #navbar .dropdown-item {
+        font-size: 14pt;
+        font-weight: 300; }
 
   #headerRooms .panelHeaderRooms {
-    height: 25vh;
+    height: auto;
     padding-top: 2.5em; }
 
   #roomDetails .room {
@@ -635,7 +676,7 @@ body {
       padding: 2em 2vh 2em 2vh; }
 
   #touristAttraction {
-    height: 65vh; }
+    height: auto; }
     #touristAttraction .leftSideTourist {
       width: 100%;
       padding: 0 2em 0 2em;
@@ -668,10 +709,13 @@ body {
     padding-left: 5vh; } }
 @media screen and (max-width: 588px) {
   #navigation {
-    height: 12vh; }
+    height: 75px; }
+    #navigation .navbar-brand {
+      margin: 0;
+      font-size: 18pt; }
 
   #firstPage .homeLine {
-    margin-top: 30%; }
+    margin-top: 140px; }
 
   #footer .leftPanel {
     height: auto; }
@@ -689,7 +733,7 @@ body {
       font-size: 28px; }
 
   #whereAreWe {
-    height: 55vh; }
+    height: auto; }
 
   .room {
     height: auto; }
@@ -699,7 +743,11 @@ body {
     padding-top: 2em; } }
 @media screen and (max-width: 320px) {
   #navigation {
-    height: 14vh; }
+    height: 75px; }
+    #navigation .navbar-brand {
+      margin: 0;
+      margin-top: 5px;
+      font-size: 14pt; }
 
   #firstPage .logoName h1 {
     font-size: 28px; }

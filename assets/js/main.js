@@ -18,8 +18,8 @@ $(document).ready(function() {
     	$('#yearBig').html(year);
     });
 
-    // Set page one height for iphone
-    $("#firstPage").css('height', window.innerHeight * 0.8);
+    // // Set page one height for iphone
+    // $("#firstPage").css('height', window.innerHeight * 0.8);
 
     $(".opened").css('height', window.innerHeight * 0.8 + "!important");
 

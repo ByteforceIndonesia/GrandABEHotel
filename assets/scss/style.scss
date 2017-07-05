@@ -3,8 +3,9 @@
 ------ Grand ABE's Website -------
 -----------------------------*/
 
-$primary-color: #272c2d;
-$secondary-color: #fff;
+$primary-color: #1B2021;
+$secondary-color: #F6F7EB;
+$accent-color : #660000;
 
 $font-primary: #fff;
 $font-secondary: #000;
@@ -35,7 +36,6 @@ body
 	top:0 !important;
 	background:#fff !important;
 	width:100% !important;
-	height:8vh;
 	
 	a
 	{
@@ -47,20 +47,19 @@ body
 #navigation
 {
 	position:absolute;
-	bottom:20%;
+	top:550px;
 	border:0;
-	background:rgba(255,255,255,0.8);
+	background:rgba(255,255,255,0);
 	box-shadow: none;
 	padding:0 2em 0 2em;
 	margin-bottom:0;
 	width:100%;
 	border-radius: 0;
-	font-size: 1.5em;
+	font-size: 20px;
 	font-weight: 300;
 	transition:all .2s ease-in-out;
 	z-index:1000;
-	color:$font-secondary;
-	overflow: hidden;
+	color:$font-primary;
 
 	h1
 	{
@@ -83,12 +82,27 @@ body
 		}
 	}
 
+	.navbar-brand
+	{
+		color:$font-primary;
+		transition: all .2s ease-in-out;
+	}	
+
 	#navbar
 	{
 		margin:0;
 		border:0;
 		z-index: 1000;
-		overflow-y:scroll;
+
+		.dropdown-item
+		{
+			color:$font-secondary;
+		}
+
+		.dropdown-menu
+		{
+			width:50%;
+		}
 
 		.in
 		{
@@ -98,7 +112,7 @@ body
 
 		a
 		{
-			color:$font-secondary;
+			color:$font-primary;
 			background:rgba(0,0,0,0);
 			opacity: 0.8;
 			transition:all .2s ease-in-out;
@@ -106,7 +120,7 @@ body
 
 		a:hover
 		{
-			color:#333;
+			color:#ccc;
 		}
 
 		ul
@@ -131,6 +145,7 @@ body
 	width:100%;
 	color: $font-primary;
 	overflow:hidden;
+	height:600px;
 
 	.logoName
 	{
@@ -149,8 +164,8 @@ body
 
 	.homeLine
 	{
-		margin-top:50%;
-		font-size: 16px;
+		margin-top:130px;
+		font-size: 14px;
 
 		button
 		{
@@ -158,7 +173,7 @@ body
 			border: 1px solid $font-primary;
 			font-weight: 300;
 			padding:0.3em 1em 0.3em 1em;
-			font-size: 24px;
+			font-size: 18px;
 			opacity:0.7;
 			transition: all .35s ease-in-out;
 			background:rgba(0,0,0,0);
@@ -199,8 +214,8 @@ body
 	{
 		height:auto;
 		background:$primary-color;
-		padding-top:2em;
-		padding-bottom: 3em;
+		padding-top:80px;
+		padding-bottom:130px;
 
 		.bookingNow
 		{
@@ -219,8 +234,7 @@ body
 
 		.bookingPanel
 		{
-			width:80%;
-			height:350px;
+			width:90%;
 			background:$secondary-color;
 			margin-top:3em;
 			box-shadow: 7px 12px 62px -12px rgba(0,0,0,0.75);
@@ -230,86 +244,72 @@ body
 			.day
 			{
 				margin-bottom: 2em;
+				display: flex;
+				justify-content:center;
+				align-items:center;
 
 				#dayBig
 				{
 					margin-top: -5px;
-					font-size:7em;
+					font-size:4em;
 					font-weight: 400;
 				}
 
 				h5
 				{
-					font-size: 40px;
+					font-size: 32px;
 					font-weight: 300;
 				}
 
-				select
+				input[type=date]
 				{
 					margin-top: 1.5em;
-					font-size: 10px;
-					background-color: $primary-color;
+					font-size: 16px;
+					background-color: $font-primary;
 				}
 			}
 
 			.month
 			{
 				margin-bottom: 2em;
+				display: flex;
+				justify-content:center;
+				align-items:center;
 
 				#monthBig
 				{
 					margin-top: -5px;
-					font-size:7em;
+					font-size:4em;
 					font-weight: 400;
 				}
 
 				h5
 				{
-					font-size: 40px;
+					font-size: 32px;
 					font-weight: 300;
 				}
 
-				select
+				input[type=date]
 				{
 					margin-top: 1.5em;
-					font-size: 10px;
-					background-color: $primary-color;
-				}
-			}
-
-			.year
-			{
-				margin-bottom: 2em;
-				
-				#yearBig
-				{
-					margin-top: -5px;
-					font-size:7em;
-					font-weight: 400;
-				}
-
-				h5
-				{
-					font-size: 40px;
-					font-weight: 300;
-				}
-
-				select
-				{
-					margin-top: 1.5em;
-					font-size: 10px;
-					background-color: $primary-color;
+					font-size: 16px;
+					background-color: $font-primary;
 				}
 			}
 
 			.formBook
 			{
+				margin-top: -1.5em;
+				display: flex;
+				justify-content:center;
+				align-items:center;
+
 				input[type=text]
 				{
-					margin-top:2.7em;
+					margin-top:2em;
 					border: 0;
-					border-bottom: 2px solid #ccc;
-					font-size: 1.1em;
+					margin-right: 2em;
+					border: 1px solid #ccc;
 					transition: border .35s ease-in-out;
 					width: 100%;
 				}
@@ -317,7 +317,7 @@ body
 				input[type=text]:focus
 				{
 					border:0;
-					border-bottom: 2px solid #000;
+					border: 1px solid #000;
 					outline: none;
 				}
 
@@ -326,7 +326,8 @@ body
 					background:rgba(0,0,0,0);
 					border: 1px solid #ccc;
 					margin-top:2em;
-					font-size: 1.5em;
+					font-size: 1em;
+					padding: 5px;
 					width:100%;
 					transition: border .35s ease-in-out;
 				}
@@ -352,7 +353,7 @@ body
 		background:url('../images/bedAbout.jpg');
 		background-size:cover;
 		position:relative;
-		height:60vh;
+		height:50vh;
 	}
 
 	.leftAbout
@@ -361,7 +362,7 @@ body
 
 		.logoAbout
 		{
-			margin-top:3em;
+			margin-top:5em;
 
 			img
 			{
@@ -375,14 +376,14 @@ body
 	h1
 	{
 		margin-top:1em;
-		font-size:52px;
+		font-size:42px;
 		font-weight: 300;
 	}
 
 	p
 	{
 		margin-top:20px;
-		font-size:18px;
+		font-size:14px;
 		font-weight: 300;
 	}
 
@@ -391,9 +392,10 @@ body
 #pageFour
 {
 	width:100%;
-	height:50vh;
+	height:auto;
 	background:$primary-color;
-	padding-top:4.5vh;
+	padding-top:130px;
+	padding-bottom:130px;
 
 	.aboutUs
 	{
@@ -402,7 +404,7 @@ body
 		h1
 		{
 			font-weight: 300;
-			font-size: 52px;
+			font-size: 42px;
 			color:#fff;
 			margin-left:10px;
 		}	
@@ -417,6 +419,7 @@ body
 			font-weight: 300;
 			margin-top:2em;
 			color:#fff;
+			font-size: 14px;
 		}
 	}
 }
@@ -427,7 +430,7 @@ body
 	background-size: cover;
 	height:auto;
 	width:100%;
-	padding-bottom: 2em;
+	padding-bottom: 150px;
 
 	.wrapMe
 	{
@@ -505,6 +508,8 @@ body
 	.rightPanel
 	{
 		padding:5vh 2em 1em 1em;
+		background: $accent-color !important;
+		color:$font-primary !important;
 		
 		h4
 		{
@@ -518,8 +523,27 @@ body
 			font-size:14px;
 			font-weight: 40;
 		}
+
+		a
+		{
+			text-decoration: none;
+			color:$font-primary !important;
+			transition:all .2s ease-in-out;
+		}
+
+		a:hover
+		{
+			color:#ccc !important;
+		}
 	}
 }
 
 // media at the last
+@media screen and (max-width: 1263px)
+{
+	#navigation
+	{
+		top:515px;
+	}
+}
 @import 'media';

@@ -65,7 +65,15 @@ class Main extends MY_Controller {
 		$this->template->load('template', 'location', $this->data);
 	}
 
-	public function weddingsandbirthdays ()
+	public function news ()
+	{
+		$this->data['main']=$this->Mainsettingsdata->getData();
+		$this->data['footer']=$this->footerdata->getData();
+		$this->data['contacts']=$this->footerdata->getContacts();
+		$this->template->load('template', 'news', $this->data);
+	}
+
+	public function weddingsandevents ()
 	{
 		$this->data['main']=$this->Mainsettingsdata->getData();
 		$this->data['header']=$this->wnbdata->getData();

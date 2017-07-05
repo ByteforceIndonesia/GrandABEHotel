@@ -19,27 +19,25 @@ body {
   position: fixed !important;
   top: 0 !important;
   background: #fff !important;
-  width: 100% !important;
-  height: 8vh; }
+  width: 100% !important; }
   .fixed a {
     color: #000 !important; }
 
 #navigation {
   position: absolute;
-  bottom: 20%;
+  top: 550px;
   border: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0);
   box-shadow: none;
   padding: 0 2em 0 2em;
   margin-bottom: 0;
   width: 100%;
   border-radius: 0;
-  font-size: 1.5em;
+  font-size: 20px;
   font-weight: 300;
   transition: all .2s ease-in-out;
   z-index: 1000;
-  color: #000;
-  overflow: hidden; }
+  color: #fff; }
   #navigation h1 {
     font-weight: 300;
     width: 50%;
@@ -49,21 +47,27 @@ body {
     max-width: 70px; }
   #navigation #toggleNav button {
     outline: none; }
+  #navigation .navbar-brand {
+    color: #fff;
+    transition: all .2s ease-in-out; }
   #navigation #navbar {
     margin: 0;
     border: 0;
-    z-index: 1000;
-    overflow-y: scroll; }
+    z-index: 1000; }
+    #navigation #navbar .dropdown-item {
+      color: #000; }
+    #navigation #navbar .dropdown-menu {
+      width: 50%; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
     #navigation #navbar a {
-      color: #000;
+      color: #fff;
       background: transparent;
       opacity: 0.8;
       transition: all .2s ease-in-out; }
     #navigation #navbar a:hover {
-      color: #333; }
+      color: #ccc; }
     #navigation #navbar ul li .active a {
       color: #fff; }
 
@@ -71,7 +75,8 @@ body {
   position: relative;
   width: 100%;
   color: #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 600px; }
   #firstPage .logoName {
     margin-top: 3em; }
     #firstPage .logoName h1 {
@@ -79,14 +84,14 @@ body {
       #firstPage .logoName h1 strong {
         font-weight: 500; }
   #firstPage .homeLine {
-    margin-top: 50%;
-    font-size: 16px; }
+    margin-top: 130px;
+    font-size: 14px; }
     #firstPage .homeLine button {
       margin-top: 1em;
       border: 1px solid #fff;
       font-weight: 300;
       padding: 0.3em 1em 0.3em 1em;
-      font-size: 24px;
+      font-size: 18px;
       opacity: 0.7;
       transition: all .35s ease-in-out;
       background: transparent;
@@ -111,9 +116,9 @@ body {
   width: 100%; }
   #pageTwo #booking {
     height: auto;
-    background: #272c2d;
-    padding-top: 2em;
-    padding-bottom: 3em; }
+    background: #1B2021;
+    padding-top: 80px;
+    padding-bottom: 130px; }
     #pageTwo #booking .bookingNow {
       color: #fff; }
       #pageTwo #booking .bookingNow h1 {
@@ -121,73 +126,71 @@ body {
         #pageTwo #booking .bookingNow h1 strong {
           font-weight: 500; }
     #pageTwo #booking .bookingPanel {
-      width: 80%;
-      height: 350px;
-      background: #fff;
+      width: 90%;
+      background: #F6F7EB;
       margin-top: 3em;
       box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75);
       padding: 2em;
       padding-bottom: 1em; }
       #pageTwo #booking .bookingPanel .day {
-        margin-bottom: 2em; }
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
         #pageTwo #booking .bookingPanel .day #dayBig {
           margin-top: -5px;
-          font-size: 7em;
+          font-size: 4em;
           font-weight: 400; }
         #pageTwo #booking .bookingPanel .day h5 {
-          font-size: 40px;
+          font-size: 32px;
           font-weight: 300; }
-        #pageTwo #booking .bookingPanel .day select {
+        #pageTwo #booking .bookingPanel .day input[type=date] {
           margin-top: 1.5em;
-          font-size: 10px;
-          background-color: #272c2d; }
+          font-size: 16px;
+          background-color: #fff; }
       #pageTwo #booking .bookingPanel .month {
-        margin-bottom: 2em; }
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
         #pageTwo #booking .bookingPanel .month #monthBig {
           margin-top: -5px;
-          font-size: 7em;
+          font-size: 4em;
           font-weight: 400; }
         #pageTwo #booking .bookingPanel .month h5 {
-          font-size: 40px;
+          font-size: 32px;
           font-weight: 300; }
-        #pageTwo #booking .bookingPanel .month select {
+        #pageTwo #booking .bookingPanel .month input[type=date] {
           margin-top: 1.5em;
-          font-size: 10px;
-          background-color: #272c2d; }
-      #pageTwo #booking .bookingPanel .year {
-        margin-bottom: 2em; }
-        #pageTwo #booking .bookingPanel .year #yearBig {
-          margin-top: -5px;
-          font-size: 7em;
-          font-weight: 400; }
-        #pageTwo #booking .bookingPanel .year h5 {
-          font-size: 40px;
-          font-weight: 300; }
-        #pageTwo #booking .bookingPanel .year select {
-          margin-top: 1.5em;
-          font-size: 10px;
-          background-color: #272c2d; }
-      #pageTwo #booking .bookingPanel .formBook input[type=text] {
-        margin-top: 2.7em;
-        border: 0;
-        border-bottom: 2px solid #ccc;
-        font-size: 1.1em;
-        transition: border .35s ease-in-out;
-        width: 100%; }
-      #pageTwo #booking .bookingPanel .formBook input[type=text]:focus {
-        border: 0;
-        border-bottom: 2px solid #000;
-        outline: none; }
-      #pageTwo #booking .bookingPanel .formBook input[type=submit] {
-        background: transparent;
-        border: 1px solid #ccc;
-        margin-top: 2em;
-        font-size: 1.5em;
-        width: 100%;
-        transition: border .35s ease-in-out; }
-      #pageTwo #booking .bookingPanel .formBook input[type=submit]:hover {
-        border: 1px solid #000;
-        cursor: pointer; }
+          font-size: 16px;
+          background-color: #fff; }
+      #pageTwo #booking .bookingPanel .formBook {
+        margin-top: -1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #pageTwo #booking .bookingPanel .formBook input[type=text] {
+          margin-top: 2em;
+          border: 0;
+          margin-right: 2em;
+          border: 1px solid #ccc;
+          transition: border .35s ease-in-out;
+          width: 100%; }
+        #pageTwo #booking .bookingPanel .formBook input[type=text]:focus {
+          border: 0;
+          border: 1px solid #000;
+          outline: none; }
+        #pageTwo #booking .bookingPanel .formBook input[type=submit] {
+          background: transparent;
+          border: 1px solid #ccc;
+          margin-top: 2em;
+          font-size: 1em;
+          padding: 5px;
+          width: 100%;
+          transition: border .35s ease-in-out; }
+        #pageTwo #booking .bookingPanel .formBook input[type=submit]:hover {
+          border: 1px solid #000;
+          cursor: pointer; }
 
 #pageThree {
   width: 100%;
@@ -197,32 +200,33 @@ body {
     background: url("../images/bedAbout.jpg");
     background-size: cover;
     position: relative;
-    height: 60vh; }
+    height: 50vh; }
   #pageThree .leftAbout {
     margin-bottom: 0; }
     #pageThree .leftAbout .logoAbout {
-      margin-top: 3em; }
+      margin-top: 5em; }
       #pageThree .leftAbout .logoAbout img {
         max-width: 20vh; }
   #pageThree h1 {
     margin-top: 1em;
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 300; }
   #pageThree p {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300; }
 
 #pageFour {
   width: 100%;
-  height: 50vh;
-  background: #272c2d;
-  padding-top: 4.5vh; }
+  height: auto;
+  background: #1B2021;
+  padding-top: 130px;
+  padding-bottom: 130px; }
   #pageFour .aboutUs {
     border-bottom: 1px solid #fff; }
     #pageFour .aboutUs h1 {
       font-weight: 300;
-      font-size: 52px;
+      font-size: 42px;
       color: #fff;
       margin-left: 10px; }
   #pageFour .aboutUsParagraph {
@@ -230,17 +234,18 @@ body {
     #pageFour .aboutUsParagraph p {
       font-weight: 300;
       margin-top: 2em;
-      color: #fff; }
+      color: #fff;
+      font-size: 14px; }
 
 #pageFive {
   background: url("../images/home_large.jpg");
   background-size: cover;
   height: auto;
   width: 100%;
-  padding-bottom: 2em; }
+  padding-bottom: 150px; }
   #pageFive .wrapMe .whitePanel {
     margin-top: 15vh;
-    background: #fff;
+    background: #F6F7EB;
     padding: 1em;
     box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75); }
     #pageFive .wrapMe .whitePanel h1 {
@@ -271,7 +276,7 @@ body {
   height: 35vh;
   overflow: hidden; }
   #footer .leftPanel {
-    background: #272c2d;
+    background: #1B2021;
     color: #fff;
     height: 40vh;
     padding: 5vh 15vh 1em 3em; }
@@ -283,7 +288,9 @@ body {
       font-size: 14px;
       font-weight: 40; }
   #footer .rightPanel {
-    padding: 5vh 2em 1em 1em; }
+    padding: 5vh 2em 1em 1em;
+    background: #660000 !important;
+    color: #fff !important; }
     #footer .rightPanel h4 {
       margin-bottom: 1em;
       font-size: 32px;
@@ -291,14 +298,21 @@ body {
     #footer .rightPanel p {
       font-size: 14px;
       font-weight: 40; }
+    #footer .rightPanel a {
+      text-decoration: none;
+      color: #fff !important;
+      transition: all .2s ease-in-out; }
+    #footer .rightPanel a:hover {
+      color: #ccc !important; }
 
 @media screen and (max-width: 1263px) {
+  #navigation {
+    top: 515px; } }
+@media screen and (max-width: 1263px) {
   #navigation #navbar a {
-    font-size: 22px; } }
+    font-size: 22px;
+    color: #000; } }
 @media screen and (max-width: 1200px) {
-  #pageTwo .bookingPanel {
-    height: 1180px !important; }
-
   #pageFour {
     height: 65vh; }
 
@@ -307,8 +321,11 @@ body {
 
   #navigation {
     padding: 1em 2em 1em 2em;
-    height: 10vh;
+    height: 85px;
     transition: all .2s ease-in-out; }
+    #navigation .navbar-brand {
+      margin: 0;
+      font-size: 22pt; }
     #navigation #navbar {
       margin: 0;
       margin-top: 0.5em;
@@ -318,8 +335,10 @@ body {
       width: 100vh; }
 
   .opened {
-    height: 75vh !important;
+    height: 600px !important;
     background: #fff !important; }
+    .opened .navbar-brand {
+      color: #000 !important; }
 
   .fixed {
     transition: all .2s ease-in-out;
@@ -376,8 +395,12 @@ body {
       padding-left: 5vh; } }
 @media screen and (max-width: 992px) {
   #headerRooms .panelHeaderRooms {
-    height: 25vh;
+    height: auto;
     padding-top: 2.5em; }
+
+  #pageTwo #booking .bookingPanel {
+    padding-top: 50px;
+    padding-bottom: 50px; }
 
   #roomDetails .room {
     height: 65vh;
@@ -423,12 +446,17 @@ body {
     font-size: 32px; }
 
   #navigation {
-    height: 8.5vh; }
+    height: 75px; }
+    #navigation .navbar-brand {
+      font-size: 18pt; }
     #navigation #navbar {
       padding: 1em 0 0 0; }
+      #navigation #navbar .dropdown-item {
+        font-size: 14pt;
+        font-weight: 300; }
 
   #headerRooms .panelHeaderRooms {
-    height: 25vh;
+    height: auto;
     padding-top: 2.5em; }
 
   #roomDetails .room {
@@ -443,7 +471,7 @@ body {
       padding: 2em 2vh 2em 2vh; }
 
   #touristAttraction {
-    height: 65vh; }
+    height: auto; }
     #touristAttraction .leftSideTourist {
       width: 100%;
       padding: 0 2em 0 2em;
@@ -476,10 +504,13 @@ body {
     padding-left: 5vh; } }
 @media screen and (max-width: 588px) {
   #navigation {
-    height: 12vh; }
+    height: 75px; }
+    #navigation .navbar-brand {
+      margin: 0;
+      font-size: 18pt; }
 
   #firstPage .homeLine {
-    margin-top: 30%; }
+    margin-top: 140px; }
 
   #footer .leftPanel {
     height: auto; }
@@ -497,7 +528,7 @@ body {
       font-size: 28px; }
 
   #whereAreWe {
-    height: 55vh; }
+    height: auto; }
 
   .room {
     height: auto; }
@@ -507,7 +538,11 @@ body {
     padding-top: 2em; } }
 @media screen and (max-width: 320px) {
   #navigation {
-    height: 14vh; }
+    height: 75px; }
+    #navigation .navbar-brand {
+      margin: 0;
+      margin-top: 5px;
+      font-size: 14pt; }
 
   #firstPage .logoName h1 {
     font-size: 28px; }

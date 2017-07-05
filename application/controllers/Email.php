@@ -24,14 +24,11 @@
 		{
 			//$ci = get_instance();
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules('day','Day','required|callback_check_day');
-			$this->form_validation->set_rules('month','Month','required|callback_check_month');
-			$this->form_validation->set_rules('year','Year','required|callback_check_year');
-			$this->form_validation->set_rules('name','Name','trim|required');
+			$this->form_validation->set_rules('starting','Check In','required');
+			$this->form_validation->set_rules('end','Check Out','required');
 			$this->form_validation->set_rules('email','Email','trim|required|valid_email');
-			$this->form_validation->set_message('check_day', 'Day is required.');
-			$this->form_validation->set_message('check_month', 'Month is required.');
-			$this->form_validation->set_message('check_year', 'Year is required.');
+			$this->form_validation->set_message('check_checkin', 'Check In is required.');
+			$this->form_validation->set_message('check_checkout', 'Check Out is required.');
 
 			if($this->form_validation->run() === FALSE)
 			{
@@ -39,10 +36,8 @@
 				$this->session->set_flashdata('mailMessageHeader','Information incomplete');
 
 				$this->session->set_flashdata('mailMessage', 
-					form_error('day').
-					form_error('month').
-					form_error('year').
-					form_error('name').
+					form_error('starting').
+					form_error('end').
 					form_error('email'));
 			}
 			else
@@ -70,7 +65,7 @@
 				$this->email->set_newline("\r\n");
 
 				$this->email->from('automated.reservations@grandabe.com', 'Customer Reservations');
-				$this->email->to('jeffry24797@gmail.com');
+				$this->email->to('zonecaptain @gmail.com');
 
 				// $this->email->cc('another@another-example.com');
 				// $this->email->bcc('them@their-ample.com');

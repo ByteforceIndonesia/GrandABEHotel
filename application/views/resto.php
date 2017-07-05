@@ -1,4 +1,4 @@
-<div class="container-fluid">   
+<div class="container">   
     <div class="col-lg-12" id="headResto">
         <h1>GRACIA CAFE & RESTO BY GRAND ABE HOTEL</h1>
     </div>
@@ -35,7 +35,7 @@ berbagai jenis makanan, yaitu Indonesian food, Chinese food, Western food, makan
              </div>
         </div>
     </div>
-    <div class="col-lg-12" id="headResto">
+    <div class="col-lg-12" id="headCake">
         <h1>GRAND ABE CAKE AND BAKERY SHOP</h1>
     </div>
     <div class="row" id="headingCake">
