@@ -2,6 +2,25 @@
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
+
+/*#headerNews{
+  height: auto;
+  font-weight: 300;
+}
+#headerNews .panelHeaderNews{
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    margin-top:-5vh;
+    background-color: #F6F7EB;
+    padding: 1em 2em 1em 2em;
+    box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75);
+}
+#headerNews .panelHeaderNews h1{
+  font-weight: 300;
+  font-size: 42px;
+}*/
+
 /* ----------------------------
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------

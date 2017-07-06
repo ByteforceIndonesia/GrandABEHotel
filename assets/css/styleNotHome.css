@@ -2,6 +2,84 @@
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
+
+#headerNews{
+  height: auto;
+  font-weight: 300;
+}
+#headerNews .panelHeaderNews{
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    margin-top:-20vh;
+    background-color: #F6F7EB;
+    padding: 1em 2em 1em 2em;
+    box-shadow: 7px 12px 62px -12px rgba(0, 0, 0, 0.75);
+}
+#headerNews .panelHeaderNews h1{
+  font-weight: 300;
+  font-size: 42px;
+}
+
+
+.newsItem{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 75%;
+  box-shadow: 7px 12px 42px -12px rgba(0, 0, 0, 0.75);
+}
+.newsItem .newsImg{
+  margin: 0;
+  padding: 0;
+}
+.imgContainer img{
+  width: 100%;
+  height: 100%;
+}
+.newsItem .newsTitle{
+  font-size: 32px;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #1B2021;
+  color: white;
+}
+.newsItem .postDate{
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.newsItem .newsDesc{
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#btnOlder{
+  background: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 25px;
+  transition:0.3s;
+}
+
+#btnOlder:hover{
+  border-color: black;
+  transition:0.3s;
+}
+
+#btnOlder:focus{
+  outline:0;
+}
+
 /* ----------------------------
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
@@ -701,6 +779,10 @@ p {
     height: auto; }
     #headerBusinessandMeetings .panelHeaderBusinessMeetings h1 {
       font-size: 28px; }
+
+  #headerNews .panelHeaderNews h1{
+    font-size: 28px;
+  }
 
   #whereAreWe {
     height: auto; }
