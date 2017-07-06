@@ -40,10 +40,10 @@ class Main extends MY_Controller {
 	{
 		$this->data['main']=$this->Mainsettingsdata->getData();
 		$this->data['footer']=$this->footerdata->getData();
-		$this->data['resto']		= $this->resto_data->getDataResto();
-		$this->data['cafe']			= $this->resto_data->getDataCafe();
-		$this->data['resto_img']	= $this->resto_data->getImagesResto();
-		$this->data['cafe_img']		= $this->resto_data->getImagesCafe();
+		$this->data['headers']			= $this->resto_data->getHeaders();
+		$this->data['resto']			= $this->resto_data->getDataResto();
+		$this->data['cafe']				= $this->resto_data->getDataCafe();
+		$this->data['cafe_catagory']	= $this->resto_data->getCakeCatagory();
 		$this->data['contacts']=$this->footerdata->getContacts();
 		$this->template->load('template', 'resto', $this->data);
 	}
