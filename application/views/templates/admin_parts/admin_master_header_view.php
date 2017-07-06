@@ -67,6 +67,12 @@
 								<li>
 									<a href="<?php echo site_url('admin/wnb')?>">Weddings & Birthdays</a>
 								</li>
+								<li>
+									<a href="<?php echo site_url('admin/resto')?>">Cafe and Resto</a>
+								</li>
+								<li>
+									<a href="<?php echo site_url('admin/news')?>">News System</a>
+								</li>
 								<li class="divider"></li>
 								<li>
 									<a href="<?php echo site_url('admin/footer')?>">Footer</a>
