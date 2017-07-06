@@ -13,6 +13,7 @@ class Main extends MY_Controller {
 		$this->load->model('locationdata');
 		$this->load->model('footerdata');
 		$this->load->model('Mainsettingsdata');
+		$this->load->model('resto_data');
 	}
 
 	public function index()
@@ -39,6 +40,10 @@ class Main extends MY_Controller {
 	{
 		$this->data['main']=$this->Mainsettingsdata->getData();
 		$this->data['footer']=$this->footerdata->getData();
+		$this->data['resto']		= $this->resto_data->getDataResto();
+		$this->data['cafe']			= $this->resto_data->getDataCafe();
+		$this->data['resto_img']	= $this->resto_data->getImagesResto();
+		$this->data['cafe_img']		= $this->resto_data->getImagesCafe();
 		$this->data['contacts']=$this->footerdata->getContacts();
 		$this->template->load('template', 'resto', $this->data);
 	}

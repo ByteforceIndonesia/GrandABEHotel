@@ -1,3 +1,7 @@
+<pre>
+    <?php print_r($resto) ?>
+</pre>
+
 <div class="container">   
     <div class="col-lg-12" id="headResto">
         <h1>GRACIA CAFE & RESTO BY GRAND ABE HOTEL</h1>
@@ -6,16 +10,27 @@
         <div class="col-lg-4">&nbsp</div>
         <div class="heading col-lg-7">
             <h4>
-                &nbsp Gracia Cafe & Resto adalah cafe sekaligus restoran yang berada di lantai satu Grand ABE Hotel. Kami menyediakan
-berbagai jenis makanan, yaitu Indonesian food, Chinese food, Western food, makanan tradisional Papua, dan tidak ketinggalan juga berbagai jenis kopi, juice, mocktail, dan lainnya. Gracia Cafe & Resto buka setiap hari dari pukul 06.00- 10.00 khusus untuk breakfast buffet dan pukul 10.00-23.00 untuk lunch dan dinner.
+                <?php echo $resto[0]->value_1 ?>
             </h4>
         </div> 
         <div class="col-lg-1">&nbsp</div>
     </div>
     <div class="row" id="freatured">
         <div class="col-lg-12" id="headSlider">
-            <div class="imageSliderResto imageSlider">&nbsp</div>
+            <div class="imageSliderResto imageSlider"
+            style="background: '../<?php echo $resto_img[0]->link ?>'">&nbsp</div>
         </div>
+        <?php foreach($resto as $count => $item): ?>
+            <?php if($count == 0) continue; ?>
+            <div class="col-lg-4">
+                <div class="imageFreatured"
+                style="background: '../<?php echo $resto_img[$item->value_1]->link ?>'"></div>
+                <div class="textFreatured">
+                    <h5><?php echo $item->name ?></h5>
+                </div>
+            </div> 
+        <?php endforeach; ?>
+
         <div class="col-lg-4">
              <div class="imageFreatured"></div>
              <div class="textFreatured">

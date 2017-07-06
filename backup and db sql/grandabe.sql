@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 14, 2017 at 04:13 PM
--- Server version: 10.1.9-MariaDB
--- PHP Version: 5.6.15
+-- Host: localhost
+-- Generation Time: Jul 06, 2017 at 07:35 AM
+-- Server version: 10.1.10-MariaDB
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -86,6 +86,31 @@ INSERT INTO `bnmimages` (`id`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cafe`
+--
+
+CREATE TABLE `cafe` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `value_1` text NOT NULL,
+  `value_2` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cafe_img`
+--
+
+CREATE TABLE `cafe_img` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `images` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `contacts`
 --
 
@@ -121,7 +146,7 @@ CREATE TABLE `footer` (
 --
 
 INSERT INTO `footer` (`ta_footerTitle`, `ta_footerContent`, `ta_addressContent`, `ta_newsletterContent`) VALUES
-('Footer Grand Abe', '<p>Donec accumsan ultricies vehicula. Vestibulum malesuada egestas leo, vel iaculis magna vestibulum ac. Donec vitae posuere risus. Nullam rutrum elementum sollicitudin. Mauris gravida arcu dui, ac sollicitudin orci bibendum eget. Donec quis tincidunt lacus. Suspendisse scelerisque tellus vel nunc imperdiet, sed bibendum lacus consectetur.</p>', '<div>\r\n<p>Donec accumsan ultricies vehicula. Vestibulum malesuada egestas leo, vel iaculis magna vestibulum ac. Donec vitae posuere risus. Nullam rutrum elementum sollicitudin.</p>\r\n</div>', '<p><span style="color: #333333; font-family: ''Helvetica Neue'', Helvetica, Arial, sans-serif; text-align: justify;">Sign Up for latest news</span></p>');
+('Footer Grand Abe', '<p>Donec accumsan ultricies vehicula. Vestibulum malesuada egestas leo, vel iaculis magna vestibulum ac. Donec vitae posuere risus. Nullam rutrum elementum sollicitudin. Mauris gravida arcu dui, ac sollicitudin orci bibendum eget. Donec quis tincidunt lacus. Suspendisse scelerisque tellus vel nunc imperdiet, sed bibendum lacus consectetur.</p>', '<div>\r\n<p>Donec accumsan ultricies vehicula. Vestibulum malesuada egestas leo, vel iaculis magna vestibulum ac. Donec vitae posuere risus. Nullam rutrum elementum sollicitudin.</p>\r\n</div>', '<p>Sign Up for latest news</p>');
 
 -- --------------------------------------------------------
 
@@ -225,9 +250,9 @@ CREATE TABLE `locations` (
 --
 
 INSERT INTO `locations` (`id`, `name`, `image`, `description`) VALUES
-(3, 'erdtfyghjksadv', '1492018241home_large.jpg', '<p>wasdfghadawd</p>'),
-(4, 'asdfghmj', '3.jpg', '<p>adasdasdasda</p>'),
-(5, 'asdawd', '3.jpg', '<p>sadasadwdwsd</p>');
+(3, 'erdtfyghjksadv', '1492018241home_large.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut elementum risus, vel mollis nisi. Etiam in condimentum ante. Aliquam sed congue augue. Quisque viverra nibh at velit semper, non interdum est efficitur. Quisque gravida semper felis vel sodales. Integer et quam id mi porttitor volutpat. Cras vestibulum augue ligula, sed consectetur lacus luctus non. Curabitur porta, urna at finibus mattis, nisi elit lacinia nisl, ac sollicitudin metus ligula non mauris. Morbi tempus dolor sit amet nisi vulputate, eu scelerisque dolor faucibus. Duis fringilla eros non lectus tempus tempus.\n\nDonec bibendum tortor quis tristique venenatis. Donec at nunc ac risus vehicula gravida et eu velit. Ut vitae lorem sed dolor convallis dignissim id eu eros. Maecenas vel feugiat magna. Quisque vitae semper mauris. In egestas risus vel nunc elementum ultrices. Mauris velit nunc, molestie ac porttitor in, iaculis ac velit. Sed mattis sit amet massa id placerat. Pellentesque placerat aliquet bibendum.\n\nPraesent sit amet orci volutpat leo porttitor auctor eget eu nisi. Pellentesque laoreet sollicitudin sapien, ac euismod nunc hendrerit nec. Curabitur fermentum ante sit amet fringilla tincidunt. Nulla dapibus quam nunc, nec sodales mi sollicitudin non. Nullam in ligula ut dolor porttitor sagittis. Etiam lectus erat, lobortis a diam quis, sodales rutrum lectus. Nam porta odio sed pretium posuere. Fusce rutrum quam quis viverra aliquet. Nulla aliquet dui felis. Aliquam in vestibulum lorem. Proin condimentum tortor nisi, eu facilisis urna lobortis ut.'),
+(4, 'asdfghmj', '3.jpg', '<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Mauris suscipit lorem a augue dapibus, at faucibus ipsum elementum. Aenean auctor neque eget odio tristique ornare eget eu lorem. Nullam a odio vitae massa aliquam auctor. Praesent sagittis lacus ut mauris suscipit, et gravida metus sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus placerat ullamcorper arcu, eget mollis ante egestas at. Aliquam tincidunt elementum sollicitudin. Phasellus placerat, massa id lacinia dictum, ligula turpis luctus massa, vitae mattis nisl leo id mi. Morbi vestibulum diam dolor, eu mollis urna scelerisque id. Proin a risus lacus. Integer semper sem quis orci venenatis, at ornare lacus vulputate.</p>\r\n<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Nullam malesuada nec felis id rhoncus. Integer tristique sollicitudin massa quis pellentesque. Proin eu erat id risus porttitor ullamcorper. Nunc id tristique est, rhoncus tempor mauris. Fusce laoreet accumsan nulla. In hac habitasse platea dictumst. Etiam tempus consectetur nulla, sit amet iaculis neque dignissim quis. Suspendisse potenti. Vestibulum venenatis faucibus nisl ut mattis.</p>'),
+(5, 'asdawd', '3.jpg', '<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Cras eget condimentum justo. Sed orci erat, placerat ac volutpat quis, lacinia ut nisi. Duis at sem nibh. Nulla ut elit blandit, tincidunt tortor id, fringilla risus. Integer tempus metus ut gravida efficitur. Nulla dictum nibh vel nibh ullamcorper commodo. Pellentesque semper sed nisl ac efficitur. Nulla aliquam malesuada risus, convallis aliquet diam bibendum non. Aliquam sed consequat velit. Morbi nisl orci, euismod ac nisl ac, scelerisque mollis nisl. Nullam efficitur eleifend risus, et volutpat ante ultrices ut.</p>\r\n<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Praesent non aliquam massa. Fusce eget orci augue. Nullam scelerisque ullamcorper nisi ac euismod. Curabitur malesuada mollis orci, id malesuada enim condimentum sed. Vivamus vestibulum, mi eget tempus ultrices, dolor massa ullamcorper est, a facilisis libero tortor et neque. Aenean tortor urna, commodo ut scelerisque euismod, hendrerit in massa. Praesent vel rhoncus orci. In hac habitasse platea dictumst. Quisque vehicula nec libero a hendrerit. Fusce non sem lacus. Mauris accumsan velit suscipit aliquet sollicitudin. Nam luctus elit at ex vehicula, ut maximus mauris ullamcorper. Quisque tempor tellus quam, in consequat lacus suscipit non. Quisque sit amet lacus ipsum.</p>');
 
 -- --------------------------------------------------------
 
@@ -260,7 +285,7 @@ CREATE TABLE `mainsettings` (
 --
 
 INSERT INTO `mainsettings` (`logo`, `background`, `email`, `password`) VALUES
-('1492165233logo.png', '1492165233home_large.jpg', 'jeffry24797@gmail.com', 'LDsDAgTA+ItWuM4gMVIwIJzHtXium50VpKALwsLSRR2vDn64UUlckmZhfqmeZNWxgLCA4xzA9FoOE4wF0YHBug==');
+('1492165233logo.png', '14938797734.jpg', 'jeffry24797@gmail.com', 'A6F2V5CatYr2jbBzW0B3R/miG0dop42eKlv3JQrTltrrJK5jpVD7rA6/CEYH6rlc09AWGGngyxzAK/18nrrFOg==');
 
 -- --------------------------------------------------------
 
@@ -281,7 +306,47 @@ CREATE TABLE `package` (
 
 INSERT INTO `package` (`id`, `name`, `image`, `description`) VALUES
 (2, 'Package', '1491937846Delicious.jpg', '<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Faragnus&nbsp;ipsum dolor sit amet, consectetur adipiscing elit. Morbi at dolor facilisis, viverra lorem at, maximus libero. Morbi volutpat nibh in rutrum mattis. Nam porta efficitur mi, sit amet volutpat sem congue ut. Fusce convallis nisl dictum pretium dignissim. Nam quis leo non ipsum lacinia rhoncus et at elit. Nulla pellentesque erat purus, id dictum leo auctor sed. Sed in nisi enim. Nulla maximus sodales eleifend.</p>\r\n<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Duis consequat rutrum est, non mattis lorem eleifend vitae. Aenean fermentum luctus lacinia. Nulla nec augue dapibus eros pulvinar consectetur. Aliquam rutrum erat pharetra placerat sagittis. Duis mattis venenatis lorem sit amet aliquet. Sed viverra magna et imperdiet pulvinar. Nam imperdiet lacus nec risus sollicitudin tempor. Quisque augue quam, laoreet eu massa sit amet, scelerisque mattis est.</p>'),
-(3, 'Another Package', '1491937895path4166.png', '<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Aenean lorem elit, varius in metus ut, tristique malesuada orci. Aenean magna lorem, rutrum sed vulputate eget, gravida nec ipsum. Praesent pulvinar lectus nibh, ut dictum lacus dapibus id. Donec nibh diam, facilisis lacinia metus non, ultrices ultrices neque. Nam ut magna finibus tellus tristique venenatis. Nullam sit amet aliquet quam. Praesent suscipit dolor velit, a imperdiet magna rhoncus vel. Etiam ante elit, venenatis ut justo vitae, ullamcorper rutrum erat. Cras in dignissim nulla. In hac habitasse platea dictumst. Curabitur aliquet gravida ligula.</p>\r\n<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Sed tempor augue nisl, nec malesuada neque vehicula ut. Morbi in laoreet tortor, at aliquam justo. Nullam vitae rutrum arcu. Donec libero dui, placerat eget vehicula ut, auctor vel felis. Fusce convallis mauris a felis interdum facilisis. Nullam enim lorem, suscipit vitae vestibulum id, tincidunt vulputate massa. In elementum, dolor vel ornare tincidunt, nisl elit tempus lacus, vitae vestibulum tellus justo at dolor. Donec lacinia dapibus magna. Nam aliquet orci urna, ac efficitur nibh pretium et. Curabitur risus eros, mattis ut felis sit amet, viverra tempus mi. Praesent vitae dui quam. Suspendisse nunc massa, pharetra vitae consectetur ac, elementum sed urna. Aenean dignissim enim at tellus porta tristique. Nam faucibus est vel condimentum pretium. Aliquam auctor volutpat diam.</p>');
+(3, 'Another Package', '1493878759book.png', '<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Aenean lorem elit, varius in metus ut, tristique malesuada orci. Aenean magna lorem, rutrum sed vulputate eget, gravida nec ipsum. Praesent pulvinar lectus nibh, ut dictum lacus dapibus id. Donec nibh diam, facilisis lacinia metus non, ultrices ultrices neque. Nam ut magna finibus tellus tristique venenatis. Nullam sit amet aliquet quam. Praesent suscipit dolor velit, a imperdiet magna rhoncus vel. Etiam ante elit, venenatis ut justo vitae, ullamcorper rutrum erat. Cras in dignissim nulla. In hac habitasse platea dictumst. Curabitur aliquet gravida ligula.</p>\r\n<p style="margin: 0px 0px 15px; padding: 0px; text-align: justify; font-family: ''Open Sans'', Arial, sans-serif;">Sed tempor augue nisl, nec malesuada neque vehicula ut. Morbi in laoreet tortor, at aliquam justo. Nullam vitae rutrum arcu. Donec libero dui, placerat eget vehicula ut, auctor vel felis. Fusce convallis mauris a felis interdum facilisis. Nullam enim lorem, suscipit vitae vestibulum id, tincidunt vulputate massa. In elementum, dolor vel ornare tincidunt, nisl elit tempus lacus, vitae vestibulum tellus justo at dolor. Donec lacinia dapibus magna. Nam aliquet orci urna, ac efficitur nibh pretium et. Curabitur risus eros, mattis ut felis sit amet, viverra tempus mi. Praesent vitae dui quam. Suspendisse nunc massa, pharetra vitae consectetur ac, elementum sed urna. Aenean dignissim enim at tellus porta tristique. Nam faucibus est vel condimentum pretium. Aliquam auctor volutpat diam.</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resto`
+--
+
+CREATE TABLE `resto` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `value_1` text,
+  `value_2` int(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resto`
+--
+
+INSERT INTO `resto` (`id`, `name`, `value_1`, `value_2`) VALUES
+(1, 'heading', 'Gracia Cafe & Resto adalah cafe sekaligus restoran yang berada di lantai satu Grand ABE Hotel. Kami menyediakan berbagai jenis makanan, yaitu Indonesian food, Chinese food, Western food, makanan tradisional Papua, dan tidak ketinggalan juga berbagai jenis kopi, juice, mocktail, dan lainnya. Gracia Cafe & Resto buka setiap hari dari pukul 06.00- 10.00 khusus untuk breakfast buffet dan pukul 10.00-23.00 untuk lunch dan dinner.', NULL),
+(2, 'FREE WI-FI – Akses internet tercepat di Jayapura', '1', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resto_img`
+--
+
+CREATE TABLE `resto_img` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resto_img`
+--
+
+INSERT INTO `resto_img` (`id`, `name`, `link`) VALUES
+(1, 'header_image', 'images/resto/4.jpg');
 
 -- --------------------------------------------------------
 
@@ -355,7 +420,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1492176050, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1493877167, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (3, '::1', 'iamdev', '$2y$08$NYx/ezvIpFC5iu9MI8Fc4uxcdduHOMOot.xHWhPksgiOMs9oHyPLK', NULL, 'iam@devpur.com', NULL, NULL, NULL, NULL, 1489924334, 1489924494, 1, 'iamtestchar', 'fordevpurposes', 'GrandABE', '191919112'),
 (4, '::1', 'troya_t', '$2y$08$cIEdfQz7E4VlD5LNzYci8u4P6mYC37R.bchjcZHHavPid4vK8Yj2y', NULL, 'troya@yahoo.com', NULL, NULL, NULL, NULL, 1489924916, 1489924959, 1, 'troya', 'treyo', 'GrandABE', '121212'),
 (5, '::1', 'testper', '$2y$08$OOc7v2t/5qzx8S0S9Oij8.YSMaX9NuDeRz4mD9G3ZGo39Tc0HfzO.', NULL, 'testper@testper.com', NULL, NULL, NULL, NULL, 1489993981, NULL, 1, '', '', '', '');
@@ -441,6 +506,18 @@ ALTER TABLE `bnmimages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cafe`
+--
+ALTER TABLE `cafe`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cafe_img`
+--
+ALTER TABLE `cafe_img`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
@@ -474,6 +551,18 @@ ALTER TABLE `login_attempts`
 -- Indexes for table `package`
 --
 ALTER TABLE `package`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resto`
+--
+ALTER TABLE `resto`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resto_img`
+--
+ALTER TABLE `resto_img`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -516,7 +605,17 @@ ALTER TABLE `birthday`
 -- AUTO_INCREMENT for table `bnmimages`
 --
 ALTER TABLE `bnmimages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `cafe`
+--
+ALTER TABLE `cafe`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `cafe_img`
+--
+ALTER TABLE `cafe_img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `contacts`
 --
@@ -548,6 +647,16 @@ ALTER TABLE `login_attempts`
 ALTER TABLE `package`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT for table `resto`
+--
+ALTER TABLE `resto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `resto_img`
+--
+ALTER TABLE `resto_img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
@@ -566,7 +675,7 @@ ALTER TABLE `users_groups`
 -- AUTO_INCREMENT for table `wedding`
 --
 ALTER TABLE `wedding`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints for dumped tables
 --
