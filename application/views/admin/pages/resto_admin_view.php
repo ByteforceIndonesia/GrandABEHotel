@@ -5,6 +5,16 @@
 	});
 </script>
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+	    $('.table').DataTable();
+	});
+</script>
+
 <pre>
 	<?php print_r($cafe) ?>
 </pre>
@@ -86,12 +96,15 @@
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
 				<table class="table">
-					<tr>
-						<td>No</td>
-						<td>Name</td>
-						<td>Image</td>
-						<td>Actions</td>
-					</tr>
+					<thead>
+						<tr>
+							<td>No</td>
+							<td>Name</td>
+							<td>Image</td>
+							<td>Actions</td>
+						</tr>
+					</thead>
+					<tbody>
 					<?php foreach($resto as $count => $item): ?>
 						<tr>
 							<td><?php echo $count+1 ?></td>
@@ -109,6 +122,7 @@
 							</td>
 						</tr>
 					<?php endforeach; ?>
+					</tbody>
 				</table>
 			</div>
 		</div>
@@ -162,7 +176,9 @@
 
 	<div class="row">
 		<div class="row">
-			
+			<div class="col-lg-10 col-lg-offset-1">
+				
+			</div>
 		</div>
 	</div>
 
@@ -175,13 +191,16 @@
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
 				<table class="table">
-					<tr>
-						<td>No</td>
-						<td>Name</td>
-						<td>Catagory</td>
-						<td>Image</td>
-						<td>Actions</td>
-					</tr>
+					<thead>
+						<tr>
+							<td>No</td>
+							<td>Name</td>
+							<td>Catagory</td>
+							<td>Image</td>
+							<td>Actions</td>
+						</tr>
+					</thead>
+					<tbody>
 					<?php foreach($cafe as $count => $item): ?>
 						<tr>
 							<td><?php echo $count+1 ?></td>
@@ -206,6 +225,7 @@
 							</td>
 						</tr>
 					<?php endforeach; ?>
+					</tbody>
 				</table>
 			</div>
 		</div>
