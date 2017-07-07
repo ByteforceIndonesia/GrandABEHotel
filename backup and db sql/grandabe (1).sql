@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 06, 2017 at 07:35 AM
+-- Generation Time: Jul 07, 2017 at 04:25 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 5.6.19
 
@@ -96,6 +96,41 @@ CREATE TABLE `cafe` (
   `value_2` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `cafe`
+--
+
+INSERT INTO `cafe` (`id`, `name`, `value_1`, `value_2`) VALUES
+(1, 'Chocolate Corn Flakes', '1', '1'),
+(2, 'Putri Salju', '2', '1'),
+(3, 'White Christmas Cake', '3', '1'),
+(4, 'Nastar', '4', '1'),
+(5, 'Kastengel', '5', '1'),
+(6, 'Christmas Tree Cake', '6', '1'),
+(7, 'Sacher Base', '7', '2'),
+(8, 'Mocca Cake', '8', '2'),
+(9, 'Domino Cake', '9', '2'),
+(10, 'Purple Cake', '10', '2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cafe_catagory`
+--
+
+CREATE TABLE `cafe_catagory` (
+  `id` int(11) NOT NULL,
+  `catagory` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cafe_catagory`
+--
+
+INSERT INTO `cafe_catagory` (`id`, `catagory`) VALUES
+(1, 'Whole Cake'),
+(2, 'Sliced Cake');
+
 -- --------------------------------------------------------
 
 --
@@ -107,6 +142,22 @@ CREATE TABLE `cafe_img` (
   `name` varchar(255) NOT NULL,
   `images` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cafe_img`
+--
+
+INSERT INTO `cafe_img` (`id`, `name`, `images`) VALUES
+(1, 'image_header', 'images/cake/1.jpg'),
+(2, 'image_header', 'images/cake/2.jpg'),
+(3, 'image_header', 'images/cake/3.jpg'),
+(4, 'image_header', 'images/cake/4.jpg'),
+(5, 'image_header', 'images/cake/5.jpg'),
+(6, 'image_header', 'images/cake/6.jpg'),
+(7, 'image_header', 'images/cake/12.jpg'),
+(8, 'image_header', 'images/cake/13.jpg'),
+(9, 'image_header', 'images/cake/14.jpg'),
+(10, 'image_header', 'images/cake/15.jpg');
 
 -- --------------------------------------------------------
 
@@ -326,8 +377,30 @@ CREATE TABLE `resto` (
 --
 
 INSERT INTO `resto` (`id`, `name`, `value_1`, `value_2`) VALUES
-(1, 'heading', 'Gracia Cafe & Resto adalah cafe sekaligus restoran yang berada di lantai satu Grand ABE Hotel. Kami menyediakan berbagai jenis makanan, yaitu Indonesian food, Chinese food, Western food, makanan tradisional Papua, dan tidak ketinggalan juga berbagai jenis kopi, juice, mocktail, dan lainnya. Gracia Cafe & Resto buka setiap hari dari pukul 06.00- 10.00 khusus untuk breakfast buffet dan pukul 10.00-23.00 untuk lunch dan dinner.', NULL),
-(2, 'FREE WI-FI – Akses internet tercepat di Jayapura', '1', NULL);
+(2, 'FREE WI-FI – Akses internet tercepat di Jayapura', '2', NULL),
+(3, 'GRACIA VIP ROOM - kapasitas hingga 20 orang', '3', NULL),
+(4, 'LIVE MUSIC - setiap Rabu pukul | 19.00 – end', '4', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resto_headers`
+--
+
+CREATE TABLE `resto_headers` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `value_1` text NOT NULL,
+  `value_2` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resto_headers`
+--
+
+INSERT INTO `resto_headers` (`id`, `name`, `value_1`, `value_2`) VALUES
+(1, 'resto_header', 'Gracia Cafe & Resto adalah cafe sekaligus restoran yang berada di lantai satu Grand ABE Hotel. Kami menyediakan berbagai jenis makanan, yaitu Indonesian food, Chinese food, Western food, makanan tradisional Papua, dan tidak ketinggalan juga berbagai jenis kopi, juice, mocktail, dan lainnya. Gracia Cafe & Resto buka setiap hari dari pukul 06.00- 10.00 khusus untuk breakfast buffet dan pukul 10.00-23.00 untuk lunch dan dinner.', 'images/resto/4.jpg'),
+(2, 'cafe_header', ' Grand ABE Hotel juga membuat berbagai jenis kue ulang tahun, black forest, chesse cake dan berbagai jenis kue lainnya dengan rasa yang nikmat dan dekorasi yang cantik. Tersedia juga aneka produk bakery, seperti roti tawar, roti sisir dan roti manis.', 'images/cake/10.jpg');
 
 -- --------------------------------------------------------
 
@@ -346,7 +419,9 @@ CREATE TABLE `resto_img` (
 --
 
 INSERT INTO `resto_img` (`id`, `name`, `link`) VALUES
-(1, 'header_image', 'images/resto/4.jpg');
+(2, 'image_freatured', 'images/resto/1.jpg'),
+(3, 'image_freatured', 'images/resto/2.jpg'),
+(4, 'image_freatured', 'images/resto/3.jpg');
 
 -- --------------------------------------------------------
 
@@ -420,7 +495,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1493877167, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1499339257, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (3, '::1', 'iamdev', '$2y$08$NYx/ezvIpFC5iu9MI8Fc4uxcdduHOMOot.xHWhPksgiOMs9oHyPLK', NULL, 'iam@devpur.com', NULL, NULL, NULL, NULL, 1489924334, 1489924494, 1, 'iamtestchar', 'fordevpurposes', 'GrandABE', '191919112'),
 (4, '::1', 'troya_t', '$2y$08$cIEdfQz7E4VlD5LNzYci8u4P6mYC37R.bchjcZHHavPid4vK8Yj2y', NULL, 'troya@yahoo.com', NULL, NULL, NULL, NULL, 1489924916, 1489924959, 1, 'troya', 'treyo', 'GrandABE', '121212'),
 (5, '::1', 'testper', '$2y$08$OOc7v2t/5qzx8S0S9Oij8.YSMaX9NuDeRz4mD9G3ZGo39Tc0HfzO.', NULL, 'testper@testper.com', NULL, NULL, NULL, NULL, 1489993981, NULL, 1, '', '', '', '');
@@ -512,6 +587,12 @@ ALTER TABLE `cafe`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cafe_catagory`
+--
+ALTER TABLE `cafe_catagory`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cafe_img`
 --
 ALTER TABLE `cafe_img`
@@ -557,6 +638,12 @@ ALTER TABLE `package`
 -- Indexes for table `resto`
 --
 ALTER TABLE `resto`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resto_headers`
+--
+ALTER TABLE `resto_headers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -610,12 +697,17 @@ ALTER TABLE `bnmimages`
 -- AUTO_INCREMENT for table `cafe`
 --
 ALTER TABLE `cafe`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `cafe_catagory`
+--
+ALTER TABLE `cafe_catagory`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `cafe_img`
 --
 ALTER TABLE `cafe_img`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `contacts`
 --
@@ -650,12 +742,17 @@ ALTER TABLE `package`
 -- AUTO_INCREMENT for table `resto`
 --
 ALTER TABLE `resto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `resto_headers`
+--
+ALTER TABLE `resto_headers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `resto_img`
 --
 ALTER TABLE `resto_img`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `rooms`
 --
