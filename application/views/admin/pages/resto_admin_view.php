@@ -9,18 +9,15 @@
  
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
 
+<script src="<?php echo base_url() . 'assets/js/resto_admin.js' ?>"></script>
+
 <script>
 	$(document).ready(function(){
 	    $('.table').DataTable();
 	});
 </script>
 
-<pre>
-	<?php print_r($cafe) ?>
-</pre>
-
 <div class="container">
-
 	<!-- Modal -->
 	<div id="myModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
@@ -58,7 +55,7 @@
 			</div>
 		</div>
 	</div>
-
+<br><br><br><br>
 	<div class="row">
 		<div class="row">
 			<div class="col-lg-3 col-lg-offset-1">
@@ -86,7 +83,7 @@
 			</div>
 		</div>
 	</div>
-
+<br><br><br><br>
 	<div class="row">
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
@@ -127,7 +124,7 @@
 			</div>
 		</div>
 	</div>
-
+<br><br><br><br>
 	<!-- Cafe -->
 	<div class="row">
 		<div class="col-lg-12">
@@ -145,7 +142,7 @@
 			</div>
 		</div>
 	</div>
-
+<br><br><br><br>
 	<div class="row">
 		<div class="row">
 			<div class="col-lg-3 col-lg-offset-1">
@@ -173,21 +170,49 @@
 			</div>
 		</div>
 	</div>
-
+<br><br><br><br>
 	<div class="row">
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
-				
+				<h3>Cafe Categories</h3>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<table class="table">
+					<thead>
+						<tr>
+							<td>No</td>
+							<td>Category Name</td>
+							<td>Actions</td>
+						</tr>
+					</thead>
+					<tbody>
+					<?php foreach($catagories as $count => $category): ?>
+						<tr>
+							<td><?php echo $count+1 ?></td>
+							<td><?php echo $category->catagory ?></td>
+							<td>
+								<a href="#">
+									<button class="btn btn-danger">Delete</button>
+								</a>
+							</td>
+						</tr>
+					<?php endforeach; ?>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
-
+		<br><br><br><br>
 	<div class="row">
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
 				<h3>Cafe Items</h3>
 			</div>
 		</div>
+		<br>
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
 				<table class="table">
@@ -208,10 +233,14 @@
 							<td>
 								<select name="category" id="">
 									<?php foreach($catagories as $catagory): ?>
-										<option value="<?php echo $catagory->id ?>"><?php echo $catagory->catagory ?></option>
+										<option
+										<?php if($catagory->id == $item->value_2): ?>
+											selected
+										<?php endif; ?>
+										value="<?php echo $catagory->id ?>"><?php echo $catagory->catagory ?></option>
 									<?php endforeach; ?>
 								</select>
-							<?php echo $item->catagory ?></td>
+							</td>
 							<td>
 								<img src="<?php echo base_url() . 'assets/' . $item->images?>" alt="Error Loading Image" width="100px">
 							</td>
@@ -231,3 +260,4 @@
 		</div>
 	</div>
 </div>
+<br><br><br><br>
