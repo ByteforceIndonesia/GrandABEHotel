@@ -162,7 +162,7 @@
 							</td>
 							<td>
 								<button class="btn btn-danger delete-resto-item" id="<?php echo $item->id ?>" data-toggle="modal" data-target="#myModal">Delete</button>
-								<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Change Image</button>
+								<button class="btn btn-primary change-image-resto" data-toggle="modal" data-target="#myModal" id="<?php echo $item->id ?>">Change Image</button>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -296,7 +296,7 @@
 									<button class="btn btn-danger">Delete</button>
 								</a>
 								<a href="#">
-									<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Change Image</button>
+									<button class="btn btn-primary change-image" data-toggle="modal" data-target="#myModal">Change Image</button>
 								</a>
 							</td>
 						</tr>
@@ -370,6 +370,17 @@ $(document).ready(function(){
 
 		$('.modal-title').html('Delete Confirmation');
 		$.post("<?php echo base_url('admin/resto/resto_item_delete_modal/') ?>" + id, function(data){
+			    $(".modal-body").html(data).fadeIn();
+			});
+	});
+
+	// Change Image
+	$('.change-image-resto').click(function()
+	{
+		var id = $(this).attr('id');
+
+		$('.modal-title').html('Change Image');
+		$.post("<?php echo base_url('admin/resto/resto_item_change_image/') ?>" + id, function(data){
 			    $(".modal-body").html(data).fadeIn();
 			});
 	});

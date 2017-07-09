@@ -39,6 +39,29 @@
 				return false;
 		}
 
+		public function resto_item_change_image($id)
+		{
+			if($_FILES)
+			{
+				if($this->resto_data->change_image_upload($id))
+				{
+					$this->session->set_flashdata('success', 'success');
+					redirect(base_url('admin/resto/'));
+					return;
+				}else
+				{
+					$this->session->set_flashdata('error', 'error');
+					redirect(base_url('admin/resto/'));
+					return;
+				}
+			}else
+			{
+				$resto_item = $this->resto_data->getOneResto($id);
+				$data = array('id' => $id, 'link' => $resto_item->link);
+				return $this->load->view('admin/pages/modal/change_image_resto', $data);
+			}
+		}
+
 		public function resto_item_delete()
 		{
 			$data = array ('id' => $this->input->post('id'));

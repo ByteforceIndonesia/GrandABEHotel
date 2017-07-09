@@ -87,6 +87,34 @@
 	    	}
 	    }
 
+	    function change_image_upload($id)
+	    {
+	    	$resto_item = $this->getOneResto($id);
+
+	    	$config['upload_path']          = './assets/images/resto/';
+	    	$config['file_name']			=  $resto_item->value_1 . '.jpg';
+	    	$config['overwrite']			= TRUE;
+            $config['allowed_types']        = 'jpg|jpeg';
+            $config['max_size']             = 3000;
+
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+
+            if (!$this->upload->do_upload('new-image'))
+            {
+                $error = $this->upload->display_errors();
+                $this->session->set_flashdata('error', $error);
+            	redirect(base_url('admin/resto'));
+                return false;
+            }
+            else
+            {
+            	$this->session->set_flashdata('success', 'success');
+            	redirect(base_url('admin/resto'));
+            	return;
+            }
+	    }
+
 	    function restoNewItem($content)
 	    {
 	    	$last = $this->getLastRestoImg();
