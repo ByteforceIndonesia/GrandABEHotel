@@ -26,5 +26,52 @@
 			$this->render('admin/pages/resto_admin_view');
 		}
 
+		public function resto_item_edit()
+		{
+			$data = array(
+				'id' 		=> $this->input->post('id'),
+				'content'	=> $this->input->post('content'),
+			);
+
+			if($this->resto_data->setRestoItemEdit($data)['error'] == null)
+				echo 'success';
+			else
+				return false;
+		}
+
+		public function resto_item_delete()
+		{
+			$data = array ('id' => $this->input->post('id'));
+
+			if($this->resto_data->restoDeleteItem($data))
+				echo 'success';
+			else
+				return false;
+		}
+
+		public function resto_item_delete_modal($id)
+		{
+			$data = array('id' => $id);
+			return $this->load->view('admin/pages/modal/delete_confirm', $data);
+		}
+
+		public function resto_item_new()
+		{
+			if($_POST)
+			{
+				$content = $this->input->post('content');
+
+				if($this->resto_data->restoNewItem($content))
+					$this->session->set_flashdata('success', 'success');
+				else
+					$this->session->set_flashdata('error', 'error');
+
+				redirect(base_url('admin/resto'));	
+
+			}else
+			{
+				return $this->load->view('admin/pages/resto_new_item', TRUE);
+			}
+		}
 
 	}
