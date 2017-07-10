@@ -35,12 +35,22 @@
 	    	return $this->db->get()->row();
 	    }
 
-	    function getLastRestoImg()
+	    function getLastImg($type)
 	    {
-	    	$this->db->select('*')
-	    			->from('resto_img')
-			    	->order_by('id', 'DESC')
-			    	->limit(1);
+	    	if($type == 'resto')
+	    	{
+		    	$this->db->select('*')
+		    			->from('resto_img')
+				    	->order_by('id', 'DESC')
+				    	->limit(1);
+		    }else if($type == 'cafe')
+		    {
+				$this->db->select('*')
+		    			->from('cafe_img')
+				    	->order_by('id', 'DESC')
+				    	->limit(1);
+		    }		
+	    	
 	    	return $this->db->get()->row();
 	    }
 
@@ -221,9 +231,91 @@
             }
 	    }
 
+	    function NewItem($type, $content)
+	    {
+	    	switch($type)
+	    	{
+	    		case 'cafe':
+	    		{
+	    			return $this->cafeNewItem($content);
+	    		}break;
+
+	    		case 'category':
+	    		{
+	    			return $this->db->insert('cafe_catagory', array('catagory' => $content));
+	    		}break;
+	    	}
+	    }
+
+	    function cafeNewItem($content)
+	    {
+	    	$last = $this->getLastImg('cafe');
+
+	    	// Check if data is null
+	    	if($last == null)
+	    	{
+	    		$last = 0;
+       			$data_img['id'] = 0;
+       			$data['id']	= 0;
+	    	}else
+	    	{
+	    		$last = $last->id;
+	    	}
+
+	    	$config['upload_path']          = './assets/images/cake/';
+	    	$config['file_name']			=  $last+1 . '.jpg';
+	    	$config['overwrite']			= TRUE;
+            $config['allowed_types']        = 'jpg|jpeg';
+            $config['max_size']             = 3000;
+
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+
+            if (!$this->upload->do_upload('image'))
+            {
+                $error = $this->upload->display_errors();
+                $this->session->set_flashdata('error', $error);
+                return false;
+            }
+            else
+            {
+            	// For Debugs
+                $upload_data = $this->upload->data();
+
+                $data = array (
+                	'name'		=> $content['name'],
+                	'value_2'	=> $content['value_2']
+                	);
+
+                $data_img = array (
+                	'name'		=> 'image_freatured',
+                	'images'	=> 'images/cake/' . $config['file_name']
+                	);
+                
+            	if($this->db->insert('cafe_img', $data_img))
+            	{
+	    			$last = $this->getLastImg('cafe')->id;
+            		$data['value_1'] = $last;
+
+            		if($this->db->insert('cafe', $data))
+	                	return $upload_data;
+	                else
+	                {
+	                	$this->session->set_flashdata('error', 'Error Inserting Into Database');
+	                	return false;
+	                }
+            	}else
+            	{
+            		$this->session->set_flashdata('error', 'Error Inserting Into Database');
+            		return false;
+            	}
+
+            }
+	    }
+
 	    function restoNewItem($content)
 	    {
-	    	$last = $this->getLastRestoImg();
+	    	$last = $this->getLastImg('resto');
 
 	    	// Check if data is null
 	    	if($last == null)
@@ -238,6 +330,7 @@
 
 	    	$config['upload_path']          = './assets/images/resto/';
 	    	$config['file_name']			=  $last+1 . '.jpg';
+	    	$config['overwrite']			= TRUE;
             $config['allowed_types']        = 'jpg|jpeg';
             $config['max_size']             = 3000;
 
@@ -265,7 +358,8 @@
                 
             	if($this->db->insert('resto_img', $data_img))
             	{
-            		$data['value_1'] = $last+1;
+	    			$last = $this->getLastImg('resto')->id;
+            		$data['value_1'] = $last;
 
             		if($this->db->insert('resto', $data))
 	                	return $upload_data;

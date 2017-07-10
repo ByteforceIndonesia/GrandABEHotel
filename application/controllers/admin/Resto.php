@@ -94,6 +94,9 @@
 		{
 			$data = array ('id' => $this->input->post('id'));
 
+			if(!$_POST)
+				return false;
+
 			if($this->resto_data->deleteItem($type, $data))
 				echo 'success';
 			else
@@ -146,6 +149,51 @@
 			}else
 			{
 				return $this->load->view('admin/pages/resto_new_item', TRUE);
+			}
+		}
+
+		public function cafe_item_new()
+		{
+			if($_POST)
+			{
+				$content 	= $this->input->post('content');
+				$category 	= $this->input->post('category');
+
+				$data = array(
+					'name'		=> $content,
+					'value_2'	=> $category
+					);
+
+				if($this->resto_data->NewItem('cafe', $data))
+					$this->session->set_flashdata('success', 'success');
+				else
+					$this->session->set_flashdata('error', 'error');
+
+				redirect(base_url('admin/resto'));	
+
+			}else
+			{
+				$data = array('categories' => $this->resto_data->getCakeCatagory());
+				return $this->load->view('admin/pages/modal/cafe_new_item', $data);
+			}
+		}
+
+		public function category_item_new()
+		{
+			if($_POST)
+			{
+				$content = $this->input->post('content');
+
+				if($this->resto_data->NewItem('category', $content))
+					$this->session->set_flashdata('success', 'success');
+				else
+					$this->session->set_flashdata('error', 'error');
+
+				redirect(base_url('admin/resto'));	
+
+			}else
+			{
+				return $this->load->view('admin/pages/modal/category_new_item', TRUE);
 			}
 		}
 

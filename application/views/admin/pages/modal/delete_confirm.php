@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			type: 'post',
-			url: "<?php echo base_url(); ?>admin/resto/item_delete/" . $type,
+			url: "<?php echo base_url() . "admin/resto/item_delete/" . $type ?>",
 			data: {id: id},
 			success: function(res)
 			{
