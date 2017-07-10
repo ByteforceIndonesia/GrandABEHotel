@@ -15,7 +15,7 @@
 		<img src="<?php echo base_url() . 'assets/' . $link ?>" alt="" class="old-image">
 	</div>
 	<div class="col-md-6">
-	<?php echo form_open_multipart('admin/resto/resto_item_change_image/' . $id) ?>
+	<?php echo form_open_multipart('admin/resto/item_change_image/' . $type . '/' . $id) ?>
 		<div class="form-group">
 			<div class="input-group">
                 <label class="input-group-btn">

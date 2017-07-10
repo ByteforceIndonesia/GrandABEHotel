@@ -1,13 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-<script type="text/javascript">
-	tinymce.init({
-		selector:'.texteditor'
-	});
-</script>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.css"/>
  
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
 
 <style>
 	.modal-container
@@ -91,7 +86,7 @@
 		<div class="col-lg-10 col-lg-offset-1">
 			<h3>Heading Text</h3>
 			<div class="form-group">
-				<textarea name="resto_heading" id="" cols="30" rows="10" class="texteditor form-control">
+				<textarea name="resto_heading" id="" cols="30" rows="10" class="texteditor-resto-heading form-control resto-header-text">
 					<?php echo $headers[0]->value_1 ?>
 				</textarea>
 			</div>
@@ -113,14 +108,20 @@
 			<div class="col-lg-3">
 				<h4>Change Image</h4>
 				<div class="form-group">
+				<?php echo form_open_multipart('admin/resto/header_image/resto') ?>
 					<div class="input-group">
 		                <label class="input-group-btn">
 		                    <span class="btn btn-primary">
-		                        Browse&hellip; <input type="file" style="display: none;" multiple>
+		                        Browse&hellip; <input type="file" style="display: none;" name="header_image">
 		                    </span>
 		                </label>
 		                <input type="text" class="form-control" readonly>
 		            </div>
+		            <br>
+		            <div class="input-group">
+		            	<input type="submit" value="Submit" class="btn btn-primary">
+		            </div>
+	            <?php echo form_close() ?>
 				</div>
 			</div>
 		</div>
@@ -183,7 +184,7 @@
 		<div class="col-lg-10 col-lg-offset-1">
 			<h3>Heading Text</h3>
 			<div class="form-group">
-				<textarea name="resto_heading" id="" cols="30" rows="10" class="texteditor form-control">
+				<textarea name="resto_heading" id="" cols="30" rows="10" class="texteditor-cafe-heading form-control">
 					<?php echo $headers[1]->value_1 ?>
 				</textarea>
 			</div>
@@ -205,14 +206,20 @@
 			<div class="col-lg-3">
 				<h4>Change Image</h4>
 				<div class="form-group">
+				<?php echo form_open_multipart('admin/resto/header_image/cafe') ?>
 					<div class="input-group">
 		                <label class="input-group-btn">
 		                    <span class="btn btn-primary">
-		                        Browse&hellip; <input type="file" style="display: none;" multiple>
+		                        Browse&hellip; <input type="file" style="display: none;" name="header_image">
 		                    </span>
 		                </label>
 		                <input type="text" class="form-control" readonly>
 		            </div>
+		            <br>
+		            <div class="input-group">
+		            	<input type="submit" value="Submit" class="btn btn-primary">
+		            </div>
+	            <?php echo form_close() ?>
 				</div>
 			</div>
 		</div>
@@ -220,8 +227,13 @@
 <br><br><br><br>
 	<div class="row">
 		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
+			<div class="col-md-3 col-lg-offset-1">
 				<h3>Cafe Categories</h3>
+			</div>
+			<div class="col-md-2 pull-right">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="new-category-item">
+					Create New
+				</button>
 			</div>
 		</div>
 		<br>
@@ -239,11 +251,18 @@
 					<?php foreach($catagories as $count => $category): ?>
 						<tr>
 							<td><?php echo $count+1 ?></td>
-							<td><?php echo $category->catagory ?></td>
+							<td 
+								contenteditable="true"
+								class="category-name"
+								id="<?php echo $category->id ?>">
+								<?php echo $category->catagory ?>
+							</td>
 							<td>
-								<a href="#">
-									<button class="btn btn-danger">Delete</button>
-								</a>
+								<button 
+								class="btn btn-danger category-delete"
+								id="<?php echo $category->id ?>">
+									Delete
+								</button>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -255,8 +274,13 @@
 		<br><br><br><br>
 	<div class="row">
 		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
+			<div class="col-md-3 col-lg-offset-1">
 				<h3>Cafe Items</h3>
+			</div>
+			<div class="col-md-2 pull-right">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="new-cafe-item">
+					Create New
+				</button>
 			</div>
 		</div>
 		<br>
@@ -278,7 +302,7 @@
 							<td><?php echo $count+1 ?></td>
 							<td><?php echo $item->name ?></td>
 							<td>
-								<select name="category" id="">
+								<select name="category" class="category-change" id="<?php echo $item->id?>">
 									<?php foreach($catagories as $catagory): ?>
 										<option
 										<?php if($catagory->id == $item->value_2): ?>
@@ -292,12 +316,18 @@
 								<img src="<?php echo base_url() . 'assets/' . $item->images?>" alt="Error Loading Image" width="100px">
 							</td>
 							<td>
-								<a href="#">
-									<button class="btn btn-danger">Delete</button>
-								</a>
-								<a href="#">
-									<button class="btn btn-primary change-image" data-toggle="modal" data-target="#myModal">Change Image</button>
-								</a>
+								<button 
+								class="btn btn-danger cafe-item-delete"
+								id="<?php echo $item->id?>">
+									Delete
+								</button>
+								<button 
+								class="btn btn-primary change-image-cafe" 
+								id="<?php echo $item->id?>"
+								data-toggle="modal" 
+								data-target="#myModal">
+									Change Image
+								</button>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -317,7 +347,77 @@
 --------------------------------*/
 
 $(document).ready(function(){
+
     $('.table').DataTable();
+
+    $('body').on('focus', '[contenteditable]', function() {
+	    var $this = $(this);
+	    $this.data('before', $this.html());
+	    return $this;
+	}).on('blur paste', '[contenteditable]', function() {
+	    var $this = $(this);
+	    if ($this.data('before') !== $this.html()) {
+	        $this.data('before', $this.html());
+	        $this.trigger('change');
+	    }
+	    return $this;
+	});
+
+	function changeHeadingResto(init)
+	{
+		var content = init.getBody().innerHTML;
+
+		$.ajax({
+			type: 'post',
+			url: "<?php echo base_url(); ?>admin/resto/header_text/resto",
+			data: {content: content},
+			success: function(res)
+			{
+				toggleSuccess();
+			},
+			error: function()
+			{
+				toggleError();
+			}
+		});
+	}
+
+	function changeHeadingCafe(init)
+	{
+		var content = init.getBody().innerHTML;
+
+		$.ajax({
+			type: 'post',
+			url: "<?php echo base_url(); ?>admin/resto/header_text/cafe",
+			data: {content: content},
+			success: function(res)
+			{
+				toggleSuccess();
+			},
+			error: function()
+			{
+				toggleError();
+			}
+		});
+	}
+
+    tinymce.init({
+		selector:'.texteditor-resto-heading',
+		setup: function(editor) {
+	        editor.on('change', function() {
+	            changeHeadingResto(editor)
+	        });
+	    }
+	});
+
+	tinymce.init({
+		selector:'.texteditor-cafe-heading',
+		setup: function(editor) {
+	        editor.on('change', function() {
+	            changeHeadingCafe(editor)
+	        });
+	    }
+	});
 
     function toggleSuccess()
 	{
@@ -363,6 +463,54 @@ $(document).ready(function(){
 		});
 	});
 
+	// Change category name
+	$('.category-name').on('change', function()
+	{
+		var id 		= $(this).attr('id');
+		var content = $(this).html();
+
+		$.ajax({
+			type: 'post',
+			url: "<?php echo base_url(); ?>admin/resto/category_name_change",
+			data: {id: id,content: content},
+			success: function(res)
+			{
+				toggleSuccess();
+			},
+			error: function()
+			{
+				toggleError();
+			}
+		});
+	});
+
+	// Delete Category
+	$('.delete-category').click(function()
+	{
+
+	});
+
+	// Change item catagory
+	$('.category-change').change(function()
+	{
+		var id = $(this).attr('id');
+		var val = $(this).val();
+
+		$.ajax({
+			type: 'post',
+			url: "<?php echo base_url(); ?>admin/resto/cafe_edit/category",
+			data: {id: id,content: val},
+			success: function(res)
+			{
+				toggleSuccess();
+			},
+			error: function()
+			{
+				toggleError();
+			}
+		});
+	});
+
 	// Delete resto dialog
 	$('.delete-resto-item').click(function()
 	{
@@ -380,7 +528,18 @@ $(document).ready(function(){
 		var id = $(this).attr('id');
 
 		$('.modal-title').html('Change Image');
-		$.post("<?php echo base_url('admin/resto/resto_item_change_image/') ?>" + id, function(data){
+		$.post("<?php echo base_url('admin/resto/item_change_image/resto/') ?>" + id, function(data){
+			    $(".modal-body").html(data).fadeIn();
+			});
+	});
+
+	// Change Image
+	$('.change-image-cafe').click(function()
+	{
+		var id = $(this).attr('id');
+
+		$('.modal-title').html('Change Image');
+		$.post("<?php echo base_url('admin/resto/item_change_image/cafe/') ?>" + id, function(data){
 			    $(".modal-body").html(data).fadeIn();
 			});
 	});

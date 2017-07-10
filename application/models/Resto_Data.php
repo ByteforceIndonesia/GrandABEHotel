@@ -65,6 +65,39 @@
 	    	return $query->row();
 	    }
 
+	    function getOneCafe ($id)
+	    {
+	    	$query = $this->db->where('cafe.id', $id)
+	    					->from('cafe')
+	    					->join('cafe_img', 'cafe.value_1 = cafe_img.id')
+	    					->join('cafe_catagory', 'cafe.value_2 = cafe_catagory.id')
+	    					->get();
+	    	return $query->row();
+	    }
+
+	    function category_change()
+	    {
+	    	$id 		= $this->input->post('id');
+	    	$content	= $this->input->post('content');
+
+	    	return $this->db->where('id', $id)
+	    			->update('cafe_catagory', array('catagory' => $content));
+	    }
+
+	    function cafe_change_item($type)
+	    {
+	    	switch($type)
+	    	{
+	    		case 'category':
+		    	{
+		    		$id = $this->input->post('id');
+		    		$content = $this->input->post('content');
+
+		    		return $this->db->where('id', $id)->update('cafe', array('value_2' => $content));
+		    	}break;
+	    	}
+	    }
+
 	    function setRestoItemEdit($data)
 	    {
 	    	$this->db->where('id', $data['id']);
@@ -87,12 +120,73 @@
 	    	}
 	    }
 
-	    function change_image_upload($id)
+	    function header_change_text($type)
 	    {
-	    	$resto_item = $this->getOneResto($id);
+	    	$content = $this->input->post('content');
 
-	    	$config['upload_path']          = './assets/images/resto/';
-	    	$config['file_name']			=  $resto_item->value_1 . '.jpg';
+	    	$data = array('value_1' => $content);
+
+	    	$this->db->where('name', $type . '_header');
+	    	return $this->db->update('resto_headers', $data);
+	    }
+
+	    function header_change_image($type)
+	    {
+	    	switch($type)
+	    	{
+	    		case 'resto':
+	    		{
+			    	$config['upload_path']          = './assets/images/resto/';
+			    	$config['file_name']			=  'resto_header.jpg';
+	    		}break;
+
+	    		case 'cafe':
+	    		{
+			    	$config['upload_path']          = './assets/images/cake/';
+			    	$config['file_name']			=  'cafe_header.jpg';
+	    		}break;
+	    	}
+
+
+	    	$config['overwrite']			= TRUE;
+            $config['allowed_types']        = 'jpg|jpeg';
+            $config['max_size']             = 5000;
+
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+
+            if (!$this->upload->do_upload('header_image'))
+            {
+                $error = $this->upload->display_errors();
+                $this->session->set_flashdata('error', $error);
+
+                print_r($error);
+                exit;
+
+            	redirect(base_url('admin/resto'));
+                return;
+            }
+            else
+            {
+            	$this->session->set_flashdata('success', 'success');
+            	redirect(base_url('admin/resto'));
+            	return;
+            }
+	    }
+
+	    function change_image_upload($type, $id)
+	    {
+	    	if($type == 'resto')
+	    	{
+	    		$item = $this->getOneResto($id);
+	    		$config['upload_path']          = './assets/images/resto/';
+	    	}else
+	    	{	
+	    		$item = $this->getOneCafe($id);
+	    		$config['upload_path']          = './assets/images/cake/';
+	    	}
+
+	    	$config['file_name']			=  $item->value_1 . '.jpg';
 	    	$config['overwrite']			= TRUE;
             $config['allowed_types']        = 'jpg|jpeg';
             $config['max_size']             = 3000;
