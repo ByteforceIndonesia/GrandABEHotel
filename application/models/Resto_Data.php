@@ -104,9 +104,21 @@
 	    	return $this->db->update('resto', array('name' => $data['content']));
 	    }
 
-	    function restoDeleteItem($data)
+	    function deleteItem($type, $data)
 	    {
-	    	$to_be_deleted = $this->getOneResto($data['id']);
+	    	if($type == 'resto')
+	    		$to_be_deleted = $this->getOneResto($data['id']);
+	    	else if($type == 'cafe')
+	    		$to_be_deleted = $this->getOneCafe($data['id']);
+	    	else if($type == 'category')
+	    	{
+	    		// Check if the category is being use
+	    		if($this->db->where('value_2', $data['id'])->get('cafe')->row())
+	    		{
+	    			return false;
+	    		}else
+	    			return $this->db->where('id', $data['id'])->delete('cafe_catagory');
+	    	}
 
 	    	try
 	    	{

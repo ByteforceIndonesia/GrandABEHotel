@@ -90,19 +90,20 @@
 			}
 		}
 
-		public function resto_item_delete()
+		public function item_delete($type)
 		{
 			$data = array ('id' => $this->input->post('id'));
 
-			if($this->resto_data->restoDeleteItem($data))
+			if($this->resto_data->deleteItem($type, $data))
 				echo 'success';
 			else
 				return false;
 		}
 
-		public function resto_item_delete_modal($id)
+		public function item_delete_modal($type, $id)
 		{
-			$data = array('id' => $id);
+			$data = array('id' => $id, 'type' => $type);
+
 			return $this->load->view('admin/pages/modal/delete_confirm', $data);
 		}
 

@@ -259,7 +259,7 @@
 							</td>
 							<td>
 								<button 
-								class="btn btn-danger category-delete"
+								class="btn btn-danger delete-category"
 								id="<?php echo $category->id ?>">
 									Delete
 								</button>
@@ -487,7 +487,12 @@ $(document).ready(function(){
 	// Delete Category
 	$('.delete-category').click(function()
 	{
+		var id 		= $(this).attr('id');
 
+		$('.modal-title').html('Delete Confirmation');
+		$.post("<?php echo base_url('admin/resto/item_delete_modal/category/') ?>" + id, function(data){
+			    $(".modal-body").html(data).fadeIn();
+			});
 	});
 
 	// Change item catagory
@@ -517,7 +522,7 @@ $(document).ready(function(){
 		var id 		= $(this).attr('id');
 
 		$('.modal-title').html('Delete Confirmation');
-		$.post("<?php echo base_url('admin/resto/resto_item_delete_modal/') ?>" + id, function(data){
+		$.post("<?php echo base_url('admin/resto/item_delete_modal/resto/') ?>" + id, function(data){
 			    $(".modal-body").html(data).fadeIn();
 			});
 	});

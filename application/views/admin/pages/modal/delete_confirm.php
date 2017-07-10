@@ -19,7 +19,7 @@
 </div>
 <div class="row">
 	<div class="col-md-6">
-		<button class="btn btn-danger btn-apel delete-resto-item-confirm" id = "<?php echo $id ?>" data-dismiss="modal">
+		<button class="btn btn-danger btn-apel delete-item-confirm" id = "<?php echo $id ?>" data-dismiss="modal">
 			Delete
 		</button>
 	</div>
@@ -50,13 +50,13 @@ $(document).ready(function(){
 	}
 
 	// Delete Resto Items
-	$('.delete-resto-item-confirm').click(function()
+	$('.delete-item-confirm').click(function()
 	{
 		var id 		= $(this).attr('id');
 
 		$.ajax({
 			type: 'post',
-			url: "<?php echo base_url(); ?>admin/resto/resto_item_delete",
+			url: "<?php echo base_url(); ?>admin/resto/item_delete/" . $type,
 			data: {id: id},
 			success: function(res)
 			{
