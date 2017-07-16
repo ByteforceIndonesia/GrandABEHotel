@@ -464,6 +464,7 @@ $(document).ready(function(){
 		});
 	});
 
+	// Cafe Item Delete
 	$('.cafe-item-delete').click(() => {
 		var id 		= $(this).attr('id');
 
