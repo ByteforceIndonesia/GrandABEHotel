@@ -117,9 +117,35 @@
 	    function deleteItem($type, $data)
 	    {
 	    	if($type == 'resto')
+	    	{
 	    		$to_be_deleted = $this->getOneResto($data['id']);
+
+		    	try
+		    	{
+		    		if($this->db->where('id', $to_be_deleted->id)->delete('resto'))
+		    			if($this->db->where('id', $to_be_deleted->value_1)->delete('resto_img'))
+		    				if(unlink(base_url() . '/' . $to_be_deleted->link))
+		    					return true;
+		    	}catch(exception $e)
+		    	{
+		    		return array('error' => $e);
+		    	}
+	    	}	
 	    	else if($type == 'cafe')
+	    	{
 	    		$to_be_deleted = $this->getOneCafe($data['id']);
+
+		    	try
+		    	{
+		    		if($this->db->where('id', $to_be_deleted->id)->delete('cafe'))
+		    			if($this->db->where('id', $to_be_deleted->value_1)->delete('cafe_img'))
+		    				if(unlink(base_url() . '/' . $to_be_deleted->images))
+		    					return true;
+		    	}catch(exception $e)
+		    	{
+		    		return array('error' => $e);
+		    	}
+		    }
 	    	else if($type == 'category')
 	    	{
 	    		// Check if the category is being use
@@ -128,17 +154,6 @@
 	    			return false;
 	    		}else
 	    			return $this->db->where('id', $data['id'])->delete('cafe_catagory');
-	    	}
-
-	    	try
-	    	{
-	    		if($this->db->where('id', $to_be_deleted->id)->delete('resto'))
-	    			if($this->db->where('id', $to_be_deleted->value_1)->delete('resto_img'))
-	    				if(unlink(base_url() . '/' . $to_be_deleted->link))
-	    					return true;
-	    	}catch(exception $e)
-	    	{
-	    		return array('error' => $e);
 	    	}
 	    }
 

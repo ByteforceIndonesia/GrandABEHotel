@@ -1,8 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.css"/>
- 
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
 
 <style>
 	.modal-container
@@ -319,7 +316,9 @@
 							<td>
 								<button 
 								class="btn btn-danger cafe-item-delete"
-								id="<?php echo $item->id?>">
+								id="<?php echo $item->id?>"
+								data-toggle="modal" 
+								data-target="#myModal">
 									Delete
 								</button>
 								<button 
@@ -349,7 +348,6 @@
 
 $(document).ready(function(){
 
-    $('.table').DataTable();
 
     $('body').on('focus', '[contenteditable]', function() {
 	    var $this = $(this);
@@ -465,7 +463,7 @@ $(document).ready(function(){
 	});
 
 	// Cafe Item Delete
-	$('.cafe-item-delete').click(() => {
+	$('.cafe-item-delete').click(function() {
 		var id 		= $(this).attr('id');
 
 		$('.modal-title').html('Delete Confirmation');
