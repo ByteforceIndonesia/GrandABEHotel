@@ -103,6 +103,16 @@
 				return false;
 		}
 
+		public function item_delete_test($type, $id)
+		{
+			$data = array ('id' => $id);
+
+			if($this->resto_data->deleteItem($type, $data))
+				echo 'success';
+			else
+				return false;
+		}
+
 		public function item_delete_modal($type, $id)
 		{
 			$data = array('id' => $id, 'type' => $type);

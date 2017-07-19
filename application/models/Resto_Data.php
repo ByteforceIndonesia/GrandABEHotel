@@ -17,7 +17,7 @@
 
 	    function getDataCafe()
 	    {
-	    	$query = $this->db->select('cafe.id, cafe.name, cafe_img.images, cafe_catagory.catagory, cafe.value_2')
+	    	$query = $this->db->select('cafe.id, cafe.name, cafe_img.link, cafe_catagory.catagory, cafe.value_2')
 	    				->from('cafe')
 	    				->join('cafe_img','cafe.value_1 = cafe_img.id')
 	    				->join('cafe_catagory', 'cafe.value_2 = cafe_catagory.id')
@@ -132,14 +132,17 @@
 
 	    	try
 	    	{
-	    		if($this->db->where('id', $to_be_deleted->id)->delete('resto'))
-	    			if($this->db->where('id', $to_be_deleted->value_1)->delete('resto_img'))
-	    				if(unlink(base_url() . '/' . $to_be_deleted->link))
+	    		if($this->db->where('id', $to_be_deleted->id)->delete("$type"))
+	    			if($this->db->where('id', $to_be_deleted->value_1)->delete($type . '_img'))
+	    				if(unlink('./assets/' . $to_be_deleted->link))
 	    					return true;
+	    				else 
+	    					return false;
 	    	}catch(exception $e)
 	    	{
 	    		return array('error' => $e);
 	    	}
+	    	
 	    }
 
 	    function header_change_text($type)
@@ -289,7 +292,7 @@
 
                 $data_img = array (
                 	'name'		=> 'image_freatured',
-                	'images'	=> 'images/cake/' . $config['file_name']
+                	'link'		=> 'images/cake/' . $config['file_name']
                 	);
                 
             	if($this->db->insert('cafe_img', $data_img))
