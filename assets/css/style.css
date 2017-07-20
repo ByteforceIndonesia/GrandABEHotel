@@ -34,7 +34,7 @@ body {
   width: 100%;
   border-radius: 0;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 100;
   transition: all .2s ease-in-out;
   z-index: 1000;
   color: #fff; }
@@ -56,8 +56,6 @@ body {
     z-index: 1000; }
     #navigation #navbar .dropdown-item {
       color: #000; }
-    #navigation #navbar .dropdown-menu {
-      width: 50%; }
     #navigation #navbar .in {
       background: #fff;
       border: 0; }
@@ -331,8 +329,7 @@ body {
       margin-top: 0.5em;
       border: 0;
       background: rgba(255, 255, 255, 0.1);
-      padding: 1em;
-      width: 100vh; }
+      padding: 1em; }
 
   .opened {
     height: 600px !important;

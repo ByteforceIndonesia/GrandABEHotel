@@ -150,4 +150,21 @@
 			}
 		}
 
+		public function edit_category ()
+		{
+			$where = array('id'	=> $this->input->post('id'));
+			$data = array('name' =>	$this->input->post('content'));
+
+			if($this->news_model->edit_category($data, $where))
+			{
+				$this->session->set_flashdata('success', 'success');
+				echo 'true';
+			}else
+			{
+				$this->session->set_flashdata('error', 'Error updating database');
+				return false;
+			}
+
+		}
+
 	}

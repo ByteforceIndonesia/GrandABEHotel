@@ -103,7 +103,9 @@
 					<?php foreach($categories as $count => $category): ?>
 						<tr>
 							<td><?php echo $count+1 ?></td>
-							<td><?php echo $category->name ?></td>
+							<td>
+								<input type="text" name="name" id="<?php echo $category->id ?>" value="<?php echo $category->name ?>" class="form-control edit-category">
+							</td>
 							<td>
 								<button 
 									class="btn btn-danger delete-category"
@@ -272,6 +274,26 @@
 			$.post("<?php echo base_url('admin/news/edit/') ?>" + id, function(data){
 				    $(".modal-body").html(data).fadeIn();
 				});
+		});
+
+		$('.edit-category').change(function(){
+
+			var id 			= $(this).attr('id');
+			var val 	= $(this).val();
+
+			$.ajax({
+				type: 'post',
+				url: "<?php echo base_url(); ?>admin/news/edit_category",
+				data: {id: id,content: val},
+				success: function(res)
+				{
+					toggleSuccess();
+				},
+				error: function()
+				{
+					toggleError();
+				}
+			});
 		});
 	});
 </script>

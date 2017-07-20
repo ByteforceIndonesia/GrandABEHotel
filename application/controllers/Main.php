@@ -75,6 +75,7 @@ class Main extends MY_Controller {
 		$this->data['main']=$this->Mainsettingsdata->getData();
 		$this->data['footer']=$this->footerdata->getData();
 		$this->data['contacts']=$this->footerdata->getContacts();
+		$this->data['news']	= $this->news_model->getWhere();
 		$this->template->load('template', 'news', $this->data);
 	}
 

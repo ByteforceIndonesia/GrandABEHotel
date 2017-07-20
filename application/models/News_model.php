@@ -119,6 +119,10 @@
 	    	}
 
 	    	return $this->db->where($id)->update('news', $posted);
+	    }
 
+	    function edit_category ($data, $where)
+	    {
+	    	return $this->db->where($where)->update('news_category', $data);
 	    }
 	}

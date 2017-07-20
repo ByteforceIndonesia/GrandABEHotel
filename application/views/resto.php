@@ -52,7 +52,7 @@
                 <?php if($item->value_2 != $catagory->id) continue; ?>
               <div class="col-lg-4">
                  <div class="imageFreatured"
-                 style="background: url('assets/<?php echo $item->images ?>')"></div>
+                 style="background: url('assets/<?php echo $item->link ?>')"></div>
                  <div class="textFreatured">
                      <h5><?php echo $item->name ?></h5>
                  </div>
