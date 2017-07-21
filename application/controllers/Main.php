@@ -14,6 +14,7 @@ class Main extends MY_Controller {
 		$this->load->model('footerdata');
 		$this->load->model('Mainsettingsdata');
 		$this->load->model('resto_data');
+		$this->load->model('news_model');
 	}
 
 	public function index()
@@ -75,7 +76,7 @@ class Main extends MY_Controller {
 		$this->data['main']=$this->Mainsettingsdata->getData();
 		$this->data['footer']=$this->footerdata->getData();
 		$this->data['contacts']=$this->footerdata->getContacts();
-		$this->data['news']	= $this->news_model->getWhere();
+		$this->data['news']	= $this->news_model->getNews();
 		$this->template->load('template', 'news', $this->data);
 	}
 

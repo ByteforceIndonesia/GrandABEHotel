@@ -32,8 +32,7 @@
 					
 					'title'			=> $this->input->post('title'),
 					'category_id'	=> $this->input->post('category'),
-					'content'		=> $this->input->post('content'),
-					'image'			=> uniqid() . '.jpg'
+					'content'		=> $this->input->post('content')
 
 					);
 

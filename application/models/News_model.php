@@ -32,7 +32,9 @@
 	    {
 	    	if($_FILES['image']['name'])
 	    	{
-	    		$config['upload_path']          = './assets/images/news/';
+            	$data['image'] = uniqid() . '.jpg';
+	    		
+    			$config['upload_path']          = './assets/images/news/';
 	    		$config['file_name']			=  $data['image'];
 		    	$config['overwrite']			= TRUE;
 	            $config['allowed_types']        = 'jpg|jpeg';
@@ -76,10 +78,17 @@
 
 				case 'news':
 				{
-					if(unlink('./assets/images/news/' . $to_be_deleted->image))
+					if($to_be_deleted->image)
+					{
+						if(unlink('./assets/images/news/' . $to_be_deleted->image))
+							return $this->db->delete('news', $where);
+						else
+							return false;
+					}else
+					{
 						return $this->db->delete('news', $where);
-					else
-						return false;
+					}
+					
 				}break;
 			}
 	    }
@@ -87,6 +96,8 @@
 	    function edit ()
 	    {
 	    	$id = array('news.id' => $this->input->post('id'));
+
+	    	$to_be_edited = 
 
 	    	$posted = array (
 	    		

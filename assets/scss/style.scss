@@ -19,7 +19,7 @@ body
 	text-align: justify;
 
 	// font-family: 'Roboto', sans-serif !important;
-	font-family: 'helvetica' !important;
+	// font-family: 'helvetica' !important;
 }
 
 .darkerFilter
@@ -56,7 +56,7 @@ body
 	width:100%;
 	border-radius: 0;
 	font-size: 20px;
-	font-weight: 100;
+	font-weight: 300;
 	transition:all .2s ease-in-out;
 	z-index:1000;
 	color:$font-primary;

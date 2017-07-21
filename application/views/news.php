@@ -15,20 +15,27 @@
 
 <?php foreach($news as $item): ?>
 		<div class="row newsItem">
+		<?php if($item->image): ?>
 			<div class="col-lg-3 newsImg">
 				<div class="imgContainer">
-					<img class="img-responsive" src="
-					<?php echo base_url().'assets/images/uploads/news/testNews.jpg'?>" 
+					<img class="img-responsive" 
+					src="<?php echo base_url().'assets/images/news/' . $item->image?>" 
 					width="100px" height="100px">
 				</div>
 			</div>
+		<?php else: ?>
+			<div class="col-lg-3">
+				&nbsp
+			</div>
+		<?php endif; ?>
 			<div class="col-lg-9">
 				<div class="row newsTitle">
-					<?php echo $item->title ?>
+					<h2><?php echo $item->title ?></h2>
 				</div>
 				<div class="row postDate">
-					
+					<strong><?php echo $item->name ?></strong>
 				</div>
+				<br>
 				<div class="row newsDesc">
 					<p>
 						<?php echo $item->content ?>
