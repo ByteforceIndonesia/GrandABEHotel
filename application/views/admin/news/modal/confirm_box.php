@@ -56,15 +56,11 @@ $(document).ready(function(){
 
 		$.ajax({
 			type: 'post',
-			url: "<?php echo base_url() . "admin/resto/item_delete/" . $type ?>",
+			url: "<?php echo base_url() . "admin/news/delete/" . $type ?>",
 			data: {id: id},
 			success: function(res)
 			{
-				toggleSuccess();
-				setTimeout(function()
-				{
-					location.reload();
-				}, 2000);
+				location.reload();
 			},
 			error: function()
 			{

@@ -19,7 +19,7 @@ body
 	text-align: justify;
 
 	// font-family: 'Roboto', sans-serif !important;
-	font-family: 'helvetica' !important;
+	// font-family: 'helvetica' !important;
 }
 
 .darkerFilter
@@ -97,11 +97,6 @@ body
 		.dropdown-item
 		{
 			color:$font-secondary;
-		}
-
-		.dropdown-menu
-		{
-			width:50%;
 		}
 
 		.in

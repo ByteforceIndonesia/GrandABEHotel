@@ -1,8 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.css"/>
- 
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/dt-1.10.15/datatables.min.js"></script>
 
 <style>
 	.modal-container
@@ -260,6 +257,7 @@
 							<td>
 								<button 
 								class="btn btn-danger delete-category"
+								data-toggle="modal" data-target="#myModal"
 								id="<?php echo $category->id ?>">
 									Delete
 								</button>
@@ -313,12 +311,14 @@
 								</select>
 							</td>
 							<td>
-								<img src="<?php echo base_url() . 'assets/' . $item->images?>" alt="Error Loading Image" width="100px">
+								<img src="<?php echo base_url() . 'assets/' . $item->link?>" alt="Error Loading Image" width="100px">
 							</td>
 							<td>
 								<button 
 								class="btn btn-danger cafe-item-delete"
-								id="<?php echo $item->id?>">
+								id="<?php echo $item->id?>"
+								data-toggle="modal" 
+								data-target="#myModal">
 									Delete
 								</button>
 								<button 
@@ -347,8 +347,6 @@
 --------------------------------*/
 
 $(document).ready(function(){
-
-    $('.table').DataTable();
 
     $('body').on('focus', '[contenteditable]', function() {
 	    var $this = $(this);
@@ -463,6 +461,16 @@ $(document).ready(function(){
 		});
 	});
 
+	// Cafe Item Delete
+	$('.cafe-item-delete').click(function() {
+		var id 		= $(this).attr('id');
+
+		$('.modal-title').html('Delete Confirmation');
+		$.post("<?php echo base_url('admin/resto/item_delete_modal/cafe/') ?>" + id, function(data){
+			    $(".modal-body").html(data).fadeIn();
+			});
+	});
+
 	// Change category name
 	$('.category-name').on('change', function()
 	{
@@ -554,6 +562,24 @@ $(document).ready(function(){
 	{
 		$('.modal-title').html('New Resto Item');
 		$.post("<?php echo base_url('admin/resto/resto_item_new') ?>", function(data){
+			    $(".modal-body").html(data).fadeIn();
+			});
+	});
+
+	// New Category Item
+	$('#new-category-item').click(function()
+	{
+		$('.modal-title').html('New Resto Item');
+		$.post("<?php echo base_url('admin/resto/category_item_new') ?>", function(data){
+			    $(".modal-body").html(data).fadeIn();
+			});
+	});
+
+	// New Cafe Item
+	$('#new-cafe-item').click(function()
+	{
+		$('.modal-title').html('New Resto Item');
+		$.post("<?php echo base_url('admin/resto/cafe_item_new') ?>", function(data){
 			    $(".modal-body").html(data).fadeIn();
 			});
 	});
