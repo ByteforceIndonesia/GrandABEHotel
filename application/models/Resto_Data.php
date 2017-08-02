@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 	
-	class resto_data extends CI_Model{
+	class Resto_data extends CI_Model{
 
 		function __construct() {
 			parent::__construct();

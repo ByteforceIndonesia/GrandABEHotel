@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 	
-	class news_model extends CI_Model{
+	class News_model extends CI_Model{
 
 		function __construct() {
 			parent::__construct();
@@ -97,7 +97,7 @@
 	    {
 	    	$id = array('news.id' => $this->input->post('id'));
 
-	    	$to_be_edited = 
+	    	$to_be_edited = $this->getNewsWhere($id);
 
 	    	$posted = array (
 	    		
@@ -111,8 +111,11 @@
 
 	    	if($_FILES['image']['name'])
 	    	{
+	    		if(!$data->image)
+	    			$posted['image'] = uniqid() . '.jpg';
+
 	    		$config['upload_path']          = './assets/images/news/';
-	    		$config['file_name']			=  $data->image;
+	    		$config['file_name']			=  $posted['image'];
 		    	$config['overwrite']			= TRUE;
 	            $config['allowed_types']        = 'jpg|jpeg';
 	            $config['max_size']             = 3000;
