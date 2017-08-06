@@ -109,10 +109,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="col-lg-4">
 					<h4>Contact Us</h4>
-					<?php foreach ($contacts as $contact) {
-						echo '<a href="'.$contact->link.'"><p>'.$contact->socialmedia.'</p></a>';
-					}?>
-					
+					<?php foreach ($contacts as $contact): ?>
+                        <a href="<?php echo $contact->link ?>" style="margin-right: 10px;">
+                            <img src="<?php echo base_url() . 'assets/images/' . $contact->image ?>" alt="" width="40px">
+                        </a>
+                    <?php endforeach; ?>
 				</div>
 			</div>
 		</div>
