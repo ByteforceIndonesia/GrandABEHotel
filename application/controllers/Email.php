@@ -42,36 +42,42 @@
 			}
 			else
 			{
-				$this->load->model('Mainsettingsdata');
+//				$this->load->model('Mainsettingsdata');
 				if($result = $this->Mainsettingsdata->getData()){
 					$data = $result;
 				}
 				$this->load->library('email');
-				$this->load->library('encrypt');
+//				$this->load->library('encrypt');
 
-				$password= $this->encrypt->decode($data->password);
+				/*
+				 *
+				 * Depreceated
+				 * @author : @darthjonathan
+				 *
+				 */
 
-				$config = Array(
-					'protocol' => 'smtp',
-					'smtp_host' => 'ssl://smtp.gmail.com',
-					'smtp_port' => 465,
-					'smtp_user' => $data->email,
-					'smtp_pass' => $password,
+//				$password= $this->encrypt->decode($data->password);
 
-					'mailtype'  => 'html', 
-					'charset'   => 'iso-8859-1'
-					);
-				$this->email->initialize($config);
+//				$config = Array(
+//					'protocol' => 'smtp',
+//					'smtp_host' => 'ssl://smtp.gmail.com',
+//					'smtp_port' => 465,
+//					'smtp_user' => $data->email,
+//					'smtp_pass' => $password,
+//
+//					'mailtype'  => 'html',
+//					'charset'   => 'iso-8859-1'
+//					);
+//				$this->email->initialize($config);
 				$this->email->set_newline("\r\n");
 
-				$this->email->from('automated.reservations@grandabe.com', 'Customer Reservations');
-				$this->email->to('zonecaptain @gmail.com');
+				$this->email->from('automated.reservations@grandabehotel.com', 'Customer Reservations');
+				$this->email->to($data->email);
 
 				// $this->email->cc('another@another-example.com');
 				// $this->email->bcc('them@their-ample.com');
 
 				$this->email->subject('Reservations');
-
 
 				$dateObj   = DateTime::createFromFormat('!m', $this->input->post('month'));
 				$monthName = $dateObj->format('F');

@@ -65,8 +65,8 @@
 			if(isset($_POST['submit'])){
 				$this->load->library('form_validation');
 				$this->form_validation->set_rules('ta_email','Email','trim|required|valid_email');
-				$this->form_validation->set_rules('ta_password','Password','trim|required');
-				$this->form_validation->set_rules('ta_cpassword','Confirm Password','trim|required');
+//				$this->form_validation->set_rules('ta_password','Password','trim|required');
+//				$this->form_validation->set_rules('ta_cpassword','Confirm Password','trim|required');
 				$this->form_validation->set_rules('txtlogo','Logo Image','trim|required');
 				$this->form_validation->set_rules('txtbg','Background Image','trim|required');
 				
@@ -80,10 +80,15 @@
 					$this->form_validation->set_message('bgExtCheck','Image should be png / jpg / jpeg');
 				}
 
-				if(!empty($this->input->post('ta_password')) && !empty($this->input->post('ta_cpassword'))){
-					$this->form_validation->set_rules('ta_cpassword','Confirm Password','callback_passValidate');
-					$this->form_validation->set_message('passValidate','Passwords do not match');
-				}
+                /*
+                 * Deprecated
+                 * @darthjonathan
+                 *
+                 */
+//				if(!empty($this->input->post('ta_password')) && !empty($this->input->post('ta_cpassword'))){
+//					$this->form_validation->set_rules('ta_cpassword','Confirm Password','callback_passValidate');
+//					$this->form_validation->set_message('passValidate','Passwords do not match');
+//				}
 
 				if($this->form_validation->run() === FALSE)
 				{
@@ -94,9 +99,12 @@
 					$this->render('admin/pages/main_settings_edit_view');
 				}
 				else{
-					$filelogo= time().$_FILES['upload_logo']['name'];
+				    /*
+				     * No need for time
+				     */
+					$filelogo= $_FILES['upload_logo']['name'];
 					$filelogo = str_replace(' ', '_', $filelogo);
-				 	$filebg = time().$_FILES['upload_bg']['name'];
+				 	$filebg = $_FILES['upload_bg']['name'];
 				 	$filebg = str_replace(' ', '_', $filebg);
 
 				 	//upload logo Image
@@ -131,13 +139,13 @@
 					 		}
 					 	}			 	
 
-					 	$this->load->library('encrypt');
-					 	$encpassword = $this->encrypt->encode($this->input->post('ta_password'));
-
-
+//					 	$this->load->library('encrypt');
+//					 	$encpassword = $this->encrypt->encode($this->input->post('ta_password'));
+//
+//
 					 	$data = array(
-					 			'email'=>$this->input->post('ta_email'),
-					 			'password'=>$encpassword
+					 			'email'=>$this->input->post('ta_email')
+//					 			'password'=>$encpassword
 					 		);
 					 	if(!empty($_FILES['upload_logo']['name'])){
 					 		$data['logo']=$filelogo;
