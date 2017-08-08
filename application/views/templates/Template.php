@@ -109,10 +109,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="col-lg-4">
 					<h4>Contact Us</h4>
-					<?php foreach ($contacts as $contact) {
-						echo '<a href="'.$contact->link.'"><p>'.$contact->socialmedia.'</p></a>';
-					}?>
-					
+					<?php foreach ($contacts as $contact): ?>
+                        <a href="<?php echo $contact->link ?>" style="margin-right: 10px;">
+                            <img src="<?php echo base_url() . 'assets/images/' . $contact->image ?>" alt="" width="40px">
+                        </a>
+                    <?php endforeach; ?>
 				</div>
 			</div>
 		</div>
@@ -120,21 +121,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 </body>
 <script>
-	// Biar navbar ga ngikut
-	// var navFixed = $('#body').waypoint(function(event, direction) 
-	// {
-	//   $('#navigation').toggleClass('fixed');
-	//   	if (direction == 'down')
-	// 	  $('#navbar').css({ 'height':nav.outerHeight() });
-	// 	else
-	// 	  $('#navbar').css({ 'height':'auto' })
-	//   ,{
-	//   	offset: function() {
-	// 	    return -(this.element.clientHeight + 300)
-	// 	  }
-	//   };	  
-	// });
-
 	$('#toggleNav').click(function(){
 		if($('#navbar').hasClass('show'))
 		{

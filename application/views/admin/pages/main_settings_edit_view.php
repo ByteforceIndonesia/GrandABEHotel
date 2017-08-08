@@ -79,6 +79,11 @@
 				<?php echo form_error('ta_email','<div style="color:red;">','</div>');?>
 			</div>
 
+            <!--
+                Deprecated
+                Doesn't need password
+
+
 			<div class="form-group">
 				<label for="ta_password" class="control-label col-sm-3">Email Password:</label>
 				<div class="col-sm-9">
@@ -94,6 +99,8 @@
 				</div>
 				<?php echo form_error('ta_cpassword','<div style="color:red;">','</div>');?>
 			</div>
+
+			-->
 			
 
 			<?php echo form_submit('submit' , 'Save' , 'class="btn btn-primary col-lg-offset-3"');?>

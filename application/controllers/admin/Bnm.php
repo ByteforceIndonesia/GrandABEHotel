@@ -112,7 +112,7 @@
 					$filepackage = time().$filepackage;
 					$config['upload_path']   = './assets/images/uploads/packages' ;
 				 	$config['allowed_types'] = 'png|jpg|jpeg';
-				 	$config['file_name'] = time().$filepackage;
+				 	$config['file_name'] = $filepackage;
 				 	$config['max_size'] = 0;
 				 	$config['overwrite'] = TRUE;
 				 	$this->load->library('upload', $config);

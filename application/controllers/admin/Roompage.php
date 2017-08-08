@@ -85,11 +85,11 @@
 			{
 				$this->load->helper('form');
 				if($result1 = $this->roomdata->getData()){
-				$this->data['headerRoom'] = $result1;
-			}
-			if($result2 = $this->roomdata->getRooms()){
-				$this->data['rooms'] = $result2;
-			}
+                    $this->data['headerRoom'] = $result1;
+                }
+                if($result2 = $this->roomdata->getRooms()){
+                    $this->data['rooms'] = $result2;
+                }
 				$this->render('admin/rooms/create_room_view');
 			}
 			else
