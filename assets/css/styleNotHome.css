@@ -93,28 +93,36 @@
 
 #packages {
   height: auto;
-  width: 100%;
-  padding: 3em 0 2em 4em;
-  font-weight: 300; }
+  width: 80%;
+  padding: 50px 0 40px 0;
+  font-weight: 300;}
+  #packages .package-scroller .row{
+    padding: 0 80px 0 80px;
+  }
+  #packages .panel{
+    float: left;
+  }
   #packages .packageImage {
-    margin-left: 3em;
+    margin-left: 30px;
     margin-top:20px;
     height: 30vh;
     width: 40vh;
     background: url("../images/bedAbout.jpg"); }
   #packages h1 {
     font-size: 42px;
+    margin-top: 20px;
     font-weight: 400;
     padding-left: 0.2em;
     text-align: left;
     padding-bottom: 0.1em;
-    border-bottom: 2px solid #000;
+    border-bottom: 1.5px solid #000;
+    margin-bottom: 25px;
     width: 100%; }
 
 #carousel {
   background: #1B2021;
   height: 400px;
-  padding: 2em 50px 2em 50px; }
+  padding: 2em 30px 2em 30px; }
   #carousel div {
     width:100%;
     height: 100%;
@@ -133,7 +141,10 @@
   background: #1B2021;
   font-weight: 300; }
   #whereAreWe .mapsWrapper {
-    padding: 3em 1em 0 2em; }
+    padding: 3em 2em 0 100px; }
+  #whereAreWe .mapsWrapper #map iframe{
+    width:100%;
+    height:100%; }
   #whereAreWe .rightSideMaps {
     color: #fff;
     padding-top: 4em;
@@ -167,9 +178,13 @@
   margin: 20px auto; }
 
 #touristAttraction {
-  margin-top: auto;
-  height: auto;
-  padding-bottom: 4em; }
+  margin-top: 50px;
+  width: 80%;
+  margin-bottom: 40px;
+  height: auto; }
+  #touristAttraction .row{
+    padding: 0 60px 0 60px;
+  }
   #touristAttraction .panel {
     float: left;
     padding: 0 2em 0 2em;

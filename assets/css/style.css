@@ -286,7 +286,7 @@ body {
       font-weight: 300; }
     #footer .leftPanel p {
       font-size: 14px;
-      font-weight: 40; }
+      font-weight: 400; }
   #footer .rightPanel {
     padding: 5vh 2em 1em 1em;
     background: #660000 !important;
@@ -297,7 +297,7 @@ body {
       font-weight: 300; }
     #footer .rightPanel p {
       font-size: 14px;
-      font-weight: 40; }
+      font-weight: 400; }
     #footer .rightPanel a {
       text-decoration: none;
       color: #fff !important;

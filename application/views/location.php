@@ -9,38 +9,39 @@
 <script src="<?php echo base_url() . JS_DIR . '/jquery.magnific-popup.min.js' ?>"></script>
 <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK0tB_7EonmaOzSbeUxxvkpNHK3PgwnQM&libraries=places"></script>-->
 
-<script>
-      function initMap() {
-        var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: {lat: -2.57, lng: 140.51}
-        });
-        directionsDisplay.setMap(map);
-
-		calculateAndDisplayRoute(directionsService, directionsDisplay);
-      }
-
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-		var airport = new google.maps.LatLng(-2.57, 140.51);
-		var grandabe = new google.maps.LatLng(-2.61, 140.66);
-
-        directionsService.route({
-          origin: airport,
-          destination: grandabe,
-          travelMode: 'DRIVING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
-      }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK0tB_7EonmaOzSbeUxxvkpNHK3PgwnQM&callback=initMap" type="text/javascript"></script>
+<!--GA USAH PAKE API-->
+<!--<script>-->
+<!--      function initMap() {-->
+<!--        var directionsService = new google.maps.DirectionsService;-->
+<!--        var directionsDisplay = new google.maps.DirectionsRenderer;-->
+<!---->
+<!--        var map = new google.maps.Map(document.getElementById('map'), {-->
+<!--          zoom: 12,-->
+<!--          center: {lat: -2.57, lng: 140.51}-->
+<!--        });-->
+<!--        directionsDisplay.setMap(map);-->
+<!---->
+<!--		calculateAndDisplayRoute(directionsService, directionsDisplay);-->
+<!--      }-->
+<!---->
+<!--      function calculateAndDisplayRoute(directionsService, directionsDisplay) {-->
+<!--		var airport = new google.maps.LatLng(-2.57, 140.51);-->
+<!--		var grandabe = new google.maps.LatLng(-2.61, 140.66);-->
+<!---->
+<!--        directionsService.route({-->
+<!--          origin: airport,-->
+<!--          destination: grandabe,-->
+<!--          travelMode: 'DRIVING'-->
+<!--        }, function(response, status) {-->
+<!--          if (status === 'OK') {-->
+<!--            directionsDisplay.setDirections(response);-->
+<!--          } else {-->
+<!--            window.alert('Directions request failed due to ' + status);-->
+<!--          }-->
+<!--        });-->
+<!--      }-->
+<!--</script>-->
+<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK0tB_7EonmaOzSbeUxxvkpNHK3PgwnQM&callback=initMap" type="text/javascript"></script>-->
 
 <style>
 	#map 
@@ -89,7 +90,9 @@ $(document).ready(function(){
 	<div class="row">
 		<div class="col-xl-5">
 			<div class="mapsWrapper">
-				<div id="map"></div>
+				<div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1775.417745752815!2d140.66627566975478!3d-2.610435105393257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadc84ceab536f6a!2sGrand+Abe+Hotel!5e0!3m2!1sen!2s!4v1502297805657" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
 			</div>
 		</div>
 		<div class="col-xl-5">

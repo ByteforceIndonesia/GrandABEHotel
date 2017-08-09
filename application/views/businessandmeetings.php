@@ -20,14 +20,14 @@
 	</div>
 </section>
 
-<section id="packages">
-	<div class="container">
+<section id="packages" class="container">
+	<div class="package-scroller">
 		<?php
 			if(!empty($packages)){
 				foreach($packages as $package){
 		?>
 			<div class="row">
-				<div class="col-xl-5">
+				<div class="col-md-6 panel">
 					<div class="packageImage" 
 					style="background-image:url('<?php echo base_url().'assets/images/uploads/packages/'.$package->image;?>');
 						background-size: contain;
@@ -37,11 +37,10 @@
 						&nbsp
 					</div>
 				</div>
-				<div class="col-xl-5">
+				<div class="col-md-6 panel">
 					<h1><?php echo $package->name?></h1>
 					<?php echo $package->description?>
 				</div>
-				<div class="col-xl-2">&nbsp</div>
 			</div>
 
 
@@ -78,6 +77,11 @@
     $(document).ready(function()
     {
         $('.img-carousel').slick({
+            autoplay: true,
+            autoplaySpeed: 5000,
+        });
+
+        $('.package-scroller').slick({
             autoplay: true,
             autoplaySpeed: 5000,
         });
