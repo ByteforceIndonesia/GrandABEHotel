@@ -269,6 +269,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <img src="<?php echo base_url() . 'assets/images/' . $contact->image ?>" alt="" width="40px">
                         </a>
                     <?php endforeach; ?>
+                    <br><br>
+                    <img src="<?php echo base_url() . 'assets/images/whatsapp.png' ?>" width="30px" alt="">&nbsp +628114825123
+                    <br><br>
+                    <img src="<?php echo base_url() . 'assets/images/phone.png' ?>" width="30px" alt=""> +628239977-2012/2017/2018
 				</div>
 			</div>
 		</div>

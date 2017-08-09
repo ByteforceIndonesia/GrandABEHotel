@@ -204,9 +204,9 @@ body {
   #pageThree .leftAbout {
     margin-bottom: 0; }
     #pageThree .leftAbout .logoAbout {
-      margin-top: 5em; }
+      margin-top: 30px; }
       #pageThree .leftAbout .logoAbout img {
-        max-width: 20vh; }
+        max-width: 150px; }
   #pageThree h1 {
     margin-top: 1em;
     font-size: 42px;

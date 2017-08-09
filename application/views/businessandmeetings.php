@@ -52,49 +52,52 @@
 </section>
 
 <section id="carousel">
-		<div id="imgCarousel" class="carousel slide" data-ride="carousel">
-			
-			<!--<ol class="carousel-indicators">
-		      <?php
-		      	if(!empty($images)){
-		      		echo '<li data-target="#imgCarousel" data-slide-to="0" class="active"></li>';
-		      		for ($i=1; $i <count($images) ; $i++) { 
-		      			echo'<li data-target="#imgCarousel" data-slide-to="'.$i.'"></li>';
-		      		}
-		      	}
-		      ?>
-   			</ol>-->
-
-			<!--Carousel Inner-->
-			<div class="carousel-inner" role="listbox">
-			<?php
-				if(!empty($images))	{
-					echo'
-					<div class="carousel-item active">
-				
-						<img src="'.base_url().'assets/images/uploads/bnmImages/'.$images[0]->image .'" class="d-block img-fluid">
-						
-					</div>
-					';
-					for ($i=1; $i <count($images) ; $i++) { 
-		      			echo '
-		      				<div class="carousel-item">
-		      				
-									<img src="'.base_url().'assets/images/uploads/bnmImages/'.$images[$i]->image .'" class="d-block img-fluid">
-							
-							</div>
-		      			';
-		      		}
-				}
-			?>
-			</div>
-				<a class="left carousel-control" href="#imgCarousel" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#imgCarousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				</a>
-   			</div>
-		</div>
+    <div class="container">
+        
+<!--		<div id="imgCarousel" class="carousel slide" data-ride="carousel">-->
+<!--			-->
+<!--			<!--<ol class="carousel-indicators">-->
+<!--		      --><?php
+//		      	if(!empty($images)){
+//		      		echo '<li data-target="#imgCarousel" data-slide-to="0" class="active"></li>';
+//		      		for ($i=1; $i <count($images) ; $i++) {
+//		      			echo'<li data-target="#imgCarousel" data-slide-to="'.$i.'"></li>';
+//		      		}
+//		      	}
+//		      ?>
+<!--   			</ol>-->-->
+<!---->
+<!--			<!--Carousel Inner-->-->
+<!--			<div class="carousel-inner" role="listbox">-->
+<!--			--><?php
+//				if(!empty($images))	{
+//					echo'
+//					<div class="carousel-item active">
+//                        <div class="col-xs-4">
+//						    <img src="'.base_url().'assets/images/uploads/bnmImages/'.$images[0]->image .'" >
+//						</div>
+//					</div>
+//					';
+//					for ($i=1; $i <count($images) ; $i++) {
+//		      			echo '
+//		      				<div class="carousel-item">
+//		      				    <div class="col-xs-4">
+//									<img src="'.base_url().'assets/images/uploads/bnmImages/'.$images[$i]->image .'">
+//							    </div>
+//							</div>
+//		      			';
+//		      		}
+//				}
+//			?>
+<!--			</div>-->
+<!--				<a class="left carousel-control" href="#imgCarousel" role="button" data-slide="prev">-->
+<!--					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+<!--					<span class="sr-only">Previous</span>-->
+<!--				</a>-->
+<!--				<a class="right carousel-control" href="#imgCarousel" role="button" data-slide="next">-->
+<!--					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+<!--				</a>-->
+<!--   			</div>-->
+<!--		</div>-->
+    </div>
 </section>

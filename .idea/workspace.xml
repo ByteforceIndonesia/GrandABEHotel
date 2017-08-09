@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79df6958-44e9-4f26-acf8-0e5b5dad5136" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/uploads/logo/top_logo_small.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_session0p89funn2v5mkhfol3vu4ihon797f57j" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_session17i06fbolf52k749aischbqq8l0o4g3a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_session22oet0571jnlh8kmk9pncf7ign09i4s3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_session3nkh3kjnhqcpqi7901b5ghi823lj4m5c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_session6vbmnlnb5qurtbgo2u2odo8ikc73rs1u" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_session76rh9d9rmfu6t30bvrbqvd8bovop1er5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionb38hvm4sagna02mm38qmun919pums0jv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionb8qq735pv2dj8eat9vibkmr62fhdcc3c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionba48vujpb8lgaga4sratkeu1p35ndt7s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionchilr1tq09vf660b6uukjpr16tcc756k" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessiondhbe5l24l5uvto5phq0j0gaaa75biaq5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionhk2cjo1dk8gr7md57g60ruecnuj6cbau" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessioni6414bajf5u58n350s1qjg4338a1enp9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessioni8rd5nqfbgg0bqeet3ndflh43u05fgm6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessioni9825elc27q6j601rdel39im9ne4fvqp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionjpedh48b4g8l27d0j8j6vduq2c0orged" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionk5j8oi9auem6oqc2rj76b621oogruaau" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionn9p01ctpce5psacbiqlhr5t2djij8pk0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionr3s6k50753o6jedq1u4acecenhhpctie" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionr9k7be9c8pvvfu5j60c3qie83gat2gg3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionrvivob3v0esgce3hkhdthh8bf1gd3qro" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessions83mg3k0u4prk5s1p556m3gjgnq5e6qq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionshj2s532oqj22vgk462pfc7869qeac7k" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionui16m173egl3jelrf2h82ge8qrnuc7jq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/sessions/ci_sessionve55ici4uvp7bd5lg19rkd90fbh7b8sj" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/Home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/templates/Template.php" afterPath="$PROJECT_DIR$/application/views/templates/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/businessandmeetings.php" afterPath="$PROJECT_DIR$/application/views/businessandmeetings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/styleNotHome.css" afterPath="$PROJECT_DIR$/assets/css/styleNotHome.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,19 +33,61 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="138" column="24" lean-forward="true" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
+            <state relative-caret-position="237">
+              <caret line="260" column="38" lean-forward="true" selection-start-line="260" selection-start-column="38" selection-end-line="260" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styleNotHome.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styleNotHome.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/styleNotHome.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="456" column="22" lean-forward="false" selection-start-line="456" selection-start-column="22" selection-end-line="456" selection-end-column="22" />
+            <state relative-caret-position="396">
+              <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="businessandmeetings.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/businessandmeetings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+              <folding>
+                <element signature="e#1246#1277#0#PHP" expanded="true" />
+                <element signature="e#1672#1699#0#PHP" expanded="true" />
+                <marker date="1502288395000" expanded="true" signature="1753:1925" ph="..." />
+                <marker date="1502288395000" expanded="true" signature="1802:1911" ph="..." />
+                <marker date="1502288395000" expanded="true" signature="2044:2214" ph="..." />
+                <marker date="1502288395000" expanded="true" signature="2085:2198" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="206" column="20" lean-forward="false" selection-start-line="206" selection-start-column="20" selection-end-line="206" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="115" column="40" lean-forward="true" selection-start-line="115" selection-start-column="40" selection-end-line="119" selection-end-column="130" />
+              <folding>
+                <marker date="1502278003000" expanded="true" signature="5376:5565" ph="..." />
+                <marker date="1502278003000" expanded="true" signature="5411:5554" ph="{...}" />
+                <marker date="1502278003000" expanded="true" signature="5451:5499" ph="{...}" />
+                <marker date="1502278003000" expanded="true" signature="5506:5551" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,11 +99,12 @@
       <find>leftpanel</find>
       <find>font-size</find>
       <find>logoab</find>
-      <find>packages h1</find>
       <find>passvalidate</find>
       <find>passval</find>
       <find>password</find>
       <find>#packages h1</find>
+      <find>logoabout</find>
+      <find>packages h1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,8 +115,6 @@
       <list>
         <option value="$PROJECT_DIR$/application/views/templates/Template.php" />
         <option value="$PROJECT_DIR$/application/views/Home.php" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/application/views/templates/template.php" />
         <option value="$PROJECT_DIR$/application/views/admin/pages/main_settings_edit_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Mainsettings.php" />
         <option value="$PROJECT_DIR$/application/controllers/Email.php" />
@@ -104,8 +122,11 @@
         <option value="$PROJECT_DIR$/application/controllers/admin/Bnm.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Location.php" />
         <option value="$PROJECT_DIR$/application/views/news.php" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/application/views/templates/template.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/assets/css/styleNotHome.css" />
+        <option value="$PROJECT_DIR$/application/views/businessandmeetings.php" />
       </list>
     </option>
   </component>
@@ -209,6 +230,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GrandABEHotel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GrandABEHotel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,7 +379,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24228000" />
+    <option name="totallyTimeSpent" value="26214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="970" extended-state="6" />
@@ -387,7 +430,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/Template.php">
+    <entry file="file://$PROJECT_DIR$/application/views/templates/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
           <caret line="111" column="20" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="115" selection-end-column="40" />
@@ -441,7 +484,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/Template.php">
+    <entry file="file://$PROJECT_DIR$/application/views/templates/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
@@ -607,22 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/Template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="193" column="15" lean-forward="false" selection-start-line="193" selection-start-column="15" selection-end-line="193" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/News_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -680,19 +707,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="206" column="20" lean-forward="false" selection-start-line="206" selection-start-column="20" selection-end-line="206" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="115" column="40" lean-forward="true" selection-start-line="115" selection-start-column="40" selection-end-line="119" selection-end-column="130" />
+          <folding>
+            <marker date="1502278003000" expanded="true" signature="5376:5565" ph="..." />
+            <marker date="1502278003000" expanded="true" signature="5411:5554" ph="{...}" />
+            <marker date="1502278003000" expanded="true" signature="5451:5499" ph="{...}" />
+            <marker date="1502278003000" expanded="true" signature="5506:5551" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="138" column="24" lean-forward="true" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
+        <state relative-caret-position="237">
+          <caret line="260" column="38" lean-forward="true" selection-start-line="260" selection-start-column="38" selection-end-line="260" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/styleNotHome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="456" column="22" lean-forward="false" selection-start-line="456" selection-start-column="22" selection-end-line="456" selection-end-column="22" />
+        <state relative-caret-position="396">
+          <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/businessandmeetings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+          <folding>
+            <element signature="e#1246#1277#0#PHP" expanded="true" />
+            <element signature="e#1672#1699#0#PHP" expanded="true" />
+            <marker date="1502288395000" expanded="true" signature="1753:1925" ph="..." />
+            <marker date="1502288395000" expanded="true" signature="1802:1911" ph="..." />
+            <marker date="1502288395000" expanded="true" signature="2044:2214" ph="..." />
+            <marker date="1502288395000" expanded="true" signature="2085:2198" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
