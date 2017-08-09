@@ -21,6 +21,7 @@ class Main extends MY_Controller {
 	{
 		$this->data['home']=$this->homedata->getData();
 		$this->data['footer']=$this->footerdata->getData();
+		$this->data['class']    = $this->roomdata->getRooms();
 		$this->data['contacts']=$this->footerdata->getContacts();
 		$this->data['main']=$this->Mainsettingsdata->getData();
 		$this->load->view('home', $this->data);
