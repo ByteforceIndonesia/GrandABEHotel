@@ -101,7 +101,6 @@ $(document).ready(function(){
 	</div>
 </section>
 
-<!-- //DESIGN Probably trlalu ke bwh -->
 <section id="headerTouristAttraction">
 	<div class="row">
 		<div class="col-lg-6">&nbsp</div>
