@@ -453,7 +453,8 @@ p {
 #footer {
   width: 100%;
   height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #1B2021; }
   #footer .leftPanel {
     background: #1B2021;
     color: #fff;

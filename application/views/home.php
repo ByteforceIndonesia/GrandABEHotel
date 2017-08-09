@@ -160,9 +160,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 						<div class="col-lg-5 col-md-12 formBook">
-							<!-- <input type="text" id= "name" name="name" placeholder="Name" <?php echo set_value('name');?>> -->
-
+                            <input type="text" id= "name" name="name" placeholder="Name" class="form-control" <?php echo set_value('name');?>>
+                            <br>
 							<input type="text" id="email" name="email" placeholder="E-mail" class="form-control" <?php echo set_value('email');?>>
+                            <select name="class" id="class" class="form-control">
+                                <?php foreach($class as $room): ?>
+                                    <option value="<?php echo $room->name ?>"><?php echo $room->name ?></option>
+                                <?php endforeach; ?>
+                            </select>
 							<br>
 							<input type="submit" id="submit" value="Mail Me!">
 						</div>
