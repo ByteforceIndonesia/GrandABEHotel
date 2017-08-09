@@ -107,8 +107,8 @@
     padding-left: 0.2em;
     padding-bottom: 0.1em;
     border-bottom: 2px solid #000;
-    text-align: left;
-    width: 100%; }
+    width: 100%;
+    margin-top: 1em; }
 
 #carousel {
   background: #1B2021;
@@ -119,19 +119,6 @@
     #carousel .carousel-inner img {
       height: 100%;
       width: 100%; }
-
-.slick-prev:before, .slick-next:before {
-  color:black !important;
-  font-size:30px !important;
-}
-
-.slick-prev:before {
-  margin-right: 10px;
-}
-
-.slick-next:before {
-  margin-left: 10px;
-}
 
 /* ----------------------------
 ---- ByteForce Indonesia ------
@@ -387,7 +374,7 @@ body {
   font-family: 'helvetica'; }
 
 p {
-  font-size: 16px; }
+  font-size: 14px; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -470,7 +457,7 @@ p {
   #footer .leftPanel {
     background: #1B2021;
     color: #fff;
-    height: auto;
+    height: 100%;
     padding: 5vh 15vh 1em 3em; }
     #footer .leftPanel h4 {
       margin-bottom: 1em;
@@ -708,7 +695,7 @@ p {
     padding: 12vh 1.5em 2em 1.5em; }
 
   #packages h1 {
-    width: 100%;}
+    width: 100%; }
 
   #headerBusinessandMeetings .panelHeaderBusinessMeetings {
     height: auto; }
