@@ -58,6 +58,7 @@ $route['location'] = 'main/location';
 $route['weddingsandevents'] = 'main/weddingsandevents'; 
 $route['restaurant'] = 'main/restaurant'; 
 $route['news']		= 'main/news';
+$route['contactus'] = 'email/contact_mail';
 
 //for CMS
 $route['admin']= 'admin/dashboard';

@@ -132,7 +132,7 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['model'] = array('footerdata', 'Mainsettingsdata', 'wnbdata');
 
 //for CMS
 $autoload['config'] = array('cms_settings');
