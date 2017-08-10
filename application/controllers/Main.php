@@ -92,5 +92,26 @@ class Main extends MY_Controller {
 		$this->template->load('template', 'weddingsandbirthdays', $this->data);
 	}
 
+	public function joboffers ()
+    {
+        $this->data['main']=$this->Mainsettingsdata->getData();
+        $this->data['header']=$this->wnbdata->getData();
+        $this->data['jobs'] = $this->job_data->getJobs();
+        $this->data['footer']=$this->footerdata->getData();
+        $this->data['contacts']=$this->footerdata->getContacts();
+        $this->template->load('template', 'job_offers', $this->data);
+    }
 
+//	public function test()
+//    {
+//        $data = array(
+//            'name'  => 'apel',
+//            'email' => 'kentang',
+//            'phone' => 'apel1',
+//            'address'   => 'dufan',
+//            'message'   => 'kamu kentang'
+//        );
+//
+//        $this->load->view('templates/email_booking_template', $data);
+//    }
 }

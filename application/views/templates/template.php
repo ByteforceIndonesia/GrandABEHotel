@@ -70,6 +70,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<a class="nav-link" href="<?php echo base_url('news') ?>">News & Promotion</a>
 					</li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('joboffers') ?>">Job Opportunities</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('contactus') ?>">Contact Us</a>
                     </li>
 				</ul>
