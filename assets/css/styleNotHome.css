@@ -515,7 +515,7 @@ p {
   #firstPage #parallax {
     background: url("../images/home_large.jpg");
     background-size: cover;
-    height: 100vh; }
+    height: 600px; }
 
 #footer {
   width: 100%;
@@ -533,7 +533,7 @@ p {
       font-weight: 300; }
     #footer .leftPanel p {
       font-size: 14px;
-      font-weight: 40; }
+      font-weight: 400; }
   #footer .rightPanel {
     padding: 5vh 2em 1em 1em;
     background: #660000 !important;
@@ -551,6 +551,20 @@ p {
       transition: all .2s ease-in-out; }
     #footer .rightPanel a:hover {
       color: #ccc !important; }
+
+    /*
+    Job Opportunities
+     */
+    #headerJobs{
+      padding:40px 0 30px 0;
+    }
+    .panelHeaderJob h1{
+      font-weight: 300;
+    }
+
+    #newsList {
+      padding: 30px;
+    }
 
 @media screen and (max-width: 1263px) {
   #navigation #navbar a {
