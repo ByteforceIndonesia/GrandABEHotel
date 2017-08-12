@@ -41,12 +41,11 @@
                     form_error('end') .
                     form_error('email'));
             } else {
-//				$this->load->model('Mainsettingsdata');
+
                 if ($result = $this->Mainsettingsdata->getData()) {
-                    $data = $result;
+                    $main_data = $result;
                 }
                 $this->load->library('email');
-//				$this->load->library('encrypt');
 
                 /*
                  *
@@ -68,26 +67,31 @@
 //					'charset'   => 'iso-8859-1'
 //					);
 //				$this->email->initialize($config);
-                $this->email->set_newline("\r\n");
 
-                $this->email->from('automated.reservations@grandabehotel.com', 'Customer Reservations');
-                $this->email->to($data->email);
+                $data = array(
 
-                // $this->email->cc('another@another-example.com');
-                // $this->email->bcc('them@their-ample.com');
+                    'name'      => $this->input->post('name'),
+                    'email'     => $this->input->post('email'),
+                    'room'     => $this->input->post('class'),
+                    'checkin'   => $this->input->post('starting'),
+                    'checkout'   => $this->input->post('end')
 
-                $this->email->subject('Reservations');
+                );
 
-                $dateObj = DateTime::createFromFormat('!m', $this->input->post('month'));
-                $monthName = $dateObj->format('F');
-                $this->email->message(
-                    "Reservations " . "<br>" .
-                    "Customer Name : " . $this->input->post('name') . "<br>" .
-                    "Date : " . $this->input->post('day') . " " . $monthName . " 20" . $this->input->post('year') . "<br>" .
-                    "Email : " . $this->input->post('email'));
+                $config = array(
+                    'charset'=>'utf-8',
+                    'wordwrap'=> TRUE,
+                    'mailtype' => 'html'
+                );
+
+                $this->email->initialize($config);
+
+                $this->email->from('automated.reservations@grandabehotel.com', 'Customer Reservations System');
+                $this->email->to($main_data->email);
+                $this->email->subject('Booking Reservations Request System');
+                $this->email->message($this->load->view('templates/email_booking_template', $data, true));
 
                 $result = $this->email->send();
-                //$ci->email->print_debugger();
                 if (!$result) {
                     $this->session->set_flashdata('mailMessageHeader', 'Error');
                     $this->session->set_flashdata('mailMessage', 'Failed to send email. Please try again later.');
