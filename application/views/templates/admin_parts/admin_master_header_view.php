@@ -73,6 +73,9 @@
 								<li>
 									<a href="<?php echo site_url('admin/news')?>">News System</a>
 								</li>
+                                <li>
+                                    <a href="<?php echo site_url('admin/jobs')?>">Job Opportunities System</a>
+                                </li>
 								<li class="divider"></li>
 								<li>
 									<a href="<?php echo site_url('admin/footer')?>">Footer</a>

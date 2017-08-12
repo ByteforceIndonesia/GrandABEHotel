@@ -7,7 +7,12 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-
+<style>
+    #body {
+        background: #1B2021;
+        color:#f4f3f2;
+    }
+</style>
 <div class="container">
     <div class="row">
         <section id="headerJobs">
@@ -19,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </section>
-        <br><br>
+    </div>
         <section id="newsList">
             <?php foreach($jobs as $item): ?>
                 <div class="row jobItem">
@@ -27,13 +32,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-lg-3 jobImage">
                             <div class="imgContainer">
                                 <img class="img-responsive"
-                                     src="<?php echo base_url().'assets/images/jobs/' . $item->image?>"
+                                     src="<?php echo base_url().'assets/images/uploads/jobs/' . $item->image?>"
                                      width="250px">
                             </div>
-                        </div>
-                    <?php else: ?>
-                        <div class="col-lg-3">
-                            &nbsp
                         </div>
                     <?php endif; ?>
                     <div class="col-lg-9" style="padding-left: 50px">

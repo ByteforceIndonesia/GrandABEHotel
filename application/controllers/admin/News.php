@@ -107,21 +107,6 @@
 
 		}
 
-		public function delete_test ($type, $id)
-		{
-
-			if($this->news_model->delete($type, $id))
-			{
-				$this->session->set_flashdata('success', 'success');
-				echo 'true';
-			}else
-			{
-				$this->session->set_flashdata('error', 'Error deleteing, Check if category is linked to press');
-				return false;
-			}
-
-		}
-
 		public function edit($id = null)
 		{
 			if($_POST)

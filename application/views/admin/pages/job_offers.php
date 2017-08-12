@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <!-- Error Notification -->
             <div class="notification error">
-                <div class="alert alert-danger">
+                <div class="alert alert-danger error_msg">
                     <strong>Error!</strong> Oops something has gone wrong.
                 </div>
             </div>
@@ -90,7 +90,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="col-md-4">
             <br>
-            <button class="btn btn-primary float-right">
+            <button
+                class="btn btn-primary pull-right"
+                data-toggle="modal" data-target="#myModal"
+                id="new_job">
                 Create New
             </button>
         </div>
@@ -117,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td><?php echo $item->title ?></td>
                                 <td><?php echo $item->content ?></td>
                                 <td>
-                                    <img src="<?php echo base_url() . 'assets/images/jobs/' . $item->content ?>" alt="No Image">
+                                    <img src="<?php echo base_url() . 'assets/images/uploads/jobs/' . $item->image ?>" width="100px" alt="No Image">
                                 </td>
                                 <td><?php echo $item->created ?></td>
                                 <td>
@@ -149,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var id = e.id;
 
         $('.modal-title').html('Edit Job Offer');
-        $.post( <?php echo base_url('admin/jobs/edit') ?>, { id:id }).done(function( data ) {
+        $.post('<?php echo base_url('admin/jobs/edit_form') ?>', { id:id }).done(function( data ) {
             $(".modal-body").html(data).fadeIn();
         });
     }
@@ -158,8 +161,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     {
         var id = e.id;
 
-        $('.modal-title').html('Delete Job Offer');
-        $.post( "test.php", { name: "John", time: "2pm" }).done(function( data ) {
+        $('.modal-title').html('Delete Confirmation Job Offer');
+        $.post('<?php echo base_url('admin/jobs/delete_confirm') ?>', { id:id }).done(function( data ) {
             $(".modal-body").html(data).fadeIn();
         });
     }
@@ -173,19 +176,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }, 2000);
         }
 
-        function toggleError()
+        function toggleError(e)
         {
             $('.error').addClass('show');
+            $('.error_msg').html(e);
             setTimeout(function(){
                 $('.error').removeClass('show');
             }, 2000);
         }
 
+        $('#new_job').click(function(){
+            $('.modal-title').html('New Job Opportunity');
+            $.post("<?php echo base_url('admin/jobs/new_job') ?>", function(data){
+                $(".modal-body").html(data).fadeIn();
+            });
+        });
+
         // Message from php
         <?php if($this->session->flashdata('success')): ?>
         toggleSuccess()
         <?php elseif($this->session->flashdata('error')): ?>
-        toggleError()
+        toggleError('<?php echo $this->session->flashdata('error') ?>')
         <?php endif; ?>
     });
 </script>
