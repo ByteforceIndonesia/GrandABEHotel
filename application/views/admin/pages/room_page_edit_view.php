@@ -40,9 +40,6 @@
 					Room Name
 				</td>
 				<td>
-					Image
-				</td>
-				<td>
 					Description
 				</td>
 				<td>
@@ -56,7 +53,7 @@
 						echo '<tr>';
 						echo 
 						'<td>'.$room->name.'</td>'.
-						'<td><div class="imgDiv"><img src='. base_url().'assets/images/uploads/rooms/'.$room->image.' id="img_room" ></div></td>'.
+//						'<td><div class="imgDiv"><img src='. base_url().'assets/images/uploads/rooms/'.$room->image.' id="img_room" ></div></td>'.
 						'<td>'.$room->description.'</td>'.
 						'<td>'.anchor('admin/roompage/editRoom/'.$room->id,'<span class="glyphicon glyphicon-pencil"></span>')
 						.' '.anchor('admin/roompage/deleteRoom/'.$room->id,'<span class="glyphicon glyphicon-remove"></span>').'</td>';

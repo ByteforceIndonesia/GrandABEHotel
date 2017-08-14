@@ -1,4 +1,7 @@
+<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . '/slick.css'?>">
+<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . '/slick-theme.css'?>">
 
+<script src="<?php echo base_url() . JS_DIR . '/slick.min.js' ?>"></script>
 
 <section id="headerRooms">
 	<div class="row">
@@ -16,29 +19,48 @@
 <section id="roomDetails">
 <?php
 	if(!empty($rooms)){
-		foreach ($rooms as $room) {
-			echo'
+		foreach ($rooms as $room): ?>
 
-	<div class="row room" id="superiorRoom">
+    <?php $thumbs = glob($room->image . '/*.{jpg,png,gif,jpeg}', GLOB_BRACE); ?>
+
+    <div class="row room" id="superiorRoom">
 		<div class="col-lg-6">
 			<div class="picPanelRooms">
-				<div class="imgRoom"
-					style="background-image:url(\''. base_url().'assets/images/uploads/rooms/'.$room->image.'\');
-					background-size:cover;"
-				></div>
-			</div>
+<!--                Deprecated-->
+<!--				<div class="imgRoom"-->
+<!--					style="background-image:url(\''. base_url().'assets/images/uploads/rooms/'.$room->image.'\');-->
+<!--					background-size:cover;"-->
+<!--				></div>-->
+                <div class="sliderWrapper">
+                    <?php foreach($thumbs as $count => $thumb): ?>
+                    <div class="imgRoom"
+                        style="background-image:url('<?php echo $thumb ?>');
+                        background-size:cover;"
+                    ></div>
+                    <?php endforeach; ?>
+			    </div>
+            </div>
 		</div>
 		<div class="col-lg-5">
 			<div class="headerPanelRoomText">
-				<h3>'. $room->name.'</h3>'.
-				$room->description.
-			'</div>
+				<h3><?php echo $room->name ?></h3>
+				<?php echo $room->description ?>
+			</div>
 		</div>
 	</div>
 
-		';		
-		}
+    <?php endforeach;
 	}
 ?>
 </section>
 
+<script>
+    $(document).ready(function(){
+        $('.sliderWrapper').slick({
+            autoplay: true,
+            autoplaySpeed: 3500,
+            arrows: false,
+            fade: true
+        });
+    });
+</script>

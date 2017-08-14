@@ -19,21 +19,6 @@
     #headerRooms .panelHeaderRooms p {
       margin-top: 2em; }
 
-#roomDetails .room:nth-child(1) .imgRoom {
-  background: url("../images/bedAbout.jpg");
-  background-size: cover; }
-#roomDetails .room:nth-child(2) .imgRoom {
-  background: url("../images/bedAbout.jpg");
-  background-size: cover; }
-#roomDetails .room:nth-child(3) .imgRoom {
-  background: url("../images/bedAbout.jpg");
-  background-size: cover; }
-#roomDetails .room:nth-child(4) .imgRoom {
-  background: url("../images/bedAbout.jpg");
-  background-size: cover; }
-#roomDetails .room:nth-child(5) .imgRoom {
-  background: url("../images/bedAbout.jpg");
-  background-size: cover; }
 #roomDetails .room:nth-child(odd) {
   background: #F6F7EB; }
 #roomDetails .room:nth-child(even) {
@@ -49,10 +34,12 @@
   font-weight: 300; }
   #roomDetails .room .picPanelRooms {
     height: 30vh; }
-    #roomDetails .room .picPanelRooms .imgRoom {
+    #roomDetails .room .picPanelRooms .sliderWrapper {
       height: 100%;
       width: 60%;
       margin-left: 30%; }
+    #roomDetails .room .picPanelRooms .imgRoom {
+      height: 250px;}
   #roomDetails .room .headerPanelRoomText h3 {
     font-size: 38px;
     font-weight: 400;

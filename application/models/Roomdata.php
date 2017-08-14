@@ -61,8 +61,24 @@
 	    	
 	    }
 
-	    public function deleteRoom($id){
-	    	$this->db->delete($this->tableNameRooms, array('id' => $id));
+        public static function delTree($dir) {
+            $files = array_diff(scandir($dir), array('.','..'));
+            foreach ($files as $file) {
+                (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file");
+            }
+            return rmdir($dir);
+        }
+
+        public function deleteRoom($id, $dir){
+	    	if($this->db->delete($this->tableNameRooms, array('id' => $id)))
+            {
+                if(!$this->delTree($dir))
+                    return false;
+                else
+                    return true;
+            }else{
+                return false;
+            }
 	    }
 	}
 ?>

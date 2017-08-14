@@ -26,7 +26,7 @@
 					<div class="input-group">
 						<label class="input-group-btn">
 							<span class="btn btn-default">
-								Browse&hellip; <input type="file" style="display: none;" id="upload_room" accept=".png,.jpg,.jpeg,.gif" name="upload_room">
+								Browse&hellip; <input type="file" style="display: none;" multiple id="upload_room" accept=".png,.jpg,.jpeg,.gif" name="upload_room[]">
 							</span>
 						</label>
 						<input type="text" class="form-control" name="txtroom"  readonly>
