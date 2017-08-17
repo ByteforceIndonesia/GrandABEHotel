@@ -28,6 +28,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
+<div id="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-top">
+                    Check In :
+                    <input type="date" name="starting" id="starting" value="<?php echo date("Y-m-d"); ?>" required>
+                </div>
+                <div class="input-top">
+                    Check Out :
+                    <input type="date" name="end" id="end" class="" value="<?php echo date("Y-m-d"); ?>" required>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="wrapper">
 
 	<!-- navbar -->
@@ -142,50 +158,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	</section>
 
-	<section id="pageTwo">
-		<div id="booking">
-			<div class="container">
-				<center>
-					<div class="bookingNow">
-						<h1>
-							GET YOUR <strong>BOOKING</strong> NOW
-						</h1>
-					</div>
-					<!-- Jeff ini formnya kemana? -->
-					<?php echo form_open('email/mail') ?>
-					<div class="bookingPanel row">
-						<div class="col-lg-7 col-md-12 panelBooking row">
-							<div class="col-md-6 day">
-								<center>
-									<p>Check In</p>
-									<input type="date" name="starting" id="starting" class="form-control" value="<?php echo date("Y-m-d"); ?>" required>
-								</center>
-							</div>
-							<div class="col-md-6 month">
-								<center>
-									<p>Check Out</p>
-									<input type="date" name="end" id="end" class="form-control" value="<?php echo date("Y-m-d"); ?>" required>
-								</center>
-							</div>
-						</div>
-						<div class="col-lg-5 col-md-12 formBook">
-                            <input type="text" id= "name" name="name" placeholder="Name" class="form-control" <?php echo set_value('name');?>>
-                            <br>
-							<input type="text" id="email" name="email" placeholder="E-mail" class="form-control" <?php echo set_value('email');?>>
-                            <select name="class" id="class" class="form-control">
-                                <?php foreach($class as $room): ?>
-                                    <option value="<?php echo $room->name ?>"><?php echo $room->name ?></option>
-                                <?php endforeach; ?>
-                            </select>
-							<br>
-							<input type="submit" id="submit" value="Mail Me!">
-						</div>
-					</div>
-					<?php echo form_close () ?>
-				</center>
-			</div>
-		</div>
-	</section>
+<!--    Depreceated per client's request 17 aug 2017-->
+<!--	<section id="pageTwo">-->
+<!--		<div id="booking">-->
+<!--			<div class="container">-->
+<!--				<center>-->
+<!--					<div class="bookingNow">-->
+<!--						<h1>-->
+<!--							GET YOUR <strong>BOOKING</strong> NOW-->
+<!--						</h1>-->
+<!--					</div>-->
+<!--					<!-- Jeff ini formnya kemana? -->
+<!--					--><?php //echo form_open('email/mail') ?>
+<!--					<div class="bookingPanel row">-->
+<!--						<div class="col-lg-7 col-md-12 panelBooking row">-->
+<!--							<div class="col-md-6 day">-->
+<!--								<center>-->
+<!--									<p>Check In</p>-->
+<!--									<input type="date" name="starting" id="starting" class="form-control" value="--><?php //echo date("Y-m-d"); ?><!--" required>-->
+<!--								</center>-->
+<!--							</div>-->
+<!--							<div class="col-md-6 month">-->
+<!--								<center>-->
+<!--									<p>Check Out</p>-->
+<!--									<input type="date" name="end" id="end" class="form-control" value="--><?php //echo date("Y-m-d"); ?><!--" required>-->
+<!--								</center>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-lg-5 col-md-12 formBook">-->
+<!--                            <input type="text" id= "name" name="name" placeholder="Name" class="form-control" --><?php //echo set_value('name');?><!-->
+<!--                            <br>-->
+<!--							<input type="text" id="email" name="email" placeholder="E-mail" class="form-control" --><?php //echo set_value('email');?><!-->
+<!--                            <select name="class" id="class" class="form-control">-->
+<!--                                --><?php //foreach($class as $room): ?>
+<!--                                    <option value="--><?php //echo $room->name ?><!--">--><?php //echo $room->name ?><!--</option>-->
+<!--                                --><?php //endforeach; ?>
+<!--                            </select>-->
+<!--							<br>-->
+<!--							<input type="submit" id="submit" value="Mail Me!">-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					--><?php //echo form_close () ?>
+<!--				</center>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
 
     <?php
 
