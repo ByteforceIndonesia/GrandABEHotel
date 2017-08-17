@@ -104,7 +104,7 @@ $(document).ready(function(){
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
+                        <h4 class="modal-title"></h4>
                     </div>
                     <div class="modal-body">
                         <p>Some text in the modal.</p>
@@ -223,7 +223,7 @@ $(document).ready(function(){
         $.each(images, function(key, value){
             if(value.id == e){
                 $('.modal-body').html(
-                    "<img src='./assets/images/uploads/locationPhotos/" + value.photo + "'>"
+                    "<img src='./assets/images/uploads/locationPhotos/" + value.photo + "' width='200px'>"
                 );
             }
         });
