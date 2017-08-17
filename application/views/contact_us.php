@@ -17,6 +17,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Pertanyaan, saran dan Komentar mengenai Grand ABE Hotel dan Pelayanan kami, anda dapat mengisi form dibawah ini </p>
+            </div>
+        </div>
+
         <?php if(validation_errors() || $this->session->flashdata('error')): ?>
             <div class="alert alert-danger">
                 <?php echo validation_errors() ?>

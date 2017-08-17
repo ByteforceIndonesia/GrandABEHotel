@@ -49,6 +49,15 @@
 		height: 400px;
 		width:100%;
 	}
+
+    .modal-container
+    {
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 
 <script>
@@ -85,6 +94,30 @@ $(document).ready(function(){
 
 });
 </script>
+
+<div class="container">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-container">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <section id="whereAreWe">
 	<div class="row">
@@ -145,30 +178,30 @@ $(document).ready(function(){
 <section id="scattered">
 	<section id="photostack-2" class="photostack photostack-start">
 		<div>
+
 			<?php 
 				if(!empty($photos)){
-					foreach ($photos as $photo) {
-						echo'
-							<figure>
-								<a href="'.$photo->link.'" class="photostack-img"><img src="'. base_url ().'assets/images/uploads/locationPhotos/'.$photo->photo .'" alt="img01"/></a>
+					foreach ($photos as $photo): ?>
+							<figure onclick="open_this('<?php echo $photo->id ?>')">
+								<img src="<?php echo base_url ().'assets/images/uploads/locationPhotos/'.$photo->photo ?>" style="width:100%;" alt="img01"/>
 								<figcaption>
-									<h2 class="photostack-title">'.$photo->title.'</h2>
+									<h2 class="photostack-title"><?php echo $photo->title ?></h2>
 									<div class="photostack-back">
-										'.$photo->caption.'
+										<?php echo $photo->caption ?>
 									</div>
 								</figcaption>
 							</figure>			
-						';
-
-
-					}
+                    <?php endforeach;
 				}
-
 			?>
 			
 		</div>
 	</section>
 </section>
+
+<div class="kentang">
+
+</div>
 
 
 <script>
@@ -179,8 +212,25 @@ $(document).ready(function(){
 	} );
 </script>
 
+
 <script>
+    var images = JSON.parse('<?php echo $images ?>');
+
+    function open_this(e){
+
+        $('#myModal').modal('toggle');
+
+        $.each(images, function(key, value){
+            if(value.id == e){
+                $('.modal-body').html(
+                    "<img src='./assets/images/uploads/locationPhotos/" + value.photo + "'>"
+                );
+            }
+        });
+    }
+
 	$(document).ready(function(){
+
 	  $('#touristAttraction').slick({
 	  	autoplay: true,
   		autoplaySpeed: 5000,

@@ -6,6 +6,18 @@
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
+
+@font-face {
+    font-family: caviar;
+    src: url('../fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: caviarBold;
+    src: url('../fonts/CaviarDreams_Bold.ttf');
+}
+
+
 #headerRooms {
   height: auto; }
   #headerRooms .panelHeaderRooms {
@@ -20,33 +32,35 @@
       margin-top: 2em; }
 
 #roomDetails .room:nth-child(odd) {
-  background: #F6F7EB; }
+  background: #1B2021; }
 #roomDetails .room:nth-child(even) {
   background: #1B2021;
   color: #fff;
   padding-bottom: 3em; }
-  #roomDetails .room:nth-child(even) .headerPanelRoomText h3 {
-    border-bottom: 2px solid #fff; }
 #roomDetails .room {
   height: auto;
-  margin: 2em 0 2em 0;
+  margin: 2em 0 0 0;
   padding-top: 3em;
   font-weight: 300; }
   #roomDetails .room .picPanelRooms {
-    height: 30vh; }
+    height: 300px; }
     #roomDetails .room .picPanelRooms .sliderWrapper {
-      height: 100%;
-      width: 60%;
-      margin-left: 30%; }
+        max-height: 300px;
+        max-width: 380px;
+        margin:auto;}
     #roomDetails .room .picPanelRooms .imgRoom {
-      height: 250px;}
+        height: 250px;
+        width: 300px;}
   #roomDetails .room .headerPanelRoomText h3 {
     font-size: 38px;
     font-weight: 400;
-    border-bottom: 2px solid #000;
+    color:#fff;
     width: 60%;
     padding-left: 0.2em;
     padding-bottom: 0.2em; }
+#roomDetails .room .headerPanelRoomText p {
+    color:#fff;
+}
 
 /* ----------------------------
 ---- ByteForce Indonesia ------
@@ -155,10 +169,16 @@
     margin-bottom: 40px;
   }
 
-/* ----------------------------
----- ByteForce Indonesia ------
------- Grand ABE's Website -------
------------------------------*/
+
+
+.photostack figure{
+    height:auto !important;
+    width:400px !important;
+}
+    /* ----------------------------
+    ---- ByteForce Indonesia ------
+    ------ Grand ABE's Website -------
+    -----------------------------*/
 #whereAreWe {
   height: auto;
   padding-bottom: 4em;
@@ -326,10 +346,10 @@
 #headSlider {
   margin-bottom: 2em;
   margin-top: -2em; }
-  #headSlider .imageSlider {
-    background-size: cover !important;
-    height: 80vh;
+  #headSlider img {
     width: 100%; }
+
+
 
 #headingResto {
   margin-bottom: -5em; }
@@ -355,8 +375,11 @@
     font-size: 52px; }
   #freatured .imageFreatured {
     background-size: 100% 100% !important;
-    height: 30vh;
+    height: auto;
     padding: 1em; }
+  #freatured .imageFreatured img {
+      width:100%;
+  }
   #freatured .textFreatured {
     margin-top: 2em;
     padding-bottom: 2em; }
@@ -425,10 +448,10 @@ body {
   padding: 0;
   text-align: justify;
   background: #F6F7EB !important;
-  font-family: 'helvetica'; }
+  font-family: caviar !important; }
 
 p {
-  font-size: 16px; }
+  font-size: 18px; }
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -454,7 +477,7 @@ p {
   padding-top: 100px;
   padding-bottom: 20px;
   border-radius: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   position: absolute;
   transition: all .2s ease-in-out;
@@ -527,7 +550,7 @@ p {
       font-size: 14px;
       font-weight: 400; }
   #footer .rightPanel {
-    padding: 5vh 2em 1em 1em;
+    padding: 5vh 2em 3em 1em;
     background: #660000 !important;
     color: #fff !important; }
     #footer .rightPanel h4 {
@@ -558,10 +581,15 @@ p {
       padding: 30px;
     }
 
+@media screen and (max-width: 1384px) and (min-width: 1200px) {
+    #navigation {
+        font-size: 19px;
+        color:#000;}
+}
 @media screen and (max-width: 1263px) {
-  #navigation #navbar a {
-    font-size: 22px;
-    color: #000; } }
+    #navigation #navbar a {
+        font-size: 19px;
+        color: #000; } }
 @media screen and (max-width: 1200px) {
   #pageFour {
     height: 65vh; }
@@ -584,7 +612,7 @@ p {
       padding: 1em; }
 
   .opened {
-    height: 600px !important;
+    height: auto !important;
     background: #fff !important; }
     .opened .navbar-brand {
       color: #000 !important; }
@@ -599,7 +627,7 @@ p {
 
   #headerBusiness {
     height: auto !important;
-    padding-top: 15vh; }
+    padding-top: 50px; }
 
   #packages {
     height: auto;

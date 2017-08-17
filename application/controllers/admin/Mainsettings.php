@@ -58,6 +58,61 @@
 			}
 		}
 
+        public function delete_image(){
+
+            $file_link = $this->input->post('file');
+
+            if(unlink($file_link)){
+                echo 'success';
+            }else{
+                return false;
+            }
+        }
+
+        public function new_promo()
+        {
+            if(!$_POST){
+                return $this->load->view('admin/pages/modal/new_promo', true);
+            }else{
+
+                $files = $_FILES['uploaded']['name'];
+
+                if(empty($files)){
+                    redirect(base_url('admin/mainsettings'));
+                    return;
+                }else{
+
+                    foreach ($files as $count => $file) {
+                        //Put into one array
+                        $_FILES['room_single']['name'] = $_FILES['uploaded']['name'][$count];
+                        $_FILES['room_single']['type'] = $_FILES['uploaded']['type'][$count];
+                        $_FILES['room_single']['tmp_name'] = $_FILES['uploaded']['tmp_name'][$count];
+                        $_FILES['room_single']['error'] = $_FILES['uploaded']['error'][$count];
+                        $_FILES['room_single']['size'] = $_FILES['uploaded']['size'][$count];
+
+                        $config['upload_path'] = './assets/images/uploads/promos';
+                        $config['allowed_types'] = 'png|jpg|jpeg|gif';
+                        $config['file_name'] = time() . '_' . uniqid();
+                        $config['max_size'] = 0;
+
+                        $this->load->library('upload', $config);
+                        $this->upload->initialize($config);
+
+                        if (!$this->upload->do_upload('room_single')) {
+                            $this->session->set_flashdata('error_file', $this->upload->display_errors());
+                        } else {
+                            $upload_data = $this->upload->data();
+                        }
+                    }
+
+
+                    redirect(base_url('admin/mainsettings'));
+                    return;
+
+                }
+            }
+        }
+
 		public function edit(){
 			$result = $this->Mainsettingsdata->getData();
 			$this->data['main'] = $result;

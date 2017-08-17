@@ -14,9 +14,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'style.css' ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . 'bootstrap.min.css' ?>">
+    <link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . '/slick.css'?>">
+    <link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . '/slick-theme.css'?>">
 
 	<!-- JS -->
 	<script src="<?php echo base_url() . JS_DIR . 'jquery-3.1.1.min.js' ?>"></script>
+    <script src="<?php echo base_url() . JS_DIR . '/slick.min.js' ?>"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'bootstrap.min.js' ?>"></script>
 	<script src="<?php echo base_url() . JS_DIR . 'jquery.waypoints.js' ?>"></script>
@@ -183,36 +186,72 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</section>
-	
-	<section id="pageThree">
-		<div class="row ">
-			<div class="col-lg-5 leftAbout">
-				<!--//DESIGN ini masih agak berantakan jona -->
 
-				<div class="bedAbout"
-					<?php if(!empty($home->upload_leftImage))
-					echo 'style="background-image:url(\''. base_url() .'assets/images/uploads/leftImage/'.$home->upload_leftImage.'\' );"'
-					?>
-				>
-					&nbsp
-				</div>
-			</div>
-			<div class="col-lg-7 leftAbout row">
-				<div class="col-lg-3">&nbsp</div>
-				<div class="col-lg-6">
-					<center>
-						<div class="logoAbout">
-							<img src="<?php if(!empty($main))echo base_url().'assets/images/uploads/logo/'.$main->logo?>" alt="" >
-						</div>
-						<h1>Grand ABE</h1>
+    <?php
 
-						<?php echo $home->ta_ShortDesc?>
-					</center>
-				</div>
-				<div class="col-lg-3">&nbsp</div>
-			</div>
-		</div>
-	</section>
+    $thumbs = glob('./assets/images/uploads/promos/*.{jpg,png,gif,jpeg}', GLOB_BRACE);
+
+    if($thumbs):?>
+    <section id="sliderPage">
+        <div class="container-fluid">
+            <div class="row promo-slider" style="height:500px;">
+                <?php foreach($thumbs as $thumb): ?>
+                    <div class="col-lg-12" style="height:100%;">
+                        <div class=""
+                             style="background-image:url('<?php echo $thumb ?>');
+                                     background-size:100% 100%;
+                                     background-repeat: no-repeat;
+                                     max-width: 100%;
+                                     height:500px;
+                                     margin:auto;"
+                        >
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function(){
+            $('.promo-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                arrows: false,
+                fade: true
+            });
+        });
+    </script>
+    <?php endif; ?>
+
+
+<!--    Deprecated per revision 16 aug 2017-->
+<!--	<section id="pageThree">-->
+<!--		<div class="row ">-->
+<!--			<div class="col-lg-5 leftAbout">-->
+<!--				<div class="bedAbout"-->
+<!--					--><?php //if(!empty($home->upload_leftImage))
+//					echo 'style="background-image:url(\''. base_url() .'assets/images/uploads/leftImage/'.$home->upload_leftImage.'\' );"'
+//					?>
+<!--				>-->
+<!--					&nbsp-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="col-lg-7 leftAbout row">-->
+<!--				<div class="col-lg-3">&nbsp</div>-->
+<!--				<div class="col-lg-6">-->
+<!--					<center>-->
+<!--						<div class="logoAbout">-->
+<!--							<img src="--><?php //if(!empty($main))echo base_url().'assets/images/uploads/logo/'.$main->logo?><!--" alt="" >-->
+<!--						</div>-->
+<!--						<h1>Grand ABE Hotel</h1>-->
+<!---->
+<!--						--><?php //echo $home->ta_ShortDesc?>
+<!--					</center>-->
+<!--				</div>-->
+<!--				<div class="col-lg-3">&nbsp</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
 
 	<section id="pageFour">
 	<div class="container">
@@ -224,7 +263,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-10 offset-lg-1">
+            <div class="col-lg-3 offset-lg-1">
+                <div class="logoAboutUs">
+                    <img src="<?php if(!empty($main))echo base_url().'assets/images/uploads/logo/'.$main->logo?>" alt="" >
+                </div>
+            </div>
+			<div class="col-lg-8">
 				<div class="aboutUsParagraph">
 					<?php echo $home->ta_aboutUs?>
 				</div>

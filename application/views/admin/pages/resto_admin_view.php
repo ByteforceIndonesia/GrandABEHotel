@@ -46,7 +46,8 @@
 		<!-- Error Notification -->
 		<div class="notification error">
 			<div class="alert alert-danger">
-			  <strong>Error!</strong> Oops something has gone wrong.
+			  <strong>Error!</strong> Oops something has gone wrong. <br>
+                <?php echo $this->session->flashdata('error') . ' ' . $this->session->flashdata('error_file') ?>
 			</div>
 		</div>
 	</div>
@@ -99,8 +100,35 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-lg-offset-1 current-image">
-				<h4>Current Image</h4>
-				<img src="<?php echo base_url() . 'assets/' . $headers[0]->value_2?>" alt="Error Loading Image" width="200px">
+				<h4>Current Image in Sliders</h4>
+                <?php $thumbs = glob( './assets/images/uploads/resto/promo/*.{jpg,png,gif,jpeg}', GLOB_BRACE); ?>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>No.</td>
+                        <td>Image</td>
+                        <td>Actions</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($thumbs as $count => $thumb): ?>
+                        <tr>
+                            <td><?php echo $count+1 ?></td>
+                            <td>
+                                <img src="<?php echo base_url() . $thumb ?>" width="150px" alt="">
+                            </td>
+                            <td>
+                                <button
+                                        class="btn btn-danger"
+                                        onclick="delete_slider_resto(this)"
+                                        id = "<?php echo $thumb ?>">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
 			</div>
 			<div class="col-lg-3">
 				<h4>Change Image</h4>
@@ -109,7 +137,7 @@
 					<div class="input-group">
 		                <label class="input-group-btn">
 		                    <span class="btn btn-primary">
-		                        Browse&hellip; <input type="file" style="display: none;" name="header_image">
+		                        Browse&hellip; <input type="file" style="display: none;" name="header_image[]" multiple>
 		                    </span>
 		                </label>
 		                <input type="text" class="form-control" readonly>
@@ -198,7 +226,7 @@
 		<div class="row">
 			<div class="col-lg-4 col-lg-offset-1 current-image">
 				<h4>Current Image</h4>
-				<img src="<?php echo base_url() . 'assets/' . $headers[1]->value_2?>" alt="Error Loading Image" width="200px">
+                <img src="<?php echo base_url() . 'assets/' . $headers[1]->value_2?>" width="200px" alt="">
 			</div>
 			<div class="col-lg-3">
 				<h4>Change Image</h4>
@@ -248,14 +276,14 @@
 					<?php foreach($catagories as $count => $category): ?>
 						<tr>
 							<td><?php echo $count+1 ?></td>
-							<td 
+							<td
 								contenteditable="true"
 								class="category-name"
 								id="<?php echo $category->id ?>">
 								<?php echo $category->catagory ?>
 							</td>
 							<td>
-								<button 
+								<button
 								class="btn btn-danger delete-category"
 								data-toggle="modal" data-target="#myModal"
 								id="<?php echo $category->id ?>">
@@ -346,6 +374,45 @@
 ------- Psalms 91 ---------------
 --------------------------------*/
 
+function delete_slider_resto(e)
+{
+    var id = e.id;
+
+    $.ajax({
+        type: 'post',
+        url: "<?php echo base_url(); ?>admin/resto/delete_slider_photo",
+        data: {id: id},
+        success: function(res)
+        {
+            toggleSuccess();
+            setTimeout(function()
+            {
+                location.reload();
+            }, 2000);
+        },
+        error: function()
+        {
+            toggleError();
+        }
+    });
+}
+
+function toggleSuccess()
+{
+    $('.success').addClass('show');
+    setTimeout(function(){
+        $('.success').removeClass('show');
+    }, 2000);
+}
+
+function toggleError()
+{
+    $('.error').addClass('show');
+    setTimeout(function(){
+        $('.error').removeClass('show');
+    }, 2000);
+}
+
 $(document).ready(function(){
 
     $('body').on('focus', '[contenteditable]', function() {
@@ -416,22 +483,6 @@ $(document).ready(function(){
 	        });
 	    }
 	});
-
-    function toggleSuccess()
-	{
-		$('.success').addClass('show');
-		setTimeout(function(){
-			$('.success').removeClass('show');
-		}, 2000);
-	}
-
-	function toggleError()
-	{
-		$('.error').addClass('show');
-		setTimeout(function(){
-			$('.error').removeClass('show');
-		}, 2000);
-	}
 
 	// Message from php
 	<?php if($this->session->flashdata('success')): ?>

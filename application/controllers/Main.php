@@ -67,6 +67,7 @@ class Main extends MY_Controller {
 		$this->data['headerLocation']=$this->locationdata->getData();
 		$this->data['locations']=$this->locationdata->getLocations();
 		$this->data['photos']=$this->locationdata->getPhotos();
+		$this->data['images'] = json_encode($this->locationdata->getPhotos());
 		$this->data['footer']=$this->footerdata->getData();
 		$this->data['contacts']=$this->footerdata->getContacts();
 		$this->template->load('template', 'location', $this->data);

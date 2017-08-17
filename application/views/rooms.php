@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . '/slick.css'?>">
 <link rel="stylesheet" href="<?php echo base_url() . CSS_DIR . '/slick-theme.css'?>">
-
+<style>
+    #body{
+        background:#1B2021;
+    }
+</style>
 <script src="<?php echo base_url() . JS_DIR . '/slick.min.js' ?>"></script>
 
 <section id="headerRooms">
@@ -22,9 +26,9 @@
 		foreach ($rooms as $room): ?>
 
     <?php $thumbs = glob($room->image . '/*.{jpg,png,gif,jpeg}', GLOB_BRACE); ?>
-
+<div class="container">
     <div class="row room" id="superiorRoom">
-		<div class="col-lg-6">
+		<div class="col-lg-5">
 			<div class="picPanelRooms">
 <!--                Deprecated-->
 <!--				<div class="imgRoom"-->
@@ -35,20 +39,20 @@
                     <?php foreach($thumbs as $count => $thumb): ?>
                     <div class="imgRoom"
                         style="background-image:url('<?php echo $thumb ?>');
-                        background-size:cover;"
+                        background-size:100% 100%;"
                     ></div>
                     <?php endforeach; ?>
 			    </div>
             </div>
 		</div>
-		<div class="col-lg-5">
+		<div class="col-lg-7">
 			<div class="headerPanelRoomText">
 				<h3><?php echo $room->name ?></h3>
 				<?php echo $room->description ?>
 			</div>
 		</div>
 	</div>
-
+</div>
     <?php endforeach;
 	}
 ?>

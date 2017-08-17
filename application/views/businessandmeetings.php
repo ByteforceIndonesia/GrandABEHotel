@@ -27,11 +27,14 @@
 				foreach($packages as $package){
 		?>
 			<div class="row">
-				<div class="col-md-6 panel">
+				<div class="col-md-6 panel" style="padding-top:40px;">
 					<div class="packageImage" 
 					style="background-image:url('<?php echo base_url().'assets/images/uploads/packages/'.$package->image;?>');
 						background-size: contain;
 						background-repeat: no-repeat;
+                        margin:auto;
+                        max-width:1000px;
+                        max-height:1000px;
 					">
 					
 						&nbsp
@@ -51,6 +54,29 @@
 		?>
 	
 	</div>
+</section>
+
+<section id="" class="container" style="
+        margin-top: -50px;
+        margin-bottom: 40px;
+">
+    <div class="">
+        <div class="row">
+            <div class="col-md-12 panel">
+                <a href="<?php echo base_url().'assets/images/table_specs.png' ?>">
+                    <div class=""
+                         style="background-image:url('<?php echo base_url().'assets/images/table_specs.png' ?>');
+                                 background-size: contain;
+                                 background-repeat: no-repeat;
+                                 max-width:580px;
+                                 height:400px;
+                                 margin:auto;
+                                 ">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="carousel">
@@ -73,6 +99,8 @@
         </div>
     </div>
 </section>
+
+
 <script>
     $(document).ready(function()
     {

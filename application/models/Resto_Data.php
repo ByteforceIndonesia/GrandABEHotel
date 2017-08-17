@@ -161,42 +161,72 @@
 	    	{
 	    		case 'resto':
 	    		{
-			    	$config['upload_path']          = './assets/images/resto/';
-			    	$config['file_name']			=  'resto_header.jpg';
+	    		    if(!$files = $_FILES['header_image']['name'])
+	    		        return false;
+
+                    foreach ($files as $count => $file) {
+                        //Put into one array
+                        $_FILES['single']['name'] = $_FILES['header_image']['name'][$count];
+                        $_FILES['single']['type'] = $_FILES['header_image']['type'][$count];
+                        $_FILES['single']['tmp_name'] = $_FILES['header_image']['tmp_name'][$count];
+                        $_FILES['single']['error'] = $_FILES['header_image']['error'][$count];
+                        $_FILES['single']['size'] = $_FILES['header_image']['size'][$count];
+
+                        $config['upload_path'] = './assets/images/uploads/resto/promo';
+                        $config['allowed_types'] = 'png|jpg|jpeg|gif';
+                        $config['file_name'] = time() . '_' . uniqid();
+                        $config['max_size'] = 2000;
+
+                        $this->load->library('upload', $config);
+                        $this->upload->initialize($config);
+
+                        if (!$this->upload->do_upload('single')) {
+                            $this->session->set_flashdata('error', 'error');
+                            $this->session->set_flashdata('error_file', $this->upload->display_errors());
+                            redirect(base_url('admin/resto'));
+                            return;
+                        } else {
+                            //For debug
+                            $upload_data = $this->upload->data();
+                        }
+                    }
+
+                    $this->session->set_flashdata('success', 'success');
+                    redirect(base_url('admin/resto'));
+                    return;
+
 	    		}break;
 
 	    		case 'cafe':
 	    		{
-			    	$config['upload_path']          = './assets/images/cake/';
-			    	$config['file_name']			=  'cafe_header.jpg';
+                    $config['upload_path']          = './assets/images/cake/';
+                    $config['file_name']			=  'cafe_header.jpg';
+                    $config['overwrite']			= TRUE;
+                    $config['allowed_types']        = 'jpg|jpeg';
+                    $config['max_size']             = 2000;
+
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+
+                    if (!$this->upload->do_upload('header_image'))
+                    {
+                        $error = $this->upload->display_errors();
+                        $this->session->set_flashdata('error', $error);
+
+                        print_r($error);
+                        exit;
+
+                        redirect(base_url('admin/resto'));
+                        return;
+                    }
+                    else
+                    {
+                        $this->session->set_flashdata('success', 'success');
+                        redirect(base_url('admin/resto'));
+                        return;
+                    }
 	    		}break;
 	    	}
-
-
-	    	$config['overwrite']			= TRUE;
-            $config['allowed_types']        = 'jpg|jpeg';
-            $config['max_size']             = 5000;
-
-            $this->load->library('upload', $config);
-            $this->upload->initialize($config);
-
-            if (!$this->upload->do_upload('header_image'))
-            {
-                $error = $this->upload->display_errors();
-                $this->session->set_flashdata('error', $error);
-
-                print_r($error);
-                exit;
-
-            	redirect(base_url('admin/resto'));
-                return;
-            }
-            else
-            {
-            	$this->session->set_flashdata('success', 'success');
-            	redirect(base_url('admin/resto'));
-            	return;
-            }
 	    }
 
 	    function change_image_upload($type, $id)

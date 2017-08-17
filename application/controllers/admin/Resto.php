@@ -143,6 +143,17 @@
 				return false;
 		}
 
+        public function delete_slider_photo(){
+
+            $file_link = $this->input->post('id');
+
+            if(unlink($file_link)){
+                echo 'success';
+            }else{
+                return false;
+            }
+        }
+
 		public function resto_item_new()
 		{
 			if($_POST)

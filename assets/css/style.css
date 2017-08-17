@@ -2,11 +2,28 @@
 ---- ByteForce Indonesia ------
 ------ Grand ABE's Website -------
 -----------------------------*/
+
+@font-face {
+  font-family: caviar;
+  src: url('../fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+  font-family: caviarBold;
+  src: url('../fonts/CaviarDreams_Bold.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  text-align: justify; }
+  text-align: justify;
+  font-family: caviar !important;
+  background:#1B2021;}
+P
+{
+  font-size:17px !important;
+}
 
 .darkerFilter {
   background: rgba(0, 0, 0, 0.4) !important;
@@ -67,6 +84,10 @@ body {
       color: #ccc; }
     #navigation #navbar ul li .active a {
       color: #fff; }
+
+#sliderPage{
+  padding:50px 20px 50px 20px;
+}
 
 #firstPage {
   position: relative;
@@ -271,14 +292,24 @@ body {
       opacity: 1;
       cursor: pointer; }
 
+
+    .logoAboutUs{
+      padding-top: 120px;
+      overflow:hidden;
+      margin:auto;
+    }
+    .logoAboutUs img{
+      width:100%;
+    }
+
 #footer {
   width: 100%;
-  height: 35vh;
+  height: auto;
   overflow: hidden; }
   #footer .leftPanel {
     background: #1B2021;
     color: #fff;
-    height: 40vh;
+    height: auto;
     padding: 5vh 15vh 1em 3em; }
     #footer .leftPanel h4 {
       margin-bottom: 1em;
@@ -288,7 +319,7 @@ body {
       font-size: 14px;
       font-weight: 400; }
   #footer .rightPanel {
-    padding: 5vh 2em 1em 1em;
+    padding: 5vh 2em 3em 1em;
     background: #660000 !important;
     color: #fff !important; }
     #footer .rightPanel h4 {
@@ -305,16 +336,31 @@ body {
     #footer .rightPanel a:hover {
       color: #ccc !important; }
 
-@media screen and (max-width: 1263px) {
+@media screen and (max-width: 1384px){
   #navigation {
-    top: 515px; } }
-@media screen and (max-width: 1263px) {
+    font-size: 18px;
+    color:white;}
+}
+@media screen and (max-width: 1278px) {
   #navigation #navbar a {
-    font-size: 22px;
-    color: #000; } }
+    font-size: 17px;
+    color: #fff; } }
+@media screen and (max-width: 1228px) {
+  #navigation #navbar a {
+    font-size: 16px;
+    color: #fff; } }
+@media screen and (max-width: 1200px) {
+  #navigation{
+    top:525px;
+  }
+  #navigation #navbar a {
+    font-size: 18px;
+    color: #000;
+  }
+}
 @media screen and (max-width: 1200px) {
   #pageFour {
-    height: 65vh; }
+    height: auto; }
 
   .bigLogo {
     display: none !important; }
@@ -334,7 +380,7 @@ body {
       padding: 1em; }
 
   .opened {
-    height: 600px !important;
+    height: auto !important;
     background: #fff !important; }
     .opened .navbar-brand {
       color: #000 !important; }
@@ -441,6 +487,12 @@ body {
     font-size: 26px;
     padding-right: 0.7em; } }
 @media screen and (max-width: 768px) {
+
+  .logoAboutUs{
+    width:300px;
+    margin:auto;
+  }
+
   #firstPage .logoName h1 {
     font-size: 32px; }
 
@@ -494,7 +546,7 @@ body {
 
   #pageFour {
     height: auto;
-    padding-bottom: 2em; }
+    padding-bottom: 160px; }
     #pageFour .aboutUsParagraph {
       padding: 0 1em 0 1em;
       font-size: 16px; }
@@ -502,6 +554,8 @@ body {
   #footer .rightPanel {
     padding-left: 5vh; } }
 @media screen and (max-width: 588px) {
+
+
   #navigation {
     height: 75px; }
     #navigation .navbar-brand {
