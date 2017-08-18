@@ -42,7 +42,7 @@
 
         <!-- Error Notification -->
         <div class="notification error">
-            <div class="alert alert-danger">
+            <div class="alert alert-danger errmsg">
                 <strong>Error!</strong> Oops something has gone wrong.
             </div>
         </div>
@@ -150,14 +150,6 @@
 				<?php echo form_error('ta_email','<div style="color:red;">','</div>');?>
 			</div>
 
-            <?php
-
-                $thumbs = glob( './assets/images/uploads/promos/*.{jpg,png,gif,jpeg}', GLOB_BRACE);
-
-            ?>
-
-
-
             <br><br>
             <h3>Promo Images</h3>
             <button class="btn btn-primary"
@@ -173,21 +165,25 @@
                         <thead>
                             <tr>
                                 <td>No.</td>
+                                <td>Title</td>
+                                <td>Content</td>
                                 <td>Image</td>
                                 <td>Actions</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($thumbs as $count => $thumb): ?>
+                            <?php foreach($main_slider as $count => $slide): ?>
                                 <tr>
                                     <td><?php echo $count+1 ?></td>
+                                    <td><?php echo $slide->title ?></td>
+                                    <td><?php echo $slide->content ?></td>
                                     <td>
-                                        <img src="<?php echo base_url() .  $thumb ?>" width="200px" alt="">
+                                        <img src="<?php echo base_url('assets/images/uploads/promos/') .  $slide->image ?>" width="200px" alt="">
                                     </td>
                                     <td>
                                         <button class="btn btn-danger"
                                         onclick="delete_promo(this)"
-                                        id="<?php echo $thumb ?>"
+                                        id="<?php echo $slide->id ?>"
                                         type="button">
                                             Delete
                                         </button>
@@ -209,9 +205,10 @@
                     }, 1000);
                 }
 
-                function toggleError()
+                function toggleError(e)
                 {
                     $('.error').addClass('show');
+                    $('.errmsg').html(e);
                     setTimeout(function(){
                         $('.error').removeClass('show');
                     }, 1000);
@@ -224,7 +221,7 @@
                     $.ajax({
                         type: 'post',
                         url: "<?php echo base_url('admin/mainsettings/delete_image'); ?>",
-                        data: {file: id},
+                        data: {id: id},
                         success: function(res)
                         {
                             toggleSuccess();
@@ -282,6 +279,11 @@
 			<br><br>
 
 <script type="text/javascript">
+    $(document).ready(function () {
+        <?php if ($this->session->flashdata('error') || $this->session->flashdata('error_file')): ?>
+            toggleError('<?php echo $this->session->flashdata('error') . " " . $this->session->flashdata('error_file') ?>');
+        <?php endif; ?>
+    });
 	document.getElementById('upload_bg').onchange = function(e) {
 		// Get the first file in the FileList object
 		var imageFile = this.files[0];

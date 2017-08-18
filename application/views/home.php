@@ -28,22 +28,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
+
 <div id="top-bar">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="input-top">
-                    Check In :
-                    <input type="date" name="starting" id="starting" value="<?php echo date("Y-m-d"); ?>" required>
-                </div>
-                <div class="input-top">
-                    Check Out :
-                    <input type="date" name="end" id="end" class="" value="<?php echo date("Y-m-d"); ?>" required>
+                <div class="wrap">
+                    <div class="input-top">
+                        Check In :<br>
+                        <input type="date" name="starting" id="starting" value="<?php echo date("Y-m-d"); ?>" required>
+                    </div>
+                    <div class="input-top">
+                        Check Out :<br>
+                        <input type="date" name="end" id="end" class="" value="<?php echo date("Y-m-d"); ?>" required>
+                    </div>
+                    <div class="input-top">
+                        Check Out :<br>
+                        <input type="date" name="end" id="end" class="" value="<?php echo date("Y-m-d"); ?>" required>
+                    </div>
+                    <div class="input-top">
+                        Name :<br>
+                        <input type="text" id= "name" name="name" placeholder="Name" <?php echo set_value('name');?>>
+                    </div>
+                    <div class="input-top">
+                        Email : <br>
+                        <input type="text" id="email" name="email" placeholder="E-mail" <?php echo set_value('email');?>>
+                    </div>
+                    <div class="input-top">
+                        Class : <br>
+                        <select name="class" id="class">
+                            <?php foreach($class as $room): ?>
+                                <option value="<?php echo $room->name ?>"><?php echo $room->name ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="input-top">
+                        <br>
+                        <input type="submit" id="submit" value="Mail Me!">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="wrapper">
 
 	<!-- navbar -->
@@ -204,24 +232,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--		</div>-->
 <!--	</section>-->
 
-    <?php
-
-    $thumbs = glob('./assets/images/uploads/promos/*.{jpg,png,gif,jpeg}', GLOB_BRACE);
-
-    if($thumbs):?>
+    <?php if($main_slider):?>
     <section id="sliderPage">
-        <div class="container-fluid">
-            <div class="row promo-slider" style="height:500px;">
-                <?php foreach($thumbs as $thumb): ?>
-                    <div class="col-lg-12" style="height:100%;">
-                        <div class=""
-                             style="background-image:url('<?php echo $thumb ?>');
-                                     background-size:100% 100%;
-                                     background-repeat: no-repeat;
-                                     max-width: 100%;
-                                     height:500px;
-                                     margin:auto;"
-                        >
+        <div class="container">
+            <div class="promo-slider">
+                <?php foreach($main_slider as $slide): ?>
+                    <div class="row">
+                        <div class="col-lg-6 panel">
+                            <img src="<?php echo base_url() . 'assets/images/uploads/promos/' . $slide->image ?>" alt="">
+                        </div>
+                        <div class="col-lg-6 panel">
+                            <h3><?php echo $slide->title ?></h3>
+                            <p><?php echo $slide->content ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>

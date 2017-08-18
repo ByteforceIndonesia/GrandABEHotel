@@ -21,6 +21,8 @@
 			if($result = $this->Mainsettingsdata->getData()){
 				$this->data['main'] = $result;
 			}
+
+			$this->data['main_slider'] = $this->Mainsettingsdata->getSlider();
 			$this->render('admin/pages/main_settings_edit_view');
 
 		}
@@ -60,10 +62,14 @@
 
         public function delete_image(){
 
-            $file_link = $this->input->post('file');
+            $id = $this->input->post('id');
+            $to_be_deleted = $this->db->get_where('main_slider', array('id' => $id))->row();
 
-            if(unlink($file_link)){
-                echo 'success';
+            if(unlink('./assets/images/uploads/promos/' . $to_be_deleted->image)){
+                if($this->db->where('id', $id)->delete('main_slider'))
+                    echo 'success';
+                else
+                    return false;
             }else{
                 return false;
             }
@@ -75,41 +81,41 @@
                 return $this->load->view('admin/pages/modal/new_promo', true);
             }else{
 
-                $files = $_FILES['uploaded']['name'];
+                $data = array (
 
-                if(empty($files)){
-                    redirect(base_url('admin/mainsettings'));
-                    return;
+                    'title'     => $this->input->post('title'),
+                    'content'   => $this->input->post('content'),
+                    'image'     => time() . '_' . uniqid(),
+                    'created'   => date('Y-m-d')
+
+                );
+
+                $config['upload_path']   = './assets/images/uploads/promos' ;
+                $config['allowed_types'] = 'jpg|png';
+                $config['file_name'] = $data['image'];
+                $config['max_size'] = 0;
+                $config['overwrite'] = TRUE;
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+
+                if($this->upload->do_upload('uploaded')){
+                    $upload_data = $this->upload->data();
                 }else{
-
-                    foreach ($files as $count => $file) {
-                        //Put into one array
-                        $_FILES['room_single']['name'] = $_FILES['uploaded']['name'][$count];
-                        $_FILES['room_single']['type'] = $_FILES['uploaded']['type'][$count];
-                        $_FILES['room_single']['tmp_name'] = $_FILES['uploaded']['tmp_name'][$count];
-                        $_FILES['room_single']['error'] = $_FILES['uploaded']['error'][$count];
-                        $_FILES['room_single']['size'] = $_FILES['uploaded']['size'][$count];
-
-                        $config['upload_path'] = './assets/images/uploads/promos';
-                        $config['allowed_types'] = 'png|jpg|jpeg|gif';
-                        $config['file_name'] = time() . '_' . uniqid();
-                        $config['max_size'] = 0;
-
-                        $this->load->library('upload', $config);
-                        $this->upload->initialize($config);
-
-                        if (!$this->upload->do_upload('room_single')) {
-                            $this->session->set_flashdata('error_file', $this->upload->display_errors());
-                        } else {
-                            $upload_data = $this->upload->data();
-                        }
-                    }
-
-
+                    $this->session->set_flashdata('error_file', $this->upload->display_errors());
                     redirect(base_url('admin/mainsettings'));
                     return;
-
                 }
+
+                $data['image'] .= '.' . explode(".", $upload_data['file_name'])[1];
+
+                if($this->Mainsettingsdata->new_slider($data)){
+                    $this->session->set_flashdata('success', 'success');
+                }else{
+                    $this->session->set_flashdata('error', 'Error');
+                }
+
+                redirect(base_url('admin/mainsettings'));
+                return;
             }
         }
 

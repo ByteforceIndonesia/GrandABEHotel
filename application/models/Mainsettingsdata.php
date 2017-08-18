@@ -14,6 +14,11 @@
 	    	}
 	    }
 
+	    function new_slider($data)
+        {
+            return $this->db->insert('main_slider', $data);
+        }
+
 	    public function getData(){
 	    	$query = $this->db->get($this->tableName);
 	    	$row = $query->row();
@@ -24,5 +29,15 @@
        			return false;
        		}
 	    }
+
+	    public function delete_slider()
+        {
+
+        }
+
+        function getSlider ()
+        {
+            return $this->db->get('main_slider')->result();
+        }
 
 	}

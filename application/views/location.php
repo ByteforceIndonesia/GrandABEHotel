@@ -223,7 +223,7 @@ $(document).ready(function(){
         $.each(images, function(key, value){
             if(value.id == e){
                 $('.modal-body').html(
-                    "<img src='./assets/images/uploads/locationPhotos/" + value.photo + "' width='200px'>"
+                    "<img src='./assets/images/uploads/locationPhotos/" + value.photo + "' width='450px'>"
                 );
             }
         });

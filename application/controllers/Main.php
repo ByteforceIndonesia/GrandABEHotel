@@ -24,6 +24,7 @@ class Main extends MY_Controller {
 		$this->data['class']    = $this->roomdata->getRooms();
 		$this->data['contacts']=$this->footerdata->getContacts();
 		$this->data['main']=$this->Mainsettingsdata->getData();
+		$this->data['main_slider'] = $this->Mainsettingsdata->getSlider();
 		$this->load->view('home', $this->data);
 	}
 
