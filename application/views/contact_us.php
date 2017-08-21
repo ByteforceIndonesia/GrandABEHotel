@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="row">
             <div class="col-lg-12">
-                <p>Pertanyaan, saran dan Komentar mengenai Grand ABE Hotel dan Pelayanan kami, anda dapat mengisi form dibawah ini </p>
+                <p>Jika ada pertanyaan, saran dan komentar mengenai Grand ABE Hotel dan Pelayanan kami, anda dapat mengisi form dibawah ini :</p>
             </div>
         </div>
 
