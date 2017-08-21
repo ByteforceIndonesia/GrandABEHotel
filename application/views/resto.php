@@ -5,13 +5,13 @@
 <div id="tabswitcher">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 offset-md-2 tab" onclick="open_resto()">
+            <div class="col-sm-4 col-xs-6 offset-sm-2 tab" onclick="open_resto()">
                 <div class="restoTab tabber active">Restaurant</div>
                 <div class="tab-tri">
                     <div id="triangle-down" class="resto-tri"></div>
                 </div>
             </div>
-            <div class="col-md-4 tab" onclick="open_cafe()">
+            <div class="col-sm-4 col-xs-6 tab" onclick="open_cafe()">
                 <div class="cafeTab tabber">Cafe</div>
                 <div class="tab-tri">
                     <div id="triangle-down" class="hidden cafe-tri"></div>

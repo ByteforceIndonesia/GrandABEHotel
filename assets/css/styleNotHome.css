@@ -543,7 +543,7 @@
 }
 
 #headResto {
-  height:300px;
+  height:auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1039,6 +1039,18 @@ p {
 @media screen and (max-width: 768px) {
   #firstPage .logoName h1 {
     font-size: 32px; }
+
+  #page-break-wedbday .more-btn {
+    font-size: 14px;
+  }
+
+  #headSlider {
+    height:auto;
+  }
+
+  #headSlider img {
+    transform: translateY(0);
+  }
 
   #navigation {
     height: 75px; }

@@ -230,11 +230,31 @@ $(document).ready(function(){
 
 	$(document).ready(function(){
 
+        var responsiveSettings = [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }
+        ];
+
 	  $('.tourist-attr-slider').slick({
 	  	autoplay: true,
   		autoplaySpeed: 5000,
         arrows: false,
-        slidesToShow: 3
+        slidesToShow: 3,
+        responsive: responsiveSettings
 	  });
 	});
 </script>

@@ -73,18 +73,12 @@
     <div class="container">
         <div class="img-carousel">
             <?php foreach($images as $count => $image): ?>
-                <?php if($count % 3 == 0): ?>
-                    <div>
-                <?php endif; ?>
-                    <div class="col-sm-4 panel">
-                        <div
-                            style="background:url('<?php echo base_url() .'assets/images/uploads/bnmImages/' . $image->image ?>');" >
+                <div class="col-sm-4 panel">
+                    <div
+                        style="background:url('<?php echo base_url() .'assets/images/uploads/bnmImages/' . $image->image ?>');" >
 
-                        </div>
                     </div>
-                <?php if(($count+1) % 3 == 0): ?>
-                    </div>
-                <?php endif; ?>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
@@ -94,17 +88,39 @@
 <script>
     $(document).ready(function()
     {
+        var responsiveSettings = [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }
+        ];
+
         $('.img-carousel').slick({
             autoplay: true,
             autoplaySpeed: 3000,
-            arrows:false
+            slidesToShow:3,
+            arrows:false,
+            responsive:responsiveSettings
         });
 
         $('.package-scroller').slick({
             autoplay: true,
             autoplaySpeed: 3000,
             slidesToShow:3,
-            arrows:false
+            arrows:false,
+            responsive:responsiveSettings
         });
     });
 </script>
