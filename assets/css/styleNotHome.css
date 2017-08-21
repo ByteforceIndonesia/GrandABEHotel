@@ -648,15 +648,15 @@
     margin-bottom: 1em;
     font-size: 52px; }
   #freaturedCake .imageFreatured {
-    background-size: 100% 100% !important;
-    height: 30vh;
     padding: 1em; }
+  #freaturedCake .imageFreatured img {
+    width:100%; }
   #freaturedCake .textFreatured {
-    margin-top: 2em;
     padding-bottom: 2em; }
     #freaturedCake .textFreatured h5 {
       padding: 1em 2em 0 2em;
       text-align: center;
+      font-size:18px;
       font-weight: 300; }
 
 #freaturedSliced {
@@ -702,6 +702,10 @@ p {
 
 .noLogoNav {
   display: none !important; }
+
+.dropdown-item {
+  font-size: 14px;
+}
 
 #navigation {
   border: 0;
