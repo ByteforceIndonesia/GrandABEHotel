@@ -3,6 +3,8 @@
 ------ Grand ABE's Website -------
 -----------------------------*/
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
 @font-face {
   font-family: caviar;
   src: url('../fonts/CaviarDreams.ttf');
@@ -18,11 +20,11 @@ body {
   padding: 0;
   overflow-x: hidden;
   text-align: justify;
-  font-family: caviar !important;
+  font-family: 'Open Sans', sans-serif !important;
   background:#1B2021;}
-P
-{
-  font-size:17px !important;
+
+P {
+  font-size:15px;
 }
 
 .darkerFilter {
@@ -40,7 +42,8 @@ P
     color: #000 !important; }
 
 #top-bar {
-  position: relative;
+  position: absolute;
+  z-index: 1000;
   top:0;
   left:0;
   margin:auto;
@@ -60,23 +63,80 @@ P
 
 #top-bar .wrap {
   height:100%;
-  margin: auto;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #top-bar select {
   width:100%;
   -webkit-appearance: none;
   border-radius: 0px;
-  padding:3px 40px 2px 40px;
+  padding:5px 40px 5px 40px;
+  background:rgba(0,0,0,0);
+  border:1px solid #eee;
+  color:#5e5e5e;
+  transition: all .3s ease-in-out;
+}
+
+#top-bar select:focus {
+  background:rgba(255,255,255,1);
+  color:#000;
 }
 
 #top-bar input[type=submit] {
-  padding:3px 40px 2px 40px;
+  padding:5px 40px 5px 40px;
+  background:transparent;
+  color:#fff;
+  border:1px solid #eee;
+  transition: all .3s ease-in-out;
+}
+
+#top-bar input[type=submit]:hover {
+  cursor: pointer;
+  background: #fff;
+}
+
+#top-bar input[type=text] {
+  background:rgba(0,0,0,0);
+  border:1px solid #eee;
+  transition: all .3s ease-in-out;
+  padding:5px;
+}
+
+#top-bar input[type=text]:focus {
+  background:rgba(255,255,255,1);
+  color:#000;
+}
+
+#top-bar input[type=date] {
+  background:rgba(0,0,0,0);
+  border:1px solid #eee;
+  transition: all .3s ease-in-out;
+  padding:4px;
+  color:#5e5e5e;
+}
+
+#top-bar input[type=date]:focus {
+  background:rgba(255,255,255,1);
+  color:#000;
+}
+
+
+#sliderPage{
+  padding:50px 20px 50px 20px;
+  background: rgb(246,246,246);
 }
 
 .promo-slider {
-  max-height: 400px;
+  height: auto;
   overflow: hidden;
+  padding:30px;
+  background:#fff;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,.07);
+  -moz-box-shadow: 0 3px 6px 0 rgba(0,0,0,.07);
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,.07);
 }
 
 .promo-slider img{
@@ -98,9 +158,9 @@ P
   margin-bottom: 0;
   width: 100%;
   border-radius: 0;
-  font-size: 20px;
   font-weight: 300;
   transition: all .2s ease-in-out;
+  font-size: 17px;
   z-index: 1000;
   color: #fff; }
   #navigation h1 {
@@ -134,22 +194,34 @@ P
     #navigation #navbar ul li .active a {
       color: #fff; }
 
-#sliderPage{
-  padding:50px 20px 50px 20px;
+.tagline-whats-new h1{
+  text-align: center;
+  font-family: caviar;
+  font-weight: 300;
+  font-size: 56px;
+}
+
+.tagline-whats-new h1 strong {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 #firstPage {
   position: relative;
+  padding-top: 80px;
   width: 100%;
   color: #fff;
   overflow: hidden;
-  height: 600px; }
+  font-weight: 300;
+  height: 680px; }
   #firstPage .logoName {
     margin-top: 3em; }
     #firstPage .logoName h1 {
-      font-weight: 300; }
+      font-weight: 300;
+      font-family: caviar}
       #firstPage .logoName h1 strong {
-        font-weight: 500; }
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif}
   #firstPage .homeLine {
     margin-top: 130px;
     font-size: 14px; }
@@ -290,22 +362,40 @@ P
   width: 100%;
   height: auto;
   background: #1B2021;
-  padding-top: 130px;
-  padding-bottom: 130px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   #pageFour .aboutUs {
-    border-bottom: 1px solid #fff; }
+    border-bottom:0;
+    width: 100%;
+    text-align: center
+  }
     #pageFour .aboutUs h1 {
       font-weight: 300;
-      font-size: 42px;
-      color: #fff;
-      margin-left: 10px; }
+      font-size: 52px;
+      color: #fff;}
   #pageFour .aboutUsParagraph {
-    margin-top: 2vh; }
+    margin-top: 20px; }
     #pageFour .aboutUsParagraph p {
       font-weight: 300;
       margin-top: 2em;
       color: #fff;
-      font-size: 14px; }
+      font-size: 15px; }
+
+  .logoAboutUs{
+    padding-top:20px;
+    padding-bottom: 20px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logoAboutUs .img-wrapper {
+    max-width:150px;
+    margin:auto;
+  }
+  .logoAboutUs .img-wrapper img{
+    max-width:100%;
+  }
 
 #pageFive {
   background: url("../images/home_large.jpg");
@@ -342,19 +432,13 @@ P
       cursor: pointer; }
 
 
-    .logoAboutUs{
-      padding-top: 120px;
-      overflow:hidden;
-      margin:auto;
-    }
-    .logoAboutUs img{
-      width:100%;
-    }
+
 
 #footer {
   width: 100%;
   height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 13px; }
   #footer .leftPanel {
     background: #1B2021;
     color: #fff;
@@ -365,7 +449,7 @@ P
       font-size: 32px;
       font-weight: 300; }
     #footer .leftPanel p {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 400; }
   #footer .rightPanel {
     padding: 5vh 2em 3em 1em;
@@ -376,7 +460,7 @@ P
       font-size: 32px;
       font-weight: 300; }
     #footer .rightPanel p {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 400; }
     #footer .rightPanel a {
       text-decoration: none;
@@ -387,20 +471,24 @@ P
 
 @media screen and (max-width: 1384px){
   #navigation {
-    font-size: 18px;
+    font-size: 15.5px;
     color:white;}
 }
 @media screen and (max-width: 1278px) {
   #navigation #navbar a {
-    font-size: 17px;
+    font-size: 14px;
     color: #fff; } }
 @media screen and (max-width: 1228px) {
   #navigation #navbar a {
-    font-size: 16px;
+    font-size: 14px;
     color: #fff; } }
 @media screen and (max-width: 1200px) {
   #navigation{
-    top:525px;
+    top:420px;
+  }
+  #firstPage{
+    padding-top: 0;
+    height:500px;
   }
   #navigation #navbar a {
     font-size: 18px;
@@ -545,6 +633,13 @@ P
     margin:auto;
   }
 
+  .tagline-whats-new h1{
+    font-size: 42px;
+  }
+
+  #firstPage .homeLine {
+    display:none; }
+
   #firstPage .logoName h1 {
     font-size: 32px; }
 
@@ -598,7 +693,7 @@ P
 
   #pageFour {
     height: auto;
-    padding-bottom: 160px; }
+    padding-bottom: 50px; }
     #pageFour .aboutUsParagraph {
       padding: 0 1em 0 1em;
       font-size: 16px; }

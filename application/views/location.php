@@ -67,18 +67,18 @@ $(document).ready(function(){
 
 	$('.locDes').each(function()
 	{
-		if($(this).html().length > 400)
+		if($(this).html().length > 200)
 		{
 			var original = $(this).html();
 			var text = original;
 
-			text = text.substring(0, 400);
+			text = text.substring(0, 200);
 			last = text.lastIndexOf(" ");
 			text = text.substring(0, last);
 
 			$(this).html(text + '... <a class="popupclick" id="#' + popUpId +'" href="#' + popUpId +'">Read More</a>');
 
-			$(this).parent().append('<div class="popup mfp-hide" id="'  + popUpId + '">' + original + '</div');
+			$(this).parent().append('<div class="popup mfp-hide" id="'  + popUpId + '">' + original + '</div>');
 
 			popUpId++;
 		}
@@ -120,59 +120,58 @@ $(document).ready(function(){
 </div>
 
 <section id="whereAreWe">
-	<div class="row">
-		<div class="col-xl-5">
-			<div class="mapsWrapper">
-				<div id="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1775.417745752815!2d140.66627566975478!3d-2.610435105393257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadc84ceab536f6a!2sGrand+Abe+Hotel!5e0!3m2!1sen!2s!4v1502297805657" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7">
+                <div class="mapsWrapper">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1775.417745752815!2d140.66627566975478!3d-2.610435105393257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadc84ceab536f6a!2sGrand+Abe+Hotel!5e0!3m2!1sen!2s!4v1502297805657" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                 </div>
-			</div>
-		</div>
-		<div class="col-xl-5">
-			<div class="rightSideMaps">
-				<h1>Where Are We</h1>
-				<?php echo $headerLocation->ta_where; ?>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="col-xl-5 mapwrap">
+                <div class="rightSideMaps">
+                    <h1>Where Are We</h1>
+                    <?php echo $headerLocation->ta_where; ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="headerTouristAttraction">
-	<div class="row">
-		<div class="col-lg-6">&nbsp</div>
-		<div class="col-lg-4">
-			<div class="panelHeaderTouristAttraction">
-				<h1>Tourist Attractions</h1>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panelHeaderTouristAttraction">
+                    <h1>Tourist Attractions</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="touristAttraction" class="container">
+<section id="touristAttraction">
+    <div class="container-fluid tourist-attr-slider">
 	<?php
 		if(!empty($locations)){
-			foreach ($locations as $location) {
-				// if the string is longer than 50 chars
-				echo'
-				<div class="row">
-					<div class="col-lg-6 panel">
+			foreach ($locations as $count => $location) : ?>
+            <div class="col-lg-4 col-md-6 panel">
+                <img src="<?php echo base_url() . "assets/images/uploads/locations/" . $location->image ?>" alt="">
+				<div class="inner-panel">
+					<div class="col-lg-12">
 						<div class="touristLeft">
-							<h1>'.$location->name.'</h1>'. 
-							'<div class="locDes wordwrapper">'.$location->description.'</div>
+							<h1><?php echo $location->name ?></h1>
+                            <hr>
+							    <div class="locDes wordwrapper"><?php echo $location->description ?></div>
 						</div>
 					</div>
-					<div class="col-lg-6 panel">
-						<div class="imageTourist" 
-							 style="background:url(\''. base_url() .'assets/images/uploads/locations/' . $location->image.'\');
-							 ">&nbsp</div>
-					</div>
 				</div>
-
-				';
-			}
+            </div>
+	<?php endforeach;
 		}
 	?>
-
+    </div>
 </section>
 
 <section id="scattered">
@@ -231,9 +230,11 @@ $(document).ready(function(){
 
 	$(document).ready(function(){
 
-	  $('#touristAttraction').slick({
+	  $('.tourist-attr-slider').slick({
 	  	autoplay: true,
   		autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 3
 	  });
 	});
 </script>

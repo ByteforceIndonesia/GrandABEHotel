@@ -34,7 +34,7 @@
 	    	{
             	$data['image'] = uniqid() . '.jpg';
 	    		
-    			$config['upload_path']          = './assets/images/news/';
+    			$config['upload_path']          = './assets/images/uploads/news/';
 	    		$config['file_name']			=  $data['image'];
 		    	$config['overwrite']			= TRUE;
 	            $config['allowed_types']        = 'jpg|jpeg';
@@ -80,7 +80,7 @@
 				{
 					if($to_be_deleted->image)
 					{
-						if(unlink('./assets/images/news/' . $to_be_deleted->image))
+						if(unlink('./assets/images/uploads/news/' . $to_be_deleted->image))
 							return $this->db->delete('news', $where);
 						else
 							return false;
@@ -114,7 +114,7 @@
 	    		if(!$data->image)
 	    			$posted['image'] = uniqid() . '.jpg';
 
-	    		$config['upload_path']          = './assets/images/news/';
+	    		$config['upload_path']          = './assets/images/uploads/news/';
 	    		$config['file_name']			=  $posted['image'];
 		    	$config['overwrite']			= TRUE;
 	            $config['allowed_types']        = 'jpg|jpeg';

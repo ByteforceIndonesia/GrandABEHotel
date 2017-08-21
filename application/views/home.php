@@ -43,10 +43,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <input type="date" name="end" id="end" class="" value="<?php echo date("Y-m-d"); ?>" required>
                     </div>
                     <div class="input-top">
-                        Check Out :<br>
-                        <input type="date" name="end" id="end" class="" value="<?php echo date("Y-m-d"); ?>" required>
-                    </div>
-                    <div class="input-top">
                         Name :<br>
                         <input type="text" id= "name" name="name" placeholder="Name" <?php echo set_value('name');?>>
                     </div>
@@ -64,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="input-top">
                         <br>
-                        <input type="submit" id="submit" value="Mail Me!">
+                        <input type="submit" id="submit" value="Book Now!">
                     </div>
                 </div>
             </div>
@@ -235,6 +231,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php if($main_slider):?>
     <section id="sliderPage">
         <div class="container">
+            <div class="tagline-whats-new">
+                <h1>What's <strong>New</strong> ?</h1>
+            </div>
+            <br><br>
             <div class="promo-slider">
                 <?php foreach($main_slider as $slide): ?>
                     <div class="row">
@@ -242,7 +242,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <img src="<?php echo base_url() . 'assets/images/uploads/promos/' . $slide->image ?>" alt="">
                         </div>
                         <div class="col-lg-6 panel">
+                            <br>
                             <h3><?php echo $slide->title ?></h3>
+                            <br>
                             <p><?php echo $slide->content ?></p>
                         </div>
                     </div>
@@ -295,7 +297,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<section id="pageFour">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 offset-lg-1">
+			<div class="col-lg-12">
 				<div class="aboutUs">
 					<h1>About Us</h1>
 				</div>
@@ -304,10 +306,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="row">
             <div class="col-lg-3 offset-lg-1">
                 <div class="logoAboutUs">
-                    <img src="<?php if(!empty($main))echo base_url().'assets/images/uploads/logo/'.$main->logo?>" alt="" >
+                    <div class="img-wrapper">
+                        <img src="<?php if(!empty($main))echo base_url().'assets/images/uploads/logo/'.$main->logo?>" alt="" >
+                    </div>
                 </div>
             </div>
-			<div class="col-lg-8">
+			<div class="col-lg-7">
 				<div class="aboutUsParagraph">
 					<?php echo $home->ta_aboutUs?>
 				</div>
@@ -361,7 +365,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <br><br>
                     <img src="<?php echo base_url() . 'assets/images/whatsapp.png' ?>" width="30px" alt="">&nbsp +628114825123
                     <br><br>
-                    <img src="<?php echo base_url() . 'assets/images/phone.png' ?>" width="30px" alt=""> +628239977-2012/2017/2018
+                    <img src="<?php echo base_url() . 'assets/images/phone.png' ?>" width="30px" alt="">+628239977-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2012/2017/2018
 				</div>
 			</div>
 		</div>
