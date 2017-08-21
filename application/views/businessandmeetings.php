@@ -90,7 +90,7 @@
     {
         var responsiveSettings = [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToScroll: 1,
                     slidesToShow: 1,
